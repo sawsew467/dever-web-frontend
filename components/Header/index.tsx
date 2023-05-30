@@ -10,7 +10,7 @@ function index() {
               height={32}
               alt="Picture of the author"
             />
-          <div className='flex gap-[40px]'>
+          <div className='flex gap-[40px] text-[16px]'>
              <a className='hover:text-[#0098FF]' href=''>Home</a>
              <a className='hover:text-[#0098FF]' href=''>Activities</a>
              <a className='hover:text-[#0098FF]' href=''>Projects</a>
