@@ -1,9 +1,9 @@
 import React from 'react'
-import Logo from '../../assest/logo.svg';
+import Logo from '../../asset/logo.svg';
 import Image from 'next/image';
 function index() {
   return (
-    <div className='w-[100%] h-[64px] flex justify-between items-center px-[5.5%]'>
+    <div className='w-[100%] h-[64px] flex justify-between items-center px-[5.5%] fixed z-[1]'>
              <Image
               src={Logo}
               width={161.6}
