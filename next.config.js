@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const path = require('path');
 
-module.exports = nextConfig
+const nextConfig = {
+  webpack: (config) => {
+    config.resolve.alias['@svg'] = path.join(__dirname, 'asses/svg');
+    return config;
+  },
+};
+
+module.exports = nextConfig;
