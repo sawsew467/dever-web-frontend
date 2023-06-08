@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../assest/logo.svg';
+import Logo from '@svg/logo.svg';
 import Image from 'next/image';
 function index() {
   return (
@@ -11,10 +11,10 @@ function index() {
               alt="Picture of the author"
             />
           <div className='flex gap-[40px] text-[16px]'>
-             <a className='hover:text-[#0098FF]' href=''>Home</a>
-             <a className='hover:text-[#0098FF]' href=''>Activities</a>
-             <a className='hover:text-[#0098FF]' href=''>Projects</a>
-             <a className='hover:text-[#0098FF]' href=''>Members</a>       
+             <a className='hover:text-primary' href=''>Home</a>
+             <a className='hover:text-primary' href=''>Activities</a>
+             <a className='hover:text-primary' href=''>Projects</a>
+             <a className='hover:text-primary' href=''>Members</a>       
           </div>
     </div>
   )
