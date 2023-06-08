@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import womanSmile from '../asset/homepage/img/womanPointing.png'
-import manModel from '../asset/homepage/img/maleModel.png'
-import man2Model from '../asset/homepage/img/male2Model.png'
-import '../app/page.css'
+import womanSmile from '@homepage/img/womanPointing.png'
+import manModel from '@homepage/img/maleModel.png'
+import man2Model from '@homepage/img/male2Model.png'
+import '@/app/page.css'
 
 export default function Home() {
   return (
