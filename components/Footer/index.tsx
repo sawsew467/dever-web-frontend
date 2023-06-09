@@ -23,13 +23,12 @@ function index() {
       tittle: "Khu đô thị FPT City, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
     },
   ];
-  const data2 = ["Home", "Activities", "Project", "Menber"];
   return (
-    <div className="w-screen bg-[#0098FF] h-[250px] flex">
-      <div>
-        <div>
+    <div className="w-[100%] bg-[#0098FF] h-[250px] flex px-[80px] py-[60px] flex justify-between">
+      <div className="flex flex-col justify-between ">
+        <div className="flex ">
           <Image src={logodever1} alt="Picture of the author" />
-          <a>FU-DEVER</a>
+          <a className="font-bold text-[40px] ml-[8px]">FU-DEVER</a>
         </div>
         <div className="flex w-[136px] justify-between">
           <Image src={facebookLogo} alt="Picture of the author" />
@@ -37,20 +36,27 @@ function index() {
           <Image src={tiktokLogo} alt="Picture of the author" />
         </div>
       </div>
-      <div>
-        <div className="">
-          {data.map((item) => (
-            <div className="flex">
-              <Image src={item.logo} alt="Picture of the author" />
-              <a>{item.tittle}</a>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        {data2.map((item) => (
-          <a>{item}</a>
+      <div className="flex flex-col justify-between">
+        {data.map((item) => (
+          <div className="flex ">
+            <Image
+              className="mr-[12px]"
+              src={item.logo}
+              alt="Picture of the author"
+            />
+            <a className="font-normal text-[16px]">{item.tittle}</a>
+          </div>
         ))}
+      </div>
+      <div className="w-[240px]  flex justify-between items-start">
+        <div className="flex  justify-between flex-col">
+          <a className="mb-[18px]">Home</a>
+          <a>Project</a>
+        </div>
+        <div className="flex  justify-between flex-col">
+          <a className="mb-[18px]">Activities</a>
+          <a>Member</a>
+        </div>
       </div>
     </div>
   );
