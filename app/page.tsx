@@ -9,7 +9,7 @@ import "@/app/page.css";
 
 export default function Home() {
   return (
-    <section className="w-screen h-[810px] flex justify-center items-center absolute top-[64px]">
+    <section className="w-screen h-[810px] flex justify-center items-center top-[64px]">
       <div className="w-[1280px] h-[100%] flex justify-center items-center relative">
         <div className="w-[620px] h-fit flex flex-col justify-center items-center">
           <h1
