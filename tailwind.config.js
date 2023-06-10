@@ -20,6 +20,9 @@ module.exports = {
         'primary': '#0098FF',
         'highlight':'FF0000',
       },
+      boxShadow: {
+        'left-smooth': 'inset 20px 0px 20px -15px rgba(244, 247, 250, 0.75)',
+      },
     },
   },
   plugins: [
