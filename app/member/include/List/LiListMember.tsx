@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import logo from "../../../../assets/images/pages/member/banner/logodever.png";
 import avatar from "../../../../assets/images/pages/member/avatar/topface/avatar.png";
-import Leader from "../../../../assets/images/pages/member/leader/leader.svg"
-import Member from "../../../../assets/images/pages/member/normal/member.svg";
+import member from "../../../../assets/images/pages/member/normal/member.svg"
+import normal from "../../../../assets/images/pages/member/normal/normal.svg";
 const LiListMember = () => {
   return (
     <li className=" cursor-pointer  relative">
@@ -23,10 +23,10 @@ const LiListMember = () => {
       <div className="h-[auto] absolute bottom-0 w-[100%]">
         <Image
           className=" h-[auto] absolute   bottom-0 w-[100%]"
-          src={Leader}
+          src={normal}
           alt="leader"
         />
-        <Image src={Member} alt="member" className="absolute bottom-0 h-[auto] lg:h-[auto] w-[100%]" />
+        <Image src={member} alt="member" className="absolute bottom-0 h-[auto] lg:h-[auto] w-[100%]" />
         <div className="font-['roboto'] relative z-10 lg:mx-[15px] sm:mx-[8px] mx-[4px] mt-[20px] mb-[4px] ">
           <h4 className=" font-[800] lg:text-[20px] md:text-[15px] text-[12px] text-[#fff] ">
             Trần Văn Bảo Thắng - K17
