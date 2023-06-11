@@ -69,8 +69,8 @@ function Footer() {
             <Link href="/" className="mb-[18px] hover:underline">
               Home
             </Link>
-            <Link href="/project" className="hover:underline">
-              Project
+            <Link href="/blogs" className="hover:underline">
+              Blogs
             </Link>
           </div>
           <div className="flex  justify-between flex-col">

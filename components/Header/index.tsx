@@ -21,8 +21,8 @@ function Header() {
           <Link className="hover:text-primary transition-all" href="/activity">
             Activities
           </Link>
-          <Link className="hover:text-primary transition-all" href="/project">
-            Projects
+          <Link className="hover:text-primary transition-all" href="/blogs">
+            Blogs
           </Link>
           <Link className="hover:text-primary transition-all" href="/member">
             Members
