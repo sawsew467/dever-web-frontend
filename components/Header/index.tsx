@@ -22,7 +22,7 @@ function Header() {
             Activities
           </Link>
           <Link className="hover:text-primary transition-all" href="/blogs">
-            Projects
+            Blogs
           </Link>
           <Link className="hover:text-primary transition-all" href="/member">
             Members
