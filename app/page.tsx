@@ -21,22 +21,22 @@ export default function Home() {
     <>
       <section className="w-screen h-[810px] flex justify-center items-center ">
         <div className="max-w-[1440px] w-[100%] px-[80px] h-[100%] flex justify-center items-center">
-          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-27px] ">
+          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-37px] ">
             <h1
-              className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[60px]`}
+              className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[54px] leading-[48px]`}
             >
               FU-DEVER
             </h1>
-            <h2 className={`text-[#0098FF] text-[32px] mt-[12px] font-[700]`}>
+            <h2 className={`text-[#0098FF] text-[32px] mt-[24px] font-[700] leading-[39px] `}>
               WORK HARD - PLAY HARD
             </h2>
-            <p className="text-center text-[#22181C] font-[400] text-[20px]">
+            <p className="text-center text-[#22181C] font-[400] text-[20px] leading-[23px] mt-[12px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation.
             </p>
-            <button className="w-[160px] h-[52px] py-[6px] bg-[#0098FF] flex justify-center items-center mt-[24px]">
-              <p className="font-[400] text-[16px] text-white">Send Your CV</p>
+            <button className="px-[32px] py-[16px] bg-[#0098FF] flex justify-center items-center mt-[24px]">
+              <p className="font-[400] text-[16px] text-white leading-[19px]">Send Your CV</p>
             </button>
           </div>
 
