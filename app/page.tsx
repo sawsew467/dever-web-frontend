@@ -20,8 +20,7 @@ export default function Home() {
   return (
     <>
       <section className="w-screen h-[810px] flex justify-center items-center ">
-
-        <div className="w-[1280px] h-[100%] flex justify-center items-center">
+        <div className="max-w-[1440px] w-[100%] px-[80px] h-[100%] flex justify-center items-center">
           <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-27px] ">
             <h1
               className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[60px]`}
@@ -43,9 +42,9 @@ export default function Home() {
 
         </div>
 
-        <div className="w-[1280px] h-[810px] absolute z-[-1]">
+        <div className="max-w-[1440px] w-[100%] h-[810px] px-[80px] absolute z-[-1]">
 
-          <div className="w-[300px] h-[330px] absolute xl:left-0 xl:bottom-[32px] left-[170px] bottom-[32px]">
+          <div className="w-[300px] h-[330px] absolute  bottom-[32px]">
             <div className="w-[200px] h-[230px] bg-[#FDECE8] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
@@ -53,7 +52,7 @@ export default function Home() {
             <div className="w-[200px] h-[230px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[345px] h-[330px] absolute xl:right-0 bottom-[81px] right-[170px] rotateY180deg">
+          <div className="w-[345px] h-[330px] absolute right-[80px] bottom-[81px] rotateY180deg">
             <div className="w-[236px] h-[250px] bg-[#FBE8D5] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
@@ -61,7 +60,7 @@ export default function Home() {
             <div className="w-[236px] h-[260px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[115px] h-[166px] absolute right-[269px] top-[132px]">
+          <div className="w-[115px] h-[166px] absolute xl:right-[349px] right-[160px] top-[132px]">
             <div className="w-[106px] h-[136px] bg-[#FFF7AD] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[10px]">
               <Image src={man2Model} alt="Picture of the author" />
@@ -69,7 +68,7 @@ export default function Home() {
             <div className="w-[106px] h-[160px] bg-[#fff] absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[115px] h-[166px] absolute left-[176px] top-[112px] rotateY180deg">
+          <div className="w-[115px] h-[166px] absolute xl:left-[256px] top-[112px] left-[160px] rotateY180deg">
             <div className="w-[106px] h-[136px] bg-[#D1F0E1] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[10px]">
               <Image src={man2Model} alt="Picture of the author" />
