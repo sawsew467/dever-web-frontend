@@ -19,9 +19,10 @@ import "@/app/page.css";
 export default function Home() {
   return (
     <>
-      <section className="w-screen h-[810px] flex justify-center items-center">
+      <section className="w-screen h-[810px] flex justify-center items-center ">
+
         <div className="w-[1280px] h-[100%] flex justify-center items-center">
-          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-27px]">
+          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-27px] ">
             <h1
               className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[60px]`}
             >
@@ -39,11 +40,12 @@ export default function Home() {
               <p className="font-[400] text-[16px] text-white">Send Your CV</p>
             </button>
           </div>
+
         </div>
 
         <div className="w-[1280px] h-[810px] absolute z-[-1]">
 
-          <div className="w-[300px] h-[330px] absolute left-0 bottom-[32px]">
+          <div className="w-[300px] h-[330px] absolute xl:left-0 xl:bottom-[32px] left-[170px] bottom-[32px]">
             <div className="w-[200px] h-[230px] bg-[#FDECE8] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
@@ -51,7 +53,7 @@ export default function Home() {
             <div className="w-[200px] h-[230px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[345px] h-[330px] absolute right-0 bottom-[81px] rotateY180deg">
+          <div className="w-[345px] h-[330px] absolute xl:right-0 bottom-[81px] right-[170px] rotateY180deg">
             <div className="w-[236px] h-[250px] bg-[#FBE8D5] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
