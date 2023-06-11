@@ -1,15 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Rectangle2,
-  Rectangle3,
-  Vector,
-  Rectangle1,
-  VectorFirst,
-} from "../svg/svg";
-import logo from "../img/logodever1.png";
-import avatar from "../img/avatar.png";
-import group1498 from "../img/Group 1498.svg";
+import avatar from "../../../../assets/images/pages/member/avatar/topface/avatar.png";
 
 const ListTopTypicalFaces = () => {
   return (
