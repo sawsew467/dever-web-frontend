@@ -5,14 +5,23 @@ import Link from "next/link";
 import womanSmile from "../assets/images/pages/home/banner/womanPointing.png";
 import manModel from "../assets/images/pages/home/banner/maleModel.png";
 import man2Model from "../assets/images/pages/home/banner/male2Model.png";
+import retangle1 from "../assets/images/pages/home/banner/svg/Rectangle 7.svg";
+import retangle2 from "../assets/images/pages/home/banner/svg/Rectangle 8.svg";
+import retangle3 from "../assets/images/pages/home/banner/svg/Rectangle 9.svg";
+import retangle4 from "../assets/images/pages/home/banner/svg/Rectangle 10.svg";
+import retangle5 from "../assets/images/pages/home/banner/svg/Rectangle 11.svg";
+import retangle6 from "../assets/images/pages/home/banner/svg/Rectangle 12.svg";
+import retangle7 from "../assets/images/pages/home/banner/svg/Rectangle 13.svg";
+
+
 import "@/app/page.css";
 
 export default function Home() {
   return (
     <>
-      <section className="w-screen h-[890px] flex justify-center items-center">
+      <section className="w-screen h-[810px] flex justify-center items-center">
         <div className="w-[1280px] h-[100%] flex justify-center items-center">
-          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-60px]">
+          <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-27px]">
             <h1
               className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[60px]`}
             >
@@ -33,7 +42,8 @@ export default function Home() {
         </div>
 
         <div className="w-[1280px] h-[810px] absolute z-[-1]">
-          <div className="w-[300px] h-[330px] absolute left-0 bottom-0">
+
+          <div className="w-[300px] h-[330px] absolute left-0 bottom-[32px]">
             <div className="w-[200px] h-[230px] bg-[#FDECE8] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
@@ -41,34 +51,61 @@ export default function Home() {
             <div className="w-[200px] h-[230px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[345px] h-[330px] absolute right-0 bottom-[80px] rotateY180deg">
+          <div className="w-[345px] h-[330px] absolute right-0 bottom-[81px] rotateY180deg">
             <div className="w-[236px] h-[250px] bg-[#FBE8D5] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[20px]">
               <Image src={womanSmile} alt="Picture of the author" />
             </div>
-            <div className="w-[260px] h-[260px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
+            <div className="w-[236px] h-[260px] bg-white absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[120px] h-[180px] absolute right-[329px] top-[68px]">
+          <div className="w-[115px] h-[166px] absolute right-[269px] top-[132px]">
             <div className="w-[106px] h-[136px] bg-[#FFF7AD] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[10px]">
-              <Image src={manModel} alt="Picture of the author" />
+              <Image src={man2Model} alt="Picture of the author" />
             </div>
-            <div className="w-[130px] h-[160px] bg-[#fff] absolute bottom-0 left-0 clip-path-subPolygon"></div>
+            <div className="w-[106px] h-[160px] bg-[#fff] absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
-          <div className="w-[120px] h-[180px] absolute left-[256px] top-[48px] rotateY180deg">
+          <div className="w-[115px] h-[166px] absolute left-[176px] top-[112px] rotateY180deg">
             <div className="w-[106px] h-[136px] bg-[#D1F0E1] absolute bottom-0 left-0 clip-path-myPolygon"></div>
             <div className="absolute left-0 bottom-0 w-[fit] mb-[10px]">
               <Image src={man2Model} alt="Picture of the author" />
             </div>
-            <div className="w-[130px] h-[160px] bg-[#ffffff] absolute bottom-0 left-0 clip-path-subPolygon"></div>
+            <div className="w-[106px] h-[160px] bg-[#ffffff] absolute bottom-0 left-0 clip-path-subPolygon"></div>
           </div>
 
         </div>
 
-        <div className="w-[1280px] h-[810px] bg-blue-50 absolute z-[-2]">
-          
+        <div className="w-[1440px] h-[810px]  absolute z-[-2]">
+
+          <div className="absolute top-[335px] left-[-70px]">
+            <Image src={retangle1} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute top-[373px] left-[250px]">
+            <Image src={retangle2} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute top-[277px] right-[160px]">
+            <Image src={retangle3} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute top-[179px] right-[-30px]">
+            <Image src={retangle4} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute bottom-[91px] right-[427px]">
+            <Image src={retangle5} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute bottom-[147px] left-[553px]">
+            <Image src={retangle6} alt="Picture of the author" />
+          </div>
+
+          <div className="absolute top-[108px] right-[571px]">
+            <Image src={retangle7} alt="Picture of the author" />
+          </div>
         </div>
 
       </section>
