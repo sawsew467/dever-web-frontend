@@ -9,12 +9,16 @@ import ProductsOne from '@pageImage/home/product/image1.png'
 import ProductsTwo from '@pageImage/home/product/image2.png'
 import ProductsThree from '@pageImage/home/product/image3.png'
 import ProductsFour from '@pageImage/home/product/image4.png'
-import Vector from "@pageImage/home/product/Vector.svg"
+import Vector from "@pageImage/home/product/longWave.svg"
+
+import Facebook from '@pageImage/home/icon/Facebook.svg'
+import Github from '@pageImage/home/icon/Github.svg'
+import Tiktok from '@pageImage/home/icon/Tiktok.svg'
 
 
 function Product() {
     return (
-       <section className='w-screen h-fit flex justify-center items-center relative'>
+       <section className='w-screen h-fit flex justify-center items-center relative mb-[20px]' >
             
             <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px] flex justify-between relative'>
 
@@ -58,7 +62,16 @@ function Product() {
                     </div>
 
                     <div className='mt-[40px] w-[186px] h-[51px] border-[3px] relative border-black '>
-                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-16px] right-[-16px]  transition'><p>Explore Projects</p></button>
+                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-18px] right-[-19px]  transition'><p>Explore Projects</p></button>
+                    </div>
+
+                    <div className='mt-[171px]'>
+                        <div className='font-[400] text-16px leading-[19px] text-[#FFFFFF]'><p>Follow FU-DEVER</p></div>
+                        <div className='mt-[12px] w-[136px] flex flex-row justify-between'>
+                            <a href="#"><Image src={Facebook} alt='Facebook'/></a>
+                            <a href="#"><Image src={Github} alt='Github'/></a>
+                            <a href="#"><Image src={Tiktok} alt='Tiktok'/></a>
+                        </div>
                     </div>
                 </div>
 
@@ -68,7 +81,7 @@ function Product() {
             {/* <div className='w-[2000px] h-full object-fill absolute left-0 right-0 bottom-0 z-[-1]'>
                     
             </div> */}
-            <Image src={Vector} className='w-[100vw] absolute right-0 left-0 bottom-0 z-[-1] '  alt='Vector'/>
+            <Image src={Vector} className='absolute right-0 bottom-0 z-[-1] max-w-fit'  alt='Vector'/>
 
       </section>
     )
