@@ -43,55 +43,55 @@ function Banner() {
 
             </div>
 
-            <div className="max-w-[1440px] w-[100%] h-[810px] px-[80px] absolute z-[10]">
+            <div className="max-w-[1440px] w-[100%] h-[810px] px-[80px] absolute z-[-1]">
 
-            <div className="w-[303px] h-[326px] absolute  bottom-[32px]">
-                <Image src={image1} alt='person'/>
-            </div>
+                <div className="w-[303px] h-[326px] absolute  bottom-[32px]">
+                    <Image src={image1} alt='person'/>
+                </div>
 
-            <div className="w-[345px] h-[330px] absolute right-[80px] bottom-[81px]">
-                <Image src={image3} alt='person'/>
-            </div>
+                <div className="w-[345px] h-[330px] absolute right-[80px] bottom-[81px]">
+                    <Image src={image3} alt='person'/>
+                </div>
 
-            <div className="w-[115px] h-[166px] absolute xl:right-[349px] right-[160px] top-[132px]">
-                <Image src={image4} alt='person'/>
-            </div>
+                <div className="w-[115px] h-[166px] absolute xl:right-[349px] right-[160px] top-[132px]">
+                    <Image src={image4} alt='person'/>
+                </div>
 
-            <div className="w-[115px] h-[166px] absolute xl:left-[256px] top-[112px] left-[160px]">
-                <Image src={image2} alt='person'/>
-            </div>
+                <div className="w-[115px] h-[166px] absolute xl:left-[256px] top-[112px] left-[160px]">
+                    <Image src={image2} alt='person'/>
+                </div>
 
-            </div>
+                </div>
 
             <div className="w-[1440px] h-[810px]  absolute z-[-2]">
 
-            <div className="absolute top-[335px] left-[-70px]">
-                <Image src={retangle1} alt="Picture of the author" />
-            </div>
+                <div className="absolute top-[335px] left-[-70px]">
+                    <Image src={retangle1} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute top-[373px] left-[250px]">
-                <Image src={retangle2} alt="Picture of the author" />
-            </div>
+                <div className="absolute top-[373px] left-[250px]">
+                    <Image src={retangle2} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute top-[277px] right-[160px]">
-                <Image src={retangle3} alt="Picture of the author" />
-            </div>
+                <div className="absolute top-[277px] right-[160px]">
+                    <Image src={retangle3} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute top-[179px] right-[-30px]">
-                <Image src={retangle4} alt="Picture of the author" />
-            </div>
+                <div className="absolute top-[179px] right-[-30px]">
+                    <Image src={retangle4} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute bottom-[91px] right-[427px]">
-                <Image src={retangle5} alt="Picture of the author" />
-            </div>
+                <div className="absolute bottom-[91px] right-[427px]">
+                    <Image src={retangle5} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute bottom-[147px] left-[553px]">
-                <Image src={retangle6} alt="Picture of the author" />
-            </div>
+                <div className="absolute bottom-[147px] left-[553px]">
+                    <Image src={retangle6} alt="Picture of the author" />
+                </div>
 
-            <div className="absolute top-[108px] right-[571px]">
-                <Image src={retangle7} alt="Picture of the author" />
-            </div>
+                <div className="absolute top-[108px] right-[571px]">
+                    <Image src={retangle7} alt="Picture of the author" />
+                </div>
             </div>
 
         </section>
