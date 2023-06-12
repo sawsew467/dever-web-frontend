@@ -9,12 +9,12 @@ import ProductsOne from '@pageImage/home/product/image1.png'
 import ProductsTwo from '@pageImage/home/product/image2.png'
 import ProductsThree from '@pageImage/home/product/image3.png'
 import ProductsFour from '@pageImage/home/product/image4.png'
-import Vector from "@pageImage/home/product/Vector.svg"
+import Vector from "@pageImage/home/product/longWave.svg"
 
 
 function Product() {
     return (
-       <section className='w-screen h-fit flex justify-center items-center relative'>
+       <section className='w-screen h-fit flex justify-center items-center relative mb-20' >
             
             <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px] flex justify-between relative'>
 
@@ -68,7 +68,7 @@ function Product() {
             {/* <div className='w-[2000px] h-full object-fill absolute left-0 right-0 bottom-0 z-[-1]'>
                     
             </div> */}
-            <Image src={Vector} className='w-[100vw]  absolute right-0 left-0 bottom-0 z-[-1]'  alt='Vector'/>
+            <Image src={Vector} className='absolute right-0 bottom-0 z-[-1] max-w-fit'  alt='Vector'/>
 
       </section>
     )
