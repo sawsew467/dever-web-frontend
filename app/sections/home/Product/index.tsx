@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import SectionTittle from '@/app/components/SectionTittle'
-import Button from '@/components/Button'
+
 
 import ProductsOne from '@pageImage/home/product/image1.png'
 import ProductsTwo from '@pageImage/home/product/image2.png'
@@ -58,7 +58,7 @@ function Product() {
                     </div>
 
                     <div className='mt-[40px] w-[186px] h-[51px] border-[3px] relative border-black '>
-                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-16px] right-[-16px] hover:translate-x-[-13.5px] hover:translate-y-[13.5px] transition'><p>Explore Projects</p></button>
+                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-16px] right-[-16px]  transition'><p>Explore Projects</p></button>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@ function Product() {
             {/* <div className='w-[2000px] h-full object-fill absolute left-0 right-0 bottom-0 z-[-1]'>
                     
             </div> */}
-            <Image src={Vector} className='w-[100vw]  absolute right-0 left-0 bottom-0 z-[-1]'  alt='Vector'/>
+            <Image src={Vector} className='w-[100vw] absolute right-0 left-0 bottom-0 z-[-1] '  alt='Vector'/>
 
       </section>
     )
