@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface ButtonProps {
+// interface ButtonProps {
 
-}
+// }
 
 const Button = () => {
   return (
