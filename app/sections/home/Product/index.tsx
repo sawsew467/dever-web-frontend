@@ -68,9 +68,9 @@ function Product() {
                     <div className='mt-[171px]'>
                         <div className='font-[400] text-16px leading-[19px] text-[#FFFFFF]'><p>Follow FU-DEVER</p></div>
                         <div className='mt-[12px] w-[136px] flex flex-row justify-between'>
-                            <a href="#"><Image src={Facebook} alt='Facebook'/></a>
-                            <a href="#"><Image src={Github} alt='Github'/></a>
-                            <a href="#"><Image src={Tiktok} alt='Tiktok'/></a>
+                            <a href="https://www.facebook.com/FPTUDever"><Image src={Facebook} alt='Facebook'/></a>
+                            <a href=""><Image src={Github} alt='Github'/></a>
+                            <a href="https://www.tiktok.com/@daihocfptdanang"><Image src={Tiktok} alt='Tiktok'/></a>
                         </div>
                     </div>
                 </div>
