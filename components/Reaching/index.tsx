@@ -22,14 +22,14 @@ function Reaching() {
   return (
     <div className="w-screen bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
       <div className="max-w-[1440px] mx-auto px-[80px] py-[40px] flex justify-between">
-        {
-            data.map((item)=>(
-                <div className="flex flex-col items-center">
-                    <a className="text-[40px] font-[700] h-[48px]">{item.number}</a>
-                    <a className="text-[32px] font-[700] mt-[8px] h-[39px]">{item.tittle}</a>
-                </div>
-            ))
-        }
+        {data.map((item, Introduction) => (
+          <div className="flex flex-col items-center" key={Introduction}>
+            <a className="text-[40px] font-[700] h-[48px]">{item.number}</a>
+            <a className="text-[32px] font-[700] mt-[8px] h-[39px]">
+              {item.tittle}
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

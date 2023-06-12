@@ -14,12 +14,12 @@ function Introduction() {
             <a className="text-[#0098FF] text-[40px] font-[700] h-[48px] flex items-center">
               WHO WE ARE?
             </a>
-            <a className="text-[#22181C] text-[28px] h-[34px] flex items-center">
+            <a className="text-[#22181C] text-[28px] h-[34px] flex items-center mt-[4px]">
               About our establishment and growth
             </a>
           </div>
-          <div className=" pt-[28px]">
-            <a className="text-[16px]">
+          <div className=" pt-[28px] text-[16px]">
+            <p className=" m-0 p0">
               Welcome to FU-DEVER, the programming club of FPT University! . At
               FU-DEVER, we strive to foster a vibrant community of aspiring
               programmers and provide a platform for skill development and
@@ -40,7 +40,7 @@ function Introduction() {
               fostering innovation, FU-DEVER has become a hub of knowledge and
               inspiration, leaving a lasting impact on the university's
               programming landscape.
-            </a>
+            </p>
           </div>
         </div>
         <div className="w-[597px] flex items-end">
