@@ -18,7 +18,7 @@ import Tiktok from '@pageImage/home/icon/Tiktok.svg'
 
 function Product() {
     return (
-       <section className='w-screen h-fit flex justify-center items-center relative' >
+       <section className='w-screen h-fit flex justify-center items-center relative mb-[1px]' >
             
             <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px] flex justify-between relative'>
 
@@ -62,7 +62,7 @@ function Product() {
                     </div>
 
                     <div className='mt-[40px] w-[186px] h-[51px] border-[3px] relative border-black '>
-                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-18px] right-[-19px]  transition'><p>Explore Projects</p></button>
+                        <button className='px-[32px] py-[16px] bg-primary absolute text-[#FFFFFF] font-[400] text-[16px] leading-[19px] top-[-22px] right-[-19px]  transition'><p>Explore Projects</p></button>
                     </div>
 
                     <div className='mt-[171px]'>
