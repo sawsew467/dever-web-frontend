@@ -19,7 +19,7 @@ function SectionTittle({tittle, subtittle, textPosition}: TittlePros) {
                 }}
             >
                 <h2 className='font-[700] text-[40px] leading-[48px] text-[#0098FF]'>{tittle.toUpperCase()}</h2>
-                <h3 className='font-[400] text-[28px] leading-[32px text-[#22181C]'>{subtittle}</h3>
+                <h3 className='font-[400] text-[28px] leading-[34px] text-[#22181C] mt-[4px]'>{subtittle}</h3>
             </div>
             <div className={`w-[10px] h-[86px] bg-[#FF0000]`}
             style={{
