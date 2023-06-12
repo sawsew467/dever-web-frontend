@@ -9,7 +9,7 @@ function Member() {
   return (
      <div className="max-w-[1440px]  mt-[120px] mx-[auto]">
         <Banner />
-        <section className=" bg-[#FAFBFC] mt-[60px]  flex flex-col">
+        <section className=" bg-[#FAFBFC]   flex flex-col">
         <ListLeaderMember />
         <ListMember />
         </section>

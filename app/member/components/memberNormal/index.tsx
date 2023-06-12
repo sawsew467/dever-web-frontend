@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import LiListMember from "../../include/List/LiListMember";
+import LiListMember from "../../include/List/LiListLeaderMember";
 import fillter from "../../../../assets/images/pages/member/leader/filter.svg"
 import vector from "../../../../assets/images/pages/member/normal/vector.svg"
 const ListMember = () => {
   return (
-    <article className="mt-[65px] mx-[80px]">
-      <div className=" justify-between relative flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
+    <article className=" mx-[80px]">
+      <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
         <div className="w-[100%] ml-[20px]  ">
           <h3
             className="mb-[4px] uppercase text-[#0098FF]  leading-[48px] xl:text-[40px] font-[800] h-[48px] w-[auto] 
@@ -16,14 +16,16 @@ const ListMember = () => {
           </h3>
           <p className="">About our establishment and growth</p>
         </div>
-        <button className="group w-[auto] h-[31px] bg-[#D9D9D9AB] rounded-[4px] border-0 flex justify-around items-center   ">
-          <Image src={fillter} alt="button fillter" className=" ml-[9px] mr-[5px] " />
-          <p className=" font-[600] py-[6px] pr-[9px] ">
-            Filters
-          </p>
+        <button className="gap-[4px] group w-[auto] h-[35px] px-[16px] py-[8px] bg-[#D9D9D9AB] rounded-[4px] border-0 flex justify-around items-center   ">
+          <Image
+            src={fillter}
+            alt="button fillter"
+            className="  "
+          />
+          <p className=" font-[600]  ">Filters</p>
         </button>
       </div>
-      <ul className="lg:gap-[65px] sm:gap-[10px] gap-[5px] mt-[36px]  flex flex-wrap lg:justify-between justify-center">
+      <ul className="lg:gap-[40px] sm:gap-[10px] gap-[5px] mt-[28px]  flex flex-wrap lg:justify-between justify-center">
         <LiListMember />
         <LiListMember />
         <LiListMember />
