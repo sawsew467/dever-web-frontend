@@ -24,24 +24,24 @@ function Product() {
 
                 <div className='max-w-[610px] w-[100%] h-[610px] flex flex-wrap gap-[50px]'>
                     <div className='w-[calc(100%-50px)/2] bg-[#FFFFFF] pt-[20px] px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative'>    
-                        <Image src={ProductsOne} alt='Product Image'/>
+                        <Image src={ProductsOne} className='w-[200px]' alt='Product Image'/>
                         <h3 className='mt-2 font-[400] text-[20px] leading-[28px]'>2D Game</h3>
                         <div className='w-[100%] h-[100%] absolute bg-[#FFFFFF] top-0 left-0 z-[-1] blur-[4px]'></div>
                     </div>  
                     <div className='w-[calc(100%-50px)/2] bg-[#FFFFFF] pt-[20px] px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative'>    
-                        <Image src={ProductsTwo} alt='Product Image'/>
+                        <Image src={ProductsTwo} className='w-[200px]' alt='Product Image'/>
                         <h3 className='mt-2 font-[400] text-[20px] leading-[28px]'>Web App</h3>
                         <div className='w-[100%] h-[100%] absolute bg-[#FFFFFF] top-0 left-0 z-[-1] blur-[4px]'></div>
 
                     </div>  
                     <div className='w-[calc(100%-50px)/2] bg-[#FFFFFF] pt-[20px] px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative'>    
-                        <Image src={ProductsThree} alt='Product Image'/>
+                        <Image src={ProductsThree} className='w-[200px]' alt='Product Image'/>
                         <h3 className='mt-2 font-[400] text-[20px] leading-[28px]'>Mobile App</h3>
                         <div className='w-[100%] h-[100%] absolute bg-[#FFFFFF] top-0 left-0 z-[-1] blur-[4px]'></div>
 
                     </div>  
                     <div className='w-[calc(100%-50px)/2] bg-[#FFFFFF] pt-[20px] px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative'>    
-                        <Image src={ProductsFour} alt='Product Image'/>
+                        <Image src={ProductsFour} className='w-[200px]' alt='Product Image'/>
                         <h3 className='mt-2 font-[400] text-[20px] leading-[28px]'>Model AI</h3>
                         <div className='w-[100%] h-[100%] absolute bg-[#FFFFFF] top-0 left-0 z-[-1] blur-[4px]'></div>
                     </div>    
