@@ -22,12 +22,13 @@ const Blogs = () => {
                 DEVER PROJECT BLOG
               </div>
             </div>
-            <div className=" w-[548px] h-[96px] text-[20px] text-black leading-[24px] font-normal ">
+            <div className="w-[548px] h-[96px] text-[20px] text-black leading-[24px] font-normal">
               Dive into the world of coding, problem-solving, and tech with
-              like-minded peers. Whether you're a beginner or an experienced
-              programmer. Join us and unlock the limitless potential of
-              programming!
+              like-minded peers. Whether you&apos;re a beginner or an
+              experienced programmer. Join us and unlock the limitless potential
+              of programming!
             </div>
+
             <div className="absolute top-[219px] ">
               <div className="absolute bg-white top-[16px] w-[167px] h-[51px] border-solid border-[3px] border-black "></div>
               <div className="absolute left-[-16px] text-white bg-primary w-[167px] h-[51px] py-[16px] px-[32px] flex items-center justify-center  ">
