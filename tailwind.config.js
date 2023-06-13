@@ -10,7 +10,7 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       clipPath: {
         myPolygon: "polygon(0% 10.2%, 100% 0%, 100% 80%, 9.26% 90%, 0% 100%)",
@@ -19,7 +19,6 @@ module.exports = {
       colors: {
         'primary': '#0098FF',
         'highlight':'FF0000',
-        'black':'#22181C',
       },
     },
   },

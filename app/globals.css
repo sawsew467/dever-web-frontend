@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -29,4 +30,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.stroke-text
+{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  color :  #0098FF;
 }
