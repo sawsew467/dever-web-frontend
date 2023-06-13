@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "../../../../assets/images/pages/home/banner/Group1.png";
-import image2 from "../../../../assets/images/pages/home/banner/Group2.png";
-import image3 from "../../../../assets/images/pages/home/banner/Group3.png";
-import image4 from "../../../../assets/images/pages/home/banner/Group4.png";
-import retangle1 from "../../../../assets/images/pages/home/banner/svg/Rectangle 7.svg";
-import retangle2 from "../../../../assets/images/pages/home/banner/svg/Rectangle 8.svg";
-import retangle3 from "../../../../assets/images/pages/home/banner/svg/Rectangle 9.svg";
-import retangle4 from "../../../../assets/images/pages/home/banner/svg/Rectangle 10.svg";
-import retangle5 from "../../../../assets/images/pages/home/banner/svg/Rectangle 11.svg";
-import retangle6 from "../../../../assets/images/pages/home/banner/svg/Rectangle 12.svg";
-import retangle7 from "../../../../assets/images/pages/home/banner/svg/Rectangle 13.svg";
+import image1 from "@pageImage/home/banner/Group2.png";
+import image2 from "@pageImage/home/banner/Group2.png";
+import image3 from "@pageImage/home/banner/Group3.png";
+import image4 from "@pageImage/home/banner/Group4.png";
+import retangle1 from "@pageImage/home/banner/svg/Rectangle 7.svg";
+import retangle2 from "@pageImage/home/banner/svg/Rectangle 8.svg";
+import retangle3 from "@pageImage/home/banner/svg/Rectangle 9.svg";
+import retangle4 from "@pageImage/home/banner/svg/Rectangle 10.svg";
+import retangle5 from "@pageImage/home/banner/svg/Rectangle 11.svg";
+import retangle6 from "@pageImage/home/banner/svg/Rectangle 12.svg";
+import retangle7 from "@pageImage/home/banner/svg/Rectangle 13.svg";
 
 function Banner() {
   return (
@@ -19,7 +19,7 @@ function Banner() {
         <div className="max-w-[1440px] w-[100%] px-[80px] h-[100%] flex justify-center items-center">
           <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-37px] ">
             <h1
-              className={`relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[54px] leading-[48px]`}
+              className={`stroke-black relative text-[#0098FF] text-[40px] flex justify-center items-center font-[700] after:content-[' '] after:w-[120px] after:h-[5px] after:bg-[red] after:absolute after:top-[54px] leading-[48px]`}
             >
               FU-DEVER
             </h1>

@@ -21,6 +21,9 @@
     ],
     "paths": {
       "@/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@pageImage/*": ["./assets/images/pages/*"],
+      "@images/*": ["./assets/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

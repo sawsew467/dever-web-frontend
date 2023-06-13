@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Background from "../../assets/images/pages/blogs/banner.png";
-import Cricle from "../../assets/images/pages/blogs/cricle.svg";
-import Human from "../../assets/images/pages/blogs/human.svg";
+import Background from "@pageImage/blogs/banner.png";
+import Cricle from "@pageImage/blogs/cricle.svg";
+import Human from "@pageImage/blogs/human.svg";
 const Blogs = () => {
   return (
     <div className="w-screen h-[2000px] relative">
