@@ -1,46 +1,37 @@
 import React from "react";
 import Image from "next/image";
 import Background from "../../assets/images/pages/blogs/banner.png";
-import Cricle from "../../assets/images/pages/blogs/cricle.svg";
-import Human from "../../assets/images/pages/blogs/human.svg";
-import Button from "@/components/Button";
+import Model from "../../assets/images/pages/blogs/model.png";
 const Blogs = () => {
   return (
-    <div className="w-screen h-[2000px] relative">
+    <div className="w-screen h-screen relative">
       <Image
         src={Background}
         alt="background effect"
-        className="absolute w-[100%] max-h-[720px]"
+        className="absolute w-[100%] h-[100%] max-h-[720px]"
       ></Image>
-      <div className="bg-[#F1F6FA] border-[2px] border border-solid border-gray-200 absolute w-screen h-[1000px] top-[431px] opacity-50 "></div>
-      <div className="max-w-[1440px] mx-auto  flex-row justify-between items-center">
-        <div className="relative">
-            <div className=" bg-[#F7F9FB] absolute h-[720px] w-[13%] max-h-[720px]  opacity-50 right-[-14.8%] top-0"></div>
-            <Image
-                src={Cricle}
-                alt="big cricle"
-                className=" absolute w-[434px] h-[720px] opacity-50 right-[-3%] top-0 "
-            ></Image>
-          <div className="px-[80px]">
-            <div className="relative w-full top-[164px]">
-              <div className="absolute w-[351px] h-[230px]  space-y-[30px]">
-                <div className="w-[100%] text-[40px] font-semibold leading-[48px] text-primary">
-                  DEVER PROJECT BLOG
-                </div>
-                <div className="text-[24px] leading-[29px] font-normal text-gray-800 text-opacity-50">
-                  WE WANT TO INSPIRE PEOPLE
-                </div>
-                <Button></Button>
-              </div>
-
-              <Image
-                  src={Human}
-                  alt="dever model"
-                  className=" absolute right-0 w-[382px] h-[342px]"
-                ></Image>
+      <div className="max-w-[1440px] mx-auto  flex-row justify-between items-center px-[60px] relative ">
+        <div className="absolute space-y-[20px] top-[209px] left-0 ">
+          <div className="space-y-[12px]">
+            <div className=" text-[32px] font-black leading-[39px] text-black " >
+              EXPLORE ABOUT
+            </div>
+            <div className="w-[100%] text-[40px] font-black leading-[48px] text-primary">
+              DEVER PROJECT BLOG
+            </div>
+          </div>
+          <div className=" w-[548px] h-[96px] text-[20px] text-black leading-[24px] font-normal ">
+             Dive into the world of coding, problem-solving, and tech with like-minded peers. Whether you're a beginner or an experienced programmer. Join us and unlock the limitless potential of programming!
+          </div>
+          <div className="absolute">
+          <div className="absolute bg-white top-[16px] w-[167px] h-[51px] border-solid border-[3px] border-black ">
+            </div>
+            <div className="absolute left-[-16px] text-white bg-primary w-[167px] h-[51px] py-[16px] px-[32px] flex items-center justify-center  ">
+              View projects
             </div>
           </div>
         </div>
+        <Image src={Model} alt="model dever blogs" className="absolute top-[120px] right-0"></Image>
       </div>
     </div>
   );
