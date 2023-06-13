@@ -35,9 +35,9 @@ const ListMember = () => {
         <LiListMember />
         <LiListMember />
       </ul>
-      <div className="mx-[auto] my-[65px]">
-        <ul className="gap-[16px] flex justify-center font-['Inter'] not-italic ">
-          <li className="mx-[5px]">
+      <div className="mx-[auto] my-[40px]">
+        <ul className="gap-[16px] flex justify-center ">
+          <li className="">
             <button className=" sm:text-[16px] text-[12px] rounded-[2px] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               <Image
                 src={vector}
@@ -46,27 +46,27 @@ const ListMember = () => {
               />
             </button>
           </li>
-          <li className="mx-[5px]">
+          <li className="">
             <button className=" sm:text-[16px] text-[12px] rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               1
             </button>
           </li>
-          <li className="mx-[5px]">
+          <li className="">
             <button className=" sm:text-[16px] text-[12px] rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               2
             </button>
           </li>
-          <li className="mx-[5px]">
+          <li className="">
             <button className=" sm:text-[16px] text-[12px] rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff] mx-[auto] mt-[auto] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               3
             </button>
           </li>
-          <li className="mx-[5px]">
+          <li className="">
             <button className=" sm:text-[16px] text-[12px] rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               4
             </button>
           </li>
-          <li className="mx-[5px]">
+          <li className="">
             <button className=" rotate-180  text-[12px] sm:text-[16px] rounded-[2px] lg:w-[40px] lg:h-[40px] sm:w-[30px] sm:h-[30px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
               <Image
                 src={vector}

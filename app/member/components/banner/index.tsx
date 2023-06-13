@@ -66,9 +66,9 @@ const TopTypical = () => {
         <p className="mt-[40px]  text-[#0065A9] not-italic font-[600] text-[20px] leading-[23px]">
           Each member is a small part in the successful development of the club.
         </p>
-        <div className="mt-[12px] mb-[21px] mx-[auto]  w-[80%] bg-[#0098FF] h-[6.18px] "></div>
+        <div className=" my-[12px] mx-[auto]  w-[80%] bg-[#0098FF] h-[6.18px] "></div>
         <Image
-          className="mx-[auto] my-[20px]"
+          className="mx-[auto] mb-[12px] "
           src={group1498}
           alt="{group1498 }"
         ></Image>
