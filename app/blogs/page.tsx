@@ -3,7 +3,6 @@ import Image from "next/image";
 import Background from "../../assets/images/pages/blogs/banner.png";
 import Cricle from "../../assets/images/pages/blogs/cricle.svg";
 import Human from "../../assets/images/pages/blogs/human.svg";
-import Button from "@/components/Button";
 const Blogs = () => {
   return (
     <div className="w-screen h-[2000px] relative">
@@ -12,7 +11,7 @@ const Blogs = () => {
         alt="background effect"
         className="absolute w-[100%] max-h-[720px]"
       ></Image>
-      <div className="bg-[#F1F6FA] border-[2px] border border-solid border-gray-200 absolute w-screen h-[1000px] top-[431px] opacity-50 "></div>
+      <div className="bg-[#F1F6FA] border-[2px] border-solid border-gray-200 absolute w-screen h-[1000px] top-[431px] opacity-50 "></div>
       <div className="max-w-[1440px] mx-auto  flex-row justify-between items-center">
         <div className="relative">
             <div className=" bg-[#F7F9FB] absolute h-[720px] w-[13%] max-h-[720px]  opacity-50 right-[-14.8%] top-0"></div>
@@ -30,7 +29,11 @@ const Blogs = () => {
                 <div className="text-[24px] leading-[29px] font-normal text-gray-800 text-opacity-50">
                   WE WANT TO INSPIRE PEOPLE
                 </div>
-                <Button></Button>
+                <button
+      className='flex bg-primary py-[6px] px-[32px] justify-center items-center w-[117px] h-[52px] text-[16px] font-normal text-white'
+    >
+        Explore
+    </button>
               </div>
 
               <Image

@@ -1,23 +1,37 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import introduction from "../../assets/images/pages/home/introduction/introduce.png";
+import introduction from "@pageImage/home/introduction/introduce.png";
+import SectionTittle from "@/components/SectionTittle";
 
 function Introduction() {
+  const data = [
+    {
+      number: "100+",
+      tittle: "Members",
+    },
+    {
+      number: "5+",
+      tittle: "Years grow",
+    },
+    {
+      number: "10+",
+      tittle: "Projects",
+    },
+    {
+      number: "20+",
+      tittle: "Prizes",
+    },
+  ];
   return (
     <div className="w-screen bg-[#F8FCFF]  text-[#000000]">
-      {/* h-[250px] */}
       <div className="max-w-[1440px] mx-auto px-[80px] py-[60px] flex justify-between">
-        {/* who we are */}
         <div className="w-[607px]">
-          <div className="flex flex-col border-l-8 border-l-[#FF0000] pl-[12px]">
-            <a className="text-[#0098FF] text-[40px] font-[700] h-[48px] flex items-center">
-              WHO WE ARE?
-            </a>
-            <a className="text-[#22181C] text-[28px] h-[34px] flex items-center mt-[4px]">
-              About our establishment and growth
-            </a>
-          </div>
+          <SectionTittle
+            tittle="who are we"
+            subtittle="About our establishment and growth"
+            textPosition="left"
+          ></SectionTittle>
           <div className=" pt-[28px] text-[16px]">
             <p className=" m-0 p0">
               Welcome to FU-DEVER, the programming club of FPT University! . At
@@ -49,6 +63,18 @@ function Introduction() {
             src={introduction}
             alt="Picture of the author"
           />
+        </div>
+      </div>
+      <div className="w-screen bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
+        <div className="max-w-[1440px] w-[100%] mx-auto px-[80px] py-[40px] flex justify-between">
+          {data.map((item, Introduction) => (
+            <div className="flex flex-col items-center" key={Introduction}>
+              <a className="text-[40px] font-[700] h-[48px]">{item.number}</a>
+              <a className="text-[32px] font-[700] mt-[8px] h-[39px]">
+                {item.tittle}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </div>
