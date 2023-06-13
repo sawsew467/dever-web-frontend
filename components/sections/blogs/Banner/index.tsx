@@ -9,7 +9,7 @@ const Blogs = () => {
       <Image
         src={Background}
         alt="background effect"
-        className="absolute w-[100%] h-[100%] max-h-[720px]"
+        className="absolute w-[100%] h-[100%] max-h-[588px]"
       ></Image>
       <div className="max-w-[1440px] w-[100%] mx-auto flex-row justify-between items-center px-[80px]">
         <div className="relative">
@@ -28,7 +28,7 @@ const Blogs = () => {
               programmer. Join us and unlock the limitless potential of
               programming!
             </div>
-            <div className="absolute">
+            <div className="absolute top-[219px] ">
               <div className="absolute bg-white top-[16px] w-[167px] h-[51px] border-solid border-[3px] border-black "></div>
               <div className="absolute left-[-16px] text-white bg-primary w-[167px] h-[51px] py-[16px] px-[32px] flex items-center justify-center  ">
                 View projects
@@ -38,7 +38,7 @@ const Blogs = () => {
           <Image
             src={Model}
             alt="model dever blogs"
-            className="absolute top-[120px] right-0"
+            className="absolute top-[120px] right-0 max-w-[50%] "
           ></Image>
         </div>
       </div>
