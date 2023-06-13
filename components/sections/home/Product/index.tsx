@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import SectionTittle from "@/components/SectionTittle";
-import ProductsOne from "@pageImage/home/product/image1.png";
-import ProductsTwo from "@pageImage/home/product/image2.png";
-import ProductsThree from "@pageImage/home/product/image3.png";
-import ProductsFour from "@pageImage/home/product/image4.png";
-import Vector from "@pageImage/home/product/longWave.svg";
-import Facebook from "@pageImage/home/icon/Facebook.svg";
-import Github from "@pageImage/home/icon/Github.svg";
-import Tiktok from "@pageImage/home/icon/Tiktok.svg";
+import ProductsOne from "../../../../assets/images/pages/home/product/image1.png";
+import ProductsTwo from "../../../../assets/images/pages/home/product/image2.png";
+import ProductsThree from "../../../../assets/images/pages/home/product/image3.png";
+import ProductsFour from "../../../../assets/images/pages/home/product/image4.png";
+import Vector from "../../../../assets/images/pages/home/product/longWave.svg";
+import Facebook from "../../../../assets/images/pages/home/icon/Facebook.svg";
+import Github from "../../../../assets/images/pages/home/icon/Github.svg";
+import Tiktok from "../../../../assets/images/pages/home/icon/Tiktok.svg";
 
 function Product() {
   return (
