@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Background from "../../../../assets/images/pages/blogs/banner.png";
-import Model from "../../../../assets/images/pages/blogs/model.png";
+import Background from "@pageImage/blogs/banner.png";
+import Model from "@pageImage/blogs/model.png";
 import "../../../../app/globals.css";
 const Blogs = () => {
   return (
