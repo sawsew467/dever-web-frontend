@@ -33,8 +33,12 @@ body {
 }
 
 .stroke-text
-{
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  color :  #0098FF;
-}
+ {
+     color: white;
+     text-shadow:
+         1px 1px 0 #0098FF,
+       -1px -1px 0 #0098FF,  
+        1px -1px 0 #0098FF,
+        -1px 1px 0 #0098FF,
+         1px 1px 0 #0098FF;
+  }
