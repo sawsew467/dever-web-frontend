@@ -3,7 +3,6 @@ import Image from "next/image";
 import Background from "../../assets/images/pages/blogs/banner.png";
 import Cricle from "../../assets/images/pages/blogs/cricle.svg";
 import Human from "../../assets/images/pages/blogs/human.svg";
-import Button from "@/components/Button";
 const Blogs = () => {
   return (
     <div className="w-screen h-[2000px] relative">
@@ -30,7 +29,11 @@ const Blogs = () => {
                 <div className="text-[24px] leading-[29px] font-normal text-gray-800 text-opacity-50">
                   WE WANT TO INSPIRE PEOPLE
                 </div>
-                <Button></Button>
+                <button
+      className='flex bg-primary py-[6px] px-[32px] justify-center items-center w-[117px] h-[52px] text-[16px] font-normal text-white'
+    >
+        Explore
+    </button>
               </div>
 
               <Image
