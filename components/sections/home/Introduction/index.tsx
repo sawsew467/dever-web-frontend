@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import introduction from "../../../../assets/images/pages/home/introduction/introduce.png";
+import introduction from "@pageImage/home/introduction/introduce.png";
 import SectionTittle from "@/components/SectionTittle";
 
 function Introduction() {
@@ -40,7 +39,7 @@ function Introduction() {
               collaboration.
               <br></br>
               <br></br>
-              Whether you're a beginner or an experienced programmer seeking to
+              Whether you&apos;re a beginner or an experienced programmer seeking to
               expand your knowledge, our club offers a range of activities,
               including coding challenges, workshops, and coding competitions.
               <br></br>
@@ -52,7 +51,7 @@ function Introduction() {
               <br></br>
               Through organizing larger events, hosting esteemed speakers, and
               fostering innovation, FU-DEVER has become a hub of knowledge and
-              inspiration, leaving a lasting impact on the university's
+              inspiration, leaving a lasting impact on the university&apos;s
               programming landscape.
             </p>
           </div>

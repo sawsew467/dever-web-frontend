@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import logodever1 from "../../assets/images/footer/logodever1.svg";
-import facebookLogo from "../../assets/images/footer/facebook-box-fill.svg";
-import githubLogo from "../../assets/images/footer/github-fill.svg";
-import tiktokLogo from "../../assets/images/footer/Tiktok.svg";
-import mail from "../../assets/images/footer/mail-line.svg";
-import phone from "../../assets/images/footer/phone-line.svg";
-import mapPin from "../../assets/images/footer/map-pin-line.svg";
-import fudever from "../../assets/images/footer/FU-DEVER.svg";
+import logodever1 from "@images/footer/logodever1.svg";
+import facebookLogo from "@images/footer/facebook-box-fill.svg";
+import githubLogo from "@images/footer/github-fill.svg";
+import tiktokLogo from "@images/footer/Tiktok.svg";
+import mail from "@images/footer/mail-line.svg";
+import phone from "@images/footer/phone-line.svg";
+import mapPin from "@images/footer/map-pin-line.svg";
+import fudever from "@images/footer/FU-DEVER.svg";
 import Link from "next/link";
 
 function Footer() {
