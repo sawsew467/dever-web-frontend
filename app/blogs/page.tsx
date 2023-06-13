@@ -12,15 +12,15 @@ const Blogs = () => {
         alt="background effect"
         className="absolute w-[100%] max-h-[720px]"
       ></Image>
-      <div className="bg-[#F1F6FA] border-[2px] border border-solid border-gray-200 absolute w-screen h-[1000px] top-[431px] opacity-50 "></div>
+      <div className="bg-[#F1F6FA] border-[2px]  border-solid border-gray-200 absolute w-screen h-[1000px] top-[431px] opacity-50 "></div>
       <div className="max-w-[1440px] mx-auto  flex-row justify-between items-center">
         <div className="relative">
-            <div className=" bg-[#F7F9FB] absolute h-[720px] w-[13%] max-h-[720px]  opacity-50 right-[-14.8%] top-0"></div>
-            <Image
-                src={Cricle}
-                alt="big cricle"
-                className=" absolute w-[434px] h-[720px] opacity-50 right-[-3%] top-0 "
-            ></Image>
+          <div className=" bg-[#F7F9FB] absolute h-[720px] w-[13%] max-h-[720px]  opacity-50 right-[-14.8%] top-0"></div>
+          <Image
+            src={Cricle}
+            alt="big cricle"
+            className=" absolute w-[434px] h-[720px] opacity-50 right-[-3%] top-0 "
+          ></Image>
           <div className="px-[80px]">
             <div className="relative w-full top-[164px]">
               <div className="absolute w-[351px] h-[230px]  space-y-[30px]">
@@ -34,10 +34,10 @@ const Blogs = () => {
               </div>
 
               <Image
-                  src={Human}
-                  alt="dever model"
-                  className=" absolute right-0 w-[382px] h-[342px]"
-                ></Image>
+                src={Human}
+                alt="dever model"
+                className=" absolute right-0 w-[382px] h-[342px]"
+              ></Image>
             </div>
           </div>
         </div>
