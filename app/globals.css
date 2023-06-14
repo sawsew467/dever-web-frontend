@@ -40,3 +40,14 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.stroke-text
+ {
+     color: white;
+     text-shadow:
+         1px 1px 0 #0098FF,
+       -1px -1px 0 #0098FF,  
+        1px -1px 0 #0098FF,
+        -1px 1px 0 #0098FF,
+         1px 1px 0 #0098FF;
+  }
