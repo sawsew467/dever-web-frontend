@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
-    <div className="w-screen fixed z-[1] bg-white/[0.8] backdrop-blur-sm">
+    <div className="left-0 right-0 top-0 fixed z-[1] bg-white/[0.8] backdrop-blur-sm">
       <div className="max-w-[1440px] mx-auto  h-[64px] flex justify-between items-center px-[80px]">
         <a href="/">
           <Image

@@ -20,6 +20,13 @@ module.exports = {
         'primary': '#0098FF',
         'highlight':'FF0000',
       },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50%': '50%',
+        '16': '4rem',
+      }
     },
   },
   plugins: [
