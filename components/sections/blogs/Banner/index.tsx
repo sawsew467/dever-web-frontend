@@ -3,6 +3,7 @@ import Image from "next/image";
 import Background from "@pageImage/blogs/banner.png";
 import Model from "@pageImage/blogs/model.png";
 import "../../../../app/globals.css";
+
 const Blogs = () => {
   return (
     <div className="w-screen h-screen relative">

@@ -9,8 +9,15 @@ import DelItem from '@pageImage/home/icon/close-line.svg'
 import daskedVector from '@pageImage/home/join/Vector 1.svg'
 import plan from '@pageImage/home/join/Group.svg'
 
+import pdfLogo from '@pageImage/home/join/pdf_318-148750.png'
+import mp4Logo from '@pageImage/home/join/mp4-file-logo.png'
+import ptsLogo from '@pageImage/home/join/PSD_file_icon.png'
+import aiLogo from '@pageImage/home/join/Ai-file-logo.png'
+import wordLogo from '@pageImage/home/join/docx_icon.svg.png'
+import powerpointLogo from '@pageImage/home/join/pptx_icon.png'
+
 function Join() {
-    const [selectedProfileFile, setSelectedProfileFile] = useState<File[]>([]);
+    const [selectedProfileFile, setSelectedProfileFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef(null)
 
@@ -20,16 +27,11 @@ function Join() {
     }
 
     const handleOnChangeSelectFile = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const files = event.target.files;
-        if(files) {
-            const fileList = Array.from(files);
-            const tempAcceptedFile: File[] = [];
-            fileList.forEach((value: File) => {
-                if(isValidFileType(value)) {
-                    tempAcceptedFile.push(value);
-                }
-            })
-            setSelectedProfileFile([...selectedProfileFile.concat(tempAcceptedFile)]);
+        const file = event.target.files && event.target.files[0];
+        if(file && isValidFileType(file)) {
+            setSelectedProfileFile(file);
+        } else {
+            setSelectedProfileFile(null);
         }
     }
 
@@ -45,18 +47,13 @@ function Join() {
     const handleDropFile = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
         setIsDragging(true);
-        const files = event.dataTransfer.files;
-
-        if(files) {
-            const fileList = Array.from(files);
-            const tempAcceptedFile: File[] = [];
-            fileList.forEach((value: File) => {
-                if(isValidFileType(value)) {
-                    tempAcceptedFile.push(value);
-                }
-            })
-            setSelectedProfileFile([...selectedProfileFile.concat(tempAcceptedFile)]);
         
+        const file = event.dataTransfer.files[0];
+
+        if(file && isValidFileType(file)) {
+            setSelectedProfileFile(file);
+        } else {
+            setSelectedProfileFile(null);
         }
         setIsDragging(false);
     };
@@ -82,9 +79,22 @@ function Join() {
         return acceptedTypes.includes(file.type);
     }
 
-    const handleDelectItem = (index: number) => {
-        const delectFiles = selectedProfileFile.filter((_,i: number) => i != index);
-        setSelectedProfileFile([...delectFiles]);
+    const handleDelectItem = () => {
+        setSelectedProfileFile(null)
+    }
+    const handleDisplayTypeOfResume = (file: File)  =>  {
+        if(file.type === 'application/pdf') return pdfLogo
+        if(file.type === 'image/vnd.adobe.photoshop') return ptsLogo
+        if(file.type === 'application/illustrator') return aiLogo
+        if(file.type === 'application/msword' || file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') return wordLogo
+        if(file.type === 'application/vnd.ms-powerpoint'|| file.type === 'application/vnd.openxmlformats-officedocument.presentationml.presentation') return powerpointLogo 
+        if(file.type === 'video/mp4') return mp4Logo
+        return ""
+    }
+
+    const handleOpentab = (file: File) => {
+        const url = URL.createObjectURL(file)
+        window.open(url, '_blank')
     }
     return (
         <section className='h-fit flex justify-center '>
@@ -111,29 +121,32 @@ function Join() {
 
                             >
                                 {
-                                    selectedProfileFile.length > 0  ? 
+                                    selectedProfileFile ? 
                                     (<> 
                                         <div className='absolute w-[100%] h-[100%] top-0 right-0 left-0 p-[20px] flex flex-row justify-between'>
-                                            <div className='w-[calc(100%-140px)] h-[100%] mr-[20px] flex flex-col overflow-auto   '>
-                                                {
-                                                    selectedProfileFile.map((value: File, index: number) => (
-                                                        <>
-                                                             <div className=' border-2 border-primary mb-[2px] flex flex-row justify-between'>
-                                                               <a href={URL.createObjectURL(value)} target='_blank' className=''> <p className='pl-[5px] w-[210px] text-ellipsis overflow-hidden whitespace-nowrap text-[#676767]'>{value.name}</p></a>
-                                                               <button className='w-[50px] h-fit flex justify-center items-center border-l-2 border-primary' onClick={() => handleDelectItem(index)}>
-                                                                <Image src={DelItem} alt=''/>
-                                                               </button>
-                                                             </div>
-                                                        </>
-                                                    ))
-                                                }
+                                            <div className='w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between'>
+                                                <Image src = {
+                                                    selectedProfileFile.type === "image/png" || selectedProfileFile.type === "image/jpeg" || selectedProfileFile.type === "image/gif" ? 
+                                                    URL.createObjectURL(selectedProfileFile) : handleDisplayTypeOfResume(selectedProfileFile)
+                                                } width={100} height={117} alt='file' className='object-cover w-[100px] h-[117px] rounded-md cursor-pointer'
+                                                    onClick={() => handleOpentab(selectedProfileFile)}
+                                                />
+                                                <div className='w-[140px] flex flex-col justify-between'>
+                                                    <div className='h-fit'>
+                                                            <h3 className='font-[700] text-primary'>File name: </h3>
+                                                            <h3 className='font-[400] text-primary whitespace-nowrap overflow-hidden text-ellipsis'>{selectedProfileFile.name}</h3>
+                                                    </div>
+                                                    <div className='h-fit'>
+                                                        <button className=' w-full py-[14px] px-[10px] border-2 border-primary border-opacity-1 font-[400] text-primary'
+                                                        onClick={handleDelectItem}
+                                                        >Cancle upload</button>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                             <div>
                                                 <input type="file" name='file' id='file' className='hidden' multiple ref={fileInputRef} onChange={handleOnChangeSelectFile} />
                                                 <label htmlFor='file' className='w-[140px] h-[100%] flex flex-col justify-center cursor-pointer items-center border-2 border-primary'>
-                                                    
-
                                                     {isDragging ? 
                                                     (<>
                                                         <div className='p-[20px] flex justify-center items-center'>
@@ -142,9 +155,8 @@ function Join() {
                                                     </>): 
                                                     (<> 
                                                         <Image src={UploadIcon} width={70} height={60} alt='icon' className='mt-[-1px] pointer-events-none'/>
-                                                        <h4 className='font-[700] text-primary '>Add more</h4>
+                                                        <h4 className='font-[700] text-primary '>Add other file</h4>
                                                     </>)}
-                                                    
                                                 </label>
                                             </div>
                                         </div>
