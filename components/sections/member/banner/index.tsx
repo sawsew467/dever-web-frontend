@@ -32,8 +32,8 @@ const TopTypical = () => {
   ]
      
   return (
-    <div className="lg:mx-[80px]">
-      <div className="flex flex-col text-center">
+    <article className="max-w-[1440px] mx-[auto]">
+      <div className="px-[80px] flex flex-col text-center">
         <h1
           className="font-[700] w-[500px] text-[#0098FF] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
        uppercase  text-[40px]  mx-[auto] not-italic  backdrog-blur-[2px]
@@ -73,7 +73,7 @@ const TopTypical = () => {
           alt="{group1498 }"
         ></Image>
       </div>
-    </div>
+    </article>
   );
 };
 

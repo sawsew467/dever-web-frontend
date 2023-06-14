@@ -1,11 +1,50 @@
 import React from "react";
 import Image from "next/image";
-import LiListMember from "../../include/List/LiListLeaderMember";
 import fillter from "../../../../assets/images/pages/member/leader/filter.svg"
 import vector from "../../../../assets/images/pages/member/normal/vector.svg"
+import avatar from "../../../../assets/images/pages/member/avatar/topface/avatar.png";
 const ListMember = () => {
+  const data=[
+    
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    },
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    },
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    },
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    }
+    ,
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    }
+    ,
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    }
+    ,
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    }
+    ,
+    {
+      url:'/assets/images/pages/member/avatar/topface/avatar.png',
+      title:"Trần văn bảo thắng"
+    }
+  ]
   return (
-    <article className=" mx-[80px]">
+    <article className="max-w-[1440px] mx-[auto] ">
       <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
         <div className="w-[100%] ml-[20px]  ">
           <h3
@@ -16,24 +55,53 @@ const ListMember = () => {
           </h3>
           <p className="">About our establishment and growth</p>
         </div>
-        <button className="gap-[4px] group w-[auto] h-[35px] px-[16px] py-[8px] bg-[#D9D9D9AB] rounded-[4px] border-0 flex justify-around items-center   ">
+        <button className="gap-[4px] group min-w-[93px] h-[35px] px-[16px] py-[8px] bg-[#D9D9D9AB] rounded-[4px] border-0 flex justify-around items-center   ">
           <Image
             src={fillter}
             alt="button fillter"
             className="  "
           />
-          <p className=" font-[600]  ">Filters</p>
+          <p className=" font-[600] mb-[2px] inline leading-[19px] ">Filter</p>
         </button>
       </div>
       <ul className="lg:gap-[40px] sm:gap-[10px] gap-[5px] mt-[28px]  flex flex-wrap lg:justify-between justify-center">
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
-        <LiListMember />
+      {data.map( (item , key)=> (
+          <li key={key} className=" cursor-pointer  relative">
+          <Image
+            width={290}
+            height={400}
+            className="object-cover rounded-tl-[20px] rounded-br-[20px] lg:w-[290px] lg:h-[400px] sm:w-[200px] sm:h-[300px] 
+                      w-[160px] h-[200px]"
+            alt=""
+            src={avatar}
+          ></Image>
+          <div className="h-[auto] absolute bottom-0 w-[100%]">
+            <div className="px-[32px] py-[6px] w-[93px] h-[32px] rounded-tl-[12px] relative left-[100%] m-0 translate-x-[-100%] bg-[#C69C6D]">
+                <p className="text-[16px] font-[700] text-[#ffffff] " >K17</p>
+            </div>
+            <div className="w-[100%] h-[118px] bg-primary rounded-br-[20px]">
+              <div className="ml-[20px] h-[100%] pt-[20px]">
+                <h4 className=" font-[700] h-[24px] lg:text-[20px] md:text-[15px] text-[12px] text-[#fff] ">
+                  Trần Văn Bảo Thắng
+                </h4>
+                <div className="mt-[12px] h-[auto] flex justify-between items-end ">
+                  <div className="mb-[20px]">
+                    <p className="font-[700] text-[14px]  leading-[17px] text-[#fff]">
+                      -DE170145
+                    </p>
+                    <p className="mt-[8px] font-[700] text-[14px]  leading-[17px] text-[#fff]">
+                      -Academic Member
+                    </p>
+                  </div>
+                  <h3 className="h-[24px] mr-[20px] mb-[20px] inline text-[#fff] font-[800] sm:text-[20px] text-[14px]">
+                    GEN 5
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        ) )}
       </ul>
       <div className="mx-[auto] my-[40px]">
         <ul className="gap-[16px] flex justify-center ">

@@ -1,15 +1,15 @@
 import React from "react";
 // import in include   
-import Banner from "./components/banner";
-import ListLeaderMember from "./components/memberLeader";
-import ListMember from "./components/memberNormal";
+import Banner from "../../components/sections/member/banner";
+import ListLeaderMember from "../../components/sections/member/memberLeader";
+import ListMember from "../../components/sections/member/memberNormal";
 // 
 
 function Member() {
   return (
-     <div className="max-w-[1440px]  mt-[120px] mx-[auto]">
+     <div className=" mt-[120px]">
         <Banner />
-        <section className=" bg-[#FAFBFC]   flex flex-col">
+        <section className=" bg-[#FAFBFC] px-[80px]  flex flex-col">
         <ListLeaderMember />
         <ListMember />
         </section>
