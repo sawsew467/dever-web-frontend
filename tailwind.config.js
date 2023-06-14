@@ -23,6 +23,13 @@ module.exports = {
       boxShadow: {
         'left-smooth': 'inset 20px 0px 20px -15px rgba(244, 247, 250, 0.75)',
       },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '50%': '50%',
+        '16': '4rem',
+      }
     },
   },
   plugins: [
