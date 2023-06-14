@@ -5,8 +5,7 @@ import React, { useState, useRef } from 'react'
 
 import Image from 'next/image'
 import UploadIcon from '@pageImage/home/icon/UploadIcon.svg'
-import DelItem from '@pageImage/home/icon/close-line.svg'
-import daskedVector from '@pageImage/home/join/Vector 1.svg'
+import dashedVector from '@pageImage/home/join/Vector 1.svg'
 import plan from '@pageImage/home/join/Group.svg'
 
 import pdfLogo from '@pageImage/home/join/pdf_318-148750.png'
@@ -34,7 +33,6 @@ function Join() {
             setSelectedProfileFile(null);
         }
     }
-
 
     const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
         event.preventDefault();
@@ -92,33 +90,27 @@ function Join() {
         return ""
     }
 
-    const handleOpentab = (file: File) => {
+    const handleOpenViewTab = (file: File) => {
         const url = URL.createObjectURL(file)
         window.open(url, '_blank')
     }
     return (
         <section className='h-fit flex justify-center '>
             <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px]'>
-
                 <div className='h-[646px] w-[100%] flex flex-col items-center relative'>
                     <div className='w-[731px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
                         <p className='text-center mt-[4px] font-[400] text-[26px] leading-[33px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
                     </div>
-
                     <div className='max-w-[462px] w-[100%] flex flex-col mt-[32px]'>
-
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
                         <input type="text" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
-
                         <div className='w-[100%] flex flex-col items-center  mt-[16px] z-[2]'>
                             <h3 className='font-[700] text-[20px] leading-[24px] text-[#0f0f0f]'>Upload CV</h3>
                             <div className='w-[462px] h-[157px] py-[20px] px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
-
                             onDrop={(e) => handleDropFile(e)}
                             onDragLeave={(e) => handleDragLeave(e)}
                             onDragOver={(e) => handleDragOver(e)}
-
                             >
                                 {
                                     selectedProfileFile ? 
@@ -129,7 +121,7 @@ function Join() {
                                                     selectedProfileFile.type === "image/png" || selectedProfileFile.type === "image/jpeg" || selectedProfileFile.type === "image/gif" ? 
                                                     URL.createObjectURL(selectedProfileFile) : handleDisplayTypeOfResume(selectedProfileFile)
                                                 } width={100} height={117} alt='file' className='object-cover w-[100px] h-[117px] rounded-md cursor-pointer'
-                                                    onClick={() => handleOpentab(selectedProfileFile)}
+                                                    onClick={() => handleOpenViewTab(selectedProfileFile)}
                                                 />
                                                 <div className='w-[140px] flex flex-col justify-between'>
                                                     <div className='h-fit'>
@@ -142,7 +134,6 @@ function Join() {
                                                         >Cancle upload</button>
                                                     </div>
                                                 </div>
-
                                             </div>
                                             <div>
                                                 <input type="file" name='file' id='file' className='hidden' multiple ref={fileInputRef} onChange={handleOnChangeSelectFile} />
@@ -168,25 +159,18 @@ function Join() {
                                         <label htmlFor="file" className='text-primary cursor-pointer underline decoration-[2px] pl-[5px]'
                                             onClick={() => handleSelectFile()}
                                         >Browse</label></h4>
-                                        
-
                                         <p className='h-[17px] font-[400] text-[12px] leading-[18px] text-[#676767] mt-[10px]'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
                                     </>)
                                 }
-
                             </div>
                             <button className='w-[100%] bg-primary opacity-[0.5] py-[12px] px-[174px] mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
                         </div>
                     </div>
-
                     <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0'>
                         <Image src={plan}  alt='plan' className='absolute top-[26px] left-[80px]'/>
-                        <Image src={daskedVector}  alt='vector' className='absolute bottom-0 right-0 left-0'/>
+                        <Image src={dashedVector}  alt='vector' className='absolute bottom-0 right-0 left-0'/>
                     </div>
-
-                </div>
-
-
+                  </div>
                 <div className=''></div>
             </div>
         </section>
