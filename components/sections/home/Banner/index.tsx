@@ -15,7 +15,7 @@ import retangle7 from "@pageImage/home/banner/svg/Rectangle 13.svg";
 function Banner() {
   return (
     <>
-      <section className="w-screen h-[810px] flex justify-center items-center ">
+      <section className="left-0 right-0  h-[810px] flex justify-center items-center ">
         <div className="max-w-[1440px] w-[100%] px-[80px] h-[100%] flex justify-center items-center">
           <div className="w-[620px] h-fit flex flex-col justify-center items-center translate-y-[-37px] ">
             <h1
@@ -54,7 +54,7 @@ function Banner() {
             <Image src={image2} alt="person" />
           </div>
         </div>
-        <div className="w-[1440px] h-[810px]  absolute z-[-2]">
+        <div className="max-w-[1440px] w-[100%] m-auto h-[810px]  absolute z-[-2]">
           <div className="absolute top-[335px] left-[-70px]">
             <Image src={retangle1} alt="Picture of the author" />
           </div>

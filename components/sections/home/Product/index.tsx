@@ -12,7 +12,7 @@ import Tiktok from "@pageImage/home/icon/Tiktok.svg";
 
 function Product() {
   return (
-    <section className="w-screen h-fit flex justify-center items-center relative mb-[1px]">
+    <section className=" h-fit flex justify-center items-center relative">
       <div className="max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px] flex justify-between relative">
         <div className="max-w-[610px] w-[100%] h-[610px] flex flex-wrap gap-[50px]">
           <div className=" bg-[#FFFFFF] pt-[20px] px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative">
