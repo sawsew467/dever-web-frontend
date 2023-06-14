@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import img from "../../assets/images/pages/activity/img.png";
-import img3 from "../../assets/images/pages/activity/img3.png";
-import img4 from "../../assets/images/pages/activity/img4.png";
-import img5 from "../../assets/images/pages/activity/img5.png";
-import img6 from "../../assets/images/pages/activity/img6.png";
-import banner from "../../assets/images/pages/activity/banner.png";
-import ArrowIcon from "../../assets/images/pages/activity/ArrowIcon.svg";
-import facebook from "../../assets/images/pages/activity/facebook.svg";
+import img from "@pageImage/activity/img.png";
+import img3 from "@pageImage/activity/img3.png";
+import img4 from "@pageImage/activity/img4.png";
+import img5 from "@pageImage/activity/img5.png";
+import img6 from "@pageImage/activity/img6.png";
+import banner from "@pageImage/activity/banner.png";
+import ArrowIcon from "@pageImage/activity/ArrowIcon.svg";
+import facebook from "@pageImage/activity/facebook.svg";
 function index() {
   const activity = [
     {
