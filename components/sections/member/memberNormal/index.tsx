@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import fillter from "../../../../assets/images/pages/member/leader/filter.svg"
-import vector from "../../../../assets/images/pages/member/normal/vector.svg"
-import avatar from "../../../../assets/images/pages/member/avatar/topface/avatar.png";
+import fillter from "@pageImage/member/leader/filter.svg"
+import vector from "@pageImage/member/normal/vector.svg"
+import avatar from "@pageImage/member/avatar/topface/avatar.png";
 const ListMember = () => {
   const data=[
     
@@ -59,9 +59,9 @@ const ListMember = () => {
           <Image
             src={fillter}
             alt="button fillter"
-            className="  "
+            className="mb-[2px]"
           />
-          <p className=" font-[600] mb-[2px] inline leading-[19px] ">Filter</p>
+          <p className=" font-[600]  inline leading-[19px] ">Filter</p>
         </button>
       </div>
       <ul className="lg:gap-[40px] sm:gap-[10px] gap-[5px] mt-[28px]  flex flex-wrap lg:justify-between justify-center">

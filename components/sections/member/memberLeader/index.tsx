@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import fillter from "../../../../assets/images/pages/member/leader/filter.svg";
-import avatar from "../../../../assets/images/pages/member/avatar/topface/avatar.png";
-import vector from "../../../../assets/images/pages/member/normal/vector.svg"
+import fillter from "@pageImage/member/leader/filter.svg";
+import avatar from "@pageImage/member/avatar/topface/avatar.png";
+import vector from "@pageImage/member/normal/vector.svg"
 const ListLeaderMember = () => {
   const data=[
     

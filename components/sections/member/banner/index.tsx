@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import group1498 from "../../../../assets/images/pages/member/banner/arrow.svg";
-import avatar  from "../../../../assets/images/pages/member/avatar/topface/avatar.png"
+import group1498 from "@pageImage/member/banner/arrow.svg";
+import avatar  from "@pageImage/member/avatar/topface/avatar.png"
 const TopTypical = () => {
   const data=[
     {
