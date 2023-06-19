@@ -91,18 +91,18 @@ function Join() {
     }
 
     const handleOpenViewTab = (file: File) => {
-        const url = URL.createObjectURL(file)
-        window.open(url, '_blank')
+        const url = URL.createObjectURL(file);
+        window.open(url, '_blank');
     }
     return (
         <section className='h-fit flex justify-center '>
             <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px]'>
-                <div className='h-[646px] w-[100%] flex flex-col items-center relative'>
-                    <div className='w-[731px] flex flex-col justify-center items-center'>
+                <div className='h-[601px] w-[100%] flex flex-col items-center relative'>
+                    <div className='w-[650px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
-                        <p className='text-center mt-[4px] font-[400] text-[26px] leading-[33px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
+                        <p className='text-center mt-[12px] font-[400] text-[19px] leading-[23px] h-[46px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
                     </div>
-                    <div className='max-w-[462px] w-[100%] flex flex-col mt-[32px]'>
+                    <div className='max-w-[462px] w-[100%] flex flex-col mt-[40px]'>
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
                         <input type="text" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
                         <div className='w-[100%] flex flex-col items-center  mt-[16px] z-[2]'>
