@@ -3,17 +3,16 @@ import Image from "next/image";
 import Background from "@pageImage/blogs/banner.png";
 import Model from "@pageImage/blogs/model.png";
 import "../../../../app/globals.css";
-
 const Blogs = () => {
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-[588px] relative mb-[60px]">
       <Image
         src={Background}
         alt="background effect"
         className="absolute w-[100%] h-[100%] max-h-[588px]"
       ></Image>
       <div className="max-w-[1440px] w-[100%] mx-auto flex-row justify-between items-center px-[80px]">
-        <div className="relative">
+        <div className="relative ">
           <div className="absolute space-y-[20px] top-[209px] left-0  ">
             <div className="space-y-[12px]">
               <div className=" text-[32px] leading-[39px] text-black stroke-text font-black ">
@@ -43,6 +42,7 @@ const Blogs = () => {
             className="absolute top-[120px] right-0 max-w-[50%] "
           ></Image>
         </div>
+     
       </div>
     </div>
   );
