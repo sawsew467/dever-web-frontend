@@ -23,7 +23,7 @@ function Introduction() {
     },
   ];
   return (
-    <div className="w-screen bg-[#F8FCFF]  text-[#000000]">
+    <div className="bg-[#F8FCFF]  text-[#000000]">
       <div className="max-w-[1440px] mx-auto px-[80px] py-[60px] flex justify-between">
         <div className="w-[607px]">
           <SectionTittle
@@ -64,7 +64,7 @@ function Introduction() {
           />
         </div>
       </div>
-      <div className="w-screen bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
+      <div className="bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
         <div className="max-w-[1440px] w-[100%] mx-auto px-[80px] py-[40px] flex justify-between">
           {data.map((item, Introduction) => (
             <div className="flex flex-col items-center" key={Introduction}>

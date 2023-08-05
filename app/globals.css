@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -42,3 +43,64 @@ body {
         -1px 1px 0 #0098FF,
          1px 1px 0 #0098FF;
   }
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+ 
+}
+
+.borderStrock {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%230098FFFF' stroke-width='4' stroke-dasharray='16.3' stroke-dashoffset='6' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+:root {
+  /* --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.stroke-text {
+  color: white;
+  text-shadow: 1px 1px 0 #0098ff, -1px -1px 0 #0098ff, 1px -1px 0 #0098ff,
+    -1px 1px 0 #0098ff, 1px 1px 0 #0098ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0; */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.stroke-text
+ {
+     color: white;
+     text-shadow:
+         1px 1px 0 #0098FF,
+       -1px -1px 0 #0098FF,  
+        1px -1px 0 #0098FF,
+        -1px 1px 0 #0098FF,
+         1px 1px 0 #0098FF;
+  }
+>>>>>>> 4ce3b94ba27d6b00ca83a126aa944a7356a7be66

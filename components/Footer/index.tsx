@@ -27,7 +27,7 @@ function Footer() {
     },
   ];
   return (
-    <div className="w-screen bg-[#0098FF] h-[250px] text-[#fff]">
+    <div className=" bg-[#0098FF] h-[250px] text-[#fff]">
       <div className="max-w-[1440px] mx-auto px-[80px] py-[60px] flex justify-between">
         <div className="flex">
           <div className="flex flex-col justify-between pr-[200px] gap-[38px]">
