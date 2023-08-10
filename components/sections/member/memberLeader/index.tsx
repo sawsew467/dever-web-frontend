@@ -76,7 +76,7 @@ const ListLeaderMember = () => {
             src={avatar}
           ></Image>
           <div className="h-[auto] absolute bottom-0 w-[100%]">
-            <div className="px-[32px] py-[6px] xl:w-[93px] xl:h-[32px] lg:w-[68px] lg:h-[23px] rounded-tl-[12px] bg-[#FF7171] absolute right-0 translate-y-[-100%] m-0">
+            <div className="z-[2] xl:px-[32px] lg:pr-[19px] lg:pl-[24px] xl:py-[6px] lx:py-[3px] xl:w-[93px] xl:h-[32px] lg:w-[68px]  lg:h-[23px] rounded-tl-[12px] bg-[#FF7171] absolute right-0 translate-y-[-100%] m-0">
                 <p className="text-[16px] font-[700] text-[#ffffff] " >K17</p>
             </div>
             <div className="w-[100%] xl:p-[20px] lg:p-[14px]  xl:h-[118px] lg:h-[88px] bg-primary rounded-br-[20px]">
