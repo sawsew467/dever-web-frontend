@@ -44,7 +44,7 @@ const ListLeaderMember = () => {
     }
   ]
   return (
-    <article className="max-w-[1440px] mx-[auto] pb-[60px] ">
+    <article className="max-w-[1440px] mx-[auto] py-[60px] ">
       <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
         <div className="w-[100%] ml-[12px] ">
           <h3
@@ -76,7 +76,7 @@ const ListLeaderMember = () => {
             src={avatar}
           ></Image>
           <div className="h-[auto] absolute bottom-0 w-[100%]">
-            <div className="z-[2] xl:px-[32px] lg:pr-[19px] lg:pl-[24px] xl:py-[6px] lx:py-[3px] xl:w-[93px] xl:h-[32px] lg:w-[68px]  lg:h-[23px] rounded-tl-[12px] bg-[#FF7171] absolute right-0 translate-y-[-100%] m-0">
+            <div className="xl:px-[32px] lg:pr-[19px] lg:pl-[24px] xl:py-[6px] lx:py-[3px] xl:w-[93px] xl:h-[32px] lg:w-[68px]  lg:h-[23px] rounded-tl-[12px] bg-[#FF7171] absolute right-0 translate-y-[-100%] m-0">
                 <p className="text-[16px] font-[700] text-[#ffffff] " >K17</p>
             </div>
             <div className="w-[100%] xl:p-[20px] lg:p-[14px]  xl:h-[118px] lg:h-[88px] bg-primary rounded-br-[20px]">
@@ -93,7 +93,7 @@ const ListLeaderMember = () => {
                       -Academic Member
                     </p>
                   </div>
-                  <h3 className="h-[24px] absolute xl:bottom-[20px] xl:right-[20px] lg:bottom-[14px] lg:right-[14px] inline text-[#fff] font-[800] sm:text-[20px] ">
+                  <h3 className="h-[24px] absolute xl:bottom-[20px] xl:right-[20px] lg:bottom-[14px] lg:right-[14px] inline text-[#fff] font-[700] sm:text-[20px] ">
                     GEN 5
                   </h3>
                 </div>
@@ -104,7 +104,7 @@ const ListLeaderMember = () => {
         ) )}
       </ul>
       <div className="mx-[auto] xl:mt-[40px] lg:mt-[35px]">
-      <ul className="text-[16px] xl:gap-[16px] lg:gap-[14px] flex justify-center font-['Inter'] not-italic ">
+      <ul className="text-[16px] xl:gap-[16px] lg:gap-[12px] flex justify-center font-['Inter'] not-italic ">
         <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px]">
           <button className="rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
             <Image
