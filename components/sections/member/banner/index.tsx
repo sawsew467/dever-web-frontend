@@ -41,7 +41,7 @@ const TopTypical = () => {
         >
           WHO ARE IN FU - DEVER?
         </h1>
-        <p className="text-[#0065A9] font-[600]  h-[23px] not-italic text-[20px] leading-[23px] xl:mt-[28px] lg:mt-[25px]">
+        <p className="text-[#0065A9] font-[700]  h-[23px] not-italic text-[20px] leading-[23px] xl:mt-[28px] lg:mt-[25px]">
           2023 - Top typical faces of the club
         </p>
         <ul
@@ -62,7 +62,7 @@ const TopTypical = () => {
         </li>
          ) )}
         </ul>
-        <p className="mt-[40px]  text-[#0065A9] not-italic font-[600] text-[20px] leading-[23px]">
+        <p className="mt-[40px]  text-[#0065A9] not-italic font-[700] text-[20px] leading-[23px]">
           Each member is a small part in the successful development of the club.
         </p>
         <div className=" my-[12px] mx-[auto]  w-[100%] bg-[#0098FF] h-[8px] "></div>

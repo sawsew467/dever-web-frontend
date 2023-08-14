@@ -48,11 +48,11 @@ const ListLeaderMember = () => {
       <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
         <div className="w-[100%] ml-[12px] ">
           <h3
-            className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF]  xl:leading-[48px] lg:leading-[38px] xl:text-[40px] lg:text-[32px] font-[800] h-[48px]  "
+            className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF]  xl:leading-[48px] lg:leading-[38px] xl:text-[40px] lg:text-[32px] font-[700] h-[48px]  "
           >
             CLUB LEADER MEMBERS
           </h3>
-          <p className="xl:text-[28px] lg:text-[24px]">About our establishment and growth</p>
+          <p className="xl:text-[28px] font-[400] lg:text-[24px]">About our establishment and growth</p>
         </div>
         <button className=" group min-w-[93px] h-[35px] px-[16px] py-[8px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
           <Image

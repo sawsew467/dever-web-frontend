@@ -48,11 +48,11 @@ const ListMember = () => {
     <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
       <div className="w-[100%] ml-[12px] ">
         <h3
-          className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF]  xl:leading-[48px] lg:leading-[38px] xl:text-[40px] lg:text-[32px] font-[800] h-[48px]  "
+          className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF]  xl:leading-[48px] lg:leading-[38px] xl:text-[40px] lg:text-[32px] font-[700] h-[48px]  "
         >
           CLUB MEMBERS
         </h3>
-        <p className="xl:text-[28px] lg:text-[24px]">About our establishment and growth</p>
+        <p className="xl:text-[28px] font-[400] lg:text-[24px]">About our establishment and growth</p>
       </div>
       <button className=" group min-w-[93px] h-[35px] px-[16px] py-[8px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
         <Image
@@ -106,7 +106,7 @@ const ListMember = () => {
     <div className="mx-[auto] xl:mt-[40px] lg:mt-[35px]">
       <ul className="text-[16px] xl:gap-[16px] lg:gap-[14px] flex justify-center font-['Inter'] not-italic ">
         <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px]">
-          <button className="rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
+          <button className="rounded-[2px] w-[100%] h-[100%] font-[400] border-[1px] border-[#1111111A]">
             <Image
               src={vector}
               alt="button "
@@ -115,27 +115,27 @@ const ListMember = () => {
           </button>
         </li>
         <li className="">
-          <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
+          <button className=" rounded-[2px] hover:bg-[#0098FF] font-[400] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
             1
           </button>
         </li>
         <li className="">
-          <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
+          <button className=" rounded-[2px] hover:bg-[#0098FF] font-[400] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
             2
           </button>
         </li>
         <li className="">
-          <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff] mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
+          <button className=" rounded-[2px] hover:bg-[#0098FF] font-[400] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff] mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
             3
           </button>
         </li>
         <li className="">
-          <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
+          <button className=" rounded-[2px] hover:bg-[#0098FF] font-[400] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] border-[1px] border-[#1111111A]">
             4
           </button>
         </li>
-        <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px]">
-          <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
+        <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px]  lg:h-[35px]">
+          <button className="rotate-[180deg] rounded-[2px] font-[400] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
             <Image
               src={vector}
               alt="button "
