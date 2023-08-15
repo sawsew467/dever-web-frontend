@@ -54,7 +54,8 @@ function Header() {
           onClick={onClickMenuButton}
         />
       </div>
-      <div className={`absolute top-[56px] w-[100%] py-[20px] flex md:flex lg:hidden flex-col md:flex-col justify-center items-end h-fit bg-primary/[0.8] text-[16px] max-w-[1024px] opacity-0`}
+
+      {/* <div className={`absolute top-[56px] w-[100%] py-[20px] flex md:flex lg:hidden flex-col md:flex-col justify-center items-end h-fit bg-primary/[0.8] text-[16px] max-w-[1024px] opacity-0`}
       style={{
         right: isOpenMenu ? "0px" : "-1024px",
         opacity: "1",
@@ -72,6 +73,60 @@ function Header() {
             Blogs
           </Link>
           <Link className="w-[100%] text-center hover:text-primary transition-all py-[10px] text-white  hover:bg-white/[0.8] hover:font-bold" href="/member">
+            Members
+          </Link> 
+        </div> */}
+
+        
+      <div className={`absolute h-fit top-[56px] w-[100%] flex md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
+      style={{
+        opacity: "1",
+        transition: "all 0.3s",
+      }}
+      onClick={() => setOpenMenu(false)}
+      >
+          <Link className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]" href="/"
+          style={{
+            opacity: isOpenMenu ? "1" : "0",
+            transition: "all 0.3s",
+            visibility: isOpenMenu ? "visible" : "hidden",
+            transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
+            transitionDelay: "0.1s"
+          }}
+          >
+            Home
+          </Link>
+          <Link className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]" href="/activity"
+          style={{
+            opacity: isOpenMenu ? "1" : "0",
+            transition: "all 0.3s",
+            visibility: isOpenMenu ? "visible" : "hidden",
+            transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
+            transitionDelay: "0.2s"
+          }}
+          >
+            Activities
+          </Link>
+          <Link className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]" href="/blogs"
+          style={{
+            opacity: isOpenMenu ? "1" : "0",
+            transition: "all 0.3s",
+            visibility: isOpenMenu ? "visible" : "hidden",
+            transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
+            transitionDelay: "0.3s"
+          }}
+          >
+            Blogs
+          </Link>
+          <Link className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]" href="/member"
+          style={{
+            opacity: isOpenMenu ? "1" : "0",
+            transition: "all 0.3s",
+            visibility: isOpenMenu ? "visible" : "hidden",
+            transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
+            transitionDelay: "0.4s"
+          }}
+          >
             Members
           </Link>
         </div>

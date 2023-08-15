@@ -104,9 +104,9 @@ function Join() {
                     <div className='max-w-[320px] md:max-w-[320px] lg:max-w-[462px] xl:max-w-[462px] w-[100%] flex flex-col mt-[32px] md:mt-[32px] lg:mt-[40px] xl:mt-[40px]'>
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
                         <input type="email" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
-                        <div className='w-[100%] flex flex-col items-center  mt-[16px] z-[2]'>
+                        <div className='w-[100%] flex flex-col items-center mt-[16px]'>
                             <h3 className='font-[700] text-[20px] leading-[24px] text-[#0f0f0f]'>Upload CV</h3>
-                            <div className='w-[320px] md:w-[320px] lg:w-[462px] xl:w-[462px] h-[175px] md:h-[175px] lg:h-[175px] xl:h-[157px] xl:py-[20px] py-[16px] md:px-[16px] lg:px-[20px] xl:px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
+                            <div className='w-[320px] md:w-[320px] lg:w-[462px] xl:w-[462px] h-[175px] md:h-[175px] lg:h-[175px] xl:h-[157px] xl:py-[20px] py-[16px] md:px-[16px] lg:px-[20px] xl:px-[20px] borderStrock flex flex-col items-center mt-[12px] relative'
                             onDrop={(e) => handleDropFile(e)}
                             onDragLeave={(e) => handleDragLeave(e)}
                             onDragOver={(e) => handleDragOver(e)}
