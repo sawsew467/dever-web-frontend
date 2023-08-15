@@ -18,8 +18,8 @@ function SectionTittle({title, subtitle, textPosition}: TittlePros) {
                     textAlign: textPosition
                 }}
             >
-                <h2 className='font-[700] text-[24px] sm:text-[24px] md:text-[32px] lg:text-[40px] text-[#0098FF]'>{title.toUpperCase()}</h2>
-                <h3 className='font-[400] text-[16px] sm:text-[16px] md:text-[24px] lg:text-[32px] text-[#22181C] mt-[4px]'>{subtitle}</h3>
+                <h2 className='font-[700] text-[24px] md:text-[24px] lg:text-[32px] xl:text-[40px] text-[#0098FF]'>{title.toUpperCase()}</h2>
+                <h3 className='font-[400] text-[16px] md:text-[16px] lg:text-[24px] xl:text-[32px] text-[#22181C] mt-[4px]'>{subtitle}</h3>
             </div>
             <div className={`w-[10px] bg-[#FF0000]`}
             style={{

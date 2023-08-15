@@ -93,7 +93,7 @@ function Product() {
           <div className="mt-[20px] md:mt-[20px] lg:mt-[40px] xl:mt-[40px] relative">
             <button className="px-[24px] md:px-[24px] lg:px-[26px] xl:px-[32px] py-[12px] xl:py-[16px] bg-primary text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-white absolute 
             top-[-4px] md:top-[-4px] lg:top-[-8px] xl:top-[-10px] right-[-4px] md:right-[-4px] lg:right-[-8px] xl:right-[-10px] 
-            hover:top-[-6px] hover:right-[-6px] active:top-[3px] active:right-[3px] 
+            hover:top-[-6px] hover:right-[-6px] active:top-[3px] active:right-[3px]
             "
             style={{
               transitionDuration: "0.1s"
