@@ -2,7 +2,6 @@
 "use client"
 
 import React, { useState, useRef } from 'react'
-
 import Image from 'next/image'
 import UploadIcon from '@pageImage/home/icon/UploadIcon.svg'
 import dashedVector from '@pageImage/home/join/Vector 1.svg'
@@ -96,18 +95,18 @@ function Join() {
     }
     return (
         <section className='h-fit flex justify-center '>
-            <div className='max-w-[1440px] w-[100%] h-fit py-[60px] px-[80px]'>
-                <div className='h-[601px] w-[100%] flex flex-col items-center relative'>
-                    <div className='w-[650px] flex flex-col justify-center items-center'>
+            <div className='max-w-[1440px] w-[100%] h-fit py-[40px] sm:py-[60px] md:py-[60px] lg:py-[60px] px-[20px] sm:px-[40px] md:px-[40px] lg:px-[80px]'>
+                <div className='h-[529px] sm:h-[529px] md:h-[520px] lg:h-[601px] w-[100%] flex flex-col items-center relative'>
+                    <div className='w-[320px] sm:w-[320px] md:w-[650px] lg:w-[650px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
-                        <p className='text-center mt-[12px] font-[400] text-[19px] leading-[23px] h-[46px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
+                        <p className='text-center mt-[12px] font-[400] text-[16px] sm:text-[16px] md:text-[19px] lg:text-[19px] leading-[23px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
                     </div>
-                    <div className='max-w-[462px] w-[100%] flex flex-col mt-[40px]'>
+                    <div className='max-w-[320px] sm:max-w-[320px] md:max-w-[462px] lg:max-w-[462px] w-[100%] flex flex-col mt-[32px] sm:mt-[32px] md:mt-[40px] lg:mt-[40px]'>
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
-                        <input type="text" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
+                        <input type="email" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
                         <div className='w-[100%] flex flex-col items-center  mt-[16px] z-[2]'>
                             <h3 className='font-[700] text-[20px] leading-[24px] text-[#0f0f0f]'>Upload CV</h3>
-                            <div className='w-[462px] h-[157px] py-[20px] px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
+                            <div className='w-[320px] sm:w-[320px] md:w-[462px] lg:w-[462px] h-[175px] sm:h-[175px] md:h-[175px] lg:h-[157px] lg:py-[20px] py-[16px] sm:px-[16px] md:px-[20px] lg:px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
                             onDrop={(e) => handleDropFile(e)}
                             onDragLeave={(e) => handleDragLeave(e)}
                             onDragOver={(e) => handleDragOver(e)}
@@ -116,11 +115,11 @@ function Join() {
                                     selectedProfileFile ? 
                                     (<> 
                                         <div className='absolute w-[100%] h-[100%] top-0 right-0 left-0 p-[20px] flex flex-row justify-between'>
-                                            <div className='w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between'>
+                                            <div className='sm:w-[calc(100%-80px)] md:w-[calc(100%-140px)] lg:w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between'>
                                                 <Image src = {
                                                     selectedProfileFile.type === "image/png" || selectedProfileFile.type === "image/jpeg" || selectedProfileFile.type === "image/gif" ? 
                                                     URL.createObjectURL(selectedProfileFile) : handleDisplayTypeOfResume(selectedProfileFile)
-                                                } width={100} height={117} alt='file' className='object-cover w-[100px] h-[117px] rounded-md cursor-pointer'
+                                                } width={100} height={117} alt='file' className='w-[110px] h-[100%] rounded-md cursor-pointer hidden sm:hidden md:block lg:block object-fill'
                                                     onClick={() => handleOpenViewTab(selectedProfileFile)}
                                                 />
                                                 <div className='w-[140px] flex flex-col justify-between'>
@@ -129,15 +128,18 @@ function Join() {
                                                             <h3 className='font-[400] text-primary whitespace-nowrap overflow-hidden text-ellipsis'>{selectedProfileFile.name}</h3>
                                                     </div>
                                                     <div className='h-fit'>
-                                                        <button className=' w-full py-[14px] px-[10px] border-2 border-primary border-opacity-1 font-[400] text-primary'
+                                                        <button className=' w-full py-[14px] px-[10px] border-2 border-primary border-opacity-1 font-[400] text-primary hover:bg-primary hover:text-white hover:font-bold'
                                                         onClick={handleDelectItem}
+                                                        style={{
+                                                            transitionDuration: "0.3s"
+                                                        }}
                                                         >Cancle upload</button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div>
                                                 <input type="file" name='file' id='file' className='hidden' multiple ref={fileInputRef} onChange={handleOnChangeSelectFile} />
-                                                <label htmlFor='file' className='w-[140px] h-[100%] flex flex-col justify-center cursor-pointer items-center border-2 border-primary'>
+                                                <label htmlFor='file' className='w-[120px] sm:w-[120px] md:w-[140px] lg:w-[140px] h-[100%] flex flex-col justify-center cursor-pointer items-center border-2 border-primary'>
                                                     {isDragging ? 
                                                     (<>
                                                         <div className='p-[20px] flex justify-center items-center'>
@@ -159,14 +161,14 @@ function Join() {
                                         <label htmlFor="file" className='text-primary cursor-pointer underline decoration-[2px] pl-[5px]'
                                             onClick={() => handleSelectFile()}
                                         >Browse</label></h4>
-                                        <p className='h-[17px] font-[400] text-[12px] leading-[18px] text-[#676767] mt-[10px]'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
+                                        <p className='font-[400] text-[12px] leading-[18px] text-[#676767] mt-[10px] text-center'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</p>
                                     </>)
                                 }
                             </div>
-                            <button className='w-[100%] bg-primary opacity-[0.5] py-[12px] px-[174px] mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
+                            <button className='w-[100%] bg-primary opacity-[0.5] py-[8px] sm:py-[8px] md:py-[12px] lg:py-[12px] md:px-[174px] lg:px-[174px] mt-[14px] sm:mt-[14px] md:mt-[32px] lg:mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[12px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
                         </div>
                     </div>
-                    <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0'>
+                    <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0 hidden sm:hidden md:hidden lg:block'>
                         <Image src={plan}  alt='plan' className='absolute top-[26px] left-[80px]'/>
                         <Image src={dashedVector}  alt='vector' className='absolute bottom-0 right-0 left-0'/>
                     </div>

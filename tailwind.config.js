@@ -26,7 +26,13 @@ module.exports = {
         'contain': 'contain',
         '50%': '50%',
         '16': '4rem',
-      }
+      },
+      screens: {
+        'sm': '640px',   // Small screens
+        'md': '769px',   // Medium screens
+        'lg': '1024px',  // Large screens
+        'xl': '1280px',  // Extra-large screens
+      },
     },
   },
   plugins: [
