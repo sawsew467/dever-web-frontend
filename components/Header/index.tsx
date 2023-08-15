@@ -54,30 +54,7 @@ function Header() {
           onClick={onClickMenuButton}
         />
       </div>
-
-      {/* <div className={`absolute top-[56px] w-[100%] py-[20px] flex md:flex lg:hidden flex-col md:flex-col justify-center items-end h-fit bg-primary/[0.8] text-[16px] max-w-[1024px] opacity-0`}
-      style={{
-        right: isOpenMenu ? "0px" : "-1024px",
-        opacity: "1",
-        transitionDuration: "0.3s",
-      }}
-      onClick={() => setOpenMenu(false)}
-      >
-          <Link className="w-[100%] text-center hover:text-primary transition-all py-[10px] text-white hover:bg-white/[0.8] hover:font-bold" href="/">
-            Home
-          </Link>
-          <Link className="w-[100%] text-center hover:text-primary transition-all py-[10px] text-white  hover:bg-white/[0.8] hover:font-bold" href="/activity">
-            Activities
-          </Link>
-          <Link className="w-[100%] text-center hover:text-primary transition-all py-[10px] text-white  hover:bg-white/[0.8] hover:font-bold" href="/blogs">
-            Blogs
-          </Link>
-          <Link className="w-[100%] text-center hover:text-primary transition-all py-[10px] text-white  hover:bg-white/[0.8] hover:font-bold" href="/member">
-            Members
-          </Link> 
-        </div> */}
-
-        
+ 
       <div className={`absolute h-fit top-[56px] w-[100%] flex md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
       style={{
         opacity: "1",
