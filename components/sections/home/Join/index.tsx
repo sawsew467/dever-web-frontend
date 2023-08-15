@@ -97,7 +97,7 @@ function Join() {
         <section className='h-fit flex justify-center '>
             <div className='max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]'>
                 <div className='h-[529px] md:h-[529px] lg:h-[520px] xl:h-[601px] w-[100%] flex flex-col items-center relative'>
-                    <div className='w-[320px] md:w-[320px] lg:w-[650px] xl:w-[650px] flex flex-col justify-center items-center'>
+                    <div className='md:max-w-[500px] w-[320px] md:w-[500px] lg:w-[650px] xl:w-[650px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
                         <p className='text-center mt-[12px] font-[400] text-[16px] md:text-[16px] lg:text-[19px] xl:text-[19px] leading-[23px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
                     </div>
