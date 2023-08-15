@@ -132,8 +132,8 @@ const ListMember = () => {
               4
             </button>
           </li>
-          <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px]">
-            <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] md:w-[30px] md:h-[30px] border-[1px] border-[#1111111A]">
+          <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] md:w-[30px] md:h-[30px]">
+            <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
               <Image
                 src={vector}
                 alt="button "
