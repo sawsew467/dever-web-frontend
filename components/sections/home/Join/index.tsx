@@ -95,18 +95,18 @@ function Join() {
     }
     return (
         <section className='h-fit flex justify-center '>
-            <div className='max-w-[1440px] w-[100%] h-fit py-[40px] sm:py-[60px] md:py-[60px] lg:py-[60px] px-[20px] sm:px-[40px] md:px-[40px] lg:px-[80px]'>
-                <div className='h-[529px] sm:h-[529px] md:h-[520px] lg:h-[601px] w-[100%] flex flex-col items-center relative'>
-                    <div className='w-[320px] sm:w-[320px] md:w-[650px] lg:w-[650px] flex flex-col justify-center items-center'>
+            <div className='max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]'>
+                <div className='h-[529px] md:h-[529px] lg:h-[520px] xl:h-[601px] w-[100%] flex flex-col items-center relative'>
+                    <div className='w-[320px] md:w-[320px] lg:w-[650px] xl:w-[650px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
-                        <p className='text-center mt-[12px] font-[400] text-[16px] sm:text-[16px] md:text-[19px] lg:text-[19px] leading-[23px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
+                        <p className='text-center mt-[12px] font-[400] text-[16px] md:text-[16px] lg:text-[19px] xl:text-[19px] leading-[23px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
                     </div>
-                    <div className='max-w-[320px] sm:max-w-[320px] md:max-w-[462px] lg:max-w-[462px] w-[100%] flex flex-col mt-[32px] sm:mt-[32px] md:mt-[40px] lg:mt-[40px]'>
+                    <div className='max-w-[320px] md:max-w-[320px] lg:max-w-[462px] xl:max-w-[462px] w-[100%] flex flex-col mt-[32px] md:mt-[32px] lg:mt-[40px] xl:mt-[40px]'>
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
                         <input type="email" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
                         <div className='w-[100%] flex flex-col items-center  mt-[16px] z-[2]'>
                             <h3 className='font-[700] text-[20px] leading-[24px] text-[#0f0f0f]'>Upload CV</h3>
-                            <div className='w-[320px] sm:w-[320px] md:w-[462px] lg:w-[462px] h-[175px] sm:h-[175px] md:h-[175px] lg:h-[157px] lg:py-[20px] py-[16px] sm:px-[16px] md:px-[20px] lg:px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
+                            <div className='w-[320px] md:w-[320px] lg:w-[462px] xl:w-[462px] h-[175px] md:h-[175px] lg:h-[175px] xl:h-[157px] xl:py-[20px] py-[16px] md:px-[16px] lg:px-[20px] xl:px-[20px] borderStrock flex flex-col items-center mt-[12px] z-1 relative'
                             onDrop={(e) => handleDropFile(e)}
                             onDragLeave={(e) => handleDragLeave(e)}
                             onDragOver={(e) => handleDragOver(e)}
@@ -115,11 +115,11 @@ function Join() {
                                     selectedProfileFile ? 
                                     (<> 
                                         <div className='absolute w-[100%] h-[100%] top-0 right-0 left-0 p-[20px] flex flex-row justify-between'>
-                                            <div className='sm:w-[calc(100%-80px)] md:w-[calc(100%-140px)] lg:w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between'>
+                                            <div className='md:w-[calc(100%-80px)] lg:w-[calc(100%-140px)] xl:w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between'>
                                                 <Image src = {
                                                     selectedProfileFile.type === "image/png" || selectedProfileFile.type === "image/jpeg" || selectedProfileFile.type === "image/gif" ? 
                                                     URL.createObjectURL(selectedProfileFile) : handleDisplayTypeOfResume(selectedProfileFile)
-                                                } width={100} height={117} alt='file' className='w-[110px] h-[100%] rounded-md cursor-pointer hidden sm:hidden md:block lg:block object-fill'
+                                                } width={100} height={117} alt='file' className='w-[110px] h-[100%] rounded-lg cursor-pointer hidden md:hidden lg:block xl:block object-fill'
                                                     onClick={() => handleOpenViewTab(selectedProfileFile)}
                                                 />
                                                 <div className='w-[140px] flex flex-col justify-between'>
@@ -139,7 +139,7 @@ function Join() {
                                             </div>
                                             <div>
                                                 <input type="file" name='file' id='file' className='hidden' multiple ref={fileInputRef} onChange={handleOnChangeSelectFile} />
-                                                <label htmlFor='file' className='w-[120px] sm:w-[120px] md:w-[140px] lg:w-[140px] h-[100%] flex flex-col justify-center cursor-pointer items-center border-2 border-primary'>
+                                                <label htmlFor='file' className='w-[120px] md:w-[120px] lg:w-[140px] xl:w-[140px] h-[100%] flex flex-col justify-center cursor-pointer items-center border-2 border-primary'>
                                                     {isDragging ? 
                                                     (<>
                                                         <div className='p-[20px] flex justify-center items-center'>
@@ -165,10 +165,10 @@ function Join() {
                                     </>)
                                 }
                             </div>
-                            <button className='w-[100%] bg-primary opacity-[0.5] py-[8px] sm:py-[8px] md:py-[12px] lg:py-[12px] md:px-[174px] lg:px-[174px] mt-[14px] sm:mt-[14px] md:mt-[32px] lg:mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[12px] sm:text-[12px] md:text-[16px] lg:text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
+                            <button className='w-[100%] bg-primary opacity-[0.5] py-[8px] md:py-[8px] lg:py-[12px] xl:py-[12px] lg:px-[174px] xl:px-[174px] mt-[14px] md:mt-[14px] lg:mt-[32px] xl:mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
                         </div>
                     </div>
-                    <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0 hidden sm:hidden md:hidden lg:block'>
+                    <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0 hidden md:hidden lg:hidden xl:block'>
                         <Image src={plan}  alt='plan' className='absolute top-[26px] left-[80px]'/>
                         <Image src={dashedVector}  alt='vector' className='absolute bottom-0 right-0 left-0'/>
                     </div>

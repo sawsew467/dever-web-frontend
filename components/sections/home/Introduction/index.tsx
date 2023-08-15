@@ -35,15 +35,15 @@ function Introduction() {
 
   return (
     <div className="bg-[#F8FCFF]  text-[#000000]">
-      <div className="max-w-[1440px] mx-auto px-[20px] sm:px-[40px] md:px-[40px] lg:px-[80px] py-[40px] sm:py-[60px] md:py-[60px] lg:py-[60px] flex justify-between lg:flex-row md:flex-row sm:flex-row flex-col">
-        <div className="w-fit sm:w-[296px] md:w-[505px] lg:w-[607px]">
+      <div className="max-w-[1440px] mx-auto px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px] py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] flex justify-between xl:flex-row lg:flex-row md:flex-row flex-col">
+        <div className="w-fit md:w-[296px] lg:w-[505px] xl:w-[607px]">
           <SectionTitle
             title="who are we"
             subtitle="About our establishment and growth"
             textPosition="left"
           ></SectionTitle>
-          <div className="pt-[20px] sm:pt-[20px] md:pt-[40px] lg:pt-[28px] text-[16px]">
-            <p className=" m-0 p0 text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] leading-[normal] font-[400]">
+          <div className="pt-[20px] md:pt-[20px] lg:pt-[40px] xl:pt-[28px] text-[16px]">
+            <p className=" m-0 p0 text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] leading-[normal] font-[400]">
               Welcome to FU-DEVER, the programming club of FPT University! . At
               FU-DEVER, we strive to foster a vibrant community of aspiring
               programmers and provide a platform for skill development and
@@ -54,18 +54,18 @@ function Introduction() {
               expand your knowledge, our club offers a range of activities,
               including coding challenges, workshops, and coding competitions.
 
-              <span id="dots" className="md:hidden lg:hidden" style={{
+              <span id="dots" className="lg:hidden xl:hidden" style={{
                 display: isReadMore ? "none" : ""
               }}>
                 <br />
                 ...</span>
 
-              <span className="hidden sm:hidden md:block lg:block " style={{
+              <span className="hidden md:hidden lg:block xl:block " style={{
                 display: isReadMore ? "block" : ""
               }}>
                 <br/>
                 FU-DEVER has experienced a remarkable journey of growth. From a
-                small group of passionate students, it has expanded into a
+                mdall group of passionate students, it has expanded into a
                 thriving community of programmers from various disciplines.
                 <br/>
                 <br/>
@@ -75,10 +75,10 @@ function Introduction() {
                 programming landscape.
               </span>
 
-              <span className="md:hidden lg:hidden">
+              <span className="lg:hidden xl:hidden">
                 <br />
                 <br />
-                <button className="px-[16px] py-[8px] border-[1px] border-primary text-primary rounded-lg flex items-center outline-none" 
+                <button className="px-[16px] py-[8px] border-[1px] border-primary text-primary rounded-md flex items-center outline-none" 
                   onClick={handleReadMore}
                 >{isReadMore ? "Read less" : "Read more"} <span>
                   <Image
@@ -94,20 +94,20 @@ function Introduction() {
             </p>
           </div>
         </div>
-        <div className="flex sm:items-start md:items-end lg:items-end pt-[20px] sm:pt-[0px] md:pt-[0px] lg:pt-[0px]">
+        <div className="flex md:items-start lg:items-end xl:items-end pt-[20px] md:pt-[0px] lg:pt-[0px] xl:pt-[0px]">
           <Image
-            className="w-fit sm:w-[320px] sm:h-[198px] md:w-[399px] md:h-[250px] lg:w-[597px] lg:h-[371px] mt-[0px] sm:mt-[90px] md:mt-[0px]  "
+            className="w-fit md:w-[320px] md:h-[198px] lg:w-[399px] lg:h-[250px] xl:w-[597px] xl:h-[371px] mt-[0px] md:mt-[90px] lg:mt-[0px]  "
             src={introduction}
             alt="Picture of the author"
           />
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
-        <div className="max-w-[1440px] w-[100%] mx-auto px-[40px] lg:px-[80px] py-[40px] sm:py-[24px] md:py-[40px] lg:py-[40px] flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between">
+        <div className="max-w-[1440px] w-[100%] mx-auto px-[40px] xl:px-[80px] py-[40px] md:py-[24px] lg:py-[40px] xl:py-[40px] flex flex-col md:flex-row lg:flex-row xl:flex-row justify-between">
           {data.map((item, Introduction) => (
             <div className="flex flex-col items-center" key={Introduction}>
-              <a className="text-[32px] sm:text-[32px] md:text-[32px] lg:text-[40px] font-[700] h-[48px]">{item.number}</a>
-              <a className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[32px] font-[700] mt-[8px] h-[39px]">
+              <a className="text-[32px] md:text-[32px] lg:text-[32px] xl:text-[40px] font-[700] h-[48px]">{item.number}</a>
+              <a className="text-[16px] md:text-[16px] lg:text-[16px] xl:text-[32px] font-[700] mt-[8px] h-[39px]">
                 {item.tittle}
               </a>
             </div>
