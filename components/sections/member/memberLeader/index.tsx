@@ -86,14 +86,14 @@ const ListLeaderMember = () => {
                 </h4>
                 <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] flex justify-between items-end ">
                   <div className="flex flex-col xl:gap-[8px] md:gap-[6px]">
-                    <p className="font-[700] text-[#fff]">
+                    <p className="font-[500] text-[#fff]">
                       -DE170145
                     </p>
-                    <p className="font-[700] text-[#fff]">
+                    <p className="font-[500] text-[#fff]">
                       -Academic Member
                     </p>
                   </div>
-                  <h3 className="absolute xl:bottom-[20px] lg:bottom-[14px] md:bottom-[10px] xl:right-[20px] lg:right-[14px] md:right-[10px] inline text-[#fff] font-[700] xl:text-[20px] lg:text-[18px] md:text-[16px]">
+                  <h3 className="absolute xl:bottom-[20px] lg:bottom-[14px] md:bottom-[10px] xl:right-[20px] lg:right-[14px] md:right-[10px] inline text-[#fff] font-[600] xl:text-[20px] lg:text-[16px] md:text-[10px]">
                     GEN 5
                   </h3>
                 </div>
@@ -134,8 +134,8 @@ const ListLeaderMember = () => {
             4
           </button>
         </li>
-        <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px]">
-          <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] md:w-[30px] md:h-[30px] border-[1px] border-[#1111111A]">
+        <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] md:w-[30px] md:h-[30px]">
+          <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
             <Image
               src={vector}
               alt="button "

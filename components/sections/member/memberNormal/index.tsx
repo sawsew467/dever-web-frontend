@@ -43,7 +43,7 @@ const ListMember = () => {
       <div className=" justify-between relative items-end flex w-[100%] h-[auto] border-l-[8px] border-[#FF0000]">
         <div className="w-[100%] ml-[12px] ">
           <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] md:leading-[29px] xl:text-[40px] lg:text-[32px] md:text-[24px] font-[700] h-[48px]  ">
-            CLUB LEADER MEMBERS
+            CLUB MEMBERS
           </h3>
           <p className="xl:text-[28px] font-[400] lg:text-[24px]">
             About our establishment and growth
@@ -76,7 +76,7 @@ const ListMember = () => {
               src={avatar}
             ></Image>
             <div className="h-[auto] absolute bottom-0 w-[100%]">
-              <div className="z-0 flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] md:py-[2px] xl:w-[93px]  lg:w-[68px] h-[auto] md:w-[47px] lg:rounded-tl-[12px] md:rounded-tl-[6px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-0">
+              <div className="z-0 flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] md:py-[2px] xl:w-[93px]  lg:w-[68px] h-[auto] md:w-[47px] lg:rounded-tl-[12px] md:rounded-tl-[6px] bg-[#C69C6D] absolute right-0 translate-y-[-100%] top-0">
                 <p className="xl:h-[19px] lg:h-[17px] md:h-[12px] xl:text-[16px] lg:text-[14px] md:text-[10px] font-[700] text-[#ffffff]">
                   K17
                 </p>
