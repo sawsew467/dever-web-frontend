@@ -105,7 +105,7 @@ const ListLeaderMember = () => {
           ))}
         </ul>
         <div className="mx-[auto] xl:mt-[40px] md:mt-[35px] sm:mt-[20px]">
-          <ul className="text-[16px] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
+          <ul className="lg:text-[16px] sm:text-[12px] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
               <button className="rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
                 <Image
