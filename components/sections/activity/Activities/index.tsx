@@ -45,8 +45,8 @@ function Activities() {
   return (
     <>
       <section className="w-full h-full flex justify-center items-center">
-        <div className="max-w-[1440px] w-full h-full xl:px-[80px] px-[40px] flex flex-col justify-center items-center">
-          <div className="bg-[#F8FCFF] flex flex-col w-full py-[60px]">
+        <div className="max-w-[1440px] w-full h-full xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col justify-center items-center">
+          <div className="bg-[#F8FCFF] flex flex-col w-full md:py-[60px] sm:py-[40px]">
             <div className="flex flex-col px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
               <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
                 Academic{" "}
@@ -55,23 +55,23 @@ function Activities() {
                 About our establishment and growth
               </p>
             </div>
-            <div className="flex flex-row justify-between xl:max-w-[1280px] max-w-[944px] w-full ">
+            <div className="flex flex-col md:flex-row md:gap-0 sm:gap-[30px] justify-between w-full ">
               {academicActivities.map((activity, i) => (
                 <>
                   <div
-                    className="flex xl:w-[calc((100%-80px)/3)] w-[calc((100%-40px)/3)] flex-col items-center gap-4"
+                    className="flex xl:w-[calc((100%-80px)/3)] md:w-[calc((100%-40px)/3)] w-full flex-col items-center gap-4"
                     key={i}
                   >
                     <Image
                       src={activity.img}
                       alt={activity.alt}
-                      className="xl:max-w-[400px] lg:max-w-[283px] max-w-[200px] object-cover w-full xl:h-[320px] lg:h-[252px] h-[178px]"
+                      className="w-full object-cover xl:h-[320px] lg:h-[252px] md:h-[178px] sm:h-[270px]"
                     ></Image>
                     <div className="flex flex-col items-center max-w-[277px] w-full">
-                      <p className="lg:text-[40px] text-[#0065A9] font-bold lg:leading-[48px] text-[24px] leading-[29px] mb-2">
+                      <p className="lg:text-[40px] text-[#0065A9] font-bold lg:leading-[48px] md:text-[24px] md:leading-[29px] sm:leading-[48px] sm:text-[40px] mb-2">
                         {activity.title}
                       </p>
-                      <p className="leading-[19px] lg:max-w-[277px] max-w-[188px] text-[16px] font-light text-center mb-[20px]">
+                      <p className="leading-[19px] lg:max-w-[277px] md:max-w-[188px] sm:w-full text-[16px] font-light text-center mb-[20px]">
                         {activity.desc}
                       </p>
                       <button className=" flex gap-1 flex-row items-center px-[32px] py-2 bg-[#0098FF] rounded-[2px]">
@@ -86,8 +86,8 @@ function Activities() {
               ))}
             </div>
           </div>
-          <div className="w-full mt-[60px] mb-[60px]">
-            <div className="flex flex-col  px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
+          <div className="w-full md:py-[60px] sm:py-[40px]">
+            <div className="flex flex-col px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
               <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
                 Extracurricular
               </p>
@@ -95,7 +95,7 @@ function Activities() {
                 About our establishment and growth
               </p>
             </div>
-            <div className="xl:max-w-[1280px]  w-full gap-4 lg:columns-3 columns-2 space-y-4">
+            <div className="xl:max-w-[1280px]  w-full gap-4 lg:columns-3 md:columns-2 sm:columns-1 space-y-4">
               {extraActivies.map((activity, index) => (
                 <Image
                   className="max-h-[420px]"

@@ -6,8 +6,8 @@ function Banner() {
   return (
     <>
       <section className="w-screen flex justify-center items-center">
-        <div className="max-w-[1440px] w-full h-full px-[40px] xl:px-[80px] flex flex-col justify-center items-center">
-          <div className="w-full flex flex-row lg:justify-between justify-center items-center mt-[70px] mb-[60px] lg:mb-[45px]">
+        <div className="max-w-[1440px] w-full h-full sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col justify-center items-center">
+          <div className="w-full flex flex-row lg:justify-between justify-center items-center mt-[70px] sm:mb-[40px] md:mb-[60px] lg:mb-[45px]">
             <p className="max-w-[266px] w-full font-normal italic text-sm hidden lg:block leading-[17px] text-[#0098FF]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -29,7 +29,7 @@ function Banner() {
               <Image src={facebook} alt="facebookIcon"></Image>
             </div>
           </div>
-          <div className="w-full mb-[60px] flex flex-col items-center justify-center">
+          <div className="w-full md:mb-[60px] sm:mb-[40px] flex flex-col items-center justify-center">
             <Image src={banner} alt="bannerImg"></Image>
           </div>
         </div>
