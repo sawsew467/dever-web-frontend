@@ -32,7 +32,7 @@ const TopTypical = () => {
   ]
      
   return (
-    <article className="max-w-[1440px] mx-[auto]">
+    <article className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] mobile:max-w-[360px] mx-[auto]">
       <div className="xl:px-[80px] md:px-[40px] mobile:px-[20px] flex flex-col text-center">
         <h1
           className="font-[700]  text-[#0098FF] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
@@ -45,8 +45,8 @@ const TopTypical = () => {
           2023 - Top typical faces of the club
         </p>
         <ul
-          className="flex-wrap xl:content-normal md:justify-between md:flex-nowrap mobile:flex-wrap mobile:justify-center md:gap-0 mobile:gap-y-[20px] mobile:gap-[calc((100%-260px)/4)] 
-      xl:flex-[0_0_10%] mx-0 content-center flex lg:mt-[40px] md:mt-[25px] mobile:mt-[20px] w-[100%] item-center"
+          className="flex-wrap xl:content-normal md:justify-between md:flex-nowrap mobile:flex-wrap mobile:justify-center md:gap-0 mobile:gap-y-[20px] mobile:gap-[20px] 
+      xl:flex-[0_0_10%] mx-0 content-center flex lg:mt-[40px] md:mt-[25px] mobile:mt-[20px] w-[100%] item-center "
         >
          {data.map(( item , banner)=> (
           <li key={banner}

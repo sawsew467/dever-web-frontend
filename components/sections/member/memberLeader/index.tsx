@@ -44,8 +44,8 @@ const ListLeaderMember = () => {
     }
   ]
   return (
-    <article className="max-w-[1440px] mx-[auto] md:py-[60px] mobile:py-[40px] ">
-      <div className="justify-between relative items-end flex mobile:flex-col mobile:items-start xl:gap-0 mobile:gap-[25px] w-[100%] h-[auto] ">
+    <article className="md:py-[60px] mobile:py-[40px] ">
+      <div className="justify-between relative items-end xl:flex-row flex mobile:flex-col mobile:items-start xl:gap-0 mobile:gap-[25px] w-[100%] h-[auto] ">
         <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
           <h3
             className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] mobile:leading-[29px] xl:text-[40px] lg:text-[32px] mobile:text-[24px]  font-[700]"
@@ -65,7 +65,7 @@ const ListLeaderMember = () => {
           <p className=" font-[600] lg:text-[16px] mobile:text-[12px] lg:h-[19px] md:h-[15px] md:mb-[1px] flex items-center ">Filter</p>
         </button>
       </div>
-      <ul className=" xl:mt-[28px] md:mt-[40px] mobile:mt-[20px] xl:gap-y-[40px] md:gap-y-[35px] mobile:gap-y-[20px] flex flex-wrap lg:flex-[0_0_30%] justify-between">
+      <ul className=" xl:mt-[28px] xl:min-w-[1280px] lg:min-w-[945px] md:min-w-[689px] mobile:min-w-[320px] w-[100%] md:mt-[40px] mobile:mt-[20px] mobile:gap-y-[20px] xl:gap-[40px] md:gap-[35px] mobile:gap-[20px] flex flex-wrap justify-start">
         {data.map( (item , key)=> (
           <li key={key} className=" xl:w-[290px] xl:h-[400px] lg:w-[210px] lg:h-[300px] md:w-[146px] md:h-[204px] mobile:w-[93px] mobile:h-[123px]  cursor-pointer  relative">
           <Image
@@ -76,15 +76,15 @@ const ListLeaderMember = () => {
             src={avatar}
           ></Image>
           <div className="h-[auto] absolute bottom-0 w-[100%]">
-            <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] mobile:py-[2px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] mobile:w-[32px] lg:rounded-tl-[12px] md:rounded-tl-[6px] mobile:rounded-tl-[4px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-0">
+            <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] mobile:py-[2px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] mobile:w-[32px] lg:rounded-tl-[12px] md:rounded-tl-[6px] mobile:rounded-tl-[4px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-[0.2px]">
                 <p className="xl:h-[19px] lg:h-[17px] md:h-[12px] mobile:h-[7px] xl:text-[16px] lg:text-[14px] md:text-[10px] mobile:text-[6px] font-[700] text-[#ffffff]">K17</p>
             </div>
-            <div className=" w-[100%] xl:p-[20px] lg:p-[14px] md:pt-[5px] md:px-[10px] mobile:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] mobile:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px]">
-              <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px]  ">
-                <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] xl:text-[20px] lg:text-[14px] md:text-[10px] mobile:text-[6px] text-[12px] text-[#fff] ">
+            <div className=" w-[100%] xl:p-[20px] lg:p-[14px] md:pt-[5px] md:px-[10px] mobile:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] mobile:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] mobile:rounded-br-[4px]">
+              <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px] mobile:gap-[4px] ">
+                <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] mobile:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] mobile:text-[6px] text-[12px] text-[#fff] ">
                   Trần Văn Bảo Thắng
                 </h4>
-                <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] mobile:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] flex justify-between items-end ">
+                <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] mobile:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] mobile:leading-[6px] flex justify-between items-end ">
                   <div className="flex flex-col xl:gap-[8px] md:gap-[6px] mobile:gap-[4px]">
                     <p className="font-[500] text-[#fff]">
                       -DE170145
