@@ -36,12 +36,12 @@ const TopTypical = () => {
       <div className="xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col text-center">
         <h1
           className="font-[800]  text-[#0098FF] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
-       uppercase lg:text-[40px] md:text-[38px] sm:text-[24px]  mx-[auto] not-italic backdrog-blur-[2px]
+       uppercase lg:text-[40px] md:text-[38px] sm:text-[24px] md:leading-[45.99px] sm:leading-[29.05px]  mx-[auto] not-italic backdrog-blur-[2px]
         "
         >
           WHO ARE IN FU - DEVER?
         </h1>
-        <p className="text-[#0065A9] font-[700]  h-[23px] not-italic lg:text-[20px] md:text-[16px] sm:text-[14px]  xl:mt-[28px] lg:mt-[25px] md:mt-[23px] sm:mt-[20px]">
+        <p className="text-[#0065A9] font-[700] not-italic lg:text-[20px] md:text-[16px] sm:text-[14px]  xl:mt-[28px] lg:mt-[25px] md:mt-[23px] sm:mt-[20px]">
           2023 - Top typical faces of the club
         </p>
         <ul
@@ -65,11 +65,13 @@ const TopTypical = () => {
         <p className="lg:mt-[40px] md:mt-[25px] sm:mt-[20px] lg:text-[20px] md:text-[16px] sm:text-[14px] text-[#0065A9] not-italic font-[700] ">
           Each member is a small part in the successful development of the club.
         </p>
-        <div className="lg:my-[12px] md:mt-[25px] md:mb-[8px] sm:mt-[8px] sm:mb-[9px] mx-[auto]  xl:w-[1115px] bg-[#0098FF] h-[8px] "></div>
+        <div className="lg:mt-[12px] md:mt-[25px] sm:mt-[8px] mx-[auto] xl:w-[1115px] lg:w-[944px] md:w-[688px] sm:w-[320px] bg-[#0098FF] lg:h-[8px] md:h-[6px] sm:h-[4px] "></div>
         <Image
-          className="mx-[auto] lg:mb-[12px] md:mb-[8px] sm:my-[9px]"
+          className="md:w-[24px] lg:h-[40px] md:h-[36px] sm:w-[20px] sm:h-[28px] mx-[auto] lg:my-[12px] md:my-[8px] sm:my-[9px]"
           src={group1498}
           alt="{group1498 }"
+          width={24}
+          height={40}
         ></Image>
       </div>
     </article>

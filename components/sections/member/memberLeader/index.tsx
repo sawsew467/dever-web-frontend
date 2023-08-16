@@ -41,12 +41,12 @@ const ListLeaderMember = () => {
   return (
     <article className="md:py-[60px] sm:py-[40px]  ">
       <div className="xl:max-w-[1280px] lg:max-w-[945px] md:max-w-[689px] sm:max-w-[320px] mx-[auto] px-[auto]">
-        <div className="justify-between relative items-end md:flex-row flex sm:flex-col sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
+        <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
           <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
             <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px]  font-[700]">
               CLUB LEADER MEMBERS
             </h3>
-            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px] sm:mb-[4px] ">
+            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px] md:mb-0 sm:mb-[4px] ">
               About our establishment and growth
             </p>
           </div>
@@ -82,7 +82,7 @@ const ListLeaderMember = () => {
                     K17
                   </p>
                 </div>
-                <div className=" w-[100%] xl:p-[20px] lg:p-[14px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
+                <div className=" w-[100%] xl:p-[20px] lg:p-[15px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
                   <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px] sm:gap-[4px] ">
                     <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] md:leading-[12px] sm:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] sm:text-[6px] text-[12px] text-[#fff] ">
                       Trần Văn Bảo Thắng
@@ -105,13 +105,15 @@ const ListLeaderMember = () => {
           ))}
         </ul>
         <div className="mx-[auto] xl:mt-[40px] md:mt-[35px] sm:mt-[20px]">
-          <ul className="lg:text-[16px] sm:text-[12px] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
+          <ul className="lg:text-[16px] sm:text-[12px] font-[400] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
               <button className="rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
                 <Image
                   src={vector}
                   alt="button "
-                  className="mx-[auto] mt-[auto]"
+                  className="lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
+                  width={16}
+                  height={16}
                 />
               </button>
             </li>
@@ -140,7 +142,9 @@ const ListLeaderMember = () => {
                 <Image
                   src={vector}
                   alt="button "
-                  className="mx-[auto] mt-[auto]"
+                  className="lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
+                  width={16}
+                  height={16}
                 />
               </button>
             </li>
