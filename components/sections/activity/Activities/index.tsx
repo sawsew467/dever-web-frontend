@@ -24,7 +24,7 @@ function Activities() {
       img: img,
       title: "Talkshows",
       alt: "talshowsImg",
-      desc: "Talkshows provide wider knowledge for both members and non-members",
+      desc: "Talkshows provide knowledge for members and non-members",
     },
   ];
 
@@ -45,37 +45,37 @@ function Activities() {
   return (
     <>
       <section className="w-full h-full flex justify-center items-center">
-        <div className="max-w-[1440px] w-full h-full px-[80px] flex flex-col justify-center items-center">
+        <div className="max-w-[1440px] w-full h-full xl:px-[80px] px-[40px] flex flex-col justify-center items-center">
           <div className="bg-[#F8FCFF] flex flex-col w-full py-[60px]">
-            <div className="flex flex-col gap-[4px] px-[20px] border-l-8 border-[#FF0000] mb-[28px]">
-              <p className="text-[#0098FF] text-[40px] font-bold leading-[48px]">
+            <div className="flex flex-col px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
+              <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
                 Academic{" "}
               </p>
-              <p className=" font-normal text-[28px] text-[#22181C] leading-[34px]">
+              <p className=" font-normal xl:text-[28px] xl:leading-[34px] text-base leading-[19px]  text-[#22181C] ">
                 About our establishment and growth
               </p>
             </div>
-            <div className="flex flex-row justify-between max-w-[1280px] w-full ">
+            <div className="flex flex-row justify-between xl:max-w-[1280px] max-w-[944px] w-full ">
               {academicActivities.map((activity, i) => (
                 <>
                   <div
-                    className="flex w-[calc((100%-80px)/3)] flex-col items-center gap-4"
+                    className="flex xl:w-[calc((100%-80px)/3)] w-[calc((100%-40px)/3)] flex-col items-center gap-4"
                     key={i}
                   >
                     <Image
                       src={activity.img}
                       alt={activity.alt}
-                      className="max-w-[400px] object-cover w-full h-[320px]"
+                      className="xl:max-w-[400px] lg:max-w-[283px] max-w-[200px] object-cover w-full xl:h-[320px] lg:h-[252px] h-[178px]"
                     ></Image>
                     <div className="flex flex-col items-center max-w-[277px] w-full">
-                      <p className="text-[40px] text-[#0065A9] font-bold leading-[48px] mb-2">
+                      <p className="lg:text-[40px] text-[#0065A9] font-bold lg:leading-[48px] text-[24px] leading-[29px] mb-2">
                         {activity.title}
                       </p>
-                      <p className="leading-[19px] text-[16px] font-light text-center mb-[20px]">
+                      <p className="leading-[19px] lg:max-w-[277px] max-w-[188px] text-[16px] font-light text-center mb-[20px]">
                         {activity.desc}
                       </p>
                       <button className=" flex gap-1 flex-row items-center px-[32px] py-2 bg-[#0098FF] rounded-[2px]">
-                        <p className="font-normal text-[16px] text-white">
+                        <p className="font-normal text-[16px] leading-[24px] text-white">
                           View more
                         </p>
                         <Image src={ArrowIcon} alt="arrowIcon"></Image>
@@ -87,17 +87,19 @@ function Activities() {
             </div>
           </div>
           <div className="w-full mt-[60px] mb-[60px]">
-            <div className="flex flex-col gap-[4px] px-[20px] border-l-8 border-[#FF0000] mb-[28px]">
-              <p className="text-[#0098FF] text-[40px] font-bold leading-[48px]">
+            <div className="flex flex-col  px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
+              <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
                 Extracurricular
               </p>
-              <p className=" font-normal text-[28px] text-[#22181C] leading-[34px]">
+              <p className="font-normal xl:text-[28px] xl:leading-[34px] text-base leading-[19px]  text-[#22181C] ">
                 About our establishment and growth
               </p>
             </div>
-            <div className="max-w-[1280px] w-full gap-4 columns-3 space-y-4">
+            <div className="xl:max-w-[1280px]  w-full gap-4 lg:columns-3 columns-2 space-y-4">
               {extraActivies.map((activity, index) => (
                 <Image
+                  className="max-h-[420px]"
+                  max-height={420}
                   src={activity.img}
                   alt={activity.alt}
                   key={index}
