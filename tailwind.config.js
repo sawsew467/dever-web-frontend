@@ -6,12 +6,6 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens : {
-      'xl' : '1440px',
-      'lg' : '1024px',
-      'md' : '768px',
-      'mobile' : '360px'
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -34,10 +28,10 @@ module.exports = {
         '16': '4rem',
       },
       screens: {
-        'sm': '640px',   // Small screens
+        'sm': '360px',   // Small screens
         'md': '768px',   // Medium screens
         'lg': '1024px',  // Large screens
-        'xl': '1280px',  // Extra-large screens
+        'xl': '1440px',  // Extra-large screens
       },
     },
   },
