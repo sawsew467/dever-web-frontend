@@ -8,7 +8,7 @@ interface catePros {
 
 function Category({category}: catePros) {
     return (
-       <div className='flex justify-center items-center text-[14px] bg-primary text-white font-[400] px-[8px] py-[4px] '>
+       <div className='flex justify-center items-center sm:text-[12px] lg:text-[14px] bg-primary text-white font-[400] px-[8px] py-[4px] '>
             {category}
        </div>
     )

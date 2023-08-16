@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import projectImage from "@images/pages/activity/img.png";
 import Category from "../Category";
-import ViewMoreButton from "@/components/ViewMoreButton";
+import ViewMoreButton from "../../ViewMoreButton";
 export interface postPros {
   category: string;
   postTime: string;
@@ -13,10 +13,10 @@ export interface postPros {
 
 function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
   return (
-    <div className="w-[100%] flex-col space-y-[24px]">
-      <div className="w-[100%] h-[500px] flex  ">
+    <div className="w-[100%] flex-col sm:space-y-[12px] lg:space-y-[20px] xl:space-y-[24px]  ">
+      <div className="w-[100%] sm:h-[440px] md:h-[254px] lg:h-[355px] xl:h-[500px] flex sm:flex-col md:flex-row ">
         <div
-          className="w-[60%] h-[100%] box-border border border-solid border-y-1 rounded-l-[6px]"
+          className="w-[100%] md:w-[60%] sm:h-[59.66%] md:h-[100%] border border-solid border-y-1 rounded-l-[6px]"
           style={{ boxSizing: "border-box" }}
         >
           <Image
@@ -25,37 +25,41 @@ function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
             alt="project image "
           ></Image>
         </div>
-        <div className="w-[40%] h-[100%] px-[56px] py-[48px] border border-solid border-1 rounded-r-[6px] flex flex-col justify-between">
-          <div className="space-y-[24px]">
+        <div className="w-[100%] md:w-[40%] sm:h-[40.34%] md:h-[100%] sm:px-[20px] sm:py-[20px] md:px-[24px] md:py-[20px] lg:px-[44px] lg:py-[34px] xl:px-[56px] xl:py-[48px] border border-solid border-1 rounded-r-[6px] flex flex-col justify-between">
+          <div className="sm:space-y-[16px] md:space-y-[20px] lg:space-y-[24px]">
             <div className="flex space-x-[16px] items-center">
               <Category category={category} />
-              <div className="text-black text-[14px]">{postTime}</div>
+              <div className="text-black sm:text-[12px] lg:text-[14px]">
+                {postTime}
+              </div>
             </div>
-            <div className="space-y-[16px]">
-              <div className="text-black text-[40px]">{tiltle}</div>
-              <div className="text-black opacity-60 text-[16px]">
+            <div className="sm:space-y-[12px] md:space-y-[16px] lg:space-y-[20px]">
+              <div className="text-black sm:text-[24px] xl:text-[40px]">
+                {tiltle}
+              </div>
+              <div className="text-black opacity-60 sm:text-[12px] lg:text-[16px]">
                 {depcription}
               </div>
             </div>
           </div>
-          <ViewMoreButton style="border" content="View more" />
+          <ViewMoreButton size="big" content="View more" />
         </div>
       </div>
-      <div className=" flex  w-[100%] justify-center items-center space-x-[30px] ">
+      <div className=" flex  w-[100%] justify-center items-center sm:space-x-[26px] lg:space-x-[30px] ">
         <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
+          className={`sm:w-[18px] sm:h-[18px] lg:w-[20px] lg:h-[20px]  rounded-[100%] ${
             page === 1 ? "bg-primary" : "bg-[#D9D9D9]"
           }`}
         ></div>
 
         <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
+          className={`sm:w-[18px] sm:h-[18px] lg:w-[20px] lg:h-[20px]   rounded-[100%] ${
             page === 2 ? "bg-primary" : "bg-[#D9D9D9]"
           }`}
         ></div>
 
         <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
+          className={`sm:w-[18px] sm:h-[18px] lg:w-[20px] lg:h-[20px]  rounded-[100%] ${
             page === 3 ? "bg-primary" : "bg-[#D9D9D9]"
           }`}
         ></div>
