@@ -9,7 +9,7 @@ const Projects = () => {
       <div className="max-w-[1440px] w-[100%] mx-auto flex-row justify-between items-center px-[80px] space-y-[40px] ">
         <SectionTitle
           title="PROJECTS"
-          subtittle="About our establishment and growth"
+          subtitle="About our establishment and growth"
           textPosition="left"
         ></SectionTitle>
         <div className="flex-col w-[100%] space-y-[60px] mb-[60px] ">
