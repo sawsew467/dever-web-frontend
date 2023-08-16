@@ -7,7 +7,7 @@ import ListMember from "../../components/sections/member/memberNormal";
 
 function Member() {
   return (
-     <div className=" xl:mt-[120px] lg:mt-[109px] mobile:mt-[96px]">
+     <div className=" xl:mt-[120px] lg:mt-[109px] sm:mt-[96px]">
         <Banner />
         <section className="bg-[#FAFBFC]  flex flex-col">
         <ListLeaderMember />
