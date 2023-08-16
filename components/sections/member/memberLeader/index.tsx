@@ -40,7 +40,7 @@ const ListLeaderMember = () => {
   ];
   return (
     <article className="md:py-[60px] sm:py-[40px]  ">
-      <div className="xl:max-w-[1280px] lg:max-w-[945px] md:max-w-[689px] sm:max-w-[320px] mx-[auto] px-[auto]">
+      <div className="xl:max-w-[1280px] lg:max-w-[945px] md:max-w-[688px] sm:max-w-[320px] mx-[auto] px-[auto]">
         <div className="justify-between relative items-end xl:flex-row flex sm:flex-col sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
           <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
             <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px]  font-[700]">
