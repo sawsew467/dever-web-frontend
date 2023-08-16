@@ -46,7 +46,7 @@ const ListLeaderMember = () => {
             <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px]  font-[700]">
               CLUB LEADER MEMBERS
             </h3>
-            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px]">
+            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px] sm:mb-[4px] ">
               About our establishment and growth
             </p>
           </div>

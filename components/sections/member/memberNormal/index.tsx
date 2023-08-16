@@ -39,14 +39,14 @@ const ListMember = () => {
     },
   ];
   return (
-    <article className="mx-[auto] md:pb-[60px] mobile:pb-[40px]">
+    <article className="mx-[auto] md:pb-[60px] sm:pb-[40px]">
       <div className="xl:max-w-[1280px] lg:max-w-[945px] md:max-w-[689px] sm:max-w-[320px] mx-[auto] px-[auto]">
         <div className="justify-between relative items-end xl:flex-row flex sm:flex-col sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
           <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
-            <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px]  font-[700]">
+            <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px] font-[700]">
               CLUB MEMBERS
             </h3>
-            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px]">
+            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px] sm:mb-[4px]">
               About our establishment and growth
             </p>
           </div>
