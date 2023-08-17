@@ -9,7 +9,7 @@ interface viewMorePros {
 function ViewMoreButton({ content, size }: viewMorePros) {
   return (
     <div
-      className={` hidden md:flex rounded-[6px] items-center space-x-[4px] border border-1 border-solid border-primary text-primary justify-center
+      className={` hidden md:flex rounded-[6px] items-center space-x-[4px] border border-[1px] border-solid border-primary text-primary justify-center
   ${size === "big" ? " md:text-[12px] lg:text-[16px] md:py-[8px] md:px-[8px] lg:px-[12px] xl:px-[32px] w-fit " : ""}
   ${
     size === "small"

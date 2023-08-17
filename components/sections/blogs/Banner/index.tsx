@@ -14,11 +14,11 @@ const Blogs = () => {
       <div className="max-w-[1440px] w-[100%]  mx-auto md:px-[40px] xl:px-[80px]">
         <div className="relative sm:text-center md:text-left">
           <div className="absolute transform sm:w-[86.11%] md:w-[42%] sm:-translate-x-1/2 sm:left-1/2 md:left-0 md:-translate-x-0 sm:space-y-[2px] md:space-y-[12px] lg:space-y-[20px] sm:top-[106px] md:top-[176px] lg:top-[154px]  xl:top-[209px] left-0  ">
-            <div className="sm:space-y-[8px] xl:space-y-[12px]">
+            <div className="md:space-y-[8px] xl:space-y-[12px]">
               <div className=" sm:text-[24px] lg:text-[32px] sm:leading-[29px] lg:leading-[39px] text-black stroke-text font-black ">
                 EXPLORE ABOUT
               </div>
-              <div className="md:hidden w-[120px] h-[4px] bg-highlight mx-auto "></div>
+              <div className=" sm:block md:hidden w-[120px] h-[4px] mt-[8px] mb-[12px] bg-highlight mx-auto "></div>
               <div className="w-[100%] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
                 FU-DEVER CLUB
               </div>
