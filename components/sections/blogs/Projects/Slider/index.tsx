@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import projectImage from "@images/pages/activity/img.png";
+import ViewMoreButton from "../../ViewMoreButton"
 import Category from "../Category";
-import ViewMoreButton from "../../ViewMoreButton";
 export interface postPros {
   category: string;
   postTime: string;
@@ -13,10 +13,10 @@ export interface postPros {
 
 function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
   return (
-    <div className="w-[100%] flex-col sm:space-y-[12px] lg:space-y-[20px] xl:space-y-[24px]  ">
-      <div className="w-[100%] sm:h-[440px] md:h-[254px] lg:h-[355px] xl:h-[500px] flex sm:flex-col md:flex-row ">
+    <div className="w-[100%] flex-col sm:space-y-[12px] lg:space-y-[20px] xl:space-y-[24px]   ">
+      <div className="w-[100%] sm:h-[440px] md:h-[254px] lg:h-[355px] xl:h-[500px] flex sm:flex-col md:flex-row  border border-solid border-1 rounded-r-[6px] rounded-l-[6px]">
         <div
-          className="w-[100%] md:w-[60%] sm:h-[59.66%] md:h-[100%] border border-solid border-y-1 rounded-l-[6px]"
+          className="w-[100%] md:w-[60%] sm:h-[59.66%] md:h-[100%] "
           style={{ boxSizing: "border-box" }}
         >
           <Image
@@ -25,7 +25,7 @@ function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
             alt="project image "
           ></Image>
         </div>
-        <div className="w-[100%] md:w-[40%] sm:h-[40.34%] md:h-[100%] sm:px-[20px] sm:py-[20px] md:px-[24px] md:py-[20px] lg:px-[44px] lg:py-[34px] xl:px-[56px] xl:py-[48px] border border-solid border-1 rounded-r-[6px] flex flex-col justify-between">
+        <div className="w-[100%] md:w-[40%] sm:h-[40.34%] md:h-[100%] sm:px-[20px] sm:py-[20px] md:px-[24px] md:py-[20px] lg:px-[44px] lg:py-[34px] xl:px-[56px] xl:py-[48px]  flex flex-col justify-between">
           <div className="sm:space-y-[16px] md:space-y-[20px] lg:space-y-[24px]">
             <div className="flex space-x-[16px] items-center">
               <Category category={category} />
@@ -42,7 +42,7 @@ function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
               </div>
             </div>
           </div>
-          <ViewMoreButton size="big" content="View more" />
+          <ViewMoreButton size="big" content={"View more"}/>
         </div>
       </div>
       <div className=" flex  w-[100%] justify-center items-center sm:space-x-[26px] lg:space-x-[30px] ">

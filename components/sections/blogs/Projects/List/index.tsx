@@ -74,8 +74,8 @@ function List() {
   };
 
   return (
-    <>
-      <div className="w-[100%] flex sm:flex-col md:flex-row sm:gap-y-[20px] md:gap-y-[12px] lg:gap-y-[20px] xl:gap-y-[32px] md:gap-x-[1.74%] lg:gap-x-[2.12%] xl:gap-x-[2.5%] flex-wrap ">
+    <div className="sm:space-y-[12px] md:space-y-[20px] xl:space-y-[24px] ">
+      <div className="w-[100%] flex sm:flex-col md:flex-row sm:gap-y-[20px] md:gap-y-[12px] lg:gap-y-[20px] xl:gap-y-[32px] justify-between flex-wrap ">
         {listProjects.map((items, i) => (
           <Card
             key={i}
@@ -91,7 +91,7 @@ function List() {
       <div className="flex justify-center  ">
         <ChangePage currentPage={page} onPageChange={onChangePage} totalPages={totalPages}></ChangePage>
       </div>
-    </>
+    </div>
   );
 }
 

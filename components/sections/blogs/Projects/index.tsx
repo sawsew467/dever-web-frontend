@@ -5,8 +5,8 @@ import ChangePage from "@/components/ChangePage";
 import List from "./List";
 const Projects = () => {
   return (
-    <div className="w-[100%] relative mb-[40px]">
-      <div className="max-w-[1440px] w-[100%] mx-auto flex-row justify-between items-center sm:px-[20px] md:px-[40px] xl:px-[80px] sm:space-y-[20px] lg:space-y-[40px] ">
+    <div className="w-[100%] relative sm:mb-[20px] lg:mb-[40px] xl:mb-[60px] ">
+      <div className="max-w-[1440px] w-[100%] mx-auto flex-row justify-between items-center sm:px-[20px] md:px-[40px] xl:px-[80px] sm:space-y-[20px] lg:space-y-[40px] xl:space-y-[60px] ">
         <SectionTittle
           title="PROJECTS"
           subtitle="About our establishment and growth"
