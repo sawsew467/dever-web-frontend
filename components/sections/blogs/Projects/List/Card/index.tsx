@@ -1,13 +1,13 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Category from "../../Category";
-import { postPros } from "../../Slider";
+import { PostProps } from "../../Slider";
 import ViewMoreButton from "../../../ViewMoreButton";
 interface itemProps {
-  category: postPros["category"];
-  postTime: postPros["postTime"];
-  tiltle: postPros["tiltle"];
-  depcription: postPros["depcription"];
+  category: PostProps["category"];
+  postTime: PostProps["postTime"];
+  tiltle: PostProps["title"];
+  depcription: PostProps["description"];
   pic : StaticImageData;
 }
 
@@ -28,8 +28,8 @@ function Card({ category, postTime, tiltle, depcription, pic }: itemProps) {
           <div className="text-black sm:text-[12px] lg:text-[14px]  ">{postTime}</div>
         </div>
         <div className="space-y-[8px] sm:text-[12px] md:text-[8px] lg:text-[12px]">
-          <div className="text-black sm:text-[16px] md:text-[12px] lg:text-[16px] xl:text-[24px]">{tiltle}</div>
-          <div className="text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] ">
+          <div className="text-black sm:text-[16px] md:text-[12px] lg:text-[16px] xl:text-[24px] xl:leading-[29px] ">{tiltle}</div>
+          <div className="text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px]">
             {depcription}
           </div>
         </div>

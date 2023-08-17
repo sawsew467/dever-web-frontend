@@ -23,7 +23,7 @@ const Blogs = () => {
                 FU-DEVER CLUB
               </div>
             </div>
-            <div className="w-[100%]  sm:text-[12px] lg:text-[16px] xl:text-[20px] text-black  md:leading-[15px] lg:leading-[19px] xl:leading-[24px] font-normal">
+            <div className="w-[100%]  sm:text-[12px] lg:text-[16px] xl:text-[20px] text-black  sm:leading-[15px] lg:leading-[19px] xl:leading-[24px] font-normal">
               Dive into the world of coding, problem-solving, and tech with
               like-minded peers. Whether you&apos;re a beginner or an
               experienced programmer. Join us and unlock the limitless potential
@@ -31,8 +31,8 @@ const Blogs = () => {
             </div>
 
             <div className="w-[100%] absolute sm:top-[180px] md:top-[156px] lg:top-[215px] xl:top-[219px]">
-              <div className="absolute bg-white sm:hidden md:block md:top-[10px] lg:top-[16px] md:w-[117px] lg:w-[167px] md:h-[31px] lg:h-[51px] border-solid border-[3px] border-black "></div>
-              <div className="absolute sm:left-1/2 transform sm:-translate-x-1/2 sm:-translate-x-123 md:left-0 md:translate-x-0 md:left-[-8px] lg:left-[-16px] text-white bg-primary sm:w-[123px] md:w-[117px] lg:w-[167px] sm:h-[39px] md:h-[31px] lg:h-[51px] md:py-[8px] lg:py-[16px] md:px-[20px] lg:px-[32px] md:text-[12px] lg:text-[16px] flex items-center justify-center  ">
+              <div className="absolute bg-white sm:hidden md:block md:top-[10px] lg:top-[16px] md:w-[117px] lg:w-[167px] md:h-[31px] lg:h-[51px] xl:h-[56px] border-solid border-[3px] border-black "></div>
+              <div className="absolute sm:left-1/2 transform sm:-translate-x-1/2 sm:-translate-x-123 md:left-0 md:translate-x-0 md:left-[-8px] lg:left-[-12px] xl:left-[-16px] text-white bg-primary sm:w-[123px] md:w-[117px] lg:w-[167px] sm:h-[39px] md:h-[31px] lg:h-[51px] xl:h-[56px]  md:py-[8px] lg:py-[16px] md:px-[20px] lg:px-[32px] md:text-[12px] lg:text-[16px] flex items-center justify-center  ">
                 View projects
               </div>
             </div>

@@ -13,13 +13,7 @@ const Projects = () => {
           textPosition="left"
         ></SectionTittle>
         <div className="flex-col w-[100%] sm:space-y-[20px] lg:space-y-[40px] xl:space-y-[60px]">
-          <Slider
-            category={"java"}
-            postTime={"5 month ago"}
-            tiltle={"Java backend"}
-            depcription={"how yo use java to backend"}
-            page={2}
-          ></Slider>
+          <Slider></Slider>
           <List></List>
         </div>
       </div>
