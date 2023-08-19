@@ -6,6 +6,8 @@ import img4 from "@pageImage/activity/img4.png";
 import img5 from "@pageImage/activity/img5.png";
 import img6 from "@pageImage/activity/img6.png";
 import ArrowIcon from "@pageImage/activity/ArrowIcon.svg";
+import SectionTitle from "@/components/SectionTitle";
+
 function Activities() {
   const academicActivities = [
     {
@@ -47,15 +49,12 @@ function Activities() {
       <section className="w-full h-full flex justify-center items-center">
         <div className="max-w-[1440px] w-full h-full xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col justify-center items-center">
           <div className="bg-[#F8FCFF] flex flex-col w-full md:py-[60px] sm:py-[40px]">
-            <div className="flex flex-col px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
-              <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
-                Academic{" "}
-              </p>
-              <p className=" font-normal xl:text-[28px] xl:leading-[34px] text-base leading-[19px]  text-[#22181C] ">
-                About our establishment and growth
-              </p>
-            </div>
-            <div className="flex flex-col md:flex-row md:gap-0 sm:gap-[30px] justify-between w-full ">
+            <SectionTitle
+              title="Academic"
+              subtitle="About our establishment and growth"
+              textPosition="left"
+            ></SectionTitle>
+            <div className="flex flex-col mt-[20px] md:flex-row md:gap-0 sm:gap-[30px] justify-between w-full ">
               {academicActivities.map((activity, i) => (
                 <>
                   <div
@@ -65,7 +64,7 @@ function Activities() {
                     <Image
                       src={activity.img}
                       alt={activity.alt}
-                      className="w-full object-cover xl:h-[320px] lg:h-[252px] md:h-[178px] sm:h-[270px]"
+                      className=" object-cover xl:w-[400px] xl:h-[320px] lg:w-[283px] lg:h-[252px] md:w-[200px] md:h-[178px] sm:w-[320px] sm:h-[270px]"
                     ></Image>
                     <div className="flex flex-col items-center max-w-[277px] w-full">
                       <p className="lg:text-[40px] text-[#0065A9] font-bold lg:leading-[48px] md:text-[24px] md:leading-[29px] sm:leading-[48px] sm:text-[40px] mb-2">
@@ -74,7 +73,7 @@ function Activities() {
                       <p className="leading-[19px] lg:max-w-[277px] md:max-w-[188px] sm:w-full text-[16px] font-light text-center mb-[20px]">
                         {activity.desc}
                       </p>
-                      <button className=" flex gap-1 flex-row items-center px-[32px] py-2 bg-[#0098FF] rounded-[2px]">
+                      <button className=" flex gap-1 flex-row items-center lg:px-[32px] lg:py-2 md:px-[10px] md:py-1 px-[32px] py-2 bg-[#0098FF] rounded-[2px]">
                         <p className="font-normal text-[16px] leading-[24px] text-white">
                           View more
                         </p>
@@ -87,19 +86,14 @@ function Activities() {
             </div>
           </div>
           <div className="w-full md:py-[60px] sm:py-[40px]">
-            <div className="flex flex-col px-[20px] border-l-8 border-[#FF0000] mb-[20px] xl:mb-[28px]">
-              <p className="text-[#0098FF] xl:text-[40px] xl:leading-[48px] text-[24px] leading-[29px] font-bold ">
-                Extracurricular
-              </p>
-              <p className="font-normal xl:text-[28px] xl:leading-[34px] text-base leading-[19px]  text-[#22181C] ">
-                About our establishment and growth
-              </p>
-            </div>
-            <div className="xl:max-w-[1280px]  w-full gap-4 lg:columns-3 md:columns-2 sm:columns-1 space-y-4">
+            <SectionTitle
+              title="Extracurricular"
+              subtitle="About our establishment and growth"
+              textPosition="left"
+            ></SectionTitle>
+            <div className="xl:max-w-[1280px] mt-5 md:block sm:grid sm:justify-center w-full gap-4 lg:columns-3 md:columns-2 sm:columns-1 sm:space-y-0  md:space-y-4">
               {extraActivies.map((activity, index) => (
                 <Image
-                  className="max-h-[420px]"
-                  max-height={420}
                   src={activity.img}
                   alt={activity.alt}
                   key={index}

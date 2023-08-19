@@ -13,11 +13,11 @@ function Banner() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation.
             </p>
-            <div className="flex flex-col items-center justify-center">
-              <p className="font-black text-[32px] leading-[39px] stroke-text ">
+            <div className=" flex flex-col items-center justify-center">
+              <p className="font-black md:text-[32px] md:leading-[39px] text-[30px] leading-[36px] mb-[12px] stroke-text ">
                 Activities in
               </p>
-              <p className="uppercase font-black text-[40px] leading-[48px] text-[#0098FF]">
+              <p className="uppercase font-black md:text-[40px] md:leading-[48px] text-[38px] leading-[46px] text-[#0098FF]">
                 {" "}
                 fu-dever club
               </p>
@@ -26,11 +26,19 @@ function Banner() {
               <p className="font-black text-[24px] leading-[29px] text-[#0098FF] opacity-50 max-w-[80px] w-full">
                 Follow us
               </p>
-              <Image src={facebook} alt="facebookIcon"></Image>
+              <Image
+                className="w-full h-full"
+                src={facebook}
+                alt="facebookIcon"
+              ></Image>
             </div>
           </div>
           <div className="w-full md:mb-[60px] sm:mb-[40px] flex flex-col items-center justify-center">
-            <Image src={banner} alt="bannerImg"></Image>
+            <Image
+              className="w-full h-full"
+              src={banner}
+              alt="bannerImg"
+            ></Image>
           </div>
         </div>
       </section>
