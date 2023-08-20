@@ -18,7 +18,7 @@ module.exports = {
       },
       colors: {
         'primary': '#0098FF',
-        'highlight':'FF0000',
+        'highlight':'#FF0000',
       },
       backgroundSize: {
         'auto': 'auto',
