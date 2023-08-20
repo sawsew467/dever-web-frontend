@@ -50,7 +50,7 @@ function Activities() {
         <div className="max-w-[1440px] w-full h-full xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col justify-center items-center">
           <div className="bg-[#F8FCFF] flex flex-col w-full md:py-[60px] sm:py-[40px]">
             <SectionTitle
-              title="Academic"
+              title="academic"
               subtitle="About our establishment and growth"
               textPosition="left"
             ></SectionTitle>
