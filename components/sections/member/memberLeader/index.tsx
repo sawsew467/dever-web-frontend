@@ -40,7 +40,7 @@ const ListLeaderMember = () => {
   ];
   return (
     <article className="md:py-[60px] sm:py-[40px]  ">
-      <div className="xl:max-w-[1280px] lg:max-w-[945px] md:max-w-[689px] sm:max-w-[320px] mx-[auto] px-[auto]">
+      <div className="xl:max-w-[1280px] mx-[auto] ">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
           <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
             <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px]  font-[700]">
@@ -63,11 +63,11 @@ const ListLeaderMember = () => {
             </p>
           </button>
         </div>
-        <ul className=" xl:mt-[28px]  w-[100%] md:mt-[40px] sm:mt-[20px] sm:gap-y-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex flex-wrap justify-start">
+        <ul className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start">
           {data.map((item, key) => (
             <li
               key={key}
-              className=" xl:w-[290px] xl:h-[400px] lg:w-[210px] lg:h-[300px] md:w-[146px] md:h-[204px] sm:w-[93px] sm:h-[123px]  cursor-pointer  relative"
+              className="xl:w-[calc((100%-40px*3)/4)] xl:aspect-[29/40]  md:w-[calc((100%-35px*3)/4)] lg:aspect-[7/10] md:aspect-[146/204] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[93/123] h-[auto]  cursor-pointer  relative"
             >
               <Image
                 width={290}
