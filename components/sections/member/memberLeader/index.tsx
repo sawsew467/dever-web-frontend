@@ -67,7 +67,7 @@ const ListLeaderMember = () => {
           {data.map((item, key) => (
             <li
               key={key}
-              className="xl:w-[calc((100%-40px*3)/4)] xl:aspect-[29/40]  md:w-[calc((100%-35px*3)/4)] lg:aspect-[7/10] md:aspect-[146/204] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[93/123] h-[auto]  cursor-pointer  relative"
+              className="xl:w-[calc((100%-40px*3)/4)] xl:aspect-[29/40]  md:w-[calc((100%-35px*3)/4)] lg:aspect-[7/10] md:aspect-[146/204] sm:w-[calc((100%-20px*2)/3)] sm:aspect-[93/123] h-[auto]  cursor-pointer  relative"
             >
               <Image
                 width={290}
