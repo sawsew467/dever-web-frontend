@@ -3,6 +3,7 @@ import Image from "next/image";
 import fillter from "@pageImage/member/leader/filter.svg";
 import vector from "@pageImage/member/normal/vector.svg";
 import avatar from "@pageImage/member/avatar/topface/avatar.png";
+import SectionTittle from "@/components/SectionTitle";
 const ListMember = () => {
   const data = [
     {
@@ -42,14 +43,7 @@ const ListMember = () => {
     <article className="mx-[auto] md:pb-[60px] sm:pb-[40px]">
       <div className="xl:max-w-[1280px] mx-[auto] px-[auto]">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end  sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
-          <div className="w-[100%] pl-[12px] border-l-[8px] border-[#FF0000]">
-            <h3 className="mb-[4px] cursor-pointer w-[auto] uppercase text-[#0098FF] xl:leading-[48px] lg:leading-[38px] sm:leading-[29px] xl:text-[40px] lg:text-[32px] sm:text-[24px] font-[700]">
-              CLUB MEMBERS
-            </h3>
-            <p className="xl:text-[28px] font-[400] lg:text-[24px] sm:text-[16px] md:mb-0 sm:mb-[4px]">
-              About our establishment and growth
-            </p>
-          </div>
+        <SectionTittle title="CLUB MEMBERS" subtitle="Meet our exceptional team leaders." textPosition="left"></SectionTittle>
           <button className="lg:min-w-[93px] lg:h-[35px] md:min-w-[71px] sm:h-[29px] lg:px-[16px] sm:w-[69px] lg:py-[8px] sm:py-[6px] sm:px-[12px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
             <Image
               src={fillter}
