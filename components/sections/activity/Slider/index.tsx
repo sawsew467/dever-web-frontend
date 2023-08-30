@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import Image, { StaticImageData } from "next/image";
-import img3 from "@pageImage/activity/img3.png";
-import ArrowImg from "@pageImage/activity/ArrowImg.svg";
+import { useState } from "react";
+import Image from "next/image";
+
 interface ExtraActivity {
   img: string;
   alt: string;
 }
 function Slider() {
-  const extraActivies: ExtraActivity[] = [
+  const extraActivities: ExtraActivity[] = [
     {
       img: "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?cs=srgb&dl=pexels-pixabay-326055.jpg&fm=jpg",
       alt: "img",
@@ -58,86 +57,94 @@ function Slider() {
     },
   ];
   const maxVisibleImages = 4;
-  const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
-  const [visibleImages, setVisibleImages] = useState<ExtraActivity[]>([]);
-
-  useEffect(() => {
-    const startIndex = selectedImageIndex % extraActivies.length;
-    const endIndex = (startIndex + maxVisibleImages - 1) % extraActivies.length;
-    const newVisibleImages = [];
-
-    if (startIndex <= endIndex) {
-      for (let i = startIndex; i <= endIndex; i++) {
-        newVisibleImages.push(extraActivies[i]);
-      }
-    } else {
-      for (let i = startIndex; i < extraActivies.length; i++) {
-        newVisibleImages.push(extraActivies[i]);
-      }
-      for (let i = 0; i <= endIndex; i++) {
-        newVisibleImages.push(extraActivies[i]);
-      }
-    }
-
-    setVisibleImages(newVisibleImages);
-  }, [selectedImageIndex, extraActivies]);
+  const [indexStart, setIndexStart] = useState<number>(0);
+  const [indexEnd, setIndexEnd] = useState<number>(maxVisibleImages - 1);
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const handleImage = (index: number) => {
-    setSelectedImageIndex(index);
+    setSelectedIndex(index);
+    setIndexStart(index);
+    setIndexEnd((index + maxVisibleImages - 1) % extraActivities.length);
   };
 
   const handleNextImg = () => {
-    setSelectedImageIndex((selectedImageIndex + 1) % extraActivies.length);
+    setIndexStart((indexStart + 1) % extraActivities.length);
+    setIndexEnd((indexEnd + 1) % extraActivities.length);
   };
 
   const handlePreviousImg = () => {
-    setSelectedImageIndex(
-      (selectedImageIndex - 1 + extraActivies.length) % extraActivies.length
+    setIndexStart(
+      (indexStart - 1 + extraActivities.length) % extraActivities.length
+    );
+    setIndexEnd(
+      (indexEnd - 1 + extraActivities.length) % extraActivities.length
     );
   };
   return (
     <>
-      <div className="flex flex-col mt-[20px] w-full xl:px-[80px] md:px-[40px] sm:px-[20px]">
+      <div className="flex flex-col mt-[20px] w-full ">
         <div className="mt-[20px] w-full max-w-[1280px]">
           <div className="flex justify-center">
-            <div className="w-full  xl:h-[500px] lg:h-[400px] md:h-[300px] sm:h-[200px] relative ">
-              <Image
+            <div className="w-full  xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
+              <svg
                 onClick={handlePreviousImg}
-                className="absolute text-[#0098FF] rotate-180 left-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
-                height={30}
-                src={ArrowImg}
-                alt="arrowIcon"
+                className=" cursor-pointer "
+                height={80}
+                width={80}
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
+                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
+                />
+              </svg>
+              <img
+                className="w-4/5 h-full object-cover"
+                src={extraActivities[indexStart]?.img}
+                alt={extraActivities[indexStart]?.alt}
               />
-              <Image
-                className="w-full h-full object-cover"
-                src={visibleImages[0]?.img}
-                alt=""
-              />
-              <Image
+              <svg
                 onClick={handleNextImg}
-                className="absolute right-5 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer"
-                height={30}
-                src={ArrowImg}
-                alt="arrowIcon"
-              />
+                className="rotate-180 cursor-pointer fill-red-800"
+                height={80}
+                width={80}
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
+                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
+                />
+              </svg>
             </div>
           </div>
-          <div className="w-full mt-[10px] flex gap-[20px] items-center">
+          <div className="w-full mt-[20px] flex gap-[20px] items-center">
             <div className="w-full justify-between o  flex items-center">
-              {visibleImages.map((img, index) => (
-                <Image
-                  //   className={
-                  //     selectedImageIndex === index
-                  //       ? "opacity-100 cursor-pointer md:w-[calc((100%-60px)/4)] sm:w-[calc((100%-30px)/4)]"
-                  //       : "opacity-60 cursor-pointer md:w-[calc((100%-60px)/4)] sm:w-[calc((100%-30px)/4)]"
-                  //   }
-                  className="opacity-100 cursor-pointer md:w-[calc((100%-60px)/4)] sm:w-[calc((100%-30px)/4)]"
-                  onClick={() => handleImage(index)}
-                  key={index}
-                  src={img.img}
-                  alt={img.alt}
-                />
-              ))}
+              {extraActivities.map((img, index) => {
+                if (
+                  indexStart <= indexEnd
+                    ? index >= indexStart && index <= indexEnd
+                    : index >= indexStart || index <= indexEnd
+                ) {
+                  return (
+                    <img
+                      onClick={() => handleImage(index)}
+                      className={`cursor-pointer ${
+                        selectedIndex === index ? "blur-0" : "blur-[2px]"
+                      } md:w-[calc((100%-60px)/4)] sm:w-[calc((100%-30px)/4)] max-h-[200px] h-full object-cover`}
+                      key={index}
+                      src={img.img}
+                      alt={img.alt}
+                    />
+                  );
+                }
+                return null; // Don't render if index is outside the range
+              })}
             </div>
           </div>
         </div>

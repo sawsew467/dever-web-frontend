@@ -70,7 +70,7 @@ function Activities() {
             </div>
           </div>
         </div>
-        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
+        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px]  w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="Extracurricular"
