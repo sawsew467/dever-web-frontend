@@ -3,7 +3,10 @@ import Image, { StaticImageData } from "next/image";
 import Category from "../../Category";
 import { PostProps } from "../../Slider";
 import ViewMoreButton from "../../../ViewMoreButton";
-interface itemProps {
+import Link from 'next/link';
+
+export interface itemProps {
+  _id : PostProps["_id"];
   category: PostProps["category"];
   postTime: PostProps["postTime"];
   tiltle: PostProps["title"];
@@ -11,7 +14,7 @@ interface itemProps {
   pic : StaticImageData;
 }
 
-function Card({ category, postTime, tiltle, depcription, pic }: itemProps) {
+function Card({_id, category, postTime, tiltle, depcription, pic }: itemProps) {
   return (
     <div className=" md:w-[32.17%] lg:w-[31.92%] xl:w-[31.65%] sm:h-[450px] md:h-[310px] lg:h-[405.30px] xl:h-[570px] flex-col   border border-solid  rounded-t-[6px]  rounded-b-[6px] ">
     <div className="w-[100%] sm:h-[66.66%] md:h-[50%] xl:h-[52.8%] ">
@@ -34,7 +37,10 @@ function Card({ category, postTime, tiltle, depcription, pic }: itemProps) {
           </div>
         </div>
       </div>
+     
+      <Link href="/posts/[id]" as={`/posts/${_id}`}>
       <ViewMoreButton size="small" content={"View more"}/>
+            </Link>
     </div>
   </div>
   );

@@ -5,7 +5,6 @@ export default function Blogs() {
     <>
       <Banner></Banner>
       <Projects></Projects>
-     
     </>
   );
 }

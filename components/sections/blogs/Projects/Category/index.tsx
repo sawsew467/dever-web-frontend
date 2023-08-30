@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from "next/image";
-import { postPros } from '../Slider';
+import { PostProps } from '../Slider';
 
 interface catePros {
-    category : postPros["category"];
+    category : PostProps["category"];
 }
 
 function Category({category}: catePros) {
