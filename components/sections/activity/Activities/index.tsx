@@ -1,12 +1,10 @@
-import React from "react";
+"use client";
 import Image from "next/image";
+import React from "react";
 import img from "@pageImage/activity/img.png";
-import img3 from "@pageImage/activity/img3.png";
-import img4 from "@pageImage/activity/img4.png";
-import img5 from "@pageImage/activity/img5.png";
-import img6 from "@pageImage/activity/img6.png";
 import ArrowIcon from "@pageImage/activity/ArrowIcon.svg";
 import SectionTitle from "@/components/SectionTitle";
+import Slider from "@components/sections/activity/Slider";
 
 function Activities() {
   const academicActivities = [
@@ -30,25 +28,11 @@ function Activities() {
     },
   ];
 
-  const extraActivies = [
-    { img: img3, alt: "img" },
-    { img: img4, alt: "img" },
-    { img: img5, alt: "img" },
-    { img: img6, alt: "img" },
-    { img: img4, alt: "img" },
-    { img: img3, alt: "img" },
-    { img: img6, alt: "img" },
-    { img: img5, alt: "img" },
-    { img: img3, alt: "img" },
-    { img: img4, alt: "img" },
-    { img: img5, alt: "img" },
-    { img: img6, alt: "img" },
-  ];
   return (
     <>
-      <section className="w-full h-full flex justify-center items-center">
-        <div className="max-w-[1440px] w-full h-full xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col justify-center items-center">
-          <div className="bg-[#F8FCFF] flex flex-col w-full md:py-[60px] sm:py-[40px]">
+      <section className="w-full h-full flex flex-col justify-center items-center">
+        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
+          <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="academic"
               subtitle="About our establishment and growth"
@@ -85,21 +69,15 @@ function Activities() {
               ))}
             </div>
           </div>
-          <div className="w-full md:py-[60px] sm:py-[40px]">
+        </div>
+        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
+          <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="Extracurricular"
               subtitle="About our establishment and growth"
               textPosition="left"
             ></SectionTitle>
-            <div className="xl:max-w-[1280px] mt-5 md:block sm:grid sm:justify-center w-full gap-4 lg:columns-3 md:columns-2 sm:columns-1 sm:space-y-0  md:space-y-4">
-              {extraActivies.map((activity, index) => (
-                <Image
-                  src={activity.img}
-                  alt={activity.alt}
-                  key={index}
-                ></Image>
-              ))}
-            </div>
+            <Slider></Slider>
           </div>
         </div>
       </section>

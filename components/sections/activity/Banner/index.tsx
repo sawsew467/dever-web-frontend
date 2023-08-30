@@ -5,9 +5,9 @@ import facebook from "@pageImage/activity/facebook.svg";
 function Banner() {
   return (
     <>
-      <section className="w-screen flex justify-center items-center">
-        <div className="max-w-[1440px] w-full h-full sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col justify-center items-center">
-          <div className="w-full flex flex-row lg:justify-between justify-center items-center mt-[70px] sm:mb-[40px] md:mb-[60px] lg:mb-[45px]">
+      <section className="w-full  flex justify-center items-center">
+        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] w-full h-full sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col justify-center items-center">
+          <div className="w-full flex flex-row lg:justify-between justify-center items-center mt-[120px] sm:mb-[40px] md:mb-[60px] lg:mb-[45px]">
             <p className="max-w-[266px] w-full font-normal italic text-sm hidden lg:block leading-[17px] text-[#0098FF]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -23,7 +23,7 @@ function Banner() {
               </p>
             </div>
             <div className=" flex-row items-center justify-center hidden lg:flex gap-[20px]">
-              <p className="font-black text-[24px] leading-[29px] text-[#0098FF] opacity-50 max-w-[80px] w-full">
+              <p className="font-black text-right text-[24px] leading-[29px] text-[#0098FF] opacity-50 max-w-[80px] w-full">
                 Follow us
               </p>
               <Image
