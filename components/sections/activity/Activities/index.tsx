@@ -31,7 +31,7 @@ function Activities() {
   return (
     <>
       <section className="w-full h-full flex flex-col justify-center items-center">
-        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
+        <div className="max-w-[1440px]  bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="academic"
@@ -48,7 +48,7 @@ function Activities() {
                     <Image
                       src={activity.img}
                       alt={activity.alt}
-                      className=" object-cover xl:w-[400px] xl:h-[320px] lg:w-[283px] lg:h-[252px] md:w-[200px] md:h-[178px] sm:w-[320px] sm:h-[270px]"
+                      className=" object-cover xl:w-[400px] xl:h-[320px] lg:w-[283px] lg:h-[252px] md:w-[200px]  md:h-[178px] sm:w-full sm:h-[270px]"
                     ></Image>
                     <div className="flex flex-col items-center max-w-[277px] w-full">
                       <p className="lg:text-[40px] text-[#0065A9] font-bold lg:leading-[48px] md:text-[24px] md:leading-[29px] sm:leading-[48px] sm:text-[40px] mb-2">
@@ -70,7 +70,7 @@ function Activities() {
             </div>
           </div>
         </div>
-        <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px]  w-full h-full  flex flex-col justify-center items-center">
+        <div className="max-w-[1440px]   w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="Extracurricular"

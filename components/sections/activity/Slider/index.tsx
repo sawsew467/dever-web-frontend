@@ -83,7 +83,7 @@ function Slider() {
   return (
     <>
       <div className="flex flex-col mt-[20px] w-full ">
-        <div className="mt-[20px] w-full max-w-[1280px]">
+        <div className="w-full max-w-[1280px]">
           <div className="flex justify-center">
             <div className="w-full  xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
               <svg
@@ -93,13 +93,11 @@ function Slider() {
                 width={80}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
               >
-                <path
-                  d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
-                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
-                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
-                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
-                />
+                <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
               </svg>
               <img
                 className="w-4/5 h-full object-cover"
@@ -108,23 +106,21 @@ function Slider() {
               />
               <svg
                 onClick={handleNextImg}
-                className="rotate-180 cursor-pointer fill-red-800"
+                className=" rotate-180 cursor-pointer "
                 height={80}
                 width={80}
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
+                style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
               >
-                <path
-                  d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z"
-                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
-                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
-                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
-                />
+                <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
               </svg>
             </div>
           </div>
           <div className="w-full mt-[20px] flex gap-[20px] items-center">
-            <div className="w-full justify-between o  flex items-center">
+            <div className="w-full justify-between flex items-center">
               {extraActivities.map((img, index) => {
                 if (
                   indexStart <= indexEnd
@@ -135,7 +131,7 @@ function Slider() {
                     <img
                       onClick={() => handleImage(index)}
                       className={`cursor-pointer ${
-                        selectedIndex === index ? "blur-0" : "blur-[2px]"
+                        indexStart === index ? "blur-0" : "blur-[2px]"
                       } md:w-[calc((100%-60px)/4)] sm:w-[calc((100%-30px)/4)] max-h-[200px] h-full object-cover`}
                       key={index}
                       src={img.img}
@@ -143,7 +139,7 @@ function Slider() {
                     />
                   );
                 }
-                return null; // Don't render if index is outside the range
+                return null;
               })}
             </div>
           </div>
