@@ -2,7 +2,7 @@
 import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
 import Author from "@/components/sections/post/Author";
-
+import RelatedPost from "@/components/sections/post/RelatedPost";
 interface BlogPost {
   id: string;
   title: string;
@@ -33,6 +33,7 @@ export default function Page({ params }: { params: { id: string } }) {
       <Banner></Banner>
       <Body></Body>
       <Author></Author>
+      <RelatedPost></RelatedPost>
     </div>
   );
 }

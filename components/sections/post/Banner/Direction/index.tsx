@@ -10,7 +10,7 @@ interface DirectPros {
 function Direction({currenPage}:DirectPros) {
   return (
     <>
-    <div className='text-[14px] font-[400] leading-normal flex flex-row  align-center  '>
+    <div className='text-[14px] font-[400] leading-normal flex flex-row  align-center opacity-70 '>
     <Link href={`/`}>
               <div>Home</div>
             </Link>
@@ -19,7 +19,7 @@ function Direction({currenPage}:DirectPros) {
               <div>Blogs</div>
             </Link>
     <Image className=""src={arrowRight} alt='right arrow'></Image>
-    <div>{currenPage}</div>
+    <div className='font-[700]'>{currenPage}</div>
     </div>
     </>
   )
