@@ -8,7 +8,7 @@ import rating from "@images/pages/blogs/rating.svg";
 function Author() {
   return (
     <div>
-      <div className="max-w-[1440px] w-full  sm:px-[20px] md:px-[40px] xl:px-[80px] flex justify-between  mb-[80px]">
+      <div className="max-w-[1440px] w-full  sm:px-[20px] md:px-[40px] xl:px-[80px] flex justify-between mx-auto sm:mb-[20px] lg:mb-[40px] xl:mb-[80px]">
         <div className="space-y-[20px]">
           <div className="sm:px-[10px] lg:px-[20px] border-l-8 border-highlight sm:text-[28px] lg:text-[36px] font-[700] leading-[48px] ">
             Author

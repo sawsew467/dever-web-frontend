@@ -38,7 +38,7 @@ function Card({_id, category, postTime, tiltle, depcription, pic }: itemProps) {
         </div>
       </div>
      
-      <Link href="/posts/[id]" as={`/posts/${_id}`}>
+      <Link href="/posts/[id]" as={`blogs/${_id}`}>
       <ViewMoreButton size="small" content={"View more"}/>
             </Link>
     </div>

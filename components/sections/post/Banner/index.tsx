@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { itemProps } from "../../blogs/Projects/List/Card";
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store';
 import projectImage from "@images/pages/activity/img.png";
 import fb from "@images/pages/blogs/fb.svg";
 import pin from "@images/pages/blogs/pinterest.svg";
@@ -11,6 +12,7 @@ import Category from "../../blogs/Projects/Category";
 import Direction from "./Direction";
 
 function Banner() {
+  
   return (
     <div className="max-w-[1440px] w-full  mx-auto sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col sm:space-y-[16px] lg:space-y-[36px] mt-[84px] sm:mb-[20px] lg:mb-[40px] xl:mb-[80px] ">
       <Direction currenPage="for number name"></Direction>

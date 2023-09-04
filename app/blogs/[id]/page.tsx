@@ -3,30 +3,36 @@ import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
 import Author from "@/components/sections/post/Author";
 import RelatedPost from "@/components/sections/post/RelatedPost";
-interface BlogPost {
-  id: string;
-  title: string;
-  content: string;
-}
+import fs from "fs";
+import matter from "gray-matter";
+import getPostMetadata from "@/utils/getPostMetadata";
 
-const blogPosts: BlogPost[] = [
-  { id: '1', title: 'First Blog Post', content: 'This is the content of the first blog post.' },
-  { id: '2', title: 'Second Blog Post', content: 'This is the content of the second blog post.' },
-];
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  const posts = getPostMetadata();
+  return posts.map((post) => ({
     id: post.id,
   }));
 }
 
-export default function Page({ params }: { params: { id: string } }) {
-  const { id } = params;
-  const post = blogPosts.find((post) => post.id === id);
+const getPostContent = (id: string) => {
+  try {
+  const folder = "posts/";
+  const file = `${folder}${id}.md`;
+  
+  const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
 
-  if (!post) {
-    return <div>Post not found</div>;
+  return matterResult;
+  } catch (error) {
+    return null 
   }
+};
+
+
+export default function Page({ params }: { params: { id: string } }) {
+  const id = params.id;
+  const post = getPostContent(id);
   
   return (
     <div>
