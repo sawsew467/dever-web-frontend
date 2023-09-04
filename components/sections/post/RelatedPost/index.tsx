@@ -34,11 +34,11 @@ const listProjects = [
 
 function RelatedPost() {
   return (
-    <div className="max-w-[1440px] w-full  mx-auto md:px-[40px] xl:px-[80px] flex flex-col justify-center mb-[80px] space-y-[40px] ">
-      <div className="mx-auto text-[36px]  w-fit leading-[44px] border-b-[8px] border-highlight px-[20px] font-[700] ">
+    <div className="max-w-[1440px] w-full  mx-auto sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col justify-center sm:mb-[20px] lg:mb-[40px] xl:mb-[80px] space-y-[40px] ">
+      <div className="mx-auto sm:text-[28px] lg:text-[36px]  w-fit leading-[44px] border-b-[8px] border-highlight sm:px-[10px] lg:px-[20px] font-[700]  ">
         Related Post
       </div>
-      <div className="flex space-x-[32px]">
+      <div className="flex sm:space-y-[20px] md:space-y-[0px] md:space-x-[32px] sm:flex-col md:flex-row">
         {listProjects.map((items, i) => (
           <Card
             key={i}
