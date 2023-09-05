@@ -40,7 +40,7 @@ const Not_found = () => {
           <Image src={logo404} alt="logo" width={911} height={290}></Image>
         </div>
         <div className="flex xl:gap-[40px] w-[100%] lg:gap-[30px] md:-[20px] sm:gap-[12px] items-end">
-          <div className="relative w-[100%] z-1 h-[auto] min-h-[128px] ">
+          <div className="relative w-[100%]  h-[auto] min-h-[128px] ">
             <div ref={input}
                onKeyDown={(event : React.KeyboardEvent<HTMLDivElement>) => {
                 if (event.code == "Enter") {
@@ -51,9 +51,9 @@ const Not_found = () => {
             }
           }}  
             onClick={() =>setOpen(true)}
-            contentEditable={true}  className="cursor-pointer text-[#000] font-[500] lg:text-[16px] md:text-[14px] sm:text-[12px] border-[#0098FF] border-[2px] rounded-[10px] absolute h-[auto] min-h-[128px] max-w-[100%] outline-0 md:p-[20px] sm:p-[15px] sm:pt-[30px] top-0 left-0 w-[100%] text-left ">
+            contentEditable={true}  className="z-[2] cursor-pointer text-[#000] font-[500] lg:text-[16px] md:text-[14px] sm:text-[12px] border-[#0098FF] border-[2px] rounded-[10px] absolute h-[auto] min-h-[128px] max-w-[100%] outline-0 md:p-[20px] sm:p-[15px] sm:pt-[30px] top-0 left-0 w-[100%] text-left ">
             </div>
-            <p className={`absolute left-[20px] ${open ? "top-0 opacity-[0.55]" : "md:top-[20px] sm:top-[30px] opacity-[1]"} font-[500] md:text-[16px] sm:text-[12px] transition-[top,opacity] duration-[0.5s] mr-[5px] text-[#0098FF]`}>Send me your feedback, if you think this is a our problem.</p>
+            <p className={`z-[1] absolute left-[20px] ${open ? "top-0 opacity-[0.55]" : "md:top-[20px] sm:top-[30px] opacity-[1]"} font-[500] md:text-[16px] sm:text-[12px] transition-[top,opacity] duration-[0.5s] mr-[5px] text-[#0098FF]`}>Send me your feedback, if you think this is a our problem.</p>
           </div>
           <button 
             onClick={()=>{
@@ -61,9 +61,9 @@ const Not_found = () => {
               input.current.innerText="";
               setOpen(false);
             }}
-            className="flex lg:gap-[16px] md:gap-[14px] sm:gap-[10px] lg:px-[14px] sm:px-[12px] rounded-[10px] xl:w-[111px] md:w-[102px] sm:w-[104px] lg:h-[57px] md:h-[48px] sm:h-[48px] items-center bg-primary">
+            className="flex lg:gap-[16px] md:gap-[14px] sm:gap-[10px] lg:px-[14px] sm:px-[12px] rounded-[10px] lg:min-w-[111px] md:min-w-[102px] sm:min-w-[104px] lg:h-[57px] md:h-[48px] sm:h-[48px] items-center bg-primary">
             <Image src={send} alt="gui" width={27} height={23} className="lg:w-[27px] h-[auto] md:w-[25px] sm:w-[23px] aspect-[27/23]"></Image>
-            <p className="font-[500] lg:text-[16px] sm:text-[12px]  text-[#fff]">Send</p>
+            <p className="font-[500] lg:text-[16px] sm:text-[12px] text-[#fff]">Send</p>
           </button>
         </div>
       </div>
