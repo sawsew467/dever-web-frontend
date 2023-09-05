@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SliderItem from './SliderItem';
 
 export interface PostProps {
+  _id : string;
   category: string;
   postTime: string;
   title: string;
@@ -14,6 +15,7 @@ export interface PostProps {
 function Slider() {
   const initialItems: PostProps[] = [
     {
+      _id : "0004",
       category: 'java',
       postTime: '5 month ago',
       title: 'Java backend 1',
@@ -22,6 +24,7 @@ function Slider() {
       handlePageChange: () => {}
     },
     {
+      _id : "0005",
       category: 'python',
       postTime: '3 month ago',
       title: 'Python backend 2',
@@ -30,6 +33,7 @@ function Slider() {
       handlePageChange: () => {}
     },
     {
+      _id : "0006",
       category: 'javascript',
       postTime: '2 month ago',
       title: 'JavaScript frontend 3',
@@ -49,6 +53,7 @@ function Slider() {
     <div>
       <div className="slider-container">
         <SliderItem
+          _id = {initialItems[currentPage-1]._id}
           category={initialItems[currentPage - 1].category}
           postTime={initialItems[currentPage - 1].postTime}
           title={initialItems[currentPage - 1].title}
