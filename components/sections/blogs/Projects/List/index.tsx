@@ -11,6 +11,7 @@ interface pageProps {
 
 const listProjects = [
   {
+    _id : "0001",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -19,6 +20,7 @@ const listProjects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
   },
   {
+    _id : "0002",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -27,6 +29,7 @@ const listProjects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
   },
   {
+    _id : "0003",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -35,6 +38,7 @@ const listProjects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
   },
   {
+    _id : "0004",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -43,6 +47,7 @@ const listProjects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
   },
   {
+    _id : "0005",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -51,6 +56,7 @@ const listProjects = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
   },
   {
+    _id : "0006",
     category: "java",
     postTime: "5 month ago",
     img: projectImage,
@@ -79,6 +85,7 @@ function List() {
         {listProjects.map((items, i) => (
           <Card
             key={i}
+            _id = {items._id}
             category={items.category}
             postTime={items.postTime}
             tiltle={items.title}
