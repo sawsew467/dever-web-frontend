@@ -6,7 +6,8 @@ import Image from "next/image";
 import goHome from "@pageImage/not-found/arrow-go-back-line.svg";
 import logo404 from "@pageImage/not-found/404.svg";
 import send from "@pageImage/not-found/send.svg";
-import { useState, useRef } from "react";
+import { useState, useRef  } from "react";
+import { useRouter } from "next/navigation";
 import { ValueOf } from "next/dist/shared/lib/constants";
 const postToServer = (text : any) =>{
   console.log('text', text);
@@ -14,6 +15,7 @@ const postToServer = (text : any) =>{
 const Not_found = () => {
   const input = useRef<HTMLParagraphElement | ValueOf<any> >(null);
   const [open, setOpen] = useState<boolean | undefined>(false);
+  const router = useRouter();
   console.log('input.current.value', open )
   return (
     <article 
@@ -27,13 +29,16 @@ const Not_found = () => {
           subtitle="Oops! Looks like you followed a bad link. If you think this is a problem with us, please tell us."
           textPosition="left"
         ></SectionTittle>
-        <Link
-          href="/"
+        <button
+          onClick={()=>{
+            router.push("/") ;    
+            router.refresh();
+          }}
           className="flex lg:gap-[16px] md:gap-[14px] sm:gap-[10px] lg:px-[14px] sm:px-[12px] rounded-[10px] lg:min-w-[137px] md:min-w-[111px] lg:h-[57px] md:h-[48px] sm:h-[48px] items-center bg-primary"
         >
           <Image src={goHome} alt="go home" width={23} height={22} className="mt-[14px] mb-[18px] lg:w-[23px] h-[auto] md:w-[20px] sm:w-[18px] aspect-[23/22]"></Image>
           <p className="font-[500] lg:text-[16px] sm:text-[12px] whitespace-nowrap text-[#fff] mt-[14px] mb-[16px]">Go Home</p>
-        </Link>
+        </button>
       </div>
       <div className="flex flex-col items-center xl:gap-[28px] lg:gap-[40px] md:gap-[35px] sm:gap-[20px]">
         <div className="flex gap-[31.5px] justify-center">
