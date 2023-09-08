@@ -82,7 +82,7 @@ function Slider() {
       <div className="flex flex-col mt-[20px] w-full ">
         <div className="w-full max-w-[1280px]">
           <div className="flex justify-center">
-            <div className="w-full  xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
+            <div className="w-full relative  xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
               <svg
                 onClick={handlePreviousImg}
                 className=" cursor-pointer "
@@ -101,6 +101,7 @@ function Slider() {
                 src={extraActivities[selectedIndex]?.img}
                 alt={extraActivities[selectedIndex]?.alt}
               />
+
               <svg
                 onClick={handleNextImg}
                 className=" rotate-180 cursor-pointer "
