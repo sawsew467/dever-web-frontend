@@ -3,7 +3,7 @@ import Image from "next/image";
 import Background from "@pageImage/blogs/banner.png";
 import Model from "@pageImage/blogs/model.png";
 import "../../../../app/globals.css";
-const Blogs = () => {
+const Blogs = ({}) => {
   return (
     <div className="w-[100%] sm:h-[413px] md:h-[402px] lg:h-[471px] xl:h-[588px]  sm:mb-[40px] md:mb-[60px] lg:mb-[60px]  relative ">
       <Image
