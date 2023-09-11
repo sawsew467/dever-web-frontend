@@ -96,7 +96,7 @@ function Introduction() {
         </div>
         <div className="flex md:items-start lg:items-end xl:items-end pt-[20px] md:pt-[0px] lg:pt-[0px] xl:pt-[0px]">
           <Image
-            className="w-fit md:w-[320px] md:h-[198px] lg:w-[399px] lg:h-[250px] xl:w-[597px] xl:h-[371px] mt-[0px] md:mt-[90px] lg:mt-[0px]  "
+            className="w-fit md:w-[320px] md:h-[198px] lg:w-[399px] lg:h-[250px] xl:w-[597px] xl:h-[371px] mt-[0px] md:mt-[100px] lg:mt-[0px]  "
             src={introduction}
             alt="Picture of the author"
           />
