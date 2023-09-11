@@ -1,3 +1,4 @@
+export const runtime: 'edge' = 'edge';
 
 import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
