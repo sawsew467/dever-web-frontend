@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Reloading from "@/components/Reloading";
 import Banner from "@/components/sections/blogs/Banner";
 import Projects from "@/components/sections/blogs/Projects";
@@ -10,12 +10,10 @@ export default function Blogs() {
     setTimeout(() => {
       setIsReloading(false);
     }, 2400);
-  })
+  });
   return (
     <>
-      {
-        isReloading ? <Reloading></Reloading> : null
-      }
+      {isReloading ? <Reloading></Reloading> : null}
       <Banner></Banner>
       <Projects></Projects>
     </>

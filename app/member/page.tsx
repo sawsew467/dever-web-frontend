@@ -9,7 +9,7 @@ import Reloading from "@/components/Reloading";
 
 function Member() {
   const [isReloading, setIsReloading] = useState<boolean>(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setIsReloading(false);

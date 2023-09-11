@@ -6,7 +6,7 @@ import Reloading from "@/components/Reloading";
 function Activity() {
   const [isReloading, setIsReloading] = useState<boolean>(true);
   console.log(isReloading);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setIsReloading(false);
