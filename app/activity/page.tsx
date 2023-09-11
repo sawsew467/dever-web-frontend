@@ -5,7 +5,6 @@ import Activities from "@/components/sections/activity/Activities";
 import Reloading from "@/components/Reloading";
 function Activity() {
   const [isReloading, setIsReloading] = useState<boolean>(true);
-  console.log(isReloading);
 
   useEffect(() => {
     setTimeout(() => {

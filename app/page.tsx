@@ -8,7 +8,6 @@ import Reloading from "@/components/Reloading";
 
 export default function Home() {
   const [isReloading, setIsReloading] = useState<boolean>(true);
-  console.log(isReloading);
 
   useEffect(() => {
     setTimeout(() => {
