@@ -29,6 +29,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.6.0",
     "tailwind-clip-path": "^1.0.0"
   }
 }
