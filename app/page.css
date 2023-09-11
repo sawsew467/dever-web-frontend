@@ -1,3 +1,14 @@
 .rotateY180deg {
   transform: rotateY(180deg);
 }
+
+.image-gallery-image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.image-gallery-thumbnail-image {
+  width: 90px;
+  height: 60px;
+}
