@@ -1,64 +1,66 @@
-import React from "react";
-import Image from "next/image";
-import projectImage from "@images/pages/activity/img.png";
-import Category from "../Category";
-import ViewMoreButton from "@/components/ViewMoreButton";
-export interface postPros {
+'use client';
+import React, { useState } from 'react';
+import SliderItem from './SliderItem';
+
+export interface PostProps {
+  _id : string;
   category: string;
   postTime: string;
-  tiltle: string;
-  depcription: string;
-  page: number;
+  title: string;
+  description: string;
+  currPage: number;
+  handlePageChange :(page:number) => void; 
 }
 
-function Slider({ category, postTime, tiltle, depcription, page }: postPros) {
+function Slider() {
+  const initialItems: PostProps[] = [
+    {
+      _id : "0004",
+      category: 'java',
+      postTime: '5 month ago',
+      title: 'Java backend 1',
+      description: 'Description 1',
+      currPage: 1,
+      handlePageChange: () => {}
+    },
+    {
+      _id : "0005",
+      category: 'python',
+      postTime: '3 month ago',
+      title: 'Python backend 2',
+      description: 'Description 2',
+      currPage: 2,
+      handlePageChange: () => {}
+    },
+    {
+      _id : "0006",
+      category: 'javascript',
+      postTime: '2 month ago',
+      title: 'JavaScript frontend 3',
+      description: 'Description 3',
+      currPage: 3,
+      handlePageChange: () => {}
+    },
+  ];
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onChangePage = (newPage: number) => {
+    setCurrentPage(newPage);
+  };
+
   return (
-    <div className="w-[100%] flex-col space-y-[24px]">
-      <div className="w-[100%] h-[500px] flex  ">
-        <div
-          className="w-[60%] h-[100%] box-border border border-solid border-y-1 rounded-l-[6px]"
-          style={{ boxSizing: "border-box" }}
-        >
-          <Image
-            src={projectImage}
-            className="w-[100%] h-[100%] rounded-l-[6px] "
-            alt="project image "
-          ></Image>
-        </div>
-        <div className="w-[40%] h-[100%] px-[56px] py-[48px] border border-solid border-1 rounded-r-[6px] flex flex-col justify-between">
-          <div className="space-y-[24px]">
-            <div className="flex space-x-[16px] items-center">
-              <Category category={category} />
-              <div className="text-black text-[14px]">{postTime}</div>
-            </div>
-            <div className="space-y-[16px]">
-              <div className="text-black text-[40px]">{tiltle}</div>
-              <div className="text-black opacity-60 text-[16px]">
-                {depcription}
-              </div>
-            </div>
-          </div>
-          <ViewMoreButton style="border" content="View more" />
-        </div>
-      </div>
-      <div className=" flex  w-[100%] justify-center items-center space-x-[30px] ">
-        <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
-            page === 1 ? "bg-primary" : "bg-[#D9D9D9]"
-          }`}
-        ></div>
-
-        <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
-            page === 2 ? "bg-primary" : "bg-[#D9D9D9]"
-          }`}
-        ></div>
-
-        <div
-          className={`w-[20px] h-[20px] rounded-[100%] ${
-            page === 3 ? "bg-primary" : "bg-[#D9D9D9]"
-          }`}
-        ></div>
+    <div>
+      <div className="slider-container">
+        <SliderItem
+          _id = {initialItems[currentPage-1]._id}
+          category={initialItems[currentPage - 1].category}
+          postTime={initialItems[currentPage - 1].postTime}
+          title={initialItems[currentPage - 1].title}
+          description={initialItems[currentPage - 1].description}
+          currPage={initialItems[currentPage - 1].currPage}
+          handlePageChange = {onChangePage}
+        />
       </div>
     </div>
   );
