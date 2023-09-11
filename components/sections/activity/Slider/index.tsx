@@ -60,7 +60,6 @@ function Slider() {
       alt: "img",
     },
   ];
-  const maxVisibleImages = 4;
 
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
@@ -82,39 +81,55 @@ function Slider() {
       <div className="flex flex-col mt-[20px] w-full ">
         <div className="w-full max-w-[1280px]">
           <div className="flex justify-center">
-            <div className="w-full relative  xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
-              <svg
-                onClick={handlePreviousImg}
-                className=" cursor-pointer "
-                height={80}
-                width={80}
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ transition: "fill 0.1s", fill: "#0098FF" }}
-                onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
-                onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
-              >
-                <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
-              </svg>
-              <img
+            <div className="w-full xl:h-[550px] lg:h-[450px] md:h-[350px] sm:h-[200px]  flex items-center justify-evenly  ">
+              <div className="h-full w-1/6 flex justify-center items-center">
+                <svg
+                  onClick={handlePreviousImg}
+                  className=" cursor-pointer "
+                  height={80}
+                  width={80}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
+                >
+                  <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
+                </svg>
+              </div>
+              {/* <img
                 className="w-4/5 h-full object-cover"
                 src={extraActivities[selectedIndex]?.img}
                 alt={extraActivities[selectedIndex]?.alt}
-              />
-
-              <svg
-                onClick={handleNextImg}
-                className=" rotate-180 cursor-pointer "
-                height={80}
-                width={80}
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ transition: "fill 0.1s", fill: "#0098FF" }}
-                onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
-                onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
-              >
-                <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
-              </svg>
+              /> */}
+              <div className="w-4/6 h-full relative overflow-hidden ">
+                <div className="absolute flex w-full h-full  ">
+                  {extraActivities.map((image, index) => (
+                    <img
+                      key={index}
+                      className="w-full h-full object-cover"
+                      src={image.img}
+                      alt={image.alt}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="h-full w-1/6 justify-center flex items-center">
+                {" "}
+                <svg
+                  onClick={handleNextImg}
+                  className=" rotate-180 cursor-pointer "
+                  height={80}
+                  width={80}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ transition: "fill 0.1s", fill: "#0098FF" }}
+                  onMouseOver={(e) => (e.currentTarget.style.opacity = "1")}
+                  onMouseOut={(e) => (e.currentTarget.style.opacity = "0.6")}
+                >
+                  <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" />
+                </svg>{" "}
+              </div>
             </div>
           </div>
           <div className="w-full mt-[20px] flex gap-[20px] items-center">
