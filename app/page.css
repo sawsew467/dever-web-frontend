@@ -9,6 +9,7 @@
 }
 
 .image-gallery-thumbnail-image {
+  object-fit: cover;
   width: 90px;
   height: 60px;
 }

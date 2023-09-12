@@ -75,9 +75,9 @@ function Slider() {
     },
     {
       original:
-        "http://res.cloudinary.com/de41uvd76/image/upload/v1694451665/xeus3vqsowboweshjkn4.png",
+        "http://res.cloudinary.com/de41uvd76/image/upload/v1694490524/ldegnymgffx6v6nxngbx.png",
       thumbnail:
-        "http://res.cloudinary.com/de41uvd76/image/upload/v1694451665/xeus3vqsowboweshjkn4.png",
+        "http://res.cloudinary.com/de41uvd76/image/upload/v1694490524/ldegnymgffx6v6nxngbx.png",
     },
   ];
 
