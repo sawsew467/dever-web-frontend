@@ -8,16 +8,8 @@ import Reloading from "@/components/Reloading";
 //
 
 function Member() {
-  const [isReloading, setIsReloading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsReloading(false);
-    }, 2400);
-  });
   return (
     <>
-      {isReloading ? <Reloading></Reloading> : null}
       <div className=" xl:mt-[120px] lg:mt-[109px] sm:mt-[96px]">
         <Banner />
         <section className="bg-[#FAFBFC] xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col">

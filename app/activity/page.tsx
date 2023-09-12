@@ -4,16 +4,8 @@ import Banner from "@/components/sections/activity/Banner";
 import Activities from "@/components/sections/activity/Activities";
 import Reloading from "@/components/Reloading";
 function Activity() {
-  const [isReloading, setIsReloading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsReloading(false);
-    }, 2400);
-  });
   return (
     <>
-      {isReloading ? <Reloading></Reloading> : null}
       <Banner></Banner>
       <Activities></Activities>
     </>

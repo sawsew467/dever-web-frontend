@@ -7,16 +7,8 @@ import { useEffect, useState } from "react";
 import Reloading from "@/components/Reloading";
 
 export default function Home() {
-  const [isReloading, setIsReloading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsReloading(false);
-    }, 2400);
-  });
   return (
     <>
-      {isReloading ? <Reloading></Reloading> : null}
       <Banner></Banner>
       <Introduction></Introduction>
       <Product></Product>
@@ -24,3 +16,4 @@ export default function Home() {
     </>
   );
 }
+
