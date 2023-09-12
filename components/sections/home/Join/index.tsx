@@ -37,8 +37,6 @@ function Join() {
         event.preventDefault();
         setIsDragging(true);
         event.dataTransfer.dropEffect = "copy";
-        console.log(isDragging);
-        
     }
 
     const handleDropFile = (event: React.DragEvent<HTMLDivElement>) => {
