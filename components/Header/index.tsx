@@ -4,26 +4,57 @@ import Logo from "@images/header/logo.svg";
 import MenuLogo from "@images/header/menu.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+const animationHeader : any = {
+  down : {
+    y : [-60, 0 ],
+    opacity : [0, 1],
+    backgroundColor : "#fff",
+    boxShadow: "0px 0px 20px 0px #2020204a",
+    scale :1,
+    transition:{
+      type: "spring",
+      bounce :0,
+      duration: 1
+    }
+  },
+  up : {
+    y : 0,
+    boxShadow : "none",
+    scale :[1.2,1],
+    opacity : 1,
+    transition:{
+      type: "spring",
+      bounce :0.5,
+      duration: 1
+    }
+  }
+}
 function Header() {
   const [isOpenMenu, setOpenMenu] = useState<Boolean>(false);
-
+  const [isScrollHeader , setScrollHeader] =  useState<Boolean>(false);
   const onClickMenuButton = () => { 
     setOpenMenu(isOpenMenu => !isOpenMenu);
   }
 
-  const handleScroll = () => {
+  const handleScroll = (e : any) => {
       setOpenMenu(false);
+      const y = document.documentElement.scrollTop;
+      if( y > 64 ) setScrollHeader(true) 
+        else setScrollHeader(false)
   }
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, {passive: true});
+    window.addEventListener("scroll",handleScroll, {passive: true});
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   },[])
 
   return (
-    <div className="left-0 right-0 top-0 fixed z-[1] bg-white/[0.8] backdrop-blur-sm">
+    <motion.div 
+      animate={isScrollHeader ? "down" : "up"}
+      variants={animationHeader}
+      className="left-0 right-0 top-0 fixed z-[1] bg-white/[0.8] backdrop-blur-sm">
       <div className={`max-w-[1440px] mx-auto h-[56px] lg:h-[64px] xl:h-[64px] flex justify-between items-center px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]`}>
         <a href="/">
           <Image
@@ -108,7 +139,7 @@ function Header() {
           </Link>
         </div>
         
-    </div>
+    </motion.div>
   );
 }
 
