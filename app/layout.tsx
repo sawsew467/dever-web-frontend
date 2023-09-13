@@ -1,9 +1,11 @@
+"use client"
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import {Suspense} from 'react'
-import { NavigationEvents } from "@/components/NavigationEvent";
+import {Suspense, useEffect, useState} from 'react'
+import { usePathname, useSearchParams } from "next/navigation";
+import Reloading from "@/components/Reloading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +19,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(isLoading => false);
+      console.log("Out");
+    }, 2300);
+    setIsLoading(true);
+  }, [pathname, searchParams]);
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <Suspense fallback={null}>
-          <NavigationEvents />
+          {isLoading ? <Reloading /> : null}
         </Suspense>
         <Header></Header>
         {children}
