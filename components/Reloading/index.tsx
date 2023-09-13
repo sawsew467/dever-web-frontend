@@ -2,12 +2,9 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 
-function Reloading({isLoading}:{isLoading:boolean}) {
+function Reloading() {
   return (
     <div className="fixed top-0 w-full h-full z-[1000] animate-fade-down-large animation-"
-    style={{
-      display: isLoading ? "" : "none"
-    }}
     >
       <div className="flex h-full justify-center items-center bg-primary">
         <div className="content flex justify-center items-center w-full animate-scale">
