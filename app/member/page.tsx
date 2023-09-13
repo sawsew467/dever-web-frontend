@@ -3,6 +3,7 @@ import React from "react";
 import Banner from "../../components/sections/member/banner";
 import ListLeaderMember from "../../components/sections/member/memberLeader";
 import ListMember from "../../components/sections/member/memberNormal";
+
 // 
 
 function Member() {

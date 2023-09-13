@@ -1,11 +1,70 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import fillter from "@pageImage/member/leader/filter.svg";
 import vector from "@pageImage/member/normal/vector.svg";
 import avatar from "@pageImage/member/avatar/topface/avatar.png";
 import SectionTittle from "@/components/SectionTitle";
+import { motion } from "framer-motion";
+const parent  : any = {
+  show : {
+    transition : {
+      type : "spring",
+      bounce : 0.8,
+      duration : 0.5,
+      staggerChildren : 0.2,
+    }
+  }
+}
+const child : any ={
+  hidden : {
+    scale : 0.8,
+    opacity : 0
+  },
+  show : {
+    scale : [1.2,1],
+    opacity : 1,
+    transition : {
+      type : "spring",
+      bounce : 0.5,
+      duration : 0.5,
+    }
+  }
+}
 const ListMember = () => {
   const data = [
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
+    {
+      url: "/assets/images/pages/member/avatar/topface/avatar.png",
+      title: "Trần văn bảo thắng",
+    },
     {
       url: "/assets/images/pages/member/avatar/topface/avatar.png",
       title: "Trần văn bảo thắng",
@@ -57,16 +116,21 @@ const ListMember = () => {
             </p>
           </button>
         </div>
-        <ul className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start">
+        <motion.ul 
+          initial="hidden"
+          whileInView="show"
+          variants={parent}
+          className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start">
           {data.map((item, key) => (
-            <li
+            <motion.li
+              variants={child}
               key={key}
               className="xl:w-[calc((100%-40px*3)/4)] xl:aspect-[29/40]  md:w-[calc((100%-35px*3)/4)] lg:aspect-[7/10] md:aspect-[146/204] sm:w-[calc((100%-20px*2)/3)] sm:aspect-[93/123] h-[auto]  cursor-pointer  relative"
             >
               <Image
                 width={290}
                 height={400}
-                className="object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
+                className="pointer-events-none object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
                 alt=""
                 src={avatar}
               ></Image>
@@ -95,9 +159,9 @@ const ListMember = () => {
                   </div>
                 </div>
               </div>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
         <div className="mx-[auto] xl:mt-[40px] md:mt-[35px] sm:mt-[20px]">
           <ul className="lg:text-[16px] sm:text-[12px] font-[400] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
@@ -105,7 +169,7 @@ const ListMember = () => {
                 <Image
                   src={vector}
                   alt="button "
-                  className="lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
+                  className="pointer-events-none lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
                   width={16}
                   height={16}
                 />
@@ -136,7 +200,7 @@ const ListMember = () => {
                 <Image
                   src={vector}
                   alt="button "
-                  className="lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
+                  className="pointer-events-none lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
                   width={16}
                   height={16}
                 />

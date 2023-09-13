@@ -2,6 +2,7 @@
 "use client"
 
 import React, { useState, useRef } from 'react'
+import {motion} from 'framer-motion'
 import Image from 'next/image'
 import UploadIcon from '@pageImage/home/icon/UploadIcon.svg'
 import dashedVector from '@pageImage/home/join/Vector 1.svg'
@@ -13,7 +14,63 @@ import ptsLogo from '@pageImage/home/join/PSD_file_icon.png'
 import aiLogo from '@pageImage/home/join/Ai-file-logo.png'
 import wordLogo from '@pageImage/home/join/docx_icon.svg.png'
 import powerpointLogo from '@pageImage/home/join/pptx_icon.png'
+type variantsProps = {
+    exit : {
+        y : number,
+        opacity : number
+    },
+    show : {
+        y : number,
+        opacity : number,
+        transition : {
+            type : string,
+            bounce : number,
+            duration : number
+            delay :number
+        }
+    },
+}
+const animaPlan = {
+    show : {
 
+        transition :{
+            type : "lieaner",
+            duration : 4
+        }
+    }
+}
+const variantsTop : variantsProps = {
+    exit : {
+        y :  -20,
+        opacity : 0,
+    },
+    show : {
+        y : 0,
+        opacity :1,
+        transition:{
+            type :"spring",
+            bounce : 0.2,
+            duration : 1.5,
+            delay : 0.5,
+        }
+    }
+}
+const variantsBottom : variantsProps = {
+    exit : {
+        y :  20,
+        opacity : 0,
+    },
+    show : {
+        y : 0,
+        opacity :1,
+        transition:{
+            type :"spring",
+            bounce : 0.2,
+            duration : 1.5,
+            delay : 0.5,
+        }
+    }
+}
 function Join() {
     const [selectedProfileFile, setSelectedProfileFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
@@ -97,11 +154,21 @@ function Join() {
         <section className='h-fit flex justify-center '>
             <div className='max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]'>
                 <div className='h-[529px] md:h-[529px] lg:h-[520px] xl:h-[601px] w-[100%] flex flex-col items-center relative'>
-                    <div className='md:max-w-[500px] w-[320px] md:w-[500px] lg:w-[650px] xl:w-[650px] flex flex-col justify-center items-center'>
+                    <motion.div 
+                        initial="exit"
+                        custom={-1}
+                        whileInView={"show"}
+                        variants={variantsTop}
+                        className='md:max-w-[500px] w-[320px] md:w-[500px] lg:w-[650px] xl:w-[650px] flex flex-col justify-center items-center'>
                         <h1 className='font-[700] text-[40px] leading-[40px] text-primary' >JOIN WITH US</h1>
                         <p className='text-center mt-[12px] font-[400] text-[16px] md:text-[16px] lg:text-[19px] xl:text-[19px] leading-[23px]'>Whether you're a beginner taking first step or an experienced programmer. Join us and unlock the limitless potential of programming!</p>
-                    </div>
-                    <div className='max-w-[320px] md:max-w-[320px] lg:max-w-[462px] xl:max-w-[462px] w-[100%] flex flex-col mt-[32px] md:mt-[32px] lg:mt-[40px] xl:mt-[40px]'>
+                    </motion.div>
+                    <motion.div 
+                        initial="exit"
+                        custom={1}
+                        whileInView={"show"}
+                        variants={variantsBottom}
+                        className='max-w-[320px] md:max-w-[320px] lg:max-w-[462px] xl:max-w-[462px] w-[100%] flex flex-col mt-[32px] md:mt-[32px] lg:mt-[40px] xl:mt-[40px]'>
                         <input type="text" placeholder='Full name' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]'/>
                         <input type="email" placeholder='Email' className='outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]'/>
                         <div className='w-[100%] flex flex-col items-center mt-[16px]'>
@@ -167,10 +234,10 @@ function Join() {
                             </div>
                             <button className='w-[100%] bg-primary opacity-[0.5] py-[8px] md:py-[8px] lg:py-[12px] xl:py-[12px] lg:px-[174px] xl:px-[174px] mt-[14px] md:mt-[14px] lg:mt-[32px] xl:mt-[32px] hover:opacity-[1] transition'><p className='font-[700] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-[#FFFFFF] leading-[18px] '>UPLOAD FILES</p></button>
                         </div>
-                    </div>
+                    </motion.div>
                     <div className='w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0 hidden md:hidden lg:hidden xl:block'>
-                        <Image src={plan}  alt='plan' className='absolute top-[26px] left-[80px]'/>
-                        <Image src={dashedVector}  alt='vector' className='absolute bottom-0 right-0 left-0'/>
+                        <Image src={plan}  alt='plan' className='absolute  z-[2] left-[80px] top-[26px]'/>
+                        <Image src={dashedVector}  alt='vector' className='z-[1 ] absolute bottom-0 right-0 left-0'/>
                     </div>
                   </div>
                 <div className=''></div>

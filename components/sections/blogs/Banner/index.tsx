@@ -1,8 +1,34 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Background from "@pageImage/blogs/banner.png";
 import Model from "@pageImage/blogs/model.png";
+import  {motion} from "framer-motion"
 import "../../../../app/globals.css";
+
+const parent :any = {
+  show : {
+  transition :{
+    staggerChildren: 0.2,
+    type : "spring",
+    bounce : 0.8,
+    duration : 4,
+    repeat :Infinity,
+    delay : 1
+  }}
+}
+const child : any = {
+  show:(index : number) => ({
+    y : index % 2 == 1 ? [20,0] : [-20,0],
+    opacity : [0,1],
+    transition :{ 
+      repeat: Infinity, 
+      repeatDelay: 4 , 
+      repeatType : "reverse" }
+  }),
+  
+
+}
 const Blogs = () => {
   return (
     <div className="w-[100%] sm:h-[413px] md:h-[402px] lg:h-[471px] xl:h-[588px]  sm:mb-[40px] md:mb-[60px] lg:mb-[60px]  relative ">
@@ -19,9 +45,18 @@ const Blogs = () => {
                 EXPLORE ABOUT
               </div>
               <div className=" sm:block md:hidden w-[120px] h-[4px] mt-[8px] mb-[12px] bg-highlight mx-auto "></div>
-              <div className="w-[100%] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
-                FU-DEVER CLUB
-              </div>
+              <motion.div 
+                animate="show"
+                variants={parent}
+                className="overflow-hidden flex relative w-[100%] h-[50px] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
+                {["F","U","-","D","E","V","E","R"," ","C","L","U","B"].map((char : string, index :number)=>
+                (<motion.p 
+                    key={index} 
+                    custom={index} 
+                    variants={child}
+                    className={`${char == " " ? "w-[0.5ch]" : ""} max-h-[100%] whitespace-nowrap overflow-hidden`}>{char}</motion.p> )
+                 )}
+              </motion.div>
             </div>
             <div className="w-[100%]  sm:text-[12px] lg:text-[16px] xl:text-[20px] text-black  sm:leading-[15px] lg:leading-[19px] xl:leading-[24px] font-normal">
               Dive into the world of coding, problem-solving, and tech with
