@@ -42,6 +42,8 @@ function Introduction() {
   const [isDesktopSite, setIsDesktopSite] = useState<boolean>(true);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [hasCounted, setHasCounted] = useState<boolean>(false);
+  console.log(scrollPosition);
+  
   
   const handleScroll = () => {
     const pos = window.pageYOffset;
@@ -54,7 +56,7 @@ function Introduction() {
     };
   }, []);
   const scrollEventProcess = () => {
-    if(scrollPosition > 1040) {
+    if(scrollPosition > 1440) {
       setHasCounted(true);
     } else if (scrollPosition == 0) {
       setHasCounted(false);
