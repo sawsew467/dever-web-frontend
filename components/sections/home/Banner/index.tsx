@@ -98,7 +98,7 @@ function Banner() {
             y: client.y ,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="w-[240px] h-[258px] lg:w-[285px] lg:h-[307px] xl:w-[303px] xl:h-[326px] absolute bottom-[40px]">
@@ -110,7 +110,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="w-[200px] h-[190px] lg:w-[307px] lg:h-[310px] xl:w-[345px] xl:h-[330px] absolute right-[20px] md:right-[40px] lg:right-[40px] xl:right-[80px] bottom-[61px] lg:bottom-[44px] xl:bottom-[80px]">
@@ -122,7 +122,7 @@ function Banner() {
             y: client.y ,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="w-[100px] h-[134px] xl:w-[119px] xl:h-[172px] absolute right-[120px] lg:right-[180px] xl:right-[328px] top-[116px] lg:top-[147px] xl:top-[132px]">
@@ -134,7 +134,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="w-[84px] h-[118px] xl:w-[115px] xl:h-[166px] absolute xl:left-[256px] top-[96px] lg:top-[142px] xl:top-[120px] lg:left-[180px] left-[120px]">
@@ -151,7 +151,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute lg:top-[204px] xl:top-[335px] lg:left-[-90px] xl:left-[-70px] xl:w-auto xl:h-auto lg:w-auto lg:h-auto md:w-[68px] md:h-[111px] md:top-[216px] md:left-[-40px] hidden md:block lg:block xl:block"
@@ -164,7 +164,7 @@ function Banner() {
             y: client.y,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute lg:top-[312px] xl:top-[373px] lg:left-[110px] xl:left-[250px] xl:w-auto xl:h-auto lg:w-[23px] lg:h-[21px] hidden md:hidden xl:block lg:block"
@@ -177,7 +177,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute xl:top-[277px] xl:right-[160px] xl:w-auto xl:h-auto lg:w-[45px] lg:h-[45px] lg:top-[297px] lg:right-[80px]  hidden md:hidden xl:block lg:block"
@@ -190,7 +190,7 @@ function Banner() {
             y: client.y ,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute xl:top-[179px] xl:right-[-30px] xl:w-auto xl:h-auto lg:w-[61px] lg:h-[73px] lg:right-[-40px] lg:top-[114px] md:w-[61px] md:h-[73px] md:top-[246px] right-[-40px] hidden md:block lg:block xl:block"
@@ -203,7 +203,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute xl:bottom-[91px] xl:right-[427px] lg:right-[340px] lg:bottom-[137px] hidden md:hidden xl:block lg:block"
@@ -216,7 +216,7 @@ function Banner() {
             y: client.y,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute xl:bottom-[147px] xl:left-[553px] xl:w-auto xl:h-auto lg:w-[31px] lg:h-[30px] lg:bottom-[159px] lg:left-[356px] md:bottom-[30px] md:left-[264px] bottom-[63px] right-[46px]"
@@ -229,7 +229,7 @@ function Banner() {
             y: client.y * -1,
           }}
           transition={{
-            type: "easeInOut",
+            type: "lieaner",
             restDelta : 0.01
           }}
           className="absolute xl:top-[108px] xl:right-[571px] xl:w-auto xl:h-auto lg:w-[33px] lg:h-[33px] lg:top-[142px] lg:right-[311px] md:top-[108px] md:right-[240px] top-[96px] left-[40px]"
