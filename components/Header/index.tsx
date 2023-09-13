@@ -9,6 +9,8 @@ const animationHeader : any = {
   down : {
     y : [-60, 0 ],
     opacity : [0, 1],
+    backgroundColor : "#fff",
+    boxShadow: "0px 0px 20px 0px #2020204a",
     scale :1,
     transition:{
       type: "spring",
@@ -18,6 +20,7 @@ const animationHeader : any = {
   },
   up : {
     y : 0,
+    boxShadow : "none",
     scale :[1.2,1],
     opacity : 1,
     transition:{
