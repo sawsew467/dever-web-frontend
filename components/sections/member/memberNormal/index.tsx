@@ -12,7 +12,7 @@ const parent  : any = {
       type : "spring",
       bounce : 0.8,
       duration : 0.5,
-      staggerChildren : 0.2,
+      staggerChildren : 0.15,
     }
   }
 }

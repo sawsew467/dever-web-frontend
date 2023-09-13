@@ -7,7 +7,7 @@ import avatar  from "@pageImage/member/avatar/topface/avatar.png"
 const parent : any = {
   show : {
     transition :{
-      staggerChildren : 0.25,
+      staggerChildren : 0.15,
       type : "spring",
       duration : 0.5,
       bounce : 0.8

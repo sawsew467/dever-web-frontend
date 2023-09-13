@@ -33,6 +33,13 @@ const animationTitle: any = {
     },
   },
 };
+// const animationBanner : any = {
+//   show : (client : number)=>{
+//     const 
+//     return {
+//     x : client.x 
+//   }}
+// }
 function Banner() {
   const [client, setClient] = useState<obj>({ x: 0, y: 0 });
   const [trans, setTrans] = useState<any>({ x: 0, y: 0 });
@@ -84,28 +91,64 @@ function Banner() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] w-[100%]  h-[421px] md:h-[573px] lg:h-[708px] xl:h-[810px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px] hidden md:block lg:block xl:block absolute z-[-1]">
-        <div className="w-[240px] h-[258px] lg:w-[285px] lg:h-[307px] xl:w-[303px] xl:h-[326px] absolute bottom-[40px]">
+      <motion.div className="max-w-[1440px] w-[100%]  h-[421px] md:h-[573px] lg:h-[708px] xl:h-[810px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px] hidden md:block lg:block xl:block absolute z-[-1]">
+        <motion.div 
+          animate={{
+            x: client.x ,
+            y: client.y ,
+          }}
+          transition={{
+            type: "easeInOut",
+            restDelta : 0.01
+          }}
+          className="w-[240px] h-[258px] lg:w-[285px] lg:h-[307px] xl:w-[303px] xl:h-[326px] absolute bottom-[40px]">
           <Image src={image1} alt="person" />
-        </div>
-        <div className="w-[200px] h-[190px] lg:w-[307px] lg:h-[310px] xl:w-[345px] xl:h-[330px] absolute right-[20px] md:right-[40px] lg:right-[40px] xl:right-[80px] bottom-[61px] lg:bottom-[44px] xl:bottom-[80px]">
+        </motion.div>
+        <motion.div 
+          animate={{
+            x: client.x * -1,
+            y: client.y * -1,
+          }}
+          transition={{
+            type: "easeInOut",
+            restDelta : 0.01
+          }}
+          className="w-[200px] h-[190px] lg:w-[307px] lg:h-[310px] xl:w-[345px] xl:h-[330px] absolute right-[20px] md:right-[40px] lg:right-[40px] xl:right-[80px] bottom-[61px] lg:bottom-[44px] xl:bottom-[80px]">
           <Image src={image3} alt="person" />
-        </div>
-        <div className="w-[100px] h-[134px] xl:w-[119px] xl:h-[172px] absolute right-[120px] lg:right-[180px] xl:right-[328px] top-[116px] lg:top-[147px] xl:top-[132px]">
+        </motion.div>
+        <motion.div
+          animate={{
+            x: client.x ,
+            y: client.y ,
+          }}
+          transition={{
+            type: "easeInOut",
+            restDelta : 0.01
+          }}
+          className="w-[100px] h-[134px] xl:w-[119px] xl:h-[172px] absolute right-[120px] lg:right-[180px] xl:right-[328px] top-[116px] lg:top-[147px] xl:top-[132px]">
           <Image src={image4} alt="person" />
-        </div>
-        <div className="w-[84px] h-[118px] xl:w-[115px] xl:h-[166px] absolute xl:left-[256px] top-[96px] lg:top-[142px] xl:top-[120px] lg:left-[180px] left-[120px]">
+        </motion.div>
+        <motion.div 
+          animate={{
+            x: client.x * -1,
+            y: client.y * -1,
+          }}
+          transition={{
+            type: "easeInOut",
+            restDelta : 0.01
+          }}
+          className="w-[84px] h-[118px] xl:w-[115px] xl:h-[166px] absolute xl:left-[256px] top-[96px] lg:top-[142px] xl:top-[120px] lg:left-[180px] left-[120px]">
           <Image src={image2} alt="person" />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <motion.div
         className="max-w-[1440px] w-[100%] m-auto  h-[421px] md:h-[573px] lg:h-[708px] xl:h-[810px] absolute z-[-2] overflow-hidden"
       >
         <motion.div
           animate={{
-            x: client.x,
-            y: client.y,
+            x: client.x * -1,
+            y: client.y * -1,
           }}
           transition={{
             type: "easeInOut",
@@ -130,8 +173,8 @@ function Banner() {
         </motion.div>
         <motion.div
           animate={{
-            x: client.x,
-            y: client.y,
+            x: client.x * -1,
+            y: client.y * -1,
           }}
           transition={{
             type: "easeInOut",
@@ -144,7 +187,7 @@ function Banner() {
         <motion.div
           animate={{
             x: client.x,
-            y: client.y,
+            y: client.y ,
           }}
           transition={{
             type: "easeInOut",
@@ -156,8 +199,8 @@ function Banner() {
         </motion.div>
         <motion.div
           animate={{
-            x: client.x,
-            y: client.y,
+            x: client.x * -1,
+            y: client.y * -1,
           }}
           transition={{
             type: "easeInOut",
@@ -182,8 +225,8 @@ function Banner() {
         </motion.div>
         <motion.div
           animate={{
-            x: client.x,
-            y: client.y,
+            x: client.x * -1,
+            y: client.y * -1,
           }}
           transition={{
             type: "easeInOut",

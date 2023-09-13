@@ -30,15 +30,6 @@ type variantsProps = {
         }
     },
 }
-const animaPlan = {
-    show : {
-
-        transition :{
-            type : "lieaner",
-            duration : 4
-        }
-    }
-}
 const variantsTop : variantsProps = {
     exit : {
         y :  -20,
@@ -50,7 +41,7 @@ const variantsTop : variantsProps = {
         transition:{
             type :"spring",
             bounce : 0.2,
-            duration : 1.5,
+            duration : 0.8,
             delay : 0.5,
         }
     }
@@ -66,7 +57,7 @@ const variantsBottom : variantsProps = {
         transition:{
             type :"spring",
             bounce : 0.2,
-            duration : 1.5,
+            duration : 0.8,
             delay : 0.5,
         }
     }
