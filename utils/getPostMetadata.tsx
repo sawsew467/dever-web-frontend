@@ -1,12 +1,12 @@
 // import fs from "fs";
 // import matter from "gray-matter";
 
-export interface PostMetadata {
-    title: string;
-    date: string;
-    subtitle: string;
-    id: string;
-  }
+// export interface PostMetadata {
+//     title: string;
+//     date: string;
+//     subtitle: string;
+//     id: string;
+//   }
 
 // const getPostMetadata = (): PostMetadata[] => {
 //   const folder = "posts/";
