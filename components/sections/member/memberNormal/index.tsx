@@ -120,7 +120,7 @@ const ListMember = () => {
       <div className="xl:max-w-[1280px] mx-[auto] px-[auto]">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end  sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
         <SectionTittle title="CLUB MEMBERS" subtitle="Meet our exceptional team leaders." textPosition="left"></SectionTittle>
-          <button className="lg:min-w-[93px] lg:h-[35px] md:min-w-[71px] sm:h-[29px] lg:px-[16px] sm:w-[69px] lg:py-[8px] sm:py-[6px] sm:px-[12px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
+          {/* <button className="lg:min-w-[93px] lg:h-[35px] md:min-w-[71px] sm:h-[29px] lg:px-[16px] sm:w-[69px] lg:py-[8px] sm:py-[6px] sm:px-[12px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
             <Image
               src={fillter}
               width={17}
@@ -131,7 +131,7 @@ const ListMember = () => {
             <p className=" font-[600] lg:text-[16px] sm:text-[12px] lg:h-[19px] md:h-[15px] md:mb-[1px] flex items-center ">
               Filter
             </p>
-          </button>
+          </button> */}
         </div>
         <motion.ul 
           initial="hidden"
