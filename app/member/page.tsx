@@ -12,6 +12,7 @@ function Member() {
   useEffect(() => {
     activeMemeberNav();
   })
+
   return (
     <>
       <div className=" xl:mt-[120px] lg:mt-[109px] sm:mt-[96px]">
