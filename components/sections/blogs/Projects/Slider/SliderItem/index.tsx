@@ -84,13 +84,13 @@ function SliderItem({
       onTouchEnd={handleTouchEnd}
     >
       <div className="w-[100%] sm:h-[440px] md:h-[254px] lg:h-[355px] xl:h-[500px] flex sm:flex-col md:flex-row  border border-solid border-1 rounded-r-[6px] rounded-l-[6px]">
-        <div className="sm:contents md:hidden relative w-[100%] h-[100%] ">
+        {/* <div className="sm:contents md:hidden relative w-[100%] h-[100%] ">
           <Link
             className="absolute w-[92%] h-[63%] "
             href="/posts/[id]"
             as={`blogs/${_id}`}
           ></Link>
-        </div>
+        </div> */}
         <div
           className="w-[100%] md:w-[60%] sm:h-[59.66%] md:h-[100%] "
           style={{ boxSizing: "border-box" }}
@@ -118,7 +118,8 @@ function SliderItem({
               </div>
             </div>
           </div>
-          <Link href="/posts/[id]" as={`blogs/${_id}`}>
+          {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
+          <Link href={`blogs/${_id}`}>
             <ViewMoreButton size="big" content={"View more"} />
           </Link>
         </div>
