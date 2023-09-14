@@ -4,10 +4,14 @@ import React, { useEffect, useState } from "react";
 import Banner from "../../components/sections/member/banner";
 import ListLeaderMember from "../../components/sections/member/memberLeader";
 import ListMember from "../../components/sections/member/memberNormal";
-import Reloading from "@/components/Reloading";
+import { useAppContext } from "../context/AppContext";
 //
 
 function Member() {
+  const {activeMemeberNav} = useAppContext();
+  useEffect(() => {
+    activeMemeberNav();
+  })
   return (
     <>
       <div className=" xl:mt-[120px] lg:mt-[109px] sm:mt-[96px]">

@@ -188,7 +188,7 @@ function Introduction() {
                        startCounting={isVisible}
                      />
                    ) : (
-                     item.number
+                     item.number +"+"
                    )}
                  </a>
                  <a className="text-[16px] md:text-[16px] lg:text-[16px] xl:text-[32px] font-[700] mt-[8px] h-[39px]">

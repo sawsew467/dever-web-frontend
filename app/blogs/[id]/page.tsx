@@ -1,9 +1,12 @@
+"use client"
 export const runtime: 'edge' = 'edge';
 
 import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
 import Author from "@/components/sections/post/Author";
 import RelatedPost from "@/components/sections/post/RelatedPost";
+import { useAppContext } from "@/app/context/AppContext";
+import { useEffect } from "react";
 // import fs from "fs";
 // import matter from "gray-matter";
 // import getPostMetadata from "@/utils/getPostMetadata";
@@ -34,7 +37,10 @@ import RelatedPost from "@/components/sections/post/RelatedPost";
 export default function Page({ params }: { params: { id: string } }) {
   const id = params.id;
   // const post = getPostContent(id);
-  
+  const {activeBlogNav} = useAppContext()
+  useEffect(() => {
+    activeBlogNav()
+  })
   return (
     <div>
       <Banner></Banner>
