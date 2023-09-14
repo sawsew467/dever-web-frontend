@@ -42,9 +42,7 @@ const animationTitle: any = {
 // }
 function Banner() {
   const [client, setClient] = useState<obj>({ x: 0, y: 0 });
-  const [trans, setTrans] = useState<any>({ x: 0, y: 0 });
   const ref = useRef<any>(null);
-  const [centerRef, setCenterRef] = useState({x : 0, y : 0})
   return (
     <motion.section
       ref={ref}
