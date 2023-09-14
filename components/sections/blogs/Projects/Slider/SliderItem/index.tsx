@@ -97,7 +97,7 @@ function SliderItem({
         >
           <Image
             src={img}
-            className="w-[100%] h-[100%] rounded-l-[6px] "
+            className="w-[100%] h-[100%] rounded-l-[6px] object-cover"
             alt="project image "
           ></Image>
         </div>

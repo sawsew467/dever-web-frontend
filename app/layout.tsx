@@ -7,6 +7,7 @@ import { AppProvider } from "./context/AppContext";
 import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Reloading from "@/components/Reloading";
+import ToastNotificationComp from "@/components/ToastNotificationComp";
 
 const inter = Inter({ subsets: ["latin"] });
 // export const metadata = {
@@ -60,6 +61,7 @@ export default function RootLayout({
           {isLoading ? <Reloading /> : null}
           <Header></Header>
           {children}
+          <ToastNotificationComp />
           <Footer></Footer>
         </AppProvider>
       </body>
