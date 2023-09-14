@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "../Projects/Slider";
 import SectionTittle from "@/components/SectionTitle";
-import ChangePage from "@/components/ChangePage";
 import List from "./List";
 const Projects = () => {
   return (
