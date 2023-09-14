@@ -124,6 +124,7 @@
 .animate-scale {
   animation: scale 1.3s cubic-bezier(0, 0, 0.2, 1) 1;
   animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade-down-large {
@@ -136,6 +137,7 @@
 .animate-fade-down-large {
   animation: fade-down-large 1.5s ease-in-out 1;
   animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 
