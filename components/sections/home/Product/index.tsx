@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react";
 import Image from "next/image";
 import SectionTitle from "@/components/SectionTitle";
@@ -11,11 +10,31 @@ import Vector from "@pageImage/home/product/longWave.svg";
 import Facebook from "@pageImage/home/icon/Facebook.svg";
 import Github from "@pageImage/home/icon/Github.svg";
 import Tiktok from "@pageImage/home/icon/Tiktok.svg";
-
+import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+type obj = {
+  x : number,
+  y : number
+}
 function Product() {
+  const [client , setClient] = useState<obj>({ x : 0, y : 0})
+  const ref = useRef<any>(null);
   return (
-    <section className=" h-fit flex justify-center items-center relative overflow-hidden">
-      <div className="max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] flex flex-col-reverse md:flex-row lg:flex-row xl:flex-row justify-between relative px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]">
+    <section 
+    ref={ref}
+    onMouseMove={({clientX, clientY} : React.MouseEvent )=>{
+      setClient(() => { 
+        const x = ((clientX - (ref?.current?.clientWidth / 2)) / ref.current.clientWidth ) * 100
+        const y =  ((clientY -( ref?.current?.clientHeight / 2)) / ref.current.clientWidth ) * 100
+        return {
+          x: x,
+          y: y,
+        };
+      })
+    }}
+      className=" h-fit flex justify-center items-center relative overflow-hidden">
+      <motion.div 
+        className="max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] flex flex-col-reverse md:flex-row lg:flex-row xl:flex-row justify-between relative px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]">
         <div className="max-w-[100%] md:max-w-[50%] lg:max-w-[50%] xl:max-w-[50%] w-[100%] h-[320px] md:h-[320px] lg:h-[480px] xl:h-[610px] grid grid-cols-2 grid-rows-2 gap-[20px] md:gap-[20px] lg:gap-[40px] xl:gap-[50px] mt-[20px] md:mt-[0px] lg:mt-[0px] xl:mt-[0px]">
           
           <div className=" bg-[#FFFFFF] pt-[12px] md:pt-[12px] lg:pt-[20px] xl:pt-[20px] px-[30px md:px-[30px] lg:px-[40px] xl:px-[40px] pb-[23px] flex flex-col items-center drop-shadow-xl relative">
@@ -126,10 +145,28 @@ function Product() {
           </div>
 
         </div>
-        <div className="w-[40px] h-[40px] bg-red-500 absolute top-[348px] left-[360px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></div>
-        <div className="w-[40px] h-[40px] bg-red-500 absolute top-[385px] right-[540px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></div>
-        <div className="w-[40px] h-[40px] bg-red-500 absolute top-[260px] right-[420px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></div>
-      </div>
+        <motion.div 
+          animate={{x : client.x * 1 ,  y : client.y * 1}}
+          transition={{
+            type: "lieaner",
+            restDelta : 0.01
+          }}
+          className="w-[40px] h-[40px] bg-red-500 absolute top-[348px] left-[360px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></motion.div>
+        <motion.div 
+          animate={{x : client.x * 2 ,  y : client.y * 2}}
+          transition={{
+            type: "lieaner",
+            restDelta : 0.01
+          }}
+          className="w-[40px] h-[40px] bg-red-500 absolute top-[385px] right-[540px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></motion.div>
+        <motion.div 
+          animate={{x : client.x * -1,  y : client.y * -1}}
+          transition={{
+            type: "lieaner",
+            restDelta : 0.01
+          }}
+          className="w-[40px] h-[40px] bg-red-500 absolute top-[260px] right-[420px] blur-[24px] z-[-1] hidden md:hidden lg:hidden xl:block"></motion.div>
+      </motion.div>
       <Image
         src={Vector}
         className="absolute bottom-[-100px] md:bottom-[-140px] lg:bottom-[-120px] xl:bottom-0 right-[-580px] md:right-[-500px] lg:right-[-300px] xl:right-0 z-[-1] max-w-fit "
