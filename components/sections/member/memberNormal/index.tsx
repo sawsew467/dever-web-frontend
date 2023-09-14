@@ -6,6 +6,16 @@ import vector from "@pageImage/member/normal/vector.svg";
 import avatar from "@pageImage/member/avatar/topface/avatar.png";
 import SectionTittle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
+import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg"
+import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg"
+import namphuoctruonghai from "@pageImage/member/normal/namphuoctruonghai.jpg"
+import nguyenhuuson from "@pageImage/member/normal/nguyenhuuson.jpg"
+import nguyentandat from "@pageImage/member/normal/nguyentandat.jpg"
+import phanquocthaibao from "@pageImage/member/normal/phanquocthaibao.jpg"
+import thantrongan from "@pageImage/member/normal/thantrongan.jpg"
+import vothithuysuong from "@pageImage/member/normal/vothithuysuong.jpg"
+import vovanvu from "@pageImage/member/normal/vovanvu.jpg"
+import nguyenthithanhthuy from "@pageImage/member/normal/nguyenthithanhthuy.jpg"
 const parent  : any = {
   show : {
     transition : {
@@ -34,70 +44,77 @@ const child : any ={
 const ListMember = () => {
   const data = [
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+      name : "Lê Đức Anh Phương",
+      idStudent : "DE180914",
+      course : "K18",
+      url : leducanhphuong,
+       title : "Lê Đức Anh Phương"
+     },
+    {
+     name : "Trần Quốc Khánh",
+     idStudent : "DE180301",
+     course : "K18",
+     url : tranquockhanh,
+      title : "Trần Quốc Khánh"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Võ Văn Vũ",
+     idStudent : "DE170201",
+     course : "K17",
+     url : vovanvu,
+      title : "Võ Văn Vũ"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Thân Trọng An",
+     idStudent : "DE170029",
+     course : "K17",
+     url : thantrongan,
+      title : "Thân Trọng An"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Đoàn Phước Trường Hải",
+     idStudent : "DE180660",
+     course : "K18",
+     url : namphuoctruonghai,
+      title : "Đoàn Phước Trường Hải"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Nguyễn Thị Thanh Thủy",
+     idStudent : "DE170035",
+     course : "K17",
+     url : nguyenthithanhthuy,
+      title : "Nguyễn Thị Thanh Thủy"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Nguyễn Hữu Sơn",
+     idStudent : "DE180845",
+     course : "K18",
+     url : nguyenhuuson,
+      title : "Nguyễn Hữu Sơn"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Phan Quốc Thái Bảo",
+     idStudent : "DE181053",
+     course : "K18",
+     url : phanquocthaibao,
+      title : "Phan Quốc Thái Bảo"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Nguyễn Tấn Đạt",
+     idStudent : "DE180864",
+     course : "K18",
+     url : nguyentandat,
+      title : "Nguyễn Tấn Đạt"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+     name : "Võ Thị Thùy Sương",
+     idStudent : "DE180087",
+     course : "K18",
+     url : vothithuysuong,
+      title : "Võ Thị Thùy Sương"
     },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-  ];
+    
+ ];
   return (
     <article className="mx-[auto] md:pb-[60px] sm:pb-[40px]">
       <div className="xl:max-w-[1280px] mx-[auto] px-[auto]">
@@ -131,23 +148,23 @@ const ListMember = () => {
                 width={290}
                 height={400}
                 className="pointer-events-none object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
-                alt=""
-                src={avatar}
+                alt={item?.title}
+                src={item?.url}
               ></Image>
               <div className="h-[auto] absolute bottom-0 w-[100%]">
                 <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] sm:py-[2px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] sm:w-[32px] lg:rounded-tl-[12px] md:rounded-tl-[6px] sm:rounded-tl-[4px] bg-[#C69C6D] absolute right-0 translate-y-[-100%] top-[0.2px]">
                   <p className="xl:h-[19px] lg:h-[17px] md:h-[12px] sm:h-[7px] xl:text-[16px] lg:text-[14px] md:text-[10px] sm:text-[6px] font-[700] text-[#ffffff]">
-                    K17
+                    {item?.course}
                   </p>
                 </div>
                 <div className=" w-[100%] xl:p-[20px] lg:p-[15px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
                   <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px] sm:gap-[4px] ">
                     <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] md:leading-[12px] sm:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] sm:text-[6px] text-[12px] text-[#fff] ">
-                      Trần Văn Bảo Thắng
+                      {item?.name}
                     </h4>
                     <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] sm:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] sm:leading-[6px] flex justify-between items-end ">
                       <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
-                        <p className="font-[500] text-[#fff]">-DE170145</p>
+                        <p className="font-[500] text-[#fff]">-{item?.idStudent}</p>
                         <p className="font-[500] text-[#fff]">
                           -Academic Member
                         </p>

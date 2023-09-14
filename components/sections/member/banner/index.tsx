@@ -4,6 +4,12 @@ import Image from "next/image";
 import {motion} from "framer-motion"
 import group1498 from "@pageImage/member/banner/arrow.svg";
 import avatar  from "@pageImage/member/avatar/topface/avatar.png"
+import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
+import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
+import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg"
+import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg"
+import vovanvu from "@pageImage/member/normal/vovanvu.jpg"
 const parent : any = {
   show : {
     transition :{
@@ -27,30 +33,29 @@ const child : any = {
 const TopTypical = () => {
   const data=[
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : avatar,
+      title : "Trần Văn Bảo Thắng"
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : luuthanhdat,
+      title : "Lưu Thành Đạt",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : nguyenthaibao,
+      title : "Nguyễn Thái Bảo",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : tranquockhanh,
+      title : "Trần Quốc Khánh",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
-    }
-    ,
+      url : leducanhphuong,
+      title : "Lê Đức Anh Phương",
+    },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
-    }
+      url : vovanvu,
+      title : "Võ Văn Vũ",
+    },
   ]
      
   return (
@@ -83,8 +88,8 @@ const TopTypical = () => {
             width={180}
             height={280}
              className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
-            alt={item.title}
-            src={avatar}
+            alt={item?.title}
+            src={item?.url}
           ></Image>
         </motion.li>
          ) )}

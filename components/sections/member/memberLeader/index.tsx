@@ -6,6 +6,10 @@ import avatar from "@pageImage/member/avatar/topface/avatar.png";
 import vector from "@pageImage/member/normal/vector.svg";
 import SectionTittle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
+import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
+import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
+import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
+import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
 const parent  : any = {
   show : {
     transition : {
@@ -34,36 +38,32 @@ const child : any ={
 const ListLeaderMember = () => {
   const data = [
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+      name : "Nguyễn Hoàng Phúc",
+      idStudent : "DE170706",
+      course : "K17",
+      url : nguyenhoangphuc,
+      title : "Nguyễn Hoàng Phúc",
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+      name : "Lưu Thành Đạt",
+      idStudent : "DE170538",
+      course : "K17",
+      url : luuthanhdat,
+      title : "Lưu Thành Đạt"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+      name : "Trần Văn Bảo Thắng",
+      idStudent : "DE170145",
+      course : "K17",
+      url : tranvanbaothang,
+      title : "Trần Văn Bảo Thắng"
     },
     {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
-    },
-    {
-      url: "/assets/images/pages/member/avatar/topface/avatar.png",
-      title: "Trần văn bảo thắng",
+      name : "Nguyễn Thái Bảo",
+      idStudent : "DE170224",
+      course : "K17",
+      url : nguyenthaibao,
+      title : "Nguyễn Thái Bảo"
     },
   ];
   return (
@@ -99,23 +99,23 @@ const ListLeaderMember = () => {
                 width={290}
                 height={400}
                 className="pointer-events-none object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
-                alt=""
-                src={avatar}
+                alt={item.title}
+                src={item?.url}
               ></Image>
               <div className="h-[auto] absolute bottom-0 w-[100%]">
                 <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] sm:py-[2px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] sm:w-[32px] lg:rounded-tl-[12px] md:rounded-tl-[6px] sm:rounded-tl-[4px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-[0.2px]">
                   <p className="xl:h-[19px] lg:h-[17px] md:h-[12px] sm:h-[7px] xl:text-[16px] lg:text-[14px] md:text-[10px] sm:text-[6px] font-[700] text-[#ffffff]">
-                    K17
+                    {item?.course}
                   </p>
                 </div>
                 <div className=" w-[100%] xl:p-[20px] lg:p-[15px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
                   <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px] sm:gap-[4px] ">
                     <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] md:leading-[12px] sm:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] sm:text-[6px] text-[12px] text-[#fff] ">
-                      Trần Văn Bảo Thắng
+                      {item.name}
                     </h4>
                     <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] sm:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] sm:leading-[6px] flex justify-between items-end ">
                       <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
-                        <p className="font-[500] text-[#fff]">-DE170145</p>
+                        <p className="font-[500] text-[#fff]">-{item?.idStudent}</p>
                         <p className="font-[500] text-[#fff]">
                           -Academic Member
                         </p>
