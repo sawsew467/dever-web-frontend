@@ -140,7 +140,7 @@ function Join() {
         window.open(url, '_blank');
     }
     return (
-        <section className='h-fit flex justify-center '>
+        <section id='joinClub' className='h-fit flex justify-center '>
             <div className='max-w-[1440px] w-[100%] h-fit py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]'>
                 <div className='h-[529px] md:h-[529px] lg:h-[520px] xl:h-[601px] w-[100%] flex flex-col items-center relative'>
                     <motion.div 

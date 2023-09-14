@@ -12,6 +12,7 @@ import Github from "@pageImage/home/icon/Github.svg";
 import Tiktok from "@pageImage/home/icon/Tiktok.svg";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 type obj = {
   x : number,
   y : number
@@ -19,6 +20,7 @@ type obj = {
 function Product() {
   const [client , setClient] = useState<obj>({ x : 0, y : 0})
   const ref = useRef<any>(null);
+  const router = useRouter();
   return (
     <section 
     ref={ref}
@@ -116,13 +118,17 @@ function Product() {
             "
             style={{
               transitionDuration: "0.1s"
-            }}>
+            }}
+            onClick={() => router.push("/blogs")}
+            >
               <p>Explore Projects</p>
             </button>
             <button className="px-[24px] md:px-[24px] lg:px-[26px] xl:px-[32px] py-[12px] xl:py-[16px] bg-white border-[3px] border-black text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]text-white"
             style={{
               transitionDuration: "0.1s"
-            }}>
+            }}
+            
+            >
               <p>Explore Projects</p>
             </button>
           </div>
