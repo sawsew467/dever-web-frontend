@@ -3,17 +3,14 @@ import Reloading from "@/components/Reloading";
 import Banner from "@/components/sections/blogs/Banner";
 import Projects from "@/components/sections/blogs/Projects";
 import { useEffect, useState } from "react";
+import { useAppContext } from "../context/AppContext";
 export default function Blogs() {
-  const [isReloading, setIsReloading] = useState<boolean>(true);
-
+  const {activeBlogNav} = useAppContext();
   useEffect(() => {
-    setTimeout(() => {
-      setIsReloading(false);
-    }, 2400);
-  });
+    activeBlogNav();
+  })
   return (
     <>
-      {isReloading ? <Reloading></Reloading> : null}
       <Banner></Banner>
       <Projects></Projects>
     </>
