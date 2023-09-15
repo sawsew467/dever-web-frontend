@@ -67,7 +67,7 @@ const ListLeaderMember = () => {
     },
   ];
   return (
-    <article className="md:py-[60px] sm:py-[40px]  ">
+    <article className=" md:py-[60px] sm:py-[40px]  ">
       <div className="xl:max-w-[1280px] mx-[auto] ">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
          <SectionTittle title="CLUB LEADER MEMBERS" subtitle="Meet our exceptional team leaders." textPosition="left"></SectionTittle>
