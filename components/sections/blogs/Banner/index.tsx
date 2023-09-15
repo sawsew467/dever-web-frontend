@@ -48,7 +48,7 @@ const Blogs = () => {
               <motion.div 
                 animate="show"
                 variants={parent}
-                className="overflow-hidden flex relative w-[100%] h-[50px] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
+                className="overflow-hidden flex md:flex-start sm:flex-center relative w-[100%] h-[50px] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
                 {["F","U","-","D","E","V","E","R"," ","C","L","U","B"].map((char : string, index :number)=>
                 (<motion.p 
                     key={index} 
