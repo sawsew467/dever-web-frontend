@@ -5,7 +5,6 @@ import {motion} from "framer-motion"
 import group1498 from "@pageImage/member/banner/arrow.svg";
 import avatar  from "@pageImage/member/avatar/topface/avatar.png"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
-import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
 import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
 import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg"
 import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg"
