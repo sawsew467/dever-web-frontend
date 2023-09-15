@@ -4,6 +4,11 @@ import Image from "next/image";
 import {motion} from "framer-motion"
 import group1498 from "@pageImage/member/banner/arrow.svg";
 import avatar  from "@pageImage/member/avatar/topface/avatar.png"
+import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
+import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
+import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
+import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
 const parent : any = {
   show : {
     transition :{
@@ -27,31 +32,30 @@ const child : any = {
 const TopTypical = () => {
   const data=[
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : avatar,
+      title : "Trần Văn Bảo Thắng"
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : luuthanhdat,
+      title : "Lưu Thành Đạt",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : nguyenthaibao,
+      title : "Nguyễn Thái Bảo",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
+      url : nguyenthanhhieu,
+      title : "Nguyễn Thanh Hiếu",
     },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
-    }
-    ,
+      url : nguyenhoangphuc,
+      title : "Nguyễn Hoàng Phúc",
+    },
     {
-      url:'/assets/images/pages/member/avatar/topface/avatar.png',
-      title:"Trần văn bảo thắng"
-    }
-  ]
+      url : nguyenthithanhthuy,
+      title : "Nguyễn Thị Thanh Thuy",
+    },
+  ].sort((a : any, b : any)=>(a.title.localeCompare(b.title)));
      
   return (
     <article className="xl:max-w-[1440px] mx-[auto]">
@@ -83,8 +87,8 @@ const TopTypical = () => {
             width={180}
             height={280}
              className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
-            alt={item.title}
-            src={avatar}
+            alt={item?.title}
+            src={item?.url}
           ></Image>
         </motion.li>
          ) )}

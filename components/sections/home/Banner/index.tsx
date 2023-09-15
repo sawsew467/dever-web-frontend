@@ -49,8 +49,8 @@ function Banner() {
       ref={ref}
       onMouseMove={({clientX, clientY}: React.MouseEvent) => {
        setClient(() => { 
-         const x = ((clientX - (ref.current.clientWidth / 2)) / ref.current.clientWidth ) * 100
-         const y =  ((clientY -( ref.current.clientHeight / 2)) / ref.current.clientWidth ) * 100
+         const x = ((clientX - (ref?.current?.clientWidth / 2)) / ref.current.clientWidth ) * 100
+         const y =  ((clientY -( ref?.current?.clientHeight / 2)) / ref.current.clientWidth ) * 100
          return {
            x: x,
            y: y,
