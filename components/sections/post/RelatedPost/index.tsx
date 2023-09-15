@@ -1,34 +1,40 @@
 import React from "react";
 import Card from "../../blogs/Projects/List/Card";
-import projectImage from "@images/pages/activity/banner.png";
+import Card1 from "@images/pages/blogs/fakedata/card1.jpg";
+import Card2 from "@images/pages/blogs/fakedata/card2.png";
+import Card3 from "@images/pages/blogs/fakedata/card3.png";
+import Card4 from "@images/pages/blogs/fakedata/card4.png";
+import Card5 from "@images/pages/blogs/fakedata/card5.png";
+import Card6 from "@images/pages/blogs/fakedata/card6.png";
+
 
 const listProjects = [
   {
     _id: "0001",
-    category: "java",
-    postTime: "5 month ago",
-    img: projectImage,
-    title: "Game with reactjsreactjs",
-    alt: "project demo pic",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    category: ["Blockchain"],
+    postTime: "5 months ago",
+    img: Card1,
+    title: "Building project using Blockchain",
+    alt: "Project 1 Demo Image",
+    desc: "This project focuses on the development of security with blockchain and...",
   },
   {
     _id: "0002",
-    category: "java",
-    postTime: "5 month ago",
-    img: projectImage,
-    title: "Game with reactjsreactjs",
-    alt: "project demo pic",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    category: ["Java","Spring boot"],
+    postTime: "3 months ago",
+    img: Card2,
+    title: "Java Spring Development is dead ?",
+    alt: "Project 2 Demo Image",
+    desc: "In this project, we delve into the world of Java. It helpfull with all dev in...",
   },
   {
     _id: "0003",
-    category: "java",
-    postTime: "5 month ago",
-    img: projectImage,
-    title: "Game with reactjsreactjs",
-    alt: "project demo pic",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    category: ["C#","Dotnet"],
+    postTime: "6 months ago",
+    img: Card3,
+    title: "Developing nice software with C#",
+    alt: "Project 3 Demo Image",
+    desc: "Our team specializes in building Windows applications using C#...",
   },
 ];
 
