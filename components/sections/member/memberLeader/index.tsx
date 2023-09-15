@@ -10,6 +10,8 @@ import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
 import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
 import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
+import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
 const parent  : any = {
   show : {
     transition : {
@@ -65,7 +67,22 @@ const ListLeaderMember = () => {
       url : nguyenthaibao,
       title : "Nguyễn Thái Bảo"
     },
-  ];
+    {
+      name : "Nguyễn Thanh Hiếu",
+      idStudent : "DS170224",
+      course : "K17",
+      url : nguyenthanhhieu,
+      title : "Nguyễn Thanh Hiếu"
+    },
+    {
+      name : "Nguyễn Thị Thanh Thủy",
+      idStudent : "DE170035",
+      course : "K17",
+      url : nguyenthithanhthuy,
+       title : "Nguyễn Thị Thanh Thủy"
+     },
+  ].sort((a : any, b : any)=>(a.name.localeCompare(b.name)));
+
   return (
     <article className=" md:py-[60px] sm:py-[40px]  ">
       <div className="xl:max-w-[1280px] mx-[auto] ">
@@ -133,7 +150,7 @@ const ListLeaderMember = () => {
         <div className="mx-[auto] xl:mt-[40px] md:mt-[35px] sm:mt-[20px]">
           <ul className="lg:text-[16px] sm:text-[12px] font-[400] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
-              <button className="rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
+              <button className="cursor-not-allowed rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
                 <Image
                   src={vector}
                   alt="button "
@@ -148,23 +165,8 @@ const ListLeaderMember = () => {
                 1
               </button>
             </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                2
-              </button>
-            </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff] mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                3
-              </button>
-            </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                4
-              </button>
-            </li>
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
-              <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
+              <button className="cursor-not-allowed rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
                 <Image
                   src={vector}
                   alt="button "

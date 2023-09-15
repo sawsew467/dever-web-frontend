@@ -6,9 +6,9 @@ import group1498 from "@pageImage/member/banner/arrow.svg";
 import avatar  from "@pageImage/member/avatar/topface/avatar.png"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
 import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
-import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg"
-import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg"
-import vovanvu from "@pageImage/member/normal/vovanvu.jpg"
+import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
+import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
+import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
 const parent : any = {
   show : {
     transition :{
@@ -44,18 +44,18 @@ const TopTypical = () => {
       title : "Nguyễn Thái Bảo",
     },
     {
-      url : tranquockhanh,
-      title : "Trần Quốc Khánh",
+      url : nguyenthanhhieu,
+      title : "Nguyễn Thanh Hiếu",
     },
     {
-      url : leducanhphuong,
-      title : "Lê Đức Anh Phương",
+      url : nguyenhoangphuc,
+      title : "Nguyễn Hoàng Phúc",
     },
     {
-      url : vovanvu,
-      title : "Võ Văn Vũ",
+      url : nguyenthithanhthuy,
+      title : "Nguyễn Thị Thanh Thuy",
     },
-  ]
+  ].sort((a : any, b : any)=>(a.title.localeCompare(b.title)));
      
   return (
     <article className="xl:max-w-[1440px] mx-[auto]">
