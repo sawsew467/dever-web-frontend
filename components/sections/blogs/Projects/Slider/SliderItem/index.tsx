@@ -4,12 +4,14 @@ import projectImage from "@images/pages/activity/img.png";
 import ViewMoreButton from "../../../ViewMoreButton";
 import Category from "../../Category";
 import { PostProps } from "..";
-
+import Link from "next/link";
 function SliderItem({
+  _id,
   category,
   postTime,
   title,
-  description,
+  desc,
+  img,
   currPage,
   handlePageChange,
 }: PostProps) {
@@ -28,7 +30,6 @@ function SliderItem({
       }
     };
 
-    
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -38,9 +39,9 @@ function SliderItem({
   }, []);
 
   const truncatedDescription =
-    description.length > descriptionLimit
-      ? description.slice(0, descriptionLimit - 3) + "..."
-      : description;
+    desc.length > descriptionLimit
+      ? desc.slice(0, descriptionLimit - 3) + "..."
+      : desc;
 
   let touchStartX = 0;
   let touchEndX = 0;
@@ -70,7 +71,7 @@ function SliderItem({
       } else {
         handlePageChange(1);
       }
-    }, 5000); // change everry 5s 
+    }, 5000); // change everry 5s
 
     return () => clearInterval(interval);
   }, [currPage, handlePageChange]);
@@ -83,13 +84,20 @@ function SliderItem({
       onTouchEnd={handleTouchEnd}
     >
       <div className="w-[100%] sm:h-[440px] md:h-[254px] lg:h-[355px] xl:h-[500px] flex sm:flex-col md:flex-row  border border-solid border-1 rounded-r-[6px] rounded-l-[6px]">
+        {/* <div className="sm:contents md:hidden relative w-[100%] h-[100%] ">
+          <Link
+            className="absolute w-[92%] h-[63%] "
+            href="/posts/[id]"
+            as={`blogs/${_id}`}
+          ></Link>
+        </div> */}
         <div
           className="w-[100%] md:w-[60%] sm:h-[59.66%] md:h-[100%] "
           style={{ boxSizing: "border-box" }}
         >
           <Image
-            src={projectImage}
-            className="w-[100%] h-[100%] rounded-l-[6px] "
+            src={img}
+            className="w-[100%] h-[100%] rounded-l-[6px] object-cover"
             alt="project image "
           ></Image>
         </div>
@@ -110,7 +118,10 @@ function SliderItem({
               </div>
             </div>
           </div>
-          <ViewMoreButton size="big" content={"View more"} />
+          {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
+          <Link href={`blogs/${_id}`}>
+            <ViewMoreButton size="big" content={"View more"} />
+          </Link>
         </div>
       </div>
       <div className=" flex  w-[100%] justify-center items-center sm:space-x-[26px] lg:space-x-[30px] ">

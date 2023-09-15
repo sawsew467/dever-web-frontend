@@ -35,7 +35,7 @@ const Blogs = () => {
       <Image
         src={Background}
         alt="background effect"
-        className="absolute w-[100%] h-[100%]  max-h-[588px] min-h-[350px] min-w-[360px]  "
+        className="absolute w-[100%] h-[100%]  max-h-[588px] min-h-[350px] min-w-[360px]  object-cover	"
       ></Image>
       <div className="max-w-[1440px] w-[100%]  mx-auto md:px-[40px] xl:px-[80px]">
         <div className="relative sm:text-center md:text-left">
