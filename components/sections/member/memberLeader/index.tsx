@@ -9,7 +9,9 @@ import { motion } from "framer-motion";
 import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
 import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
-import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import doanthisaomai from "@pageImage/member/leader/doanthisaomai.jpg"
+import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
+import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
 const parent  : any = {
   show : {
     transition : {
@@ -43,29 +45,50 @@ const ListLeaderMember = () => {
       course : "K17",
       url : nguyenhoangphuc,
       title : "Nguyễn Hoàng Phúc",
+      position : "Vice President"
     },
     {
       name : "Lưu Thành Đạt",
       idStudent : "DE170538",
       course : "K17",
       url : luuthanhdat,
-      title : "Lưu Thành Đạt"
+      title : "Lưu Thành Đạt",
+      position : "Head of Academic Board"
     },
     {
       name : "Trần Văn Bảo Thắng",
       idStudent : "DE170145",
       course : "K17",
       url : tranvanbaothang,
-      title : "Trần Văn Bảo Thắng"
+      title : "Trần Văn Bảo Thắng",
+      position : "President"
     },
     {
-      name : "Nguyễn Thái Bảo",
-      idStudent : "DE170224",
+      name : "Nguyễn Thanh Hiếu",
+      idStudent : "DS170224",
       course : "K17",
-      url : nguyenthaibao,
-      title : "Nguyễn Thái Bảo"
+      url : nguyenthanhhieu,
+      title : "Nguyễn Thanh Hiếu",
+      position :"Head of Event Board"
     },
-  ];
+    {
+      name : "Nguyễn Thị Thanh Thủy",
+      idStudent : "DE170035",
+      course : "K17",
+      url : nguyenthithanhthuy,
+       title : "Nguyễn Thị Thanh Thủy",
+       position : "Secretary"
+     },
+    {
+      name : "Đoàn Thị Sao Mai",
+      idStudent : "DE170200",
+      course : "K17",
+      url : doanthisaomai,
+      title : "Đoàn Thị Sao Mai",
+      position : "Head of Media Board"
+     },
+  ].sort((a : any, b : any)=>(a.name.localeCompare(b.name)));
+  console.log('data', data)
   return (
     <article className=" md:py-[60px] sm:py-[40px]  ">
       <div className="xl:max-w-[1280px] mx-[auto] ">
@@ -117,7 +140,7 @@ const ListLeaderMember = () => {
                       <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
                         <p className="font-[500] text-[#fff]">-{item?.idStudent}</p>
                         <p className="font-[500] text-[#fff]">
-                          -Academic Member
+                          -{item?.position}
                         </p>
                       </div>
                       <h3 className="absolute xl:bottom-[20px] lg:bottom-[14px] md:bottom-[10px] xl:right-[20px] lg:right-[14px] md:right-[10px] sm:right-[5px] sm:bottom-[5px] inline text-[#fff] font-[600] xl:text-[20px] lg:text-[16px] md:text-[10px] sm:text-[6px]">
@@ -133,7 +156,7 @@ const ListLeaderMember = () => {
         <div className="mx-[auto] xl:mt-[40px] md:mt-[35px] sm:mt-[20px]">
           <ul className="lg:text-[16px] sm:text-[12px] font-[400] xl:gap-[16px] lg:gap-[12px] sm:gap-[10px] flex justify-center font-['Inter'] not-italic ">
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
-              <button className="rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
+              <button className="cursor-not-allowed rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
                 <Image
                   src={vector}
                   alt="button "
@@ -148,23 +171,8 @@ const ListLeaderMember = () => {
                 1
               </button>
             </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                2
-              </button>
-            </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff] mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                3
-              </button>
-            </li>
-            <li className="">
-              <button className=" rounded-[2px] hover:bg-[#0098FF] hover:text-[#fff] focus:bg-[#0098FF] focus:text-[#fff]  mx-[auto] mt-[auto] xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] border-[1px] border-[#1111111A]">
-                4
-              </button>
-            </li>
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
-              <button className="rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
+              <button className="cursor-not-allowed rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
                 <Image
                   src={vector}
                   alt="button "
