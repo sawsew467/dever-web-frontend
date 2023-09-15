@@ -16,6 +16,7 @@ import retangle4 from "@pageImage/home/banner/svg/Rectangle 10.svg";
 import retangle5 from "@pageImage/home/banner/svg/Rectangle 11.svg";
 import retangle6 from "@pageImage/home/banner/svg/Rectangle 12.svg";
 import retangle7 from "@pageImage/home/banner/svg/Rectangle 13.svg";
+import Link from "next/link";
 type obj = {
   x: number;
   y: number;
@@ -83,7 +84,7 @@ function Banner() {
           </p>
           <button className="px-[24px] xl:px-[32px] py-[12px] xl:py-[16px] bg-[#0098FF] flex justify-center items-center mt-[20px]">
             <p className="font-[400] text-[12px] xl:text-[16px] text-white leading-[19px]">
-              Send Your CV
+              <a href="#joinClub" className="text-white decoration-none">Send Your CV</a>
             </p>
           </button>
         </div>
