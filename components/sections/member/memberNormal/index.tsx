@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import fillter from "@pageImage/member/leader/filter.svg";
@@ -6,114 +6,134 @@ import vector from "@pageImage/member/normal/vector.svg";
 import avatar from "@pageImage/member/avatar/topface/avatar.png";
 import SectionTittle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
-import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg"
-import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg"
-import namphuoctruonghai from "@pageImage/member/normal/namphuoctruonghai.jpg"
-import nguyenhuuson from "@pageImage/member/normal/nguyenhuuson.jpg"
-import nguyentandat from "@pageImage/member/normal/nguyentandat.jpg"
-import phanquocthaibao from "@pageImage/member/normal/phanquocthaibao.jpg"
-import thantrongan from "@pageImage/member/normal/thantrongan.jpg"
-import vothithuysuong from "@pageImage/member/normal/vothithuysuong.jpg"
-import vovanvu from "@pageImage/member/normal/vovanvu.jpg"
-import nguyenthithanhthuy from "@pageImage/member/normal/nguyenthithanhthuy.jpg"
-const parent  : any = {
-  show : {
-    transition : {
-      type : "spring",
-      bounce : 0.8,
-      duration : 0.5,
-      staggerChildren : 0.15,
-    }
-  }
-}
-const child : any ={
-  hidden : {
-    scale : 0.8,
-    opacity : 0
+import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg";
+import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg";
+import namphuoctruonghai from "@pageImage/member/normal/namphuoctruonghai.jpg";
+import nguyenhuuson from "@pageImage/member/normal/nguyenhuuson.jpg";
+import nguyentandat from "@pageImage/member/normal/nguyentandat.jpg";
+import phanquocthaibao from "@pageImage/member/normal/phanquocthaibao.jpg";
+import thantrongan from "@pageImage/member/normal/thantrongan.jpg";
+import vothithuysuong from "@pageImage/member/normal/vothithuysuong.jpg";
+import vovanvu from "@pageImage/member/normal/vovanvu.jpg";
+import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg";
+const parent: any = {
+  show: {
+    transition: {
+      type: "spring",
+      bounce: 0.8,
+      duration: 0.5,
+      staggerChildren: 0.15,
+    },
   },
-  show : {
-    scale : [1.2,1],
-    opacity : 1,
-    transition : {
-      type : "spring",
-      bounce : 0.5,
-      duration : 0.5,
-    }
-  }
-}
+};
+const child: any = {
+  hidden: {
+    scale: 0.8,
+    opacity: 0,
+  },
+  show: {
+    scale: [1.2, 1],
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.5,
+      duration: 0.5,
+    },
+  },
+};
 const ListMember = () => {
   const data = [
     {
-      name : "Lê Đức Anh Phương",
-      idStudent : "DE180914",
-      course : "K18",
-      url : leducanhphuong,
-       title : "Lê Đức Anh Phương"
-     },
-    {
-     name : "Trần Quốc Khánh",
-     idStudent : "DE180301",
-     course : "K18",
-     url : tranquockhanh,
-      title : "Trần Quốc Khánh"
+      name: "Lê Đức Anh Phương",
+      idStudent: "DE180914",
+      course: "K18",
+      url: leducanhphuong,
+      title: "Lê Đức Anh Phương",
+      position: "Academic Board",
     },
     {
-     name : "Võ Văn Vũ",
-     idStudent : "DE170201",
-     course : "K17",
-     url : vovanvu,
-      title : "Võ Văn Vũ"
+      name: "Nguyễn Thái Bảo",
+      idStudent: "DE170224",
+      course: "K17",
+      url: nguyenthaibao,
+      title: "Nguyễn Thái Bảo",
+      position: "Academic Board",
     },
     {
-     name : "Thân Trọng An",
-     idStudent : "DE170029",
-     course : "K17",
-     url : thantrongan,
-      title : "Thân Trọng An"
+      name: "Trần Quốc Khánh",
+      idStudent: "DE180301",
+      course: "K18",
+      url: tranquockhanh,
+      title: "Trần Quốc Khánh",
+      position: "Academic Board",
     },
     {
-     name : "Đoàn Phước Trường Hải",
-     idStudent : "DE180660",
-     course : "K18",
-     url : namphuoctruonghai,
-      title : "Đoàn Phước Trường Hải"
-    },
-    
-    {
-     name : "Nguyễn Hữu Sơn",
-     idStudent : "DE180845",
-     course : "K18",
-     url : nguyenhuuson,
-      title : "Nguyễn Hữu Sơn"
+      name: "Võ Văn Vũ",
+      idStudent: "DE170201",
+      course: "K17",
+      url: vovanvu,
+      title: "Võ Văn Vũ",
+      position: "Academic Board",
     },
     {
-     name : "Phan Quốc Thái Bảo",
-     idStudent : "DE181053",
-     course : "K18",
-     url : phanquocthaibao,
-      title : "Phan Quốc Thái Bảo"
+      name: "Thân Trọng An",
+      idStudent: "DE170029",
+      course: "K17",
+      url: thantrongan,
+      title: "Thân Trọng An",
+      position: "Academic Board",
     },
     {
-     name : "Nguyễn Tấn Đạt",
-     idStudent : "DE180864",
-     course : "K18",
-     url : nguyentandat,
-      title : "Nguyễn Tấn Đạt"
+      name: "Đoàn Phước Trường Hải",
+      idStudent: "DE180660",
+      course: "K18",
+      url: namphuoctruonghai,
+      title: "Đoàn Phước Trường Hải",
+      position: "Media Board",
+    },
+
+    {
+      name: "Nguyễn Hữu Sơn",
+      idStudent: "DE180845",
+      course: "K18",
+      url: nguyenhuuson,
+      title: "Nguyễn Hữu Sơn",
+      position: "Event Board",
     },
     {
-     name : "Võ Thị Thùy Sương",
-     idStudent : "DE180087",
-     course : "K18",
-     url : vothithuysuong,
-      title : "Võ Thị Thùy Sương"
+      name: "Phan Quốc Thái Bảo",
+      idStudent: "DE181053",
+      course: "K18",
+      url: phanquocthaibao,
+      title: "Phan Quốc Thái Bảo",
+      position: "Academic Board",
     },
-    
- ];
+    {
+      name: "Nguyễn Tấn Đạt",
+      idStudent: "DE180864",
+      course: "K18",
+      url: nguyentandat,
+      title: "Nguyễn Tấn Đạt",
+      position: "Academic Board",
+    },
+    {
+      name: "Võ Thị Thùy Sương",
+      idStudent: "DE180087",
+      course: "K18",
+      url: vothithuysuong,
+      title: "Võ Thị Thùy Sương",
+      position: "Media Board",
+    },
+  ].sort((a : any, b : any)=>(a.name.localeCompare(b.name)));;
   return (
     <article className="mx-[auto] md:pb-[60px] sm:pb-[40px]">
       <div className="xl:max-w-[1280px] mx-[auto] px-[auto]">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end  sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
-        <SectionTittle title="CLUB MEMBERS" subtitle="Meet our exceptional team leaders." textPosition="left"></SectionTittle>
+          <SectionTittle
+            title="CLUB MEMBERS"
+            subtitle="Meet our exceptional team leaders."
+            textPosition="left"
+          ></SectionTittle>
           {/* <button className="lg:min-w-[93px] lg:h-[35px] md:min-w-[71px] sm:h-[29px] lg:px-[16px] sm:w-[69px] lg:py-[8px] sm:py-[6px] sm:px-[12px] flex bg-[#D9D9D9AB] rounded-[4px] border-0 gap-[4px] justify-around items-center  ">
             <Image
               src={fillter}
@@ -127,11 +147,12 @@ const ListMember = () => {
             </p>
           </button> */}
         </div>
-        <motion.ul 
+        <motion.ul
           initial="hidden"
           whileInView="show"
           variants={parent}
-          className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start">
+          className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start"
+        >
           {data.map((item, key) => (
             <motion.li
               variants={child}
@@ -158,9 +179,11 @@ const ListMember = () => {
                     </h4>
                     <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] sm:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] sm:leading-[6px] flex justify-between items-end ">
                       <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
-                        <p className="font-[500] text-[#fff]">-{item?.idStudent}</p>
                         <p className="font-[500] text-[#fff]">
-                          -Academic Member
+                          -{item?.idStudent}
+                        </p>
+                        <p className="font-[500] text-[#fff]">
+                          -{item?.position}
                         </p>
                       </div>
                       <h3 className="absolute xl:bottom-[20px] lg:bottom-[14px] md:bottom-[10px] xl:right-[20px] lg:right-[14px] md:right-[10px] sm:right-[5px] sm:bottom-[5px] inline text-[#fff] font-[600] xl:text-[20px] lg:text-[16px] md:text-[10px] sm:text-[6px]">

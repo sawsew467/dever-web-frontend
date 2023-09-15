@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
 import tranvanbaothang from "@pageImage/member/leader/tranvanbaothang.jpg"
-import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import doanthisaomai from "@pageImage/member/leader/doanthisaomai.jpg"
 import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
 import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
 const parent  : any = {
@@ -45,44 +45,50 @@ const ListLeaderMember = () => {
       course : "K17",
       url : nguyenhoangphuc,
       title : "Nguyễn Hoàng Phúc",
+      position : "Vice President"
     },
     {
       name : "Lưu Thành Đạt",
       idStudent : "DE170538",
       course : "K17",
       url : luuthanhdat,
-      title : "Lưu Thành Đạt"
+      title : "Lưu Thành Đạt",
+      position : "Head of Academic Board"
     },
     {
       name : "Trần Văn Bảo Thắng",
       idStudent : "DE170145",
       course : "K17",
       url : tranvanbaothang,
-      title : "Trần Văn Bảo Thắng"
-    },
-    {
-      name : "Nguyễn Thái Bảo",
-      idStudent : "DE170224",
-      course : "K17",
-      url : nguyenthaibao,
-      title : "Nguyễn Thái Bảo"
+      title : "Trần Văn Bảo Thắng",
+      position : "President"
     },
     {
       name : "Nguyễn Thanh Hiếu",
       idStudent : "DS170224",
       course : "K17",
       url : nguyenthanhhieu,
-      title : "Nguyễn Thanh Hiếu"
+      title : "Nguyễn Thanh Hiếu",
+      position :"Head of Event Board"
     },
     {
       name : "Nguyễn Thị Thanh Thủy",
       idStudent : "DE170035",
       course : "K17",
       url : nguyenthithanhthuy,
-       title : "Nguyễn Thị Thanh Thủy"
+       title : "Nguyễn Thị Thanh Thủy",
+       position : "Secretary"
+     },
+    {
+      name : "Đoàn Thị Sao Mai",
+      idStudent : "DE170200",
+      course : "K17",
+      url : doanthisaomai,
+      title : "Đoàn Thị Sao Mai",
+      position : "Head of Media Board"
      },
   ].sort((a : any, b : any)=>(a.name.localeCompare(b.name)));
-
+  console.log('data', data)
   return (
     <article className=" md:py-[60px] sm:py-[40px]  ">
       <div className="xl:max-w-[1280px] mx-[auto] ">
@@ -134,7 +140,7 @@ const ListLeaderMember = () => {
                       <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
                         <p className="font-[500] text-[#fff]">-{item?.idStudent}</p>
                         <p className="font-[500] text-[#fff]">
-                          -Academic Member
+                          -{item?.position}
                         </p>
                       </div>
                       <h3 className="absolute xl:bottom-[20px] lg:bottom-[14px] md:bottom-[10px] xl:right-[20px] lg:right-[14px] md:right-[10px] sm:right-[5px] sm:bottom-[5px] inline text-[#fff] font-[600] xl:text-[20px] lg:text-[16px] md:text-[10px] sm:text-[6px]">
