@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 import group1498 from "@pageImage/member/banner/arrow.svg";
 import avatar  from "@pageImage/member/avatar/topface/avatar.png"
 import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
-import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg"
+import doanthisaomai from "@pageImage/member/leader/doanthisaomai.jpg"
 import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
 import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
 import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
@@ -40,8 +40,8 @@ const TopTypical = () => {
       title : "Lưu Thành Đạt",
     },
     {
-      url : nguyenthaibao,
-      title : "Nguyễn Thái Bảo",
+      url : doanthisaomai,
+      title : "Đoàn Thị Sao Mai",
     },
     {
       url : nguyenthanhhieu,
