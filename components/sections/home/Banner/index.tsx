@@ -84,7 +84,7 @@ function Banner() {
           </p>
           <button className="px-[24px] xl:px-[32px] py-[12px] xl:py-[16px] bg-[#0098FF] flex justify-center items-center mt-[20px]">
             <p className="font-[400] text-[12px] xl:text-[16px] text-white leading-[19px]">
-              <a href="#joinClub" className="text-white decoration-none">Send Your CV</a>
+              <a target="_blank" href="https://docs.google.com/forms/d/1zr-qtjxbWkFvV10AWEyRnlsdq2IzqqOrewaHWXKIuDQ/prefill" className="text-white decoration-none">APPLY NOW</a>
             </p>
           </button>
         </div>

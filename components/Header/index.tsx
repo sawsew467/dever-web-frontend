@@ -57,7 +57,7 @@ function Header() {
     <motion.div 
       animate={isScrollHeader ? "down" : "up"}
       variants={animationHeader}
-      className="left-0 right-0 top-0 fixed z-[1] bg-white/[0.8] backdrop-blur-sm">
+      className="left-0 right-0 top-0 fixed z-[100] bg-white/[0.8] backdrop-blur-sm">
       <div className={`max-w-[1440px] mx-auto h-[56px] lg:h-[64px] xl:h-[64px] flex justify-between items-center px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]`}>
         <a href="/">
           <Image
