@@ -80,7 +80,7 @@ function Banner() {
             Dive into the world of coding, problem-solving, and tech with
             like-minded peers. Whether you're a beginner or an experienced
             programmer. Join us and unlock the limitless potential of
-            programming!
+            programming! 
           </p>
           <button className="px-[24px] xl:px-[32px] py-[12px] xl:py-[16px] bg-[#0098FF] flex justify-center items-center mt-[20px]">
             <p className="font-[400] text-[12px] xl:text-[16px] text-white leading-[19px]">
