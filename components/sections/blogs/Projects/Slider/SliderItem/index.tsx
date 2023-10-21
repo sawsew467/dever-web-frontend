@@ -119,9 +119,9 @@ function SliderItem({
             </div>
           </div>
           {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
-          <Link href={`blogs/${_id}`}>
+          {/* <Link href={`blogs/${_id}`}> */}
             <ViewMoreButton size="big" content={"View more"} />
-          </Link>
+          {/* </Link> */}
         </div>
       </div>
       <div className=" flex  w-[100%] justify-center items-center sm:space-x-[26px] lg:space-x-[30px] ">
