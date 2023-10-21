@@ -54,9 +54,9 @@ function Card({
         </div>
 
         {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
-        <Link href={`blogs/${_id}`}>
+        {/* <Link href={`blogs/${_id}`}> */}
           <ViewMoreButton size="small" content={"View more"} />
-        </Link>
+        {/* </Link> */}
       </div>
     </div>
   );
