@@ -5,10 +5,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { ValueOf } from "next/dist/shared/lib/constants";
-import image1 from "@pageImage/home/banner/Group1.png";
-import image2 from "@pageImage/home/banner/Group2.png";
-import image3 from "@pageImage/home/banner/Group3.png";
-import image4 from "@pageImage/home/banner/Group4.png";
+import image1 from "@pageImage/home/banner/Thuy.png";
+import image2 from "@pageImage/home/banner/Vu.png";
+import image3 from "@pageImage/home/banner/Mai.png";
+import image4 from "@pageImage/home/banner/Hai.png";
 import retangle1 from "@pageImage/home/banner/svg/Rectangle 7.svg";
 import retangle2 from "@pageImage/home/banner/svg/Rectangle 8.svg";
 import retangle3 from "@pageImage/home/banner/svg/Rectangle 9.svg";
@@ -34,13 +34,7 @@ const animationTitle: any = {
     },
   },
 };
-// const animationBanner : any = {
-//   show : (client : number)=>{
-//     const 
-//     return {
-//     x : client.x 
-//   }}
-// }
+
 function Banner() {
   const [client, setClient] = useState<obj>({ x: 0, y: 0 });
   const ref = useRef<any>(null);
@@ -100,7 +94,7 @@ function Banner() {
             type: "lieaner",
             restDelta : 0.01
           }}
-          className="w-[240px] h-[258px] lg:w-[285px] lg:h-[307px] xl:w-[303px] xl:h-[326px] absolute bottom-[40px]">
+          className="w-[240px] h-[258px] lg:w-[200px] lg:h-[240px] xl:w-[226px] xl:h-[272px] absolute bottom-[40px]">
           <Image src={image1} alt="person" />
         </motion.div>
         <motion.div 
@@ -112,7 +106,7 @@ function Banner() {
             type: "lieaner",
             restDelta : 0.01
           }}
-          className="w-[200px] h-[190px] lg:w-[307px] lg:h-[310px] xl:w-[345px] xl:h-[330px] absolute right-[20px] md:right-[40px] lg:right-[40px] xl:right-[80px] bottom-[61px] lg:bottom-[44px] xl:bottom-[80px]">
+          className="w-[200px] h-[190px] lg:w-[210] lg:h-[260px] xl:w-[236px] xl:h-[333px] absolute right-[20px] md:right-[40px] lg:right-[40px] xl:right-[80px] bottom-[61px] lg:bottom-[44px] xl:bottom-[80px]">
           <Image src={image3} alt="person" />
         </motion.div>
         <motion.div
@@ -124,7 +118,7 @@ function Banner() {
             type: "lieaner",
             restDelta : 0.01
           }}
-          className="w-[100px] h-[134px] xl:w-[119px] xl:h-[172px] absolute right-[120px] lg:right-[180px] xl:right-[328px] top-[116px] lg:top-[147px] xl:top-[132px]">
+          className="w-[120px] h-[144px] xl:w-[133px] xl:h-[141px] absolute right-[120px] lg:right-[180px] xl:right-[328px] top-[116px] lg:top-[147px] xl:top-[132px]">
           <Image src={image4} alt="person" />
         </motion.div>
         <motion.div 
@@ -136,7 +130,7 @@ function Banner() {
             type: "lieaner",
             restDelta : 0.01
           }}
-          className="w-[84px] h-[118px] xl:w-[115px] xl:h-[166px] absolute xl:left-[256px] top-[96px] lg:top-[142px] xl:top-[120px] lg:left-[180px] left-[120px]">
+          className="w-[134px] h-[138px] xl:w-[156px] xl:h-[148px] absolute xl:left-[256px] top-[96px] lg:top-[142px] xl:top-[120px] lg:left-[180px] left-[120px]">
           <Image src={image2} alt="person" />
         </motion.div>
       </motion.div>
