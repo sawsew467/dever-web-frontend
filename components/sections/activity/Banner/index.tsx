@@ -26,11 +26,13 @@ function Banner() {
               <p className="font-black text-right text-[24px] leading-[29px] text-[#0098FF] opacity-50 max-w-[80px] w-full">
                 Follow us
               </p>
-              <Image
-                className="w-full h-full"
-                src={facebook}
-                alt="facebookIcon"
-              ></Image>
+              <a href="https://www.facebook.com/FPTUDever" target="_blank">
+                <Image
+                  className="w-full h-full"
+                  src={facebook}
+                  alt="facebookIcon"
+                ></Image>
+              </a>
             </div>
           </div>
           <div className="w-full md:mb-[60px] sm:mb-[40px] flex flex-col items-center justify-center">

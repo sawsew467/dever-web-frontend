@@ -35,7 +35,7 @@ const Blogs = () => {
       <Image
         src={Background}
         alt="background effect"
-        className="absolute w-[100%] h-[100%]  max-h-[588px] min-h-[350px] min-w-[360px]  "
+        className="absolute w-[100%] h-[100%]  max-h-[588px] min-h-[350px] min-w-[360px]  object-cover	"
       ></Image>
       <div className="max-w-[1440px] w-[100%]  mx-auto md:px-[40px] xl:px-[80px]">
         <div className="relative sm:text-center md:text-left">
@@ -48,7 +48,7 @@ const Blogs = () => {
               <motion.div 
                 animate="show"
                 variants={parent}
-                className="overflow-hidden flex relative w-[100%] h-[50px] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
+                className="overflow-hidden flex md:justify-start sm:justify-center relative w-[100%] h-[50px] sm:text-[32px] lg:text-[40px] font-black sm:leading-[39px] lg:leading-[48px] text-primary">
                 {["F","U","-","D","E","V","E","R"," ","C","L","U","B"].map((char : string, index :number)=>
                 (<motion.p 
                     key={index} 

@@ -24,14 +24,14 @@ function Card({
 }: itemProps) {
   return (
     <div className=" md:w-[32.17%] lg:w-[31.92%] xl:w-[31.65%] sm:h-[450px] md:h-[310px] lg:h-[405.30px] xl:h-[570px] flex-col   border border-solid  rounded-t-[6px]  rounded-b-[6px] ">
-      <div className="sm:contents md:hidden relative w-[100%] h-[100%] ">
+      {/* <div className="sm:contents md:hidden relative w-[100%] h-[100%] ">
       <Link className="absolute w-[92%] h-[63%] " href="/posts/[id]" as={`blogs/${_id}`}>
         </Link>
-      </div>
+      </div> */}
       <div className="w-[100%] sm:h-[66.66%] md:h-[50%] xl:h-[52.8%] ">
         <Image
           src={pic}
-          className="w-[100%] h-[100%] rounded-t-[6px] "
+          className="w-[100%] h-[100%] rounded-t-[6px] object-cover"
           alt="project image "
         ></Image>
       </div>
@@ -53,7 +53,8 @@ function Card({
           </div>
         </div>
 
-        <Link href="/posts/[id]" as={`blogs/${_id}`}>
+        {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
+        <Link href={`blogs/${_id}`}>
           <ViewMoreButton size="small" content={"View more"} />
         </Link>
       </div>
