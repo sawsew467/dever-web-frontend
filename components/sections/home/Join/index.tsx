@@ -84,7 +84,6 @@ function Join() {
     email: "",
     studentId: "",
   });
-  console.log(uploadData);
   const [fullNameAlert, setFullNameAlert] = useState<string>("");
   const [emailAlert, setEmailAlert] = useState<string>("");
   const [sidAlert, setSidAlert] = useState<string>("");
@@ -148,7 +147,6 @@ function Join() {
         }
       } catch (error) {
         if (axios.isAxiosError(error)) {
-          console.log(error.response?.data);
           toast.error(error.response?.data.errorMessages[0]);
           setIsUploadSuccess(false);
           setIsUploading(false);
@@ -156,7 +154,6 @@ function Join() {
       }
     }
   };
-  console.log(isUploadSuccess);
   const handleSelectFile = () => {
     // fileInputRef.current.click();
     // console.log(fileInputRef);
