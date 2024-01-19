@@ -273,7 +273,7 @@ function Join() {
   };
   const handleGetStudentId = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    const studentIdRegex = /^[A-Za-z]{2}\d{6,}$/;
+    const studentIdRegex = /^[A-Za-z]{2}\d{6}$/;
     const isValidStudentId = studentIdRegex.test(value.trim());
     if (isValidStudentId) {
       setUploadData((prev) => ({
