@@ -19,7 +19,6 @@ import { uploadResume } from "@/app/apis/ResumeApi";
 import { CircleSpinner } from "react-spinners-kit";
 import { toast } from "react-toastify";
 
-
 type variantsProps = {
   exit: {
     y: number;
@@ -90,67 +89,71 @@ function Join() {
   const [emailAlert, setEmailAlert] = useState<string>("");
   const [sidAlert, setSidAlert] = useState<string>("");
   const [resumeFileAlert, setResumeFileAlert] = useState<string>("");
-  const [isPassed, setIsPassed]  = useState<boolean>(false);
+  const [isPassed, setIsPassed] = useState<boolean>(false);
 
   const [isUploadSuccess, setIsUploadSuccess] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
 
   const handleCheckBeforeUpload = (): boolean => {
-    if(uploadData.fullName.trim().length == 0) {
-        setFullNameAlert('Full name is required!')
-        setIsPassed(false);
+    if (uploadData.fullName.trim().length == 0) {
+      setFullNameAlert("Full name is required!");
+      setIsPassed(false);
     } else setIsPassed(true);
-    if(uploadData.email.trim().length == 0) {
-        setEmailAlert('Email is required!');
-        setIsPassed(false);
+    if (uploadData.email.trim().length == 0) {
+      setEmailAlert("Email is required!");
+      setIsPassed(false);
     } else setIsPassed(true);
-    if(uploadData.studentId.trim().length == 0) {
-        setSidAlert('Student Id is required!');
-        setIsPassed(false);
+    if (uploadData.studentId.trim().length == 0) {
+      setSidAlert("Student Id is required!");
+      setIsPassed(false);
     } else setIsPassed(true);
-    if( selectedProfileFile == null) {
-        setResumeFileAlert('Cv file is required!')
-        setIsPassed(false);
-        return false;
+    if (selectedProfileFile == null) {
+      setResumeFileAlert("Cv file is required!");
+      setIsPassed(false);
+      return false;
     } else setIsPassed(true);
-    return true
-  }
+    return true;
+  };
 
   const handleSubmit = async () => {
     const passed = handleCheckBeforeUpload();
     setIsUploadSuccess(false);
-    if(passed) {
-        try {
-            if(selectedProfileFile) {
-                // Error code 400 (┬┬﹏┬┬)
-                // console.log(selectedProfileFile)
-                // await uploadResume(uploadData, selectedProfileFile);
-                // alert('upload success')
+    if (passed) {
+      try {
+        if (selectedProfileFile) {
+          // Error code 400 (┬┬﹏┬┬)
+          // console.log(selectedProfileFile)
+          // await uploadResume(uploadData, selectedProfileFile);
+          // alert('upload success')
 
-                setIsUploading(true);
-                const formData = new FormData();
-                formData.append('FullName', uploadData.fullName);
-                formData.append('Email', uploadData.email);
-                formData.append('StudentId', uploadData.studentId);
-                formData.append('CvFile', selectedProfileFile);
+          setIsUploading(true);
+          const formData = new FormData();
+          formData.append("FullName", uploadData.fullName);
+          formData.append("Email", uploadData.email);
+          formData.append("StudentId", uploadData.studentId);
+          formData.append("CvFile", selectedProfileFile);
 
-                const res = await axios.post('https://fudever.bsite.net/api/Cv/upload', formData, {
-                  headers: {
-                    "Content-Type": 'multipart/form-data'
-                  }
-                })
-                setIsUploadSuccess(true);
-                setIsUploading(false);
-                toast.success('Upload successfully!');
+          const res = await axios.post(
+            "https://fudever.bsite.net/api/Cv/upload",
+            formData,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
             }
-        } catch (error) {
-            if(axios.isAxiosError(error)) {
-                console.log(error.response?.data);
-                toast.error(error.response?.data.errorMessages[0]);
-                setIsUploadSuccess(false);
-                setIsUploading(false);
-            }
+          );
+          setIsUploadSuccess(true);
+          setIsUploading(false);
+          toast.success("Upload successfully!");
         }
+      } catch (error) {
+        if (axios.isAxiosError(error)) {
+          console.log(error.response?.data);
+          toast.error(error.response?.data.errorMessages[0]);
+          setIsUploadSuccess(false);
+          setIsUploading(false);
+        }
+      }
     }
   };
   console.log(isUploadSuccess);
@@ -165,7 +168,7 @@ function Join() {
     const file = event.target.files && event.target.files[0];
     if (file && isValidFileType(file)) {
       setSelectedProfileFile(file);
-      setResumeFileAlert('')
+      setResumeFileAlert("");
     } else {
       setSelectedProfileFile(null);
     }
@@ -183,7 +186,7 @@ function Join() {
     const file = event.dataTransfer.files[0];
     if (file && isValidFileType(file)) {
       setSelectedProfileFile(file);
-      setResumeFileAlert('');
+      setResumeFileAlert("");
     } else {
       setSelectedProfileFile(null);
     }
@@ -332,17 +335,17 @@ function Join() {
                 <p className="text-[12px] text-red-600">{emailAlert}</p>
               ) : null}
             </div>
-           <div className="w-full ">
-           <input
-              onChange={(e) => handleGetStudentId(e)}
-              type="text"
-              placeholder="Student ID"
-              className="w-full outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]"
-            />
-             {sidAlert.length > 0 ? (
+            <div className="w-full ">
+              <input
+                onChange={(e) => handleGetStudentId(e)}
+                type="text"
+                placeholder="Student ID"
+                className="w-full outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]"
+              />
+              {sidAlert.length > 0 ? (
                 <p className="text-[12px] text-red-600">{sidAlert}</p>
               ) : null}
-           </div>
+            </div>
             <div className="w-[100%] flex flex-col items-center mt-[16px]">
               <h3 className="font-[700] text-[20px] leading-[24px] text-[#0f0f0f]">
                 Upload CV
@@ -462,25 +465,26 @@ function Join() {
                       </label>
                     </h4>
                     <p className="font-[400] text-[12px] leading-[18px] text-[#676767] mt-[10px] text-center">
-                    Requires uploading PDF files, other files will not be valid at all.
+                      Requires uploading PDF files, other files will not be
+                      valid at all.
                     </p>
                   </>
                 )}
               </div>
-                  {
-                    resumeFileAlert.length > 0 ? <p className="text-[12px] text-red-600">{resumeFileAlert}</p> : null
-                  }
+              {resumeFileAlert.length > 0 ? (
+                <p className="text-[12px] text-red-600">{resumeFileAlert}</p>
+              ) : null}
               <button
                 type="submit"
                 onClick={handleSubmit}
                 className="w-[100%] bg-primary opacity-[0.5] py-[8px] md:py-[8px] lg:py-[12px] xl:py-[12px] lg:px-[174px] xl:px-[174px] mt-[14px] md:mt-[14px] lg:mt-[32px] xl:mt-[32px] hover:opacity-[1] transition flex flex-row gap-2 items-center justify-center"
               >
-                <p className="font-[700] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-[#FFFFFF] leading-[18px] ">
-                  UPLOAD FILES
-                </p>
-                {
-                  isUploading ? <CircleSpinner size={16}/> : null
-                }
+                <div className="flex flex-row gap-2">
+                  <p className="font-[700] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-[#FFFFFF] leading-[18px] whitespace-nowrap">
+                    UPLOAD FILES
+                  </p>
+                  {isUploading ? <CircleSpinner size={16} /> : null}
+                </div>
               </button>
             </div>
           </motion.div>
