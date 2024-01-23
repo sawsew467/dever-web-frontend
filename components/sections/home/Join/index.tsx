@@ -241,7 +241,7 @@ function Join() {
 
   const handleGetName = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    const nameRegex = /^[A-Z][a-zA-Z]+(?:[\s.'-][a-zA-Z]+)*$/;
+    const nameRegex = /^(?:\p{Lu}\p{L}*[\s']?)+$/u;
     const isValidName = nameRegex.test(value.trim());
     if (isValidName) {
       setUploadData((prev) => ({
