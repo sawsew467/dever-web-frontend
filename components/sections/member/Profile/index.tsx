@@ -4,6 +4,7 @@ import position from "@/assets/icon/member/position.svg";
 import dob from "@/assets/icon/member/dob.svg";
 import id_person from "@/assets/icon/member/id_person.svg";
 import moment from "moment";
+import Social from "../Social";
 const decs = [
   { label: "Email address:", dataIndex: "email" },
   { label: "Home address:", dataIndex: "hometown" },
@@ -49,9 +50,7 @@ const Profile = ({ user }: { user: any }) => {
           </span>
           <span className="flex flex-col gap-[8px]">
             <h2 className="text-20px] font-bold">Social media</h2>
-            <p className="text-[20px] font-regular flex leading-none">
-              {moment(user?.dob).subtract(10, "days").calendar()}
-            </p>
+            <Social socials={user?.socials} />
           </span>
         </div>
       </div>

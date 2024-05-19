@@ -1,15 +1,8 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Banner from "@components/sections/member/banner";
 import ListLeaderMember from "@components/sections/member/memberLeader";
 import ListMember from "@components/sections/member/memberNormal";
-import axios from "axios";
-import { userEndpoint } from "@/helpers/endpoint";
-const initialData = {
-  memberData: [],
-  adminData: [],
-  excellentData: [],
-};
+
 const Main = ({ data }: any) => {
   return (
     <>

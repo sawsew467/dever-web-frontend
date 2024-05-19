@@ -6,10 +6,9 @@ import CardInfor from "../CardInfor";
 import AboutMe from "../Aboutme";
 
 const DetailMember = ({ user }: any) => {
-  console.log("user", user);
   return (
     <main className="p-[60px] min-h-[500px] mt-[60px] ">
-      <div className="flex w-full justify-between mb-[60px]">
+      <div className="flex w-full justify-between mb-[60px] px-[60px]">
         <span className="text-[40px] font-bold flex gap-[10px]">
           <h2 className="text-[#0098FF]">
             {user?.firstname} {user?.lastname}

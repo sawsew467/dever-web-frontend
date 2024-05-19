@@ -7,7 +7,7 @@ async function Member() {
     (user: any) => user?.isAdmin
   );
   const excellentData = data?.data?.data?.users?.filter(
-    (user: any) => user?.excellent
+    (user: any) => user?.isExcellent
   );
   const memberData = data?.data?.data?.users?.filter(
     (user: any) => !user?.isAdmin
