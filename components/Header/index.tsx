@@ -87,17 +87,17 @@ function Header() {
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
-            href="/blogs"
+            href="/member"
           >
-            Blogs
+            Members
             <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
-            href="/member"
+            href="/leaderboard"
           >
-            Members
+            Leader board
             <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
             <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>

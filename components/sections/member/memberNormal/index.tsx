@@ -1,18 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import vector from "@pageImage/member/normal/vector.svg";
 import SectionTittle from "@/components/SectionTitle";
 import { motion } from "framer-motion";
-import tranquockhanh from "@pageImage/member/normal/tranquockhanh.jpg";
-import leducanhphuong from "@pageImage/member/normal/leducanhphuong.jpg";
-import namphuoctruonghai from "@pageImage/member/normal/namphuoctruonghai.jpg";
-import nguyenhuuson from "@pageImage/member/normal/nguyenhuuson.jpg";
-import nguyentandat from "@pageImage/member/normal/nguyentandat.jpg";
-import phanquocthaibao from "@pageImage/member/normal/phanquocthaibao.jpg";
-import thantrongan from "@pageImage/member/normal/thantrongan.jpg";
-import vothithuysuong from "@pageImage/member/normal/vothithuysuong.jpg";
-import vovanvu from "@pageImage/member/normal/vovanvu.jpg";
-import nguyenthaibao from "@pageImage/member/leader/nguyenthaibao.jpg";
+
 import Link from "next/link";
 const parent: any = {
   show: {
@@ -38,6 +30,7 @@ const child: any = {
     },
   },
 };
+
 const ListMember = ({ data }: { data: any }) => {
   return (
     <article className=" md:pb-[60px] sm:pb-[40px]">

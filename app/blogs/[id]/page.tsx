@@ -5,7 +5,6 @@ import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
 import Author from "@/components/sections/post/Author";
 import RelatedPost from "@/components/sections/post/RelatedPost";
-import { useAppContext } from "@/app/context/AppContext";
 import { useEffect } from "react";
 // import fs from "fs";
 // import matter from "gray-matter";
@@ -119,10 +118,6 @@ export default function Page({ params }: { params: { id: string } }) {
   const index = findIndexById(params.id);
 
   // const post = getPostContent(id);
-  const {activeBlogNav} = useAppContext()
-  useEffect(() => {
-    activeBlogNav()
-  })
   return (
     <div>
       <Banner category={listProjects[index]?.category} tiltle={listProjects[index]?.title} pic={listProjects[index]?.img} _id={""} postTime={""} depcription={""}></Banner>
