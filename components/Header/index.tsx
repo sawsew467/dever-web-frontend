@@ -5,7 +5,6 @@ import MenuLogo from "@images/header/menu.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useAppContext } from "@/app/context/AppContext";
 import "./style.css";
 const animationHeader: any = {
   down: {
@@ -34,16 +33,6 @@ const animationHeader: any = {
 };
 function Header() {
   const [isOpenMenu, setOpenMenu] = useState<Boolean>(false);
-  const {
-    isHome,
-    isActivities,
-    isBlog,
-    isMember,
-    activeHomeNav,
-    activeActivitiesNav,
-    activeBlogNav,
-    activeMemeberNav,
-  } = useAppContext();
   const [isScrollHeader, setScrollHeader] = useState<Boolean>(false);
 
   const onClickMenuButton = () => {
@@ -82,102 +71,35 @@ function Header() {
           <Link
             className="hover:text-primary header transition-all relative"
             href="/"
-            onClick={() => {
-              setOpenMenu(false);
-              activeHomeNav();
-            }}
-            style={{
-              color: isHome ? "#60a5fa" : "",
-            }}
           >
             Home
-            <span
-              className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isHome ? "50%" : "",
-              }}
-            ></span>
-            <span
-              className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isHome ? "50%" : "",
-              }}
-            ></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/activity"
-            onClick={() => {
-              setOpenMenu(false);
-              activeActivitiesNav();
-            }}
-            style={{
-              color: isActivities ? "#60a5fa" : "",
-            }}
+            style={{}}
           >
             Activities
-            <span
-              className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isActivities ? "50%" : "",
-              }}
-            ></span>
-            <span
-              className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isActivities ? "50%" : "",
-              }}
-            ></span>
-          </Link>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/blogs"
-            onClick={() => {
-              setOpenMenu(false);
-              activeBlogNav();
-            }}
-            style={{
-              color: isBlog ? "#60a5fa" : "",
-            }}
-          >
-            Blogs
-            <span
-              className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isBlog ? "50%" : "",
-              }}
-            ></span>
-            <span
-              className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isBlog ? "50%" : "",
-              }}
-            ></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/member"
-            onClick={() => {
-              setOpenMenu(false);
-              activeMemeberNav();
-            }}
-            style={{
-              color: isMember ? "#60a5fa" : "",
-            }}
           >
             Members
-            <span
-              className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isMember ? "50%" : "",
-              }}
-            ></span>
-            <span
-              className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-              style={{
-                width: isMember ? "50%" : "",
-              }}
-            ></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+          </Link>
+          <Link
+            className="hover:text-primary header transition-all relative"
+            href="/leaderboard"
+          >
+            Leader board
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
         </div>
 

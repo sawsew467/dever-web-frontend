@@ -1,62 +1,35 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import group1498 from "@pageImage/member/banner/arrow.svg";
-import avatar  from "@pageImage/member/avatar/topface/avatar.png"
-import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg"
-import doanthisaomai from "@pageImage/member/leader/doanthisaomai.jpg"
-import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg"
-import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg"
-import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg"
-const parent : any = {
-  show : {
-    transition :{
-      staggerChildren : 0.15,
-      type : "spring",
-      duration : 0.5,
-      bounce : 0.8
-    }
-  }
-}
-const child : any = {
-  hidden : (index : number)=> ({
-    x : -20 * (index + 1),
-    opacity : 0
+import avatar from "@pageImage/member/avatar/topface/avatar.png";
+import luuthanhdat from "@pageImage/member/leader/luuthanhdat.jpg";
+import doanthisaomai from "@pageImage/member/leader/doanthisaomai.jpg";
+import nguyenhoangphuc from "@pageImage/member/leader/nguyenhoangphuc.jpg";
+import nguyenthanhhieu from "@pageImage/member/leader/nguyenthanhhieu.jpg";
+import nguyenthithanhthuy from "@pageImage/member/leader/nguyenthithanhthuy.jpg";
+const parent: any = {
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+      type: "spring",
+      duration: 0.5,
+      bounce: 0.8,
+    },
+  },
+};
+const child: any = {
+  hidden: (index: number) => ({
+    x: -20 * (index + 1),
+    opacity: 0,
   }),
-  show : {
-    x : 0,
-    opacity : 1,
-  }
-}
-const TopTypical = () => {
-  const data=[
-    {
-      url : avatar,
-      title : "Trần Văn Bảo Thắng"
-    },
-    {
-      url : luuthanhdat,
-      title : "Lưu Thành Đạt",
-    },
-    {
-      url : doanthisaomai,
-      title : "Đoàn Thị Sao Mai",
-    },
-    {
-      url : nguyenthanhhieu,
-      title : "Nguyễn Thanh Hiếu",
-    },
-    {
-      url : nguyenhoangphuc,
-      title : "Nguyễn Hoàng Phúc",
-    },
-    {
-      url : nguyenthithanhthuy,
-      title : "Nguyễn Thị Thanh Thuy",
-    },
-  ].sort((a : any, b : any)=>(a.title.localeCompare(b.title)));
-     
+  show: {
+    x: 0,
+    opacity: 1,
+  },
+};
+const TopTypical = ({ data }: { data: any }) => {
   return (
     <article className="xl:max-w-[1440px] mx-[auto]">
       <div className="xl:px-[80px] md:px-[40px] sm:px-[20px] flex flex-col text-center">
@@ -76,22 +49,22 @@ const TopTypical = () => {
           variants={parent}
           className="flex-wrap xl:content-normal md:justify-between md:flex-nowrap sm:flex-wrap sm:justify-center xl:gap-[40px] lg:gap-[34px] md:gap-0 sm:gap-y-[20px] sm:gap-[20px] mx-0 content-center flex lg:mt-[40px] md:mt-[25px] sm:mt-[20px] w-[100%] item-center "
         >
-         {data.map(( item , index)=> (
-          <motion.li 
-            custom={index}
-            variants={child}
-            key={index}
-          className="xl:w-[calc((100%-40px*5)/6)] xl:aspect-[9/14] h-[auto] lg:w-[calc((100%-34px*5)/6)] lg:aspect-[129/200] md:w-[calc((100%-30px*5)/6)] md:aspect-[90/136] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[65/95] "
-        >
-          <Image
-            width={180}
-            height={280}
-             className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
-            alt={item?.title}
-            src={item?.url}
-          ></Image>
-        </motion.li>
-         ) )}
+          {data?.map((user: any, index: any) => (
+            <motion.li
+              custom={index}
+              variants={child}
+              key={index}
+              className="xl:w-[calc((100%-40px*5)/6)] xl:aspect-[9/14] h-[auto] lg:w-[calc((100%-34px*5)/6)] lg:aspect-[129/200] md:w-[calc((100%-30px*5)/6)] md:aspect-[90/136] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[65/95] "
+            >
+              <Image
+                width={180}
+                height={280}
+                className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
+                alt={user?.nickname}
+                src={user?.avatar}
+              ></Image>
+            </motion.li>
+          ))}
         </motion.ul>
         <p className="lg:mt-[40px] md:mt-[25px] sm:mt-[20px] lg:text-[20px] md:text-[16px] sm:text-[14px] text-[#0065A9] not-italic font-[700] ">
           Each member is a small part in the successful development of the club.

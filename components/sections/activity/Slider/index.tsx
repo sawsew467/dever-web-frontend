@@ -90,6 +90,7 @@ function Slider() {
               <ImageGallery
                 lazyLoad={true}
                 items={extraActivities}
+                autoPlay
               ></ImageGallery>
             </div>
           </div>
