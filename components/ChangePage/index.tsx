@@ -1,6 +1,7 @@
 import React from "react";
 import arrowLeft from "@images/pages/blogs/arrowLeft.svg";
 import arrowRight from "@images/pages/blogs/arrowRightNonColor.svg";
+
 import Image from "next/image";
 
 export interface ChangePageProps {

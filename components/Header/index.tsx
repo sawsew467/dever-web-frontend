@@ -5,60 +5,61 @@ import MenuLogo from "@images/header/menu.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useAppContext } from "@/app/context/AppContext";
-import './style.css'
-const animationHeader : any = {
-  down : {
-    y : [-60, 0 ],
-    opacity : [0, 1],
-    backgroundColor : "#fff",
+import "./style.css";
+const animationHeader: any = {
+  down: {
+    y: [-60, 0],
+    opacity: [0, 1],
+    backgroundColor: "#fff",
     boxShadow: "0px 0px 20px 0px #2020204a",
-    scale :1,
-    transition:{
+    scale: 1,
+    transition: {
       type: "spring",
-      bounce :0,
-      duration: 1
-    }
+      bounce: 0,
+      duration: 1,
+    },
   },
-  up : {
-    y : 0,
-    boxShadow : "none",
-    scale :[1.2,1],
-    opacity : 1,
-    transition:{
+  up: {
+    y: 0,
+    boxShadow: "none",
+    scale: [1.2, 1],
+    opacity: 1,
+    transition: {
       type: "spring",
-      bounce :0.5,
-      duration: 1
-    }
-  }
-}
+      bounce: 0.5,
+      duration: 1,
+    },
+  },
+};
 function Header() {
   const [isOpenMenu, setOpenMenu] = useState<Boolean>(false);
-  const {isHome, isActivities, isBlog, isMember, activeHomeNav, activeActivitiesNav, activeBlogNav, activeMemeberNav} = useAppContext();
-  const [isScrollHeader , setScrollHeader] =  useState<Boolean>(false);
+  const [isScrollHeader, setScrollHeader] = useState<Boolean>(false);
 
-  const onClickMenuButton = () => { 
-    setOpenMenu(isOpenMenu => !isOpenMenu);
-  }
+  const onClickMenuButton = () => {
+    setOpenMenu((isOpenMenu) => !isOpenMenu);
+  };
 
-  const handleScroll = (e : any) => {
-      setOpenMenu(false);
-      const y = document.documentElement.scrollTop;
-      if( y > 64 ) setScrollHeader(true) 
-        else setScrollHeader(false)
-  }
+  const handleScroll = (e: any) => {
+    setOpenMenu(false);
+    const y = document.documentElement.scrollTop;
+    if (y > 64) setScrollHeader(true);
+    else setScrollHeader(false);
+  };
   useEffect(() => {
-    window.addEventListener("scroll",handleScroll, {passive: true});
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
-    <motion.div 
+    <motion.div
       animate={isScrollHeader ? "down" : "up"}
       variants={animationHeader}
-      className="left-0 right-0 top-0 fixed z-[100] bg-white/[0.8] backdrop-blur-sm">
-      <div className={`max-w-[1440px] mx-auto h-[56px] lg:h-[64px] xl:h-[64px] flex justify-between items-center px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]`}>
+      className="left-0 right-0 top-0 fixed z-[100] bg-white/[0.8] backdrop-blur-sm"
+    >
+      <div
+        className={`max-w-[1440px] mx-auto h-[56px] lg:h-[64px] xl:h-[64px] flex justify-between items-center px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px]`}
+      >
         <a href="/">
           <Image
             src={Logo}
@@ -70,82 +71,35 @@ function Header() {
           <Link
             className="hover:text-primary header transition-all relative"
             href="/"
-            onClick={() => {setOpenMenu(false)
-              activeHomeNav()
-            }}
-            style={{
-              color: isHome ? "#60a5fa" : ''
-            }}
           >
             Home
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-            style={{
-              width: isHome ? "50%" : '',
-            }}></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-            style={{
-              width: isHome ? "50%" : '',
-            }}></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/activity"
-            onClick={() => {setOpenMenu(false)
-              activeActivitiesNav()
-             }}
-              style={{
-                color: isActivities ? "#60a5fa" : ''
-              }}
+            style={{}}
           >
             Activities
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isActivities ? "50%" : '',
-            }}></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isActivities ? "50%" : '',
-            }}></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/blogs"
-            onClick={() => {setOpenMenu(false)
-              activeBlogNav()
-              }}
-              style={{
-                color: isBlog ? "#60a5fa" : ''
-              }}
           >
             Blogs
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isBlog ? "50%" : '',
-            }}></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isBlog ? "50%" : '',
-            }}></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/member"
-            onClick={() => {setOpenMenu(false)
-              activeMemeberNav()
-             }}
-              style={{
-                color: isMember ? "#60a5fa" : ''
-              }}
           >
             Members
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isMember ? "50%" : '',
-            }}></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"
-             style={{
-              width: isMember ? "50%" : '',
-            }}></span>
+            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
           </Link>
         </div>
 
@@ -214,11 +168,10 @@ function Header() {
             transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
             transitionDelay: "0.4s",
           }}
-          >
-            Members
-          </Link>
-        </div>
-        
+        >
+          Members
+        </Link>
+      </div>
     </motion.div>
   );
 }

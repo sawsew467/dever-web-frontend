@@ -1,18 +1,4 @@
-"use client";
-import Reloading from "@/components/Reloading";
-import Banner from "@/components/sections/blogs/Banner";
-import Projects from "@/components/sections/blogs/Projects";
-import { useEffect, useState } from "react";
-import { useAppContext } from "../context/AppContext";
+import MainBlog from "@/components/sections/blogs/Main";
 export default function Blogs() {
-  const {activeBlogNav} = useAppContext();
-  useEffect(() => {
-    activeBlogNav();
-  })
-  return (
-    <>
-      <Banner></Banner>
-      <Projects></Projects>
-    </>
-  );
+  return <MainBlog />;
 }

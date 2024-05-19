@@ -45,7 +45,7 @@ function RelatedPost() {
         Related Post
       </div>
       <div className="flex sm:space-y-[20px] md:space-y-[0px] md:space-x-[32px] sm:flex-col md:flex-row">
-        {listProjects.map((items, i) => (
+        {listProjects?.map((items, i) => (
           <Card
             key={i}
             _id={items._id}

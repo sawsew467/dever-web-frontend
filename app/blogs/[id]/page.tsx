@@ -125,7 +125,7 @@ export default function Page({ params }: { params: { id: string } }) {
   })
   return (
     <div>
-      <Banner category={listProjects[index].category} tiltle={listProjects[index].title} pic={listProjects[index].img} _id={""} postTime={""} depcription={""}></Banner>
+      <Banner category={listProjects[index]?.category} tiltle={listProjects[index]?.title} pic={listProjects[index]?.img} _id={""} postTime={""} depcription={""}></Banner>
       <Body _id={""} category={[]} postTime={""} tiltle={""} depcription={""} pic={Card1}></Body>
       <Author></Author>
       <RelatedPost></RelatedPost>
