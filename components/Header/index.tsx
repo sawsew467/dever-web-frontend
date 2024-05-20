@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import "./style.css";
+import { usePathname } from "next/navigation";
 const animationHeader: any = {
   down: {
     y: [-60, 0],
@@ -34,6 +35,8 @@ const animationHeader: any = {
 function Header() {
   const [isOpenMenu, setOpenMenu] = useState<Boolean>(false);
   const [isScrollHeader, setScrollHeader] = useState<Boolean>(false);
+  const pathname = usePathname();
+  const nav = pathname.split("/").at(1);
 
   const onClickMenuButton = () => {
     setOpenMenu((isOpenMenu) => !isOpenMenu);
@@ -51,6 +54,7 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  console.log("nav", nav);
   return (
     <motion.div
       animate={isScrollHeader ? "down" : "up"}
@@ -74,33 +78,63 @@ function Header() {
             href="/"
           >
             Home
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span
+              className={`${
+                nav === "" ? "show" : null
+              } absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+            <span
+              className={`${nav === "" ? "show" : null}
+            absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/activity"
-            style={{}}
           >
             Activities
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span
+              className={`${
+                nav === "activity" ? "show" : null
+              } absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+            <span
+              className={`${
+                nav === "activity" ? "show" : null
+              } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/member"
           >
             Members
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span
+              className={`${
+                nav === "member" ? "show" : null
+              } absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+            <span
+              className={`${
+                nav === "member" ? "show" : null
+              } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
             href="/leaderboard"
           >
             Leader board
-            <span className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
-            <span className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span"></span>
+            <span
+              className={`${
+                nav === "leaderboard" ? "show" : null
+              } absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+            <span
+              className={`${
+                nav === "leaderboard" ? "show" : null
+              } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
           </Link>
         </div>
 
@@ -149,7 +183,7 @@ function Header() {
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/blogs"
+          href="/leaderboard"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -158,7 +192,7 @@ function Header() {
             transitionDelay: "0.3s",
           }}
         >
-          Blogs
+          Leader board
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"

@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import leetcode from "@/assets/icon/member/detail/leetcode.svg";
+import crown from "@/public/static/media/crown.svg";
 function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
   const user1 = leaderboardData?.[0];
   const user2 = leaderboardData?.[1];
@@ -9,7 +11,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
     <main className="min-h-[100vh] pt-14">
       <section className="flex flex-col items-center pt-14 pb-10">
         <h1
-          className="font-[800]  text-[#0098FF] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
+          className="text-center font-[800]  text-[#0098FF] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]
        uppercase lg:text-[40px] md:text-[38px] sm:text-[24px] md:leading-[45.99px] sm:leading-[29.05px]  mx-[auto] not-italic backdrog-blur-[2px]
         "
         >
@@ -40,7 +42,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               <div className="flex gap-2 items-center">
                 <Image
                   loading="lazy"
-                  src={"/static/media/leetcode.png"}
+                  src={leetcode}
                   alt=""
                   width={20}
                   height={24}
@@ -54,8 +56,8 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 gap-6">
             <div className="relative">
               <Image
+                src={crown}
                 loading="lazy"
-                src={"/static/media/crown.svg"}
                 alt=""
                 width={60}
                 height={52}
@@ -80,7 +82,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               <div className="flex gap-2 items-center">
                 <Image
                   loading="lazy"
-                  src={"/static/media/leetcode.png"}
+                  src={leetcode}
                   alt=""
                   width={20}
                   height={24}
@@ -91,7 +93,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col lg:gap-12 gap-6 mt-20">
+          <div className="flex flex-col lg:gap-12 md:gap-6 sm:gap-4 mt-20">
             <div className="relative">
               <Image
                 loading="lazy"
@@ -112,7 +114,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               <div className="flex gap-2 items-center">
                 <Image
                   loading="lazy"
-                  src={"/static/media/leetcode.png"}
+                  src={leetcode}
                   alt=""
                   width={20}
                   height={24}
@@ -128,7 +130,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
       <section className="max-w-[1440px] mx-auto w-full bg-[#F8FCFF] lg:px-20 px-5 py-10 flex flex-col gap-4">
         {leaderboardData?.map((user: any, index: number) => (
           <div
-            className="w-full bg-white drop-shadow-md rounded-2xl p-5 flex items-center group hover:bg-[#7dd6ff] transition-all"
+            className="cursor-pointer w-full bg-white drop-shadow-md rounded-2xl lg:p-5 md:p-4 sm:p-3 flex items-center group hover:bg-[#7dd6ff] transition-all"
             key={index}
           >
             <span className="block lg:w-24 w-10 text-center text-xs lg:text-lg">
