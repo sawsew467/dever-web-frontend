@@ -1,6 +1,18 @@
-import MainMember from "@/components/sections/member/Main";
-import { userEndpoint } from "@/helpers/endpoint";
 import axios from "axios";
+
+import { userEndpoint } from "@/helpers/endpoint";
+
+import MainMember from "@/components/sections/member/Main";
+
+export const metadata = {
+  title: "FU-DEVER | Members",
+  description:
+    "Meet the talented members of FU-DEVER. Our diverse community of programmers, from beginners to experts, collaborates on innovative projects, shares knowledge, and grows together in the tech world.",
+  icons: {
+    icon: "/icons/layout/logo.png",
+  },
+};
+
 const getUser = async () => {
   let config = {
     method: "get",
