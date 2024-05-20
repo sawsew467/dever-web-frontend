@@ -22,6 +22,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 gap-6 mt-20">
             <div className="relative">
               <Image
+                loading="lazy"
                 src={user2?.userId?.avatar}
                 alt=""
                 width={290}
@@ -38,6 +39,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               </p>
               <div className="flex gap-2 items-center">
                 <Image
+                  loading="lazy"
                   src={"/static/media/leetcode.png"}
                   alt=""
                   width={20}
@@ -52,6 +54,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 gap-6">
             <div className="relative">
               <Image
+                loading="lazy"
                 src={"/static/media/crown.svg"}
                 alt=""
                 width={60}
@@ -59,6 +62,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
                 className="absolute lg:top-[-32px] top-[-24px] left-1/2 translate-x-[-50%] lg:w-[60px] lg:h-[52px] w-[40px] h-[34px]"
               />
               <Image
+                loading="lazy"
                 src={user2?.userId?.avatar}
                 alt=""
                 width={290}
@@ -75,6 +79,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               </p>
               <div className="flex gap-2 items-center">
                 <Image
+                  loading="lazy"
                   src={"/static/media/leetcode.png"}
                   alt=""
                   width={20}
@@ -89,6 +94,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 gap-6 mt-20">
             <div className="relative">
               <Image
+                loading="lazy"
                 src={user3?.userId?.avatar}
                 alt=""
                 width={290}
@@ -105,6 +111,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               </p>
               <div className="flex gap-2 items-center">
                 <Image
+                  loading="lazy"
                   src={"/static/media/leetcode.png"}
                   alt=""
                   width={20}
@@ -128,6 +135,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               {index + 1}
             </span>
             <Image
+              loading="lazy"
               src={user?.userId?.avatar}
               alt=""
               width={40}

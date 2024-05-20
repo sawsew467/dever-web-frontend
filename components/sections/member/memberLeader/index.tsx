@@ -62,6 +62,7 @@ const ListLeaderMember = ({ data }: { data: any }) => {
             >
               <Link href={`member/${user?._id}`}>
                 <Image
+                  loading="lazy"
                   width={290}
                   height={400}
                   className="xl:aspect-[29/40] lg:aspect-[7/10] md:aspect-[146/204]  sm:aspect-[93/123] pointer-events-none object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
@@ -104,6 +105,7 @@ const ListLeaderMember = ({ data }: { data: any }) => {
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
               <button className="cursor-not-allowed rounded-[2px] w-[100%] h-[100%]  border-[1px] border-[#1111111A]">
                 <Image
+                  loading="lazy"
                   src={vector}
                   alt="button "
                   className="pointer-events-none lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
@@ -120,6 +122,7 @@ const ListLeaderMember = ({ data }: { data: any }) => {
             <li className="xl:w-[40px] xl:h-[40px] lg:w-[35px] lg:h-[35px] sm:w-[30px] sm:h-[30px]">
               <button className="cursor-not-allowed rotate-[180deg] rounded-[2px] w-[100%] h-[100%] border-[1px] border-[#1111111A]">
                 <Image
+                  loading="lazy"
                   src={vector}
                   alt="button "
                   className="pointer-events-none lg:w-[6px] lg:h-[10px] sm:w-[4px] sm:h-[8px] mx-[auto] mt-[auto]"
