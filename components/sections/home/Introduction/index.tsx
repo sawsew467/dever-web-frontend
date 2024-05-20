@@ -6,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import arrowRight from "@pageImage/home/icon/Chevron Down.svg";
 import VisibilitySensor from "react-visibility-sensor";
 
+import "./style.css";
 function Counter({
   initialValue,
   maxValue,
@@ -93,8 +94,8 @@ function Introduction() {
 
   return (
     <div className="bg-[#F8FCFF]  text-[#000000]">
-      <div className="max-w-[1440px] mx-auto px-[20px] md:px-[40px] lg:px-[40px] xl:px-[80px] py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] flex justify-between xl:flex-row lg:flex-row md:flex-row flex-col">
-        <div className="w-fit md:w-[296px] lg:w-[505px] xl:w-[607px]">
+      <div className="max-w-[1440px] mx-auto  flex justify-end xl:flex-row lg:flex-row md:flex-row flex-col relative">
+        <div className="md:w-1/2 sm:w-full pl-[20px] md:pl-[40px] lg:pl-[40px] xl:pl-[80px] lg:w-[505px] xl:w-[607px] py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] md:absolute md:left-0 z-10">
           <SectionTitle
             title="who are we"
             subtitle="About our establishment and growth"
@@ -163,13 +164,15 @@ function Introduction() {
             </p>
           </div>
         </div>
-        <div className="flex md:items-start lg:items-end xl:items-end pt-[20px] md:pt-[0px] lg:pt-[0px] xl:pt-[0px]">
+        <div className="flex md:items-end lg:items-end xl:items-end mt-[20px] md:mt-[0px] lg:pt-[0px] xl:pt-[0px] w-fit lg:h-[519px] md:h-[450px] relative z-0">
+          <span className="absolute h-full w-1/6 background_blur_left_to_right left-0"></span>
           <Image
             loading="lazy"
-            className="w-fit md:w-[320px] md:h-[198px] lg:w-[399px] lg:h-[250px] xl:w-[597px] xl:h-[371px] mt-[0px] md:mt-[100px] lg:mt-[0px]  "
+            className="w-auto h-full "
             src={introduction}
             alt="Picture of the author"
           />
+          <span className="absolute h-full w-1/6 background_blur_right_to_left right-0"></span>
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
