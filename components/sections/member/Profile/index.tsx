@@ -15,6 +15,7 @@ const Profile = ({ user }: { user: any }) => {
     <div className="flex flex-col p-[40px] rounded-[16px] shadow-[0_2px_8px_0_#00000040] gap-[30px] w-fit">
       <div className="flex gap-[20px]">
         <Image
+          loading="lazy"
           src={user?.avatar}
           alt={user?.description}
           width={160}
@@ -26,19 +27,32 @@ const Profile = ({ user }: { user: any }) => {
             {user?.firstname} {user?.lastname}
           </h2>
           <span className="flex gap-[8px] items-center">
-            <Image src={position} alt="job" width={30} height={30}></Image>
+            <Image
+              loading="lazy"
+              src={position}
+              alt="job"
+              width={30}
+              height={30}
+            ></Image>
             <p className="text-[20px] font-regular flex leading-none">
               {user?.positionId?.name}
             </p>
           </span>
           <span className="flex gap-[8px] items-center">
-            <Image src={dob} alt="job" width={30} height={30}></Image>
+            <Image
+              loading="lazy"
+              src={dob}
+              alt="job"
+              width={30}
+              height={30}
+            ></Image>
             <p className="text-[20px] font-regular flex leading-none">
               {moment(user?.dob).subtract(10, "days").calendar()}
             </p>
           </span>
           <span className="flex gap-[8px] items-center">
             <Image
+              loading="lazy"
               src={id_person}
               alt="id student"
               width={30}

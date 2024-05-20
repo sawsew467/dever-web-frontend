@@ -57,6 +57,7 @@ const TopTypical = ({ data }: { data: any }) => {
               className="xl:w-[calc((100%-40px*5)/6)] xl:aspect-[9/14] h-[auto] lg:w-[calc((100%-34px*5)/6)] lg:aspect-[129/200] md:w-[calc((100%-30px*5)/6)] md:aspect-[90/136] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[65/95] "
             >
               <Image
+                loading="lazy"
                 width={180}
                 height={280}
                 className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
@@ -71,6 +72,7 @@ const TopTypical = ({ data }: { data: any }) => {
         </p>
         <div className="lg:mt-[12px] md:mt-[25px] sm:mt-[8px] mx-[auto] xl:w-[1115px] lg:w-[944px] md:w-[688px] sm:w-[320px] bg-[#0098FF] lg:h-[8px] md:h-[6px] sm:h-[4px] "></div>
         <Image
+          loading="lazy"
           className="pointer-events-none md:w-[24px] lg:h-[40px] md:h-[36px] sm:w-[20px] sm:h-[28px] mx-[auto] lg:my-[12px] md:my-[8px] sm:my-[9px]"
           src={group1498}
           alt="{group1498 }"

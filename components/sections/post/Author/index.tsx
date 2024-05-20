@@ -15,6 +15,7 @@ function Author() {
           </div>
           <div className="sm:w-[100%] lg:w-[718px] sm:space-x-[20px] md:space-x-[75px] flex content-center justify-center flex-row ">
             <Image
+              loading="lazy"
               src={avatar}
               alt=""
               className="w-[27.86%] rounded-[125px] my-auto sm:w-[100px] sm:h-[100px] md:w-[200px] md:h-[200px] overflow-hidden "
@@ -36,9 +37,9 @@ function Author() {
               <div className=" justify-between sm:hidden md:flex">
                 <div className="font-[400] text-[16px] ">K17DN</div>
                 <div className="flex space-x-[15px]">
-                  <Image src={lin} alt=""></Image>
-                  <Image src={insta} alt=""></Image>
-                  <Image src={twi} alt=""></Image>
+                  <Image loading="lazy" src={lin} alt=""></Image>
+                  <Image loading="lazy" src={insta} alt=""></Image>
+                  <Image loading="lazy" src={twi} alt=""></Image>
                 </div>
               </div>
             </div>
@@ -47,7 +48,12 @@ function Author() {
         <div className=" flex-col justify-between sm:hidden lg:flex">
           <div></div>
           <div className="flex lg:justify-end xl:justify-between">
-          <Image src={rating} alt="" className=" lg:h-[32px] xl:h-[48px] lg:w-[70%] xl:w-[100%]"></Image>
+            <Image
+              loading="lazy"
+              src={rating}
+              alt=""
+              className=" lg:h-[32px] xl:h-[48px] lg:w-[70%] xl:w-[100%]"
+            ></Image>
           </div>
         </div>
       </div>

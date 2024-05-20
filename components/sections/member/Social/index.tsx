@@ -17,6 +17,7 @@ const Social = ({ socials }: any) => {
       {socials?.map((social: any) => (
         <Link href={social?.url} key={social?._id}>
           <Image
+            loading="lazy"
             src={icon[social?.socialId?.constant]}
             alt={`icon ${social?.name}`}
           ></Image>

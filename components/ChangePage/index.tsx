@@ -43,7 +43,7 @@ function ChangePage({ currentPage, totalPages, onPageChange }: ChangePageProps) 
         }`}
         onClick={() => handlePageChange(currentPage - 1)}
       >
-        <Image src={arrowLeft} alt="arrow" />
+        <Image loading="lazy" src={arrowLeft} alt="arrow" />
       </div>
       {generatePageNumbers()}
       <div
@@ -52,7 +52,7 @@ function ChangePage({ currentPage, totalPages, onPageChange }: ChangePageProps) 
         }`}
         onClick={() => handlePageChange(currentPage + 1)}
       >
-        <Image src={arrowRight} alt="arrow" />
+        <Image loading="lazy" src={arrowRight} alt="arrow" />
       </div>
     </div>
   );
