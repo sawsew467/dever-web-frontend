@@ -62,6 +62,7 @@ function Header() {
       >
         <a href="/">
           <Image
+            loading="lazy"
             src={Logo}
             alt="Picture of the author"
             className="w-auto h-auto"
@@ -104,6 +105,7 @@ function Header() {
         </div>
 
         <Image
+          loading="lazy"
           src={MenuLogo}
           alt="Menu Logo"
           className="block lg:hidden md:block cursor-pointer"

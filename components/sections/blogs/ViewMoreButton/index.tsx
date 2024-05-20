@@ -23,7 +23,7 @@ function ViewMoreButton({ content, size }: viewMorePros) {
   `}
     >
       <div className="">{content}</div>
-      <Image src={Aroww} alt="arrow icon" />
+      <Image loading="lazy" src={Aroww} alt="arrow icon" />
     </div>
   );
 }

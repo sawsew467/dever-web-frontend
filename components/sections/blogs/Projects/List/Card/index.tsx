@@ -30,6 +30,7 @@ function Card({
       </div> */}
       <div className="w-[100%] sm:h-[66.66%] md:h-[50%] xl:h-[52.8%] ">
         <Image
+          loading="lazy"
           src={pic}
           className="w-[100%] h-[100%] rounded-t-[6px] object-cover"
           alt="project image "
@@ -55,7 +56,7 @@ function Card({
 
         {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
         {/* <Link href={`blogs/${_id}`}> */}
-          <ViewMoreButton size="small" content={"View more"} />
+        <ViewMoreButton size="small" content={"View more"} />
         {/* </Link> */}
       </div>
     </div>

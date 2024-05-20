@@ -11,9 +11,10 @@ const Button = ({ href, icon, title }: any) => {
         router.push(href);
         router.refresh();
       }}
-      className="flex lg:gap-[16px] md:gap-[14px] sm:gap-[10px] lg:px-[14px] sm:px-[12px] rounded-[10px] lg:min-w-[137px] md:min-w-[111px] lg:h-[57px] md:h-[48px] sm:h-[40px] items-center bg-primary"
+      className="flex lg:gap-[16px] md:gap-[14px] sm:gap-[10px] lg:px-[14px] sm:px-[12px] rounded-[10px] lg:min-w-[137px] md:min-w-[111px] lg:h-[57px] md:h-[48px] sm:h-[48px] items-center bg-primary"
     >
       <Image
+        loading="lazy"
         src={icon}
         alt="go home"
         width={23}

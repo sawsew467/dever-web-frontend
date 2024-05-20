@@ -31,8 +31,8 @@ function Activities() {
 
   return (
     <>
-      <section className="w-full h-full flex flex-col justify-center items-center">
-        <div className="max-w-[1440px]  bg-[#F8FCFF] w-full h-full  flex flex-col justify-center items-center">
+      <section className="w-full h-full flex flex-col justify-center items-center bg-[#F8FCFF]">
+        <div className="max-w-[1440px] w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
               title="academic"
@@ -46,6 +46,7 @@ function Activities() {
                   className="flex xl:w-[calc((100%-80px)/3)] md:w-[calc((100%-40px)/3)] w-full flex-col items-center gap-4"
                 >
                   <Image
+                    loading="lazy"
                     src={activity.img}
                     alt={activity.alt}
                     className=" object-cover xl:w-[400px] xl:h-[320px] lg:w-[283px] lg:h-[252px] md:w-[200px]  md:h-[178px] sm:w-full sm:h-[270px]"
@@ -61,7 +62,7 @@ function Activities() {
                       <p className="font-normal text-[16px] leading-[24px] text-white">
                         View more
                       </p>
-                      <Image src={ArrowIcon} alt="arrowIcon"></Image>
+                      <Image loading="lazy" src={ArrowIcon} alt="arrowIcon"></Image>
                     </button> */}
                   </div>
                 </div>
@@ -69,6 +70,8 @@ function Activities() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="w-full h-full flex flex-col justify-center items-center bg-[#fff]">
         <div className="max-w-[1440px]   w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle

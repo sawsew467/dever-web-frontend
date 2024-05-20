@@ -358,6 +358,7 @@ function Join() {
                     <div className="absolute w-[100%] h-[100%] top-0 right-0 left-0 p-[20px] flex flex-row justify-between">
                       <div className="md:w-[calc(100%-80px)] lg:w-[calc(100%-140px)] xl:w-[calc(100%-140px)] h-full mr-[20px] flex flex-row justify-between">
                         <Image
+                          loading="lazy"
                           src={
                             selectedProfileFile.type === "image/png" ||
                             selectedProfileFile.type === "image/jpeg" ||
@@ -418,6 +419,7 @@ function Join() {
                           ) : (
                             <>
                               <Image
+                                loading="lazy"
                                 src={UploadIcon}
                                 width={70}
                                 height={60}
@@ -436,6 +438,7 @@ function Join() {
                 ) : (
                   <>
                     <Image
+                      loading="lazy"
                       src={UploadIcon}
                       width={70}
                       height={60}
@@ -487,11 +490,13 @@ function Join() {
           </motion.div>
           <div className="w-[100%] h-[606px] z-[-1] absolute bottom-0 left-0 right-0 hidden md:hidden lg:hidden xl:block">
             <Image
+              loading="lazy"
               src={plan}
               alt="plan"
               className="absolute  z-[2] left-[80px] top-[26px]"
             />
             <Image
+              loading="lazy"
               src={dashedVector}
               alt="vector"
               className="z-[1 ] absolute bottom-0 right-0 left-0"

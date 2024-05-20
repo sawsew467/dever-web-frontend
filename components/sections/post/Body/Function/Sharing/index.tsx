@@ -18,12 +18,12 @@ function Sharing() {
         <div className="w-[100%] lg:space-y-[10px] sm:space-x-[10px] flex sm:flex-row lg:flex-col justify-end">
           <div className="lg:w-[100%] flex justify-end">
             <div className="w-[54px] h-[54px] bg-[#F8F9FA] rounded-[100%] flex justify-center content-center ">
-              <Image src={fb} alt=""></Image>
+              <Image loading="lazy" src={fb} alt=""></Image>
             </div>
           </div>
           <div className="lg:w-[100%] flex justify-end">
             <div className="w-[54px] h-[54px] bg-[#F8F9FA] rounded-[100%] flex justify-center content-center ">
-              <Image src={twi} alt=""></Image>
+              <Image loading="lazy" src={twi} alt=""></Image>
             </div>
           </div>
         </div>

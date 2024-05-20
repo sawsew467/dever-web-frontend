@@ -25,6 +25,7 @@ function Footer() {
     {
       logo: mapPin,
       tittle: "Khu đô thị FPT City, Ngũ Hành Sơn, Đà Nẵng, Việt Nam",
+      url: "https://www.google.com/maps/place/%C4%90%E1%BA%A1i+h%E1%BB%8Dc+FPT+%C4%90%C3%A0+N%E1%BA%B5ng/@15.968891,108.2583164,17z/data=!3m1!4b1!4m6!3m5!1s0x3142116949840599:0x365b35580f52e8d5!8m2!3d15.9688859!4d108.2608913!16s%2Fg%2F11fl0yz7tc?hl=vi-VN&entry=ttu",
     },
   ];
   return (
@@ -34,11 +35,13 @@ function Footer() {
           <div className="w-[213px] xl:w-[278px] h-[75px] md:h-[83px] lg:h-[91px] xl:h-[130px] flex flex-col justify-between gap-[12px] md:gap-[20px] xl:gap-[38px]">
             <a target="_blank" href="/" className="flex items-center">
               <Image
+                loading="lazy"
                 src={logodever1}
                 alt="Picture of the author"
                 className="w-[40px] h-[37px] xl:w-[64px] xl:h-[60px]"
               />
               <Image
+                loading="lazy"
                 src={fudever}
                 alt="Picture of the author"
                 className="pl-[8px] w-[165px] h-[39px] xl:w-[264px] xl:h-[48px]"
@@ -47,6 +50,7 @@ function Footer() {
             <div className="flex gap-[20px]">
               <a target="_blank" href="https://www.facebook.com/FPTUDever">
                 <Image
+                  loading="lazy"
                   src={facebookLogo}
                   alt="Picture of the author"
                   className="w-[24px] h-[24px] xl:w-[23px] xl:h-[32px]"
@@ -54,6 +58,7 @@ function Footer() {
               </a>
               <a target="_blank" href="https://github.com/sawsew467">
                 <Image
+                  loading="lazy"
                   src={githubLogo}
                   alt="Picture of the author"
                   className="w-[24px] h-[24px] xl:w-[23px] xl:h-[32px]"
@@ -61,6 +66,7 @@ function Footer() {
               </a>
               <a target="_blank" href="https://www.tiktok.com/@daihocfptdanang">
                 <Image
+                  loading="lazy"
                   src={tiktokLogo}
                   alt="Picture of the author"
                   className="w-[24px] h-[24px] xl:w-[23px] xl:h-[32px]"
@@ -73,11 +79,15 @@ function Footer() {
             {data.map((item, Footer) => (
               <div key={Footer} className="flex">
                 <Image
+                  loading="lazy"
                   className="mr-[12px] w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]"
                   src={item.logo}
                   alt="Picture of the author"
                 />
-                <a className="font-normal text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]" href={item.url}>
+                <a
+                  className="font-normal text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]"
+                  href={item.url}
+                >
                   {item.tittle}
                 </a>
               </div>

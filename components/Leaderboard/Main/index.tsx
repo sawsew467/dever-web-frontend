@@ -24,6 +24,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 gap-6 mt-20">
             <div className="relative">
               <Image
+                loading="lazy"
                 src={user2?.userId?.avatar}
                 alt=""
                 width={290}
@@ -39,7 +40,13 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
                 {user2?.userId?.firstname + " " + user2?.userId?.lastname}
               </p>
               <div className="flex gap-2 items-center">
-                <Image src={leetcode} alt="" width={20} height={24} />
+                <Image
+                  loading="lazy"
+                  src={leetcode}
+                  alt=""
+                  width={20}
+                  height={24}
+                />
                 <p className="lg:text-lg text-xs font-medium">
                   {user2?.acSubmissionList?.length * 10} pts
                 </p>
@@ -50,12 +57,14 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
             <div className="relative">
               <Image
                 src={crown}
+                loading="lazy"
                 alt=""
                 width={60}
                 height={52}
                 className="absolute lg:top-[-32px] top-[-24px] left-1/2 translate-x-[-50%] lg:w-[60px] lg:h-[52px] w-[40px] h-[34px]"
               />
               <Image
+                loading="lazy"
                 src={user2?.userId?.avatar}
                 alt=""
                 width={290}
@@ -71,7 +80,13 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
                 {user2?.userId?.firstname + " " + user2?.userId?.lastname}
               </p>
               <div className="flex gap-2 items-center">
-                <Image src={leetcode} alt="" width={20} height={24} />
+                <Image
+                  loading="lazy"
+                  src={leetcode}
+                  alt=""
+                  width={20}
+                  height={24}
+                />
                 <p className="lg:text-lg text-xs font-medium">
                   {user2?.acSubmissionList?.length * 10} pts
                 </p>
@@ -81,6 +96,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
           <div className="flex flex-col lg:gap-12 md:gap-6 sm:gap-4 mt-20">
             <div className="relative">
               <Image
+                loading="lazy"
                 src={user3?.userId?.avatar}
                 alt=""
                 width={290}
@@ -96,7 +112,13 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
                 {user3?.userId?.firstname + " " + user3?.userId?.lastname}
               </p>
               <div className="flex gap-2 items-center">
-                <Image src={leetcode} alt="" width={20} height={24} />
+                <Image
+                  loading="lazy"
+                  src={leetcode}
+                  alt=""
+                  width={20}
+                  height={24}
+                />
                 <p className="lg:text-lg text-xs font-medium">
                   {user3?.acSubmissionList?.length * 10} pts
                 </p>
@@ -115,6 +137,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
               {index + 1}
             </span>
             <Image
+              loading="lazy"
               src={user?.userId?.avatar}
               alt=""
               width={40}

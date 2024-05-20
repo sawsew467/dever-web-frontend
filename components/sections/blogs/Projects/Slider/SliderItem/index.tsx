@@ -96,6 +96,7 @@ function SliderItem({
           style={{ boxSizing: "border-box" }}
         >
           <Image
+            loading="lazy"
             src={img}
             className="w-[100%] h-[100%] rounded-l-[6px] object-cover"
             alt="project image "
@@ -120,7 +121,7 @@ function SliderItem({
           </div>
           {/* <Link href="/posts/[id]" as={`blogs/${_id}`}> */}
           {/* <Link href={`blogs/${_id}`}> */}
-            <ViewMoreButton size="big" content={"View more"} />
+          <ViewMoreButton size="big" content={"View more"} />
           {/* </Link> */}
         </div>
       </div>
