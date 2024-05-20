@@ -1,3 +1,7 @@
 .header:hover span {
     width: 50%;
 }
+
+.show {
+    width: 50% !important;
+}
