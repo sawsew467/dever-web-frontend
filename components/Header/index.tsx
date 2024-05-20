@@ -147,7 +147,7 @@ function Header() {
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/blogs"
+          href="/leaderboard"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -156,7 +156,7 @@ function Header() {
             transitionDelay: "0.3s",
           }}
         >
-          Blogs
+          Leader board
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
