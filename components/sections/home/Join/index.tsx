@@ -95,19 +95,19 @@ function Join() {
 
   const handleCheckBeforeUpload = (): boolean => {
     if (uploadData.fullName.trim().length == 0) {
-      setFullNameAlert("Full name is required!");
+      setFullNameAlert("Yêu cầu nhập Họ và Tên!");
       setIsPassed(false);
     } else setIsPassed(true);
     if (uploadData.email.trim().length == 0) {
-      setEmailAlert("Email is required!");
+      setEmailAlert("Yêu cầu nhập Email!");
       setIsPassed(false);
     } else setIsPassed(true);
     if (uploadData.studentId.trim().length == 0) {
-      setSidAlert("Student Id is required!");
+      setSidAlert("Yêu cầu nhập mã số sinh viên!");
       setIsPassed(false);
     } else setIsPassed(true);
     if (selectedProfileFile == null) {
-      setResumeFileAlert("Cv file is required!");
+      setResumeFileAlert("Yêu cầu CV!");
       setIsPassed(false);
       return false;
     } else setIsPassed(true);
@@ -279,7 +279,7 @@ function Join() {
       }));
       setSidAlert("");
     } else {
-      setSidAlert("Invalid student ID");
+      setSidAlert("Mã số sinh viên không hợp lệ");
     }
   };
 
@@ -298,9 +298,8 @@ function Join() {
               JOIN WITH US
             </h1>
             <p className="text-center mt-[12px] font-[400] text-[16px] md:text-[16px] lg:text-[19px] xl:text-[19px] leading-[23px]">
-              Whether you're a beginner taking first step or an experienced
-              programmer. Join us and unlock the limitless potential of
-              programming!
+            Dù bạn là người mới bắt đầu hay lập trình viên giàu kinh nghiệm, 
+            hãy tham gia cùng chúng tôi và khai phá tiềm năng vô tận của bản thân!
             </p>
           </motion.div>
           <motion.div
@@ -314,7 +313,7 @@ function Join() {
               <input
                 onChange={(e) => handleGetName(e)}
                 type="text"
-                placeholder="Full name"
+                placeholder="Họ và tên"
                 className="w-full outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px]"
               />
               {fullNameAlert.length > 0 ? (
@@ -336,7 +335,7 @@ function Join() {
               <input
                 onChange={(e) => handleGetStudentId(e)}
                 type="text"
-                placeholder="Student ID"
+                placeholder="Mã số sinh viên"
                 className="w-full outline-none border-b-2 border-[#676767] placeholder:text-[#676767] h-[32px] mt-[16px]"
               />
               {sidAlert.length > 0 ? (
@@ -446,7 +445,7 @@ function Join() {
                       className=""
                     />
                     <h4 className="font-[700] text-[16px] leading-[19px] text-[#0f0f0f] mt-[10px] ">
-                      Drag & Drop files or
+                      Kéo và thả files hoặc
                       <input
                         type="file"
                         name="file"
@@ -465,8 +464,7 @@ function Join() {
                       </label>
                     </h4>
                     <p className="font-[400] text-[12px] leading-[18px] text-[#676767] mt-[10px] text-center">
-                      Requires uploading PDF files, other files will not be
-                      valid at all.
+                      Yêu cầu upload PDF files, các loại files khác sẽ không hợp lệ.
                     </p>
                   </>
                 )}

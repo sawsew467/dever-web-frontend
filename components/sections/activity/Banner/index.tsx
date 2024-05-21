@@ -9,14 +9,14 @@ function Banner() {
         <div className="xl:max-w-[1440px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[360px] w-full h-full sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col justify-center items-center ">
           <div className="w-full flex flex-row lg:justify-between justify-center items-center mt-[120px] sm:mb-[40px] md:mb-[60px] lg:mb-[45px]">
             <p className="max-w-[266px] w-full font-normal italic text-sm hidden lg:block leading-[17px] text-[#0098FF]">
-              Join our vibrant coding club, where exciting activities happen
-              weekly. Learn, share experiences, and develop your skills with
-              fellow tech enthusiasts. Together, we&apos;ll create amazing
-              projects and unlock your potential!
+            Hãy tham gia cùng chúng tôi, 
+            nơi mỗi tuần diễn ra những hoạt động hấp dẫn. 
+            Học hỏi, chia sẻ kinh nghiệm, và phát triển kỹ năng cùng những người đam mê công nghệ. 
+            Cùng nhau, chúng ta sẽ tạo ra những dự án tuyệt vời và mở khóa tiềm năng của bạn!!
             </p>
             <div className=" flex flex-col items-center justify-center">
               <p className="font-black md:text-[32px] md:leading-[39px] text-[30px] leading-[36px] mb-[12px] stroke-text ">
-                Activities in
+                Hoạt động ở 
               </p>
               <p className="uppercase font-black md:text-[40px] md:leading-[48px] text-[38px] leading-[46px] text-[#0098FF]">
                 {" "}

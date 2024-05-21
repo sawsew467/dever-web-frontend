@@ -13,19 +13,19 @@ function Activities() {
       img: workshop,
       title: "Workshop",
       alt: "workshopImg",
-      desc: "Workshops provide a valuable opportunity for hands-on learning",
+      desc: "Mang lại cơ hội quý giá cho việc học tập thông qua thực hành trực tiếp",
     },
     {
       img: training,
       title: "Training",
       alt: "trainingImg",
-      desc: "Training activity provide personal skills and professional skills.",
+      desc: "Đào tạo cung cấp kỹ năng cá nhân và kỹ năng chuyên môn",
     },
     {
       img: contest,
       title: "Contest",
       alt: "ContestImg",
-      desc: "Put your knowledge to the test in thrilling competitions with enticing rewards.",
+      desc: "Thử thách bản với các cuộc thi nghẹt thở với những phần thưởng hấp dẫn",
     },
   ];
 
@@ -35,8 +35,8 @@ function Activities() {
         <div className="max-w-[1440px] w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
-              title="academic"
-              subtitle="About our establishment and growth"
+              title="HỌC THUẬT"
+              subtitle="Chia sẽ kiến thức, cạnh tranh lành mạnh"
               textPosition="left"
             ></SectionTitle>
             <div className="flex flex-col mt-[20px] md:flex-row md:gap-0 sm:gap-[30px] justify-between w-full ">
@@ -75,8 +75,8 @@ function Activities() {
         <div className="max-w-[1440px]   w-full h-full  flex flex-col justify-center items-center">
           <div className=" flex flex-col w-full xl:px-[80px] md:px-[40px] sm:px-[20px] md:py-[60px] sm:py-[40px]">
             <SectionTitle
-              title="Extracurricular"
-              subtitle="About our establishment and growth"
+              title="NGOẠI KHÓA"
+              subtitle="Không ngừng kết nối, phát triển vững bềnh"
               textPosition="left"
             ></SectionTitle>
             <Slider></Slider>
