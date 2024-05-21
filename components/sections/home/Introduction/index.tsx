@@ -95,7 +95,7 @@ function Introduction() {
   return (
     <div className="bg-[#F8FCFF]  text-[#000000]">
       <div className="max-w-[1440px] mx-auto  flex justify-end xl:flex-row lg:flex-row md:flex-row flex-col relative">
-        <div className="md:w-1/2 sm:w-full pl-[20px] md:pl-[40px] lg:pl-[40px] xl:pl-[80px] lg:w-[505px] xl:w-[607px] py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] md:absolute md:left-0 z-10">
+        <div className=" lg:w-[50%] md:w-[62%] sm:w-full pl-[20px] md:pl-[40px] lg:pl-[40px] xl:pl-[80px]  py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] md:absolute md:left-0 z-10">
           <SectionTitle
             title="who are we"
             subtitle="About our establishment and growth"

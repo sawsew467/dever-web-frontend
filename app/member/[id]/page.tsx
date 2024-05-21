@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 import axios from "axios";
 import { userEndpoint } from "@/helpers/endpoint";
 
-const fetchUser = async (id?: string) => {
+const fetchUser = async (id: string) => {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: `${userEndpoint.GET_ALL_USERS}/${id}`,
+    url: userEndpoint.GET_USER_DETAIL_BY_ID.replace("{id}", id),
     headers: {
       "X-API-Key": "{{token}}",
     },
@@ -22,7 +22,7 @@ const fetchUser = async (id?: string) => {
   }
 };
 
-const Member = async ({ params: { id } }: { params: { id?: string } }) => {
+const Member = async ({ params: { id } }: { params: { id: string } }) => {
   const user: any = await fetchUser(id);
 
   if (!user) {
