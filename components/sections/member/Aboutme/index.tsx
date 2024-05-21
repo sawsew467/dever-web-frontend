@@ -10,7 +10,7 @@ const decs = [
 ];
 const AboutMe = ({ user }: any) => {
   return (
-    <div className="flex flex-col lg:p-[40px] sm:p-[20px] lg:rounded-[16px] rounded-[8px] shadow-[0_2px_8px_0_#00000040] lg:gap-[30px] sm:gap-[20px] xl:w-fit h-fit lg:w-1/2 xl:min-w-[600px]">
+    <div className="flex flex-col lg:p-[40px] sm:p-[20px] lg:rounded-[16px] rounded-[8px] shadow-[0_2px_8px_0_#00000040] lg:gap-[30px] sm:gap-[20px] w-full">
       <SectionTittle
         title="General Information:"
         textPosition="left"

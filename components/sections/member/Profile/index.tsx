@@ -76,7 +76,7 @@ const Profile = ({ user }: { user: any }) => {
               {data.label}
             </h2>
             <p className="xl:text-[16px] lg:text-[14px] font-bold">
-              {user[data.dataIndex]}
+              {user && user[data.dataIndex]}
             </p>
           </span>
         ))}

@@ -54,7 +54,6 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log("nav", nav);
   return (
     <motion.div
       animate={isScrollHeader ? "down" : "up"}
@@ -106,7 +105,25 @@ function Header() {
           </Link>
           <Link
             className="hover:text-primary header transition-all relative"
+            href="/project"
+            
+          >
+            Project
+            <span
+              className={`${
+                nav === "project" ? "show" : null
+              } absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+            <span
+              className={`${
+                nav === "project" ? "show" : null
+              } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
+            ></span>
+          </Link>
+          <Link
+            className="hover:text-primary header transition-all relative"
             href="/member"
+            
           >
             Members
             <span
@@ -148,7 +165,9 @@ function Header() {
       </div>
 
       <div
-        className={`absolute h-fit top-[56px] w-[100%] flex md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
+        className={`${
+          isOpenMenu ? "" : "pointer-events-none"
+        } absolute  h-fit top-[56px] w-[100%]  md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
         style={{
           opacity: "1",
           transition: "all 0.3s",
@@ -183,16 +202,16 @@ function Header() {
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/leaderboard"
+          href="/project"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
             visibility: isOpenMenu ? "visible" : "hidden",
             transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
-            transitionDelay: "0.3s",
+            transitionDelay: "0.4s",
           }}
         >
-          Leader board
+          Project
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
@@ -206,6 +225,19 @@ function Header() {
           }}
         >
           Members
+        </Link>
+        <Link
+          className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
+          href="/leaderboard"
+          style={{
+            opacity: isOpenMenu ? "1" : "0",
+            transition: "all 0.3s",
+            visibility: isOpenMenu ? "visible" : "hidden",
+            transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
+            transitionDelay: "0.3s",
+          }}
+        >
+          Leader board
         </Link>
       </div>
     </motion.div>
