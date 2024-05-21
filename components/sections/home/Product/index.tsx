@@ -99,22 +99,23 @@ function Product() {
 
         <div className="max-w-[100%] md:max-w-[50%] lg:max-w-[50%] xl:max-w-[50%] h-fit flex flex-col items-end text-[16px] font-[400] ">
           <SectionTitle
-            title="products we develop"
-            subtitle="Appliction and services"
+            title="Sản phẩm"
+            subtitle="Phần mềm và dịch vụ"
             textPosition="right"
           ></SectionTitle>
           <div className="w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] mt-[28px]">
             <p className="text-right leading-[normal] md:leading-[normal] lg:leading-[normal] xl:leading-[19px] text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] pl-[0] md:pl-[20px] lg:pl-[20px] xl:pl-[20px]">
-              Our products are game-changers, revolutionizing industries and
-              enhancing user experiences. With cutting-edge technology and
-              user-centric design, we deliver innovative solutions that surpass
-              expectations and drive positive change.
+              Sản phẩm của chúng tôi mang lại những cải tiến quan trọng, 
+              hỗ trợ các ngành công nghiệp và nâng cao trải nghiệm người dùng. 
+              Với các công nghệ hiện đại và luôn lấy người dùng làm trung tâm, 
+              chúng tôi cung cấp các giải pháp sáng tạo đáp ứng mong đợi, nhu cầu 
+              và thúc đẩy sự phát triển vững bềnh.
               <br />
               <br />
-              With a team of passionate programmers, developers, and designers,
-              we collaborate to bring innovative solutions to life. Our products
-              range from web and mobile applications to software tools and
-              utilities that streamline processes and enhance productivity.
+              Với đội ngũ lập trình viên đầy nhiệt huyết, 
+              chúng tôi cùng nhau tạo ra những giải pháp sáng tạo. 
+              Sản phẩm của chúng tôi bao gồm các ứng dụng Web và di động, 
+              công cụ phần mềm và tiện ích giúp tối ưu hóa quy trình và nâng cao năng suất.
             </p>
           </div>
 
@@ -129,7 +130,7 @@ function Product() {
               }}
               onClick={() => router.push("/blogs")}
             >
-              <p>Explore Projects</p>
+              <p>Dự án</p>
             </button>
             <button
               className="px-[24px] md:px-[24px] lg:px-[26px] xl:px-[32px] py-[12px] xl:py-[16px] bg-white border-[3px] border-black text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]text-white"
@@ -137,7 +138,7 @@ function Product() {
                 transitionDuration: "0.1s",
               }}
             >
-              <p>Explore Projects</p>
+              <p>Dự án</p>
             </button>
           </div>
 

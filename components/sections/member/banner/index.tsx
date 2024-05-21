@@ -32,10 +32,10 @@ const TopTypical = ({ data }: { data: any }) => {
        uppercase lg:text-[40px] md:text-[38px] sm:text-[24px] md:leading-[45.99px] sm:leading-[29.05px]  mx-[auto] not-italic backdrog-blur-[2px]
         "
         >
-          WHO ARE IN FU - DEVER?
+          TRONG FU - DEVER CÓ AI?
         </h1>
         <p className="text-[#0065A9] font-[700] not-italic lg:text-[20px] md:text-[16px] sm:text-[14px]  xl:mt-[28px] lg:mt-[25px] md:mt-[23px] sm:mt-[20px]">
-          2023 - Top typical faces of the club
+          2024 - Những gương mặt tiêu biểu của câu lạc bộ
         </p>
         <motion.ul
           initial="hidden"
@@ -62,7 +62,7 @@ const TopTypical = ({ data }: { data: any }) => {
           ))}
         </motion.ul>
         <p className="lg:mt-[40px] md:mt-[25px] sm:mt-[20px] lg:text-[20px] md:text-[16px] sm:text-[14px] text-[#0065A9] not-italic font-[700] ">
-          Each member is a small part in the successful development of the club.
+        Mỗi thành viên là một phần nhỏ trong sự phát triển thành công của câu lạc bộ.
         </p>
         <div className="lg:mt-[12px] md:mt-[25px] sm:mt-[8px] mx-[auto] xl:w-[1115px] lg:w-[944px] md:w-[688px] sm:w-[320px] bg-[#0098FF] lg:h-[8px] md:h-[6px] sm:h-[4px] "></div>
         <Image

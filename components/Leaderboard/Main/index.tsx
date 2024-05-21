@@ -15,10 +15,10 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
        uppercase lg:text-[40px] md:text-[38px] sm:text-[24px] md:leading-[45.99px] sm:leading-[29.05px]  mx-[auto] not-italic backdrog-blur-[2px]
         "
         >
-          MEMBER’S CODING LEADERBOARD
+          CÁC THÀNH VIÊN DẪN ĐẦU CODING LEADERBOARD
         </h1>
         <p className="text-[#0065A9] font-[700] not-italic lg:text-[20px] md:text-[16px] sm:text-[14px]  xl:mt-[28px] lg:mt-[25px] md:mt-[23px] sm:mt-[20px]">
-          2023 - Top typical faces of the club
+          SUMMER - 2024
         </p>
         <div className="flex mt-12 px-5 gap-4 lg:gap-20">
           <div className="flex flex-col lg:gap-12 gap-6 mt-20">

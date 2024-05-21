@@ -67,22 +67,22 @@ function Introduction() {
   const data = [
     {
       number: 100,
-      tittle: "Members",
+      tittle: "Thành viên",
       speed: 30,
     },
     {
       number: 5,
-      tittle: "Years grow",
+      tittle: "Năm hoạt động",
       speed: 500,
     },
     {
       number: 10,
-      tittle: "Projects",
+      tittle: "Dự án",
       speed: 300,
     },
     {
       number: 20,
-      tittle: "Prizes",
+      tittle: "Giải thưởng",
       speed: 150,
     },
   ];
@@ -97,22 +97,20 @@ function Introduction() {
       <div className="max-w-[1440px] mx-auto  flex justify-end xl:flex-row lg:flex-row md:flex-row flex-col relative">
         <div className="md:w-1/2 sm:w-full pl-[20px] md:pl-[40px] lg:pl-[40px] xl:pl-[80px] lg:w-[505px] xl:w-[607px] py-[40px] md:py-[60px] lg:py-[60px] xl:py-[60px] md:absolute md:left-0 z-10">
           <SectionTitle
-            title="who are we"
-            subtitle="About our establishment and growth"
+            title="Chúng tôi là ai"
+            subtitle="Mục tiêu thành lập và phát triển"
             textPosition="left"
           ></SectionTitle>
           <div className="pt-[20px] md:pt-[20px] lg:pt-[40px] xl:pt-[28px] text-[16px]">
             <p className=" m-0 p0 text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] leading-[normal] font-[400]">
-              Welcome to FU-DEVER, the programming club of FPT University! . At
-              FU-DEVER, we strive to foster a vibrant community of aspiring
-              programmers and provide a platform for skill development and
-              collaboration.
+            Chào mừng đến với FU-DEVER, 
+            câu lạc bộ lập trình của Đại học FPT! 
+            Tại đây, chúng tôi tạo ra một cộng đồng năng động cho những lập trình viên tương lai, 
+            cung cấp cơ hội phát triển kỹ năng và giao lưu.
               <br />
               <br />
-              Whether you&apos;re a beginner or an experienced programmer
-              seeking to expand your knowledge, our club offers a range of
-              activities, including coding challenges, workshops, and coding
-              competitions.
+              Dù bạn là người mới bắt đầu hay lập trình viên có kinh nghiệm, 
+              FU-DEVER có mọi hoạt động để bạn tham gia, từ các thử thách lập trình đến các cuộc thi và Workshop.
               <span
                 id="dots"
                 className="lg:hidden xl:hidden"
@@ -129,16 +127,11 @@ function Introduction() {
                   display: isReadMore ? "block" : "",
                 }}
               >
-                <br />
-                FU-DEVER has experienced a remarkable journey of growth. From a
-                small group of passionate students, it has expanded into a
-                thriving community of programmers from various disciplines.
-                <br />
-                <br />
-                Through organizing larger events, hosting esteemed speakers, and
-                fostering innovation, FU-DEVER has become a hub of knowledge and
-                inspiration, leaving a lasting impact on the university&apos;s
-                programming landscape.
+                <br />  
+                Từ một nhóm sinh viên nhiệt huyết, 
+                FU-DEVER đã phát triển thành một cộng đồng đa dạng, 
+                tổ chức các sự kiện lớn và khuyến khích sự sáng tạo, 
+                góp phần làm nâng cao kỹ năng, kinh nghiệm, trải nghiệm của cộng đồng lập trình tại trường đại học.
               </span>
               <span className="lg:hidden xl:hidden">
                 <br />
