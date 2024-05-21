@@ -130,7 +130,7 @@ function LeaderboardModule({ leaderboardData }: { leaderboardData: any }) {
       <section className="max-w-[1440px] mx-auto w-full bg-[#F8FCFF] lg:px-20 px-5 py-10 flex flex-col gap-4">
         {leaderboardData?.map((user: any, index: number) => (
           <div
-            className="cursor-pointer w-full bg-white drop-shadow-md rounded-2xl lg:p-5 md:p-4 sm:p-3 flex items-center group hover:bg-[#7dd6ff] transition-all"
+            className="cursor-pointer hover:bg-[#7dd6ff] transition-all w-full bg-white drop-shadow-md rounded-2xl lg:p-5 md:p-4 sm:p-3 flex items-center group "
             key={index}
           >
             <span className="block lg:w-24 w-10 text-center text-xs lg:text-lg">

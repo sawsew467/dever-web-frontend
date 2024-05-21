@@ -115,44 +115,44 @@ function Join() {
   };
 
   const handleSubmit = async () => {
-    const passed = handleCheckBeforeUpload();
-    setIsUploadSuccess(false);
-    if (passed) {
-      try {
-        if (selectedProfileFile) {
+    // const passed = handleCheckBeforeUpload();
+    // setIsUploadSuccess(false);
+    // if (passed) {
+      // try {
+        // if (selectedProfileFile) {
           // Error code 400 (┬┬﹏┬┬)
           // console.log(selectedProfileFile)
           // await uploadResume(uploadData, selectedProfileFile);
           // alert('upload success')
 
-          setIsUploading(true);
-          const formData = new FormData();
-          formData.append("FullName", uploadData.fullName);
-          formData.append("Email", uploadData.email);
-          formData.append("StudentId", uploadData.studentId);
-          formData.append("CvFile", selectedProfileFile);
+    //       setIsUploading(true);
+    //       const formData = new FormData();
+    //       formData.append("FullName", uploadData.fullName);
+    //       formData.append("Email", uploadData.email);
+    //       formData.append("StudentId", uploadData.studentId);
+    //       formData.append("CvFile", selectedProfileFile);
 
-          const res = await axios.post(
-            "https://fudever.bsite.net/api/Cv/upload",
-            formData,
-            {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }
-          );
-          setIsUploadSuccess(true);
-          setIsUploading(false);
-          toast.success("Upload successfully!");
-        }
-      } catch (error) {
-        if (axios.isAxiosError(error)) {
-          toast.error(error.response?.data.errorMessages[0]);
-          setIsUploadSuccess(false);
-          setIsUploading(false);
-        }
-      }
-    }
+    //       const res = await axios.post(
+    //         "https://fudever.bsite.net/api/Cv/upload",
+    //         formData,
+    //         {
+    //           headers: {
+    //             "Content-Type": "multipart/form-data",
+    //           },
+    //         }
+    //       );
+    //       setIsUploadSuccess(true);
+    //       setIsUploading(false);
+    //       toast.success("Upload successfully!");
+    //     }
+    //   } catch (error) {
+    //     if (axios.isAxiosError(error)) {
+    //       toast.error(error.response?.data.errorMessages[0]);
+    //       setIsUploadSuccess(false);
+    //       setIsUploading(false);
+    //     }
+    //   }
+    // }
   };
   const handleSelectFile = () => {
     // fileInputRef.current.click();

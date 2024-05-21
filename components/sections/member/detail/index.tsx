@@ -4,6 +4,7 @@ import Button from "@/components/core/common/button";
 import Profile from "../Profile";
 import CardInfor from "../CardInfor";
 import AboutMe from "../Aboutme";
+import LeetCode from "../LeetCode";
 
 const DetailMember = ({ user }: any) => {
   return (
@@ -35,7 +36,10 @@ const DetailMember = ({ user }: any) => {
             />
           </div>
         </div>
-        <AboutMe user={user} />
+        <div className="flex flex-col lg:gap-[40px] sm:gap-[20px] xl:w-fit h-fit lg:w-1/2 xl:min-w-[600px]">
+          <AboutMe user={user} />
+          <LeetCode submissionList={user?.acSubmissionList} />
+        </div>
       </div>
     </main>
   );
