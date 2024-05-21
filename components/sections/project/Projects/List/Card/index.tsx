@@ -28,8 +28,8 @@ function Card({
           ></Image>
         </div>
         <div className="w-[100%] sm:h-[33.34%] md:h-[50%] xl:h-[47.5%] sm:px-[20px] md:px-[8px] lg:px-[12px] xl:px-[24px] sm:py-[20px] md:py-[8px] lg:py-[12px] xl:py-[24px]  flex flex-col justify-between ">
-          <div className="space-y-[16px]">
-            <div className="flex space-x-[16px] items-center justify-between ">
+          <div className="space-y-[8px]">
+            <div className="flex space-x-[8px] items-center justify-between ">
               <div className="text-black sm:text-[7px] lg:text-[10px]  ">
                 {moment(new Date(postTime), "YYYYMMDD").fromNow()}
               </div>
@@ -42,6 +42,9 @@ function Card({
                 dangerouslySetInnerHTML={{ __html: depcription }}
                 className="truncate whitespace-pre-line max-h-[40px] text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px] "
               ></div>
+              <div className="text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px]">
+                ...
+              </div>
             </div>
           </div>
 

@@ -13,6 +13,7 @@ import Tiktok from "@pageImage/home/icon/Tiktok.svg";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 type obj = {
   x: number;
   y: number;
@@ -105,22 +106,23 @@ function Product() {
           ></SectionTitle>
           <div className="w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] mt-[28px]">
             <p className="text-right leading-[normal] md:leading-[normal] lg:leading-[normal] xl:leading-[19px] text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] pl-[0] md:pl-[20px] lg:pl-[20px] xl:pl-[20px]">
-              Sản phẩm của chúng tôi mang lại những cải tiến quan trọng, 
-              hỗ trợ các ngành công nghiệp và nâng cao trải nghiệm người dùng. 
-              Với các công nghệ hiện đại và luôn lấy người dùng làm trung tâm, 
-              chúng tôi cung cấp các giải pháp sáng tạo đáp ứng mong đợi, nhu cầu 
-              và thúc đẩy sự phát triển vững bềnh.
+              Sản phẩm của chúng tôi mang lại những cải tiến quan trọng, hỗ trợ
+              các ngành công nghiệp và nâng cao trải nghiệm người dùng. Với các
+              công nghệ hiện đại và luôn lấy người dùng làm trung tâm, chúng tôi
+              cung cấp các giải pháp sáng tạo đáp ứng mong đợi, nhu cầu và thúc
+              đẩy sự phát triển vững bềnh.
               <br />
               <br />
-              Với đội ngũ lập trình viên đầy nhiệt huyết, 
-              chúng tôi cùng nhau tạo ra những giải pháp sáng tạo. 
-              Sản phẩm của chúng tôi bao gồm các ứng dụng Web và di động, 
-              công cụ phần mềm và tiện ích giúp tối ưu hóa quy trình và nâng cao năng suất.
+              Với đội ngũ lập trình viên đầy nhiệt huyết, chúng tôi cùng nhau
+              tạo ra những giải pháp sáng tạo. Sản phẩm của chúng tôi bao gồm
+              các ứng dụng Web và di động, công cụ phần mềm và tiện ích giúp tối
+              ưu hóa quy trình và nâng cao năng suất.
             </p>
           </div>
 
           <div className="mt-[20px] md:mt-[20px] lg:mt-[40px] xl:mt-[40px] relative">
-            <button
+            <Link
+              href="/project"
               className="px-[24px] md:px-[24px] lg:px-[26px] xl:px-[32px] py-[12px] xl:py-[16px] bg-primary text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] text-white absolute 
             top-[-4px] md:top-[-4px] lg:top-[-8px] xl:top-[-10px] right-[-4px] md:right-[-4px] lg:right-[-8px] xl:right-[-10px] 
             hover:top-[-6px] hover:right-[-6px] active:top-[3px] active:right-[3px]
@@ -128,10 +130,9 @@ function Product() {
               style={{
                 transitionDuration: "0.1s",
               }}
-              onClick={() => router.push("/blogs")}
             >
               <p>Dự án</p>
-            </button>
+            </Link>
             <button
               className="px-[24px] md:px-[24px] lg:px-[26px] xl:px-[32px] py-[12px] xl:py-[16px] bg-white border-[3px] border-black text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]text-white"
               style={{

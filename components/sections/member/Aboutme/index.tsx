@@ -22,7 +22,9 @@ const AboutMe = ({ user }: any) => {
         </h2>
         <div
           className=" font-regular xl:text-[18px] lg:text-[16px] sm:text-[14px] leading-[150%]"
-          dangerouslySetInnerHTML={{ __html: user?.description }}
+          dangerouslySetInnerHTML={{
+            __html: `<div>${user?.description}</div>`,
+          }}
         ></div>
       </div>
       <div className="grid lg:grid-cols-2 sm:grid-cols-3 xl:gap-[20px] lg:gap-[10px] sm:gap-[8px]">

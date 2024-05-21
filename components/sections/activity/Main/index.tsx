@@ -1,13 +1,12 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import Banner from "@/components/sections/activity/Banner";
 import Activities from "@/components/sections/activity/Activities";
 
-const Main = () => {
+const Main = ({ data }: any) => {
   return (
     <>
       <Banner></Banner>
-      <Activities></Activities>
+      <Activities data={data}></Activities>
     </>
   );
 };

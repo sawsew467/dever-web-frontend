@@ -9,4 +9,8 @@ const projectEndpoint = {
   GET_ALL_PROJECT: `${API_SERVER}${prefix}/project`,
   GET_PROJECT_BY_SLUG: `${API_SERVER}${prefix}/project/{slug}`,
 };
-export { userEndpoint, projectEndpoint };
+
+const activityEndpointer = {
+  GET_IMAGE_ACTIVITY: `${API_SERVER}${prefix}/image-activity`,
+};
+export { userEndpoint, projectEndpoint, activityEndpointer };
