@@ -46,8 +46,8 @@ const ListLeaderMember = ({ data = initialData }: { data: any }) => {
       <div className="xl:max-w-[1280px] mx-[auto] ">
         <div className="justify-between relative items-end md:flex-row flex sm:flex-col md:items-end sm:items-start xl:gap-0 sm:gap-[25px] w-[100%] h-[auto] ">
           <SectionTittle
-            title="CLUB LEADER MEMBERS"
-            subtitle="Meet our exceptional team leaders."
+            title="CÁC THÀNH VIÊN LÃNH ĐẠO CỦA CÂU LẠC BỘ"
+            subtitle="Những trụ cột đặc biệt của chúng tôi"
             textPosition="left"
           ></SectionTittle>
         </div>

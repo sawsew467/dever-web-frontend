@@ -100,13 +100,13 @@ function Footer() {
                 href="/"
                 className="mb-[18px] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] hover:underline"
               >
-                Home
+                Trang chủ
               </Link>
               <Link
                 href="/blogs"
                 className="hover:underline text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]"
               >
-                Blogs
+                Dự án
               </Link>
             </div>
             <div className="flex  justify-between flex-col">
@@ -114,13 +114,13 @@ function Footer() {
                 href="/activity"
                 className="mb-[18px] text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px] hover:underline"
               >
-                Activities
+                Hoạt động
               </Link>
               <Link
                 href="/member"
                 className="hover:underline text-[12px] md:text-[12px] lg:text-[16px] xl:text-[16px]"
               >
-                Member
+                Thành viên
               </Link>
             </div>
           </div>

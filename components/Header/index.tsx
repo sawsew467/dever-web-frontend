@@ -76,7 +76,7 @@ function Header() {
             className="hover:text-primary header transition-all relative"
             href="/"
           >
-            Home
+            Trang chủ
             <span
               className={`${
                 nav === "" ? "show" : null
@@ -91,7 +91,7 @@ function Header() {
             className="hover:text-primary header transition-all relative"
             href="/activity"
           >
-            Activities
+            Hoạt động
             <span
               className={`${
                 nav === "activity" ? "show" : null
@@ -125,7 +125,7 @@ function Header() {
             href="/member"
             
           >
-            Members
+            Thành viên
             <span
               className={`${
                 nav === "member" ? "show" : null
@@ -141,7 +141,7 @@ function Header() {
             className="hover:text-primary header transition-all relative"
             href="/leaderboard"
           >
-            Leader board
+            Bản xếp hạng
             <span
               className={`${
                 nav === "leaderboard" ? "show" : null
@@ -185,7 +185,7 @@ function Header() {
             transitionDelay: "0.1s",
           }}
         >
-          Home
+          Trang chủ
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
@@ -198,7 +198,7 @@ function Header() {
             transitionDelay: "0.2s",
           }}
         >
-          Activities
+          Hoạt động
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
@@ -211,7 +211,7 @@ function Header() {
             transitionDelay: "0.4s",
           }}
         >
-          Project
+          Bản xếp hạng
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
@@ -224,7 +224,7 @@ function Header() {
             transitionDelay: "0.4s",
           }}
         >
-          Members
+          Thành viên
         </Link>
         <Link
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
