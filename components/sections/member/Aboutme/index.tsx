@@ -20,9 +20,10 @@ const AboutMe = ({ user }: any) => {
         <h2 className="text-[#0065A9] xl:text-[20px] lg:text-[18px] font-semibold">
           About me
         </h2>
-        <p className=" font-regular xl:text-[18px] lg:text-[16px] sm:text-[14px] leading-[150%]">
-          {user?.description}
-        </p>
+        <div
+          className=" font-regular xl:text-[18px] lg:text-[16px] sm:text-[14px] leading-[150%]"
+          dangerouslySetInnerHTML={{ __html: user?.description }}
+        ></div>
       </div>
       <div className="grid lg:grid-cols-2 sm:grid-cols-3 xl:gap-[20px] lg:gap-[10px] sm:gap-[8px]">
         <span className="w-fit">
@@ -50,7 +51,9 @@ const AboutMe = ({ user }: any) => {
           </p>
         </span>
         <span className="w-fit">
-          <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">Major:</h2>
+          <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
+            Major:
+          </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
             {user?.majorId?.name}
           </p>

@@ -167,7 +167,7 @@ function Header() {
       <div
         className={`${
           isOpenMenu ? "" : "pointer-events-none"
-        } absolute  h-fit top-[56px] w-[100%]  md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
+        } absolute flex h-fit top-[56px] w-[100%]  md:flex lg:hidden flex-col md:flex-col text-[16px] max-w-[1024px] opacity-0 rounded-b-xl overflow-hidden`}
         style={{
           opacity: "1",
           transition: "all 0.3s",
@@ -208,7 +208,7 @@ function Header() {
             transition: "all 0.3s",
             visibility: isOpenMenu ? "visible" : "hidden",
             transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
-            transitionDelay: "0.4s",
+            transitionDelay: "0.3s",
           }}
         >
           Project
@@ -234,7 +234,7 @@ function Header() {
             transition: "all 0.3s",
             visibility: isOpenMenu ? "visible" : "hidden",
             transform: isOpenMenu ? "translateY(0px)" : "translateY(-20px)",
-            transitionDelay: "0.3s",
+            transitionDelay: "0.5s",
           }}
         >
           Leader board

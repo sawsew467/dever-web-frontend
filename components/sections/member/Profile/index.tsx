@@ -20,7 +20,7 @@ const Profile = ({ user }: { user: any }) => {
             alt={user?.description}
             width={160}
             height={220}
-            className="w-full h-full"
+            className="w-full h-full object-cover"
           ></Image>
         </div>
         <div className="flex flex-col gap-[8px] w-fit">
