@@ -1,9 +1,8 @@
 import React from "react";
-import { Metadata } from "next";
 import MainMember from "@/components/sections/member/detail";
-import { notFound } from "next/navigation";
 import axios from "axios";
 import { userEndpoint } from "@/helpers/endpoint";
+import { redirect } from "next/navigation";
 
 const fetchUser = async (id: string) => {
   let config = {
@@ -49,9 +48,9 @@ const Member = async ({ params: { id } }: { params: { id: string } }) => {
   const user: any = await fetchUser(id);
 
   if (!user?.data?.data) {
-    notFound();
+    redirect("/404");
   }
-  return <MainMember user={user?.data?.data} />;
+  return <MainMember user={user?.data?.data ?? {}} />;
 };
 
 export default Member;

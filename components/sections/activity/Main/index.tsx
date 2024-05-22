@@ -6,7 +6,7 @@ const Main = ({ data }: any) => {
   return (
     <>
       <Banner></Banner>
-      <Activities data={data}></Activities>
+      <Activities data={data} ></Activities>
     </>
   );
 };
