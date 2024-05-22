@@ -26,6 +26,12 @@ export const metadata = {
   icons: {
     icon: "/icons/layout/logo.png",
   },
+  openGraph: {
+    images: ["/images/project].jpg"],
+    title: "FU-DEVER | Câu lạc bộ lập trình FU-DEVER",
+    description:
+      "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",
+  },
 };
 export default async function Project() {
   const data: any = await getAllProject();
