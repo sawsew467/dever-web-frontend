@@ -9,7 +9,7 @@ export const metadata = {
     icon: "/icons/layout/logo.png",
   },
   openGraph: {
-    images: ["/images/leaderboard.jpg"],
+    images: ["/images/leaderboard.png"],
     title: "FU-DEVER | Câu lạc bộ lập trình FU-DEVER",
     description:
       "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",

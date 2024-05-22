@@ -6,6 +6,7 @@ import contest from "@pageImage/activity/contest.jpg";
 import ArrowIcon from "@pageImage/activity/ArrowIcon.svg";
 import SectionTitle from "@/components/SectionTitle";
 import Slider from "@components/sections/activity/Slider";
+import Album from "../Album";
 
 function Activities({ data }: any) {
   const academicActivities = [
@@ -83,6 +84,7 @@ function Activities({ data }: any) {
           </div>
         </div>
       </section>
+      <Album />
     </>
   );
 }
