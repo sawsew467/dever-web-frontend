@@ -11,6 +11,11 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: "https://www.fu-dever.com/project",
+      lastModified: new Date(),
+      priority: 0.5,
+    },
+    {
       url: "https://www.fu-dever.com/member",
       lastModified: new Date(),
       priority: 0.5,

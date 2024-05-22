@@ -11,7 +11,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ["res.cloudinary.com", "aiartshop.com", "th.bing.com"],
+    domains: ["res.cloudinary.com", "aiartshop.com", "th.bing.com", "i.ibb.co"],
   },
 };
 

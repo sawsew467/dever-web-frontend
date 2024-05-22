@@ -52,13 +52,13 @@ const ListMember = ({ data = initialData }: { data: any }) => {
           className=" xl:mt-[28px] w-[100%] md:mt-[40px] sm:mt-[20px] xl:gap-[40px] md:gap-[35px] sm:gap-[20px] flex-wrap flex justify-start"
         >
           {data?.map((user: any) =>
-            data.length != 0   ? (
+            data.length != 0 ? (
               <motion.li
                 variants={child}
                 key={user?._id}
-                className="xl:w-[calc((100%-40px*3)/4)]  md:w-[calc((100%-35px*3)/4)]  xl:aspect-[29/40] lg:aspect-[7/10] md:aspect-[146/204]  sm:aspect-[93/123] sm:w-[calc((100%-20px*2)/3)]  cursor-pointer  relative"
+                className="xl:w-[calc((100%-40px*3)/4)] shadow-2xl lg:rounded-[20px_0] md:rounded-[15px_0] sm:rounded-[8px_0] overflow-hidden  md:w-[calc((100%-35px*3)/4)]  xl:aspect-[29/40] lg:aspect-[7/10] md:aspect-[146/204]  sm:aspect-[93/123] sm:w-[calc((100%-20px*2)/3)]  cursor-pointer  relative"
               >
-                <Link href={`member/${user?.slug}`}>
+                <Link href={`member/${user?._id}`}>
                   <Image
                     loading="lazy"
                     width={290}

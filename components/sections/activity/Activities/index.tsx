@@ -7,7 +7,7 @@ import ArrowIcon from "@pageImage/activity/ArrowIcon.svg";
 import SectionTitle from "@/components/SectionTitle";
 import Slider from "@components/sections/activity/Slider";
 
-function Activities() {
+function Activities({ data }: any) {
   const academicActivities = [
     {
       img: workshop,
@@ -79,7 +79,7 @@ function Activities() {
               subtitle="Không ngừng kết nối, phát triển vững bềnh"
               textPosition="left"
             ></SectionTitle>
-            <Slider></Slider>
+            <Slider images={data?.images}></Slider>
           </div>
         </div>
       </section>

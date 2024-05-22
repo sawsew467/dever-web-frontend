@@ -158,14 +158,14 @@ function Introduction() {
           </div>
         </div>
         <div className="flex md:items-end lg:items-end xl:items-end mt-[20px] md:mt-[0px] lg:pt-[0px] xl:pt-[0px] w-fit lg:h-[519px] md:h-[450px] relative z-0">
-          <span className="absolute h-full w-1/6 background_blur_left_to_right left-0"></span>
+          <span className="absolute h-full w-[200px] background_blur_left_to_right left-0"></span>
           <Image
             loading="lazy"
             className="w-auto h-full "
             src={introduction}
             alt="Picture of the author"
           />
-          <span className="absolute h-full w-1/6 background_blur_right_to_left right-0"></span>
+          <span className="absolute h-full w-[200px] background_blur_right_to_left right-0"></span>
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">
