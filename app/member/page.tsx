@@ -48,6 +48,6 @@ async function Member() {
     (user: any) => !user?.isAdmin
   );
   const user = { adminData, excellentData, memberData };
-  return <MainMember data={user} />;
+  return <MainMember data={user ?? []} />;
 }
 export default Member;

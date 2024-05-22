@@ -2,6 +2,7 @@ import { projectEndpoint } from "@/helpers/endpoint";
 import axios from "axios";
 
 import MainProject from "@/components/sections/project/post/Main";
+import { redirect } from "next/navigation";
 const getDetailProject = async (id: string) => {
   let config = {
     method: "get",
@@ -37,7 +38,7 @@ export async function generateMetadata({
     openGraph: {
       images: [project?.image],
       title: `FU-DEVER | ${project?.title}`,
-      description:`${project?.subTitle}`,
+      description: `${project?.subTitle}`,
     },
   };
 }
@@ -48,5 +49,8 @@ export default async function Page({
   params: { id: string };
 }) {
   const data: any = await getDetailProject(id);
-  return <MainProject project={data?.data?.data} />;
+  if (!data?.data?.data) {
+    redirect("/404");
+  }
+  return <MainProject project={data?.data?.data ?? {}} />;
 }

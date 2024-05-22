@@ -8,7 +8,7 @@ import SectionTitle from "@/components/SectionTitle";
 import Slider from "@components/sections/activity/Slider";
 import Album from "../Album";
 
-function Activities({ data }: any) {
+function Activities({ data, album }: any) {
   const academicActivities = [
     {
       img: workshop,
@@ -84,7 +84,7 @@ function Activities({ data }: any) {
           </div>
         </div>
       </section>
-      {/* <Album /> */}
+      {/* <Album albums={album} /> */}
     </>
   );
 }

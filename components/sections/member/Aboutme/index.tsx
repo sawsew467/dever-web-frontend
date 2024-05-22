@@ -30,15 +30,15 @@ const AboutMe = ({ user }: any) => {
       <div className="grid lg:grid-cols-2 sm:grid-cols-3 xl:gap-[20px] lg:gap-[10px] sm:gap-[8px]">
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Join Date:
+            Thế hệ:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            {user ? `Gen ${user?.gen}` : "Chưa biết"}
+            {user?.gen ? `Gen ${user?.gen}` : "Chưa biết"}
           </p>
         </span>
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Education:
+            Học tập:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
             {user?.school ?? "chưa có thông tin"}
@@ -46,7 +46,7 @@ const AboutMe = ({ user }: any) => {
         </span>
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Position:
+            Vị trí:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
             {user?.positionId?.name ?? "chưa có vị trí cụ thể"}
@@ -54,7 +54,7 @@ const AboutMe = ({ user }: any) => {
         </span>
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Major:
+            Chuyên ngành:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
             {user?.majorId?.name ?? "Chưa có thông tin"}
@@ -62,7 +62,7 @@ const AboutMe = ({ user }: any) => {
         </span>
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Department:
+            Thuộc ban:
           </h2>
           <span className="flex flex-col gap-[4px]">
             {user?.departments?.length != 0 ? (
@@ -70,7 +70,7 @@ const AboutMe = ({ user }: any) => {
                 {user?.departments?.map((department: any) => (
                   <p
                     className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]"
-                    key={department._id}
+                    key={department?._id}
                   >
                     {department?.name}
                   </p>
@@ -83,7 +83,7 @@ const AboutMe = ({ user }: any) => {
         </span>
         <span className="w-fit">
           <h2 className="font-regular xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px]">
-            Work history:
+            Lịch sử làm việc:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
             {user?.workplace ?? "Chưa từng làm việc"}

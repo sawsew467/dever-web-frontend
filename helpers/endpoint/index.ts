@@ -12,5 +12,6 @@ const projectEndpoint = {
 
 const activityEndpointer = {
   GET_IMAGE_ACTIVITY: `${API_SERVER}${prefix}/image-activity`,
+  GET_ALL_ALBUM: `${API_SERVER}${prefix}/album`,
 };
 export { userEndpoint, projectEndpoint, activityEndpointer };

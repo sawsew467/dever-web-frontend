@@ -33,6 +33,23 @@ const getActivity = async () => {
     return error;
   }
 };
+const getAlbum = async () => {
+  let config = {
+    method: "get",
+    maxBodyLength: Infinity,
+    url: activityEndpointer.GET_ALL_ALBUM,
+    headers: {
+      "X-API-Key": "{{token}}",
+    },
+  };
+
+  try {
+    const response = await axios.request(config);
+    return response;
+  } catch (error) {
+    return error;
+  }
+};
 async function Activity() {
   const data: any = await getActivity();
   return <MainActivy data={data?.data?.data} />;
