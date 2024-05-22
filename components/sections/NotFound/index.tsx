@@ -30,8 +30,8 @@ const Not_found = () => {
     >
       <div className="flex justify-between md:items-end sm:items-start md:flex-row sm:gap-[25px] md:gap-[20px] sm:flex-col ">
         <SectionTittle
-          title="Page Not Found"
-          subtitle="Oops! Looks like you followed a bad link. If you think this is a problem with us, please tell us."
+          title="Không tìm thấy"
+          subtitle="Ối! Có vẻ như bạn đã truy cập vào một liên kết xấu. Nếu bạn cho rằng đây là vấn đề với chúng tôi, vui lòng cho chúng tôi biết."
           textPosition="left"
         ></SectionTittle>
         <button
@@ -50,7 +50,7 @@ const Not_found = () => {
             className="mt-[14px] mb-[18px] lg:w-[23px] h-[auto] md:w-[20px] sm:w-[18px] aspect-[23/22]"
           ></Image>
           <p className="font-[500] lg:text-[16px] sm:text-[12px] whitespace-nowrap text-[#fff] mt-[14px] mb-[16px]">
-            Go Home
+            Trở lại
           </p>
         </button>
       </div>
@@ -87,7 +87,8 @@ const Not_found = () => {
                   : "md:top-[20px] sm:top-[30px] opacity-[1]"
               } font-[500] md:text-[16px] sm:text-[12px] transition-[top,opacity] duration-[0.5s] mr-[5px] text-[#0098FF]`}
             >
-              Send me your feedback, if you think this is a our problem.
+              Hãy gửi cho tôi phản hồi của bạn nếu bạn cho rằng đây là vấn đề
+              của chúng tôi.
             </p>
           </div>
           <button
@@ -107,7 +108,7 @@ const Not_found = () => {
               className="lg:w-[27px] h-[auto] md:w-[25px] sm:w-[23px] aspect-[27/23]"
             ></Image>
             <p className="font-[500] lg:text-[16px] sm:text-[12px] text-[#fff]">
-              Send
+              Gửi
             </p>
           </button>
         </div>

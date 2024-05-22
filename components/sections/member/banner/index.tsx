@@ -44,7 +44,7 @@ const TopTypical = ({ data = initialData }: { data: any }) => {
           initial="hidden"
           whileInView={"show"}
           variants={parent}
-          className="flex-wrap xl:content-normal md:justify-between md:flex-nowrap sm:flex-wrap sm:justify-center xl:gap-[40px] lg:gap-[34px] md:gap-0 sm:gap-y-[20px] sm:gap-[20px] mx-0 content-center flex lg:mt-[40px] md:mt-[25px] sm:mt-[20px] w-[100%] item-center "
+          className="flex-wrap xl:content-normal md:justify-between md:flex-nowrap sm:flex-wrap sm:justify-center xl:gap-[40px] lg:gap-[34px] sm:gap-[20px] mx-0 content-center flex lg:mt-[40px] md:mt-[25px] sm:mt-[20px] w-[100%] item-center "
         >
           {data?.map((user: any, index: any) =>
             user ? (
@@ -52,7 +52,7 @@ const TopTypical = ({ data = initialData }: { data: any }) => {
                 custom={index}
                 variants={child}
                 key={index}
-                className="xl:w-[calc((100%-40px*5)/6)] xl:aspect-[9/14] h-[auto] lg:w-[calc((100%-34px*5)/6)] lg:aspect-[129/200] md:w-[calc((100%-30px*5)/6)] md:aspect-[90/136] sm:w-[calc((100%-20px*3)/4)] sm:aspect-[65/95] "
+                className={`lg:w-fit  xl:aspect-[9/14]   lg:aspect-[129/200] md:w-[calc((100%-30px*2)/3)] md:aspect-[90/136] sm:w-[calc((100%-20px*2)/3)] sm:aspect-[65/95] `}
               >
                 <Image
                   loading="lazy"
@@ -76,7 +76,8 @@ const TopTypical = ({ data = initialData }: { data: any }) => {
           )}
         </motion.ul>
         <p className="lg:mt-[40px] md:mt-[25px] sm:mt-[20px] lg:text-[20px] md:text-[16px] sm:text-[14px] text-[#0065A9] not-italic font-[700] ">
-        Mỗi thành viên là một phần nhỏ trong sự phát triển thành công của câu lạc bộ.
+          Mỗi thành viên là một phần nhỏ trong sự phát triển thành công của câu
+          lạc bộ.
         </p>
         <div className="lg:mt-[12px] md:mt-[25px] sm:mt-[8px] mx-[auto] xl:w-[1115px] lg:w-[944px] md:w-[688px] sm:w-[320px] bg-[#0098FF] lg:h-[8px] md:h-[6px] sm:h-[4px] "></div>
         <Image

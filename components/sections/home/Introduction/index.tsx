@@ -103,14 +103,15 @@ function Introduction() {
           ></SectionTitle>
           <div className="pt-[20px] md:pt-[20px] lg:pt-[40px] xl:pt-[28px] text-[16px]">
             <p className=" m-0 p0 text-[12px] md:text-[12px] lg:text-[14px] xl:text-[16px] leading-[normal] font-[400]">
-            Chào mừng đến với FU-DEVER, 
-            câu lạc bộ lập trình của Đại học FPT! 
-            Tại đây, chúng tôi tạo ra một cộng đồng năng động cho những lập trình viên tương lai, 
-            cung cấp cơ hội phát triển kỹ năng và giao lưu.
+              Chào mừng đến với FU-DEVER, câu lạc bộ lập trình của Đại học FPT!
+              Tại đây, chúng tôi tạo ra một cộng đồng năng động cho những lập
+              trình viên tương lai, cung cấp cơ hội phát triển kỹ năng và giao
+              lưu.
               <br />
               <br />
-              Dù bạn là người mới bắt đầu hay lập trình viên có kinh nghiệm, 
-              FU-DEVER có mọi hoạt động để bạn tham gia, từ các thử thách lập trình đến các cuộc thi và Workshop.
+              Dù bạn là người mới bắt đầu hay lập trình viên có kinh nghiệm,
+              FU-DEVER có mọi hoạt động để bạn tham gia, từ các thử thách lập
+              trình đến các cuộc thi và Workshop.
               <span
                 id="dots"
                 className="lg:hidden xl:hidden"
@@ -127,11 +128,11 @@ function Introduction() {
                   display: isReadMore ? "block" : "",
                 }}
               >
-                <br />  
-                Từ một nhóm sinh viên nhiệt huyết, 
-                FU-DEVER đã phát triển thành một cộng đồng đa dạng, 
-                tổ chức các sự kiện lớn và khuyến khích sự sáng tạo, 
-                góp phần làm nâng cao kỹ năng, kinh nghiệm, trải nghiệm của cộng đồng lập trình tại trường đại học.
+                <br />
+                Từ một nhóm sinh viên nhiệt huyết, FU-DEVER đã phát triển thành
+                một cộng đồng đa dạng, tổ chức các sự kiện lớn và khuyến khích
+                sự sáng tạo, góp phần làm nâng cao kỹ năng, kinh nghiệm, trải
+                nghiệm của cộng đồng lập trình tại trường đại học.
               </span>
               <span className="lg:hidden xl:hidden">
                 <br />
@@ -158,14 +159,15 @@ function Introduction() {
           </div>
         </div>
         <div className="flex md:items-end lg:items-end xl:items-end mt-[20px] md:mt-[0px] lg:pt-[0px] xl:pt-[0px] w-fit lg:h-[519px] md:h-[450px] relative z-0">
-          <span className="absolute h-full w-[200px] background_blur_left_to_right left-0"></span>
+          <span className="absolute h-full xl:w-[200px] lg:w-[180px] md:w-[150px] background_blur_left_to_right left-0 md:block sm:hidden"></span>
+          <span className="absolute h-[100px] w-full background_blur_top_to_bottom left-0 md:hidden block"></span>
           <Image
             loading="lazy"
             className="w-auto h-full "
             src={introduction}
             alt="Picture of the author"
           />
-          <span className="absolute h-full w-[200px] background_blur_right_to_left right-0"></span>
+          <span className="absolute h-full xl:w-[200px] lg:w-[180px] md:w-[150px] background_blur_right_to_left right-0 md:block sm:hidden"></span>
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#0065A9] via-[#0098FF] to-[#0065A9]  text-[#fff]">

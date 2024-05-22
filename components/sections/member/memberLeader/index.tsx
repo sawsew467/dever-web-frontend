@@ -79,12 +79,12 @@ const ListLeaderMember = ({ data = initialData }: { data: any }) => {
                         {`K${user?.MSSV?.slice(2, 4)}`}
                       </p>
                     </div>
-                    <div className=" w-[100%] xl:p-[20px] lg:p-[15px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[37px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
+                    <div className=" w-[100%] xl:p-[20px] lg:p-[15px] md:pt-[5px] md:px-[10px] md:py-0 sm:p-[5px] xl:h-[118px] lg:h-[88px] md:h-[59px] sm:h-[47px] bg-primary lg:rounded-br-[20px]  md:rounded-br-[15px] sm:rounded-br-[4px]">
                       <div className="flex flex-col h-[100%] xl:gap-[12px] md:gap-[6px] sm:gap-[4px] ">
-                        <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] md:leading-[12px] sm:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] sm:text-[6px] text-[12px] text-[#fff] ">
+                        <h4 className=" font-[700]  xl:leading-[24.2px] lg:leading-[16.94px] md:leading-[12px] sm:leading-[7px] xl:text-[20px] lg:text-[14px] md:text-[10px] sm:text-[8px] text-[12px] text-[#fff] ">
                           {`${user?.firstname} ${user?.lastname}`}
                         </h4>
-                        <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] sm:text-[5px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] sm:leading-[6px] flex justify-between items-end ">
+                        <div className=" h-[auto] xl:text-[14px]  lg:text-[12px] md:text-[8px] sm:text-[6px] xl:leading-[17px] lg:leading-[14.52px] md:leading-[9.6px] sm:leading-[6px] flex justify-between items-end ">
                           <div className="flex flex-col xl:gap-[8px] md:gap-[6px] sm:gap-[4px]">
                             <p className="font-[500] text-[#fff]">
                               -{user?.MSSV}
