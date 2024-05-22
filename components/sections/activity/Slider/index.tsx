@@ -9,7 +9,6 @@ function Slider({ images }: any) {
     thumbnail: image?.url,
     alt: image?.createdAt,
   }));
-  console.log("first", newImages);
   return (
     <>
       <div className="flex flex-col mt-[20px] h-full w-full ">

@@ -5,9 +5,9 @@ import { userEndpoint } from "@/helpers/endpoint";
 import MainMember from "@/components/sections/member/Main";
 
 export const metadata = {
-  title: "FU-DEVER | Members",
+  title: "FU-DEVER | Thành viên",
   description:
-    "Meet the talented members of FU-DEVER. Our diverse community of programmers, from beginners to experts, collaborates on innovative projects, shares knowledge, and grows together in the tech world.",
+    "Gặp gỡ các thành viên tài năng của FU-DEVER. Cộng đồng lập trình viên đa dạng của chúng tôi, từ người mới bắt đầu đến chuyên gia, cộng tác trong các dự án đổi mới, chia sẻ kiến thức và cùng nhau phát triển trong thế giới công nghệ.",
   icons: {
     icon: "/icons/layout/logo.png",
   },
@@ -15,7 +15,7 @@ export const metadata = {
     images: ["/images/member.png"],
     title: "FU-DEVER | Câu lạc bộ lập trình FU-DEVER",
     description:
-      "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",
+      "Chào mừng bạn đến với FU-DEVER, câu lạc bộ lập trình của Đại học FPT! . Tại FU-DEVER, chúng tôi cố gắng thúc đẩy một cộng đồng sôi động gồm các lập trình viên đầy tham vọng và cung cấp nền tảng để phát triển kỹ năng và cộng tác.",
   },
 };
 
