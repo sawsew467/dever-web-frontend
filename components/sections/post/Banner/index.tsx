@@ -7,9 +7,8 @@ import time from "@images/pages/blogs/time.svg";
 import twi from "@images/pages/blogs/twi.svg";
 import Category from "../../blogs/Projects/Category";
 import Direction from "./Direction";
-import { PostItems } from "@/app/blogs/[id]/page";
 
-function Banner({ pic, category, tiltle, depcription }: PostItems) {
+function Banner({ pic, category, tiltle, depcription }: any) {
   return (
     <div className="max-w-[1440px] w-full  mx-auto sm:px-[20px] md:px-[40px] xl:px-[80px] flex flex-col sm:space-y-[16px] lg:space-y-[36px] mt-[84px] sm:mb-[20px] lg:mb-[40px] xl:mb-[80px] ">
       <Direction currenPage={tiltle}></Direction>

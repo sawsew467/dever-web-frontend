@@ -18,12 +18,12 @@ const AboutMe = ({ user }: any) => {
       />
       <div className="flex flex-col gap-[8px]">
         <h2 className="text-[#0065A9] xl:text-[20px] lg:text-[18px] font-semibold">
-          About me
+          Thông tin về tôi
         </h2>
         <div
           className=" font-regular xl:text-[18px] lg:text-[16px] sm:text-[14px] leading-[150%]"
           dangerouslySetInnerHTML={{
-            __html: `<div>${user?.description}</div>`,
+            __html: `<div>${user?.description ?? "Chưa có thông tin"}</div>`,
           }}
         ></div>
       </div>
@@ -33,7 +33,7 @@ const AboutMe = ({ user }: any) => {
             Join Date:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            Gen {user?.gen}
+            {user ? `Gen ${user?.gen}` : "Chưa biết"}
           </p>
         </span>
         <span className="w-fit">
@@ -41,7 +41,7 @@ const AboutMe = ({ user }: any) => {
             Education:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            {user?.school}
+            {user?.school ?? "chưa có thông tin"}
           </p>
         </span>
         <span className="w-fit">
@@ -49,7 +49,7 @@ const AboutMe = ({ user }: any) => {
             Position:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            {user?.positionId?.name}
+            {user?.positionId?.name ?? "chưa có vị trí cụ thể"}
           </p>
         </span>
         <span className="w-fit">
@@ -57,7 +57,7 @@ const AboutMe = ({ user }: any) => {
             Major:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            {user?.majorId?.name}
+            {user?.majorId?.name ?? "Chưa có thông tin"}
           </p>
         </span>
         <span className="w-fit">
@@ -65,14 +65,20 @@ const AboutMe = ({ user }: any) => {
             Department:
           </h2>
           <span className="flex flex-col gap-[4px]">
-            {user?.departments?.map((department: any) => (
-              <p
-                className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]"
-                key={department._id}
-              >
-                {department?.name}
-              </p>
-            ))}
+            {user?.departments?.length != 0 ? (
+              <>
+                {user?.departments?.map((department: any) => (
+                  <p
+                    className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]"
+                    key={department._id}
+                  >
+                    {department?.name}
+                  </p>
+                ))}
+              </>
+            ) : (
+              <p>Chưa có thông tin</p>
+            )}
           </span>
         </span>
         <span className="w-fit">
@@ -80,7 +86,7 @@ const AboutMe = ({ user }: any) => {
             Work history:
           </h2>
           <p className="font-bold xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[#0065A9]">
-            {user?.workplace}
+            {user?.workplace ?? "Chưa từng làm việc"}
           </p>
         </span>
       </div>

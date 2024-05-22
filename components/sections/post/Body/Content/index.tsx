@@ -1,5 +1,4 @@
 import React from "react";
-import { PostItems } from "@/app/blogs/[id]/page";
 import Image from "next/image";
 import Infor from "@images/pages/blogs/fakedata/infor.jpg";
 

@@ -42,9 +42,6 @@ function Card({
                 dangerouslySetInnerHTML={{ __html: depcription }}
                 className="truncate whitespace-pre-line max-h-[40px] text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px] "
               ></div>
-              <div className="text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px]">
-                ...
-              </div>
             </div>
           </div>
 

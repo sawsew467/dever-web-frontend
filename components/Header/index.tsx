@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import "./style.css";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 const animationHeader: any = {
   down: {
     y: [-60, 0],
@@ -37,6 +37,7 @@ function Header() {
   const [isScrollHeader, setScrollHeader] = useState<Boolean>(false);
   const pathname = usePathname();
   const nav = pathname.split("/").at(1);
+  const router = useRouter();
 
   const onClickMenuButton = () => {
     setOpenMenu((isOpenMenu) => !isOpenMenu);
@@ -54,6 +55,11 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleDirect = (url: string) => {
+    router.push(url);
+    router.refresh();
+  };
   return (
     <motion.div
       animate={isScrollHeader ? "down" : "up"}
@@ -72,9 +78,11 @@ function Header() {
           />
         </a>
         <div className={`hidden md:hidden lg:flex gap-[40px] text-[16px]`}>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/"
+          <button
+            onClick={() => handleDirect("/")}
+            className={`${
+              nav === "" ? "text-primary " : null
+            } hover:text-primary header transition-all relative`}
           >
             Trang chủ
             <span
@@ -86,10 +94,12 @@ function Header() {
               className={`${nav === "" ? "show" : null}
             absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
             ></span>
-          </Link>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/activity"
+          </button>
+          <button
+            onClick={() => handleDirect("/activity")}
+            className={`${
+              nav === "activity" ? "text-primary " : null
+            } hover:text-primary header transition-all relative`}
           >
             Hoạt động
             <span
@@ -102,10 +112,12 @@ function Header() {
                 nav === "activity" ? "show" : null
               } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
             ></span>
-          </Link>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/project"
+          </button>
+          <button
+            onClick={() => handleDirect("/project")}
+            className={`${
+              nav === "project" ? "text-primary " : null
+            } hover:text-primary header transition-all relative`}
           >
             Dự án
             <span
@@ -118,10 +130,12 @@ function Header() {
                 nav === "project" ? "show" : null
               } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
             ></span>
-          </Link>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/member"
+          </button>
+          <button
+            onClick={() => handleDirect("/member")}
+            className={`${
+              nav === "member" ? "text-primary " : null
+            } hover:text-primary header transition-all relative`}
           >
             Thành viên
             <span
@@ -134,12 +148,14 @@ function Header() {
                 nav === "member" ? "show" : null
               } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
             ></span>
-          </Link>
-          <Link
-            className="hover:text-primary header transition-all relative"
-            href="/leaderboard"
+          </button>
+          <button
+            onClick={() => handleDirect("/leaderboard")}
+            className={`${
+              nav === "leaderboard" ? "text-primary " : null
+            } hover:text-primary header transition-all relative`}
           >
-            Bản xếp hạng
+            Bảng xếp hạng
             <span
               className={`${
                 nav === "leaderboard" ? "show" : null
@@ -150,7 +166,7 @@ function Header() {
                 nav === "leaderboard" ? "show" : null
               } absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-blue-400 underline-span`}
             ></span>
-          </Link>
+          </button>
         </div>
 
         <Image
@@ -172,9 +188,9 @@ function Header() {
         }}
         onClick={() => setOpenMenu(false)}
       >
-        <Link
+        <button
+          onClick={() => handleDirect("/")}
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -184,10 +200,10 @@ function Header() {
           }}
         >
           Trang chủ
-        </Link>
-        <Link
+        </button>
+        <button
+          onClick={() => handleDirect("/activity")}
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/activity"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -197,10 +213,10 @@ function Header() {
           }}
         >
           Hoạt động
-        </Link>
-        <Link
+        </button>
+        <button
+          onClick={() => handleDirect("/project")}
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/project"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -210,10 +226,10 @@ function Header() {
           }}
         >
           Dự án
-        </Link>
-        <Link
+        </button>
+        <button
+          onClick={() => handleDirect("/member")}
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/member"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -222,11 +238,11 @@ function Header() {
             transitionDelay: "0.4s",
           }}
         >
-          Members
-        </Link>
-        <Link
+          Thành viên
+        </button>
+        <button
+          onClick={() => handleDirect("/leaderboard")}
           className="w-[100%] bg-primary/[0.8] active:bg-white/[0.8] active:text-primary text-center cursor-pointer transition-all py-[10px] text-white  hover:font-bold translate-y-[-20px]"
-          href="/leaderboard"
           style={{
             opacity: isOpenMenu ? "1" : "0",
             transition: "all 0.3s",
@@ -236,7 +252,7 @@ function Header() {
           }}
         >
           Bảng xếp hạng
-        </Link>
+        </button>
       </div>
     </motion.div>
   );

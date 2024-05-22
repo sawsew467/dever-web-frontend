@@ -1,9 +1,5 @@
 import Image from "next/image";
-import fb from "@images/pages/blogs/fb.svg";
-import pin from "@images/pages/blogs/pinterest.svg";
-import view from "@images/pages/blogs/view.svg";
 import time from "@images/pages/blogs/time.svg";
-import twi from "@images/pages/blogs/twi.svg";
 import Direction from "./Direction";
 import moment from "moment";
 

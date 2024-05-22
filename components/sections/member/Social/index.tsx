@@ -14,15 +14,21 @@ const icon: any = {
 const Social = ({ socials }: any) => {
   return (
     <span className="flex gap-[16px] ">
-      {socials?.map((social: any) => (
-        <Link href={social?.url} key={social?._id}>
-          <Image
-            className="aspect-square xl:w-[30px] md:w-[25px] sm:w-[20px]"
-            src={icon[social?.socialId?.constant]}
-            alt={`icon ${social?.name}`}
-          ></Image>
-        </Link>
-      ))}
+      {socials?.length != 0 ? (
+        <>
+          {socials?.map((social: any) => (
+            <Link href={social?.url} key={social?._id}>
+              <Image
+                className="aspect-square xl:w-[30px] md:w-[25px] sm:w-[20px]"
+                src={icon[social?.socialId?.constant]}
+                alt={`icon ${social?.name}`}
+              ></Image>
+            </Link>
+          ))}
+        </>
+      ) : (
+        <p>Không có</p>
+      )}
     </span>
   );
 };

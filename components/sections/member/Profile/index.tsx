@@ -25,7 +25,9 @@ const Profile = ({ user }: { user: any }) => {
         </div>
         <div className="flex flex-col gap-[8px] w-fit">
           <h2 className="xl:text-[24px] lg:text-[20px] md:text-[18px] sm:text-[20px] text-[#0065A9] font-extrabold mb-[10px]">
-            {user?.firstname} {user?.lastname}
+            {user?.firstname || user?.lastname
+              ? `${user?.firstname ?? ""} ${user?.lastname ?? ""}`
+              : "Chưa có tông tin tên"}
           </h2>
           <span className="flex gap-[8px] items-center w-fit">
             <Image
@@ -36,7 +38,7 @@ const Profile = ({ user }: { user: any }) => {
               height={30}
             ></Image>
             <p className="xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] font-regular flex leading-none">
-              {user?.positionId?.name}
+              {user?.positionId?.name ?? "Chưa có vị trí cụ thể trong clb"}
             </p>
           </span>
           <span className="flex gap-[8px] items-center w-fit">
@@ -48,7 +50,9 @@ const Profile = ({ user }: { user: any }) => {
               height={30}
             ></Image>
             <p className="xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] font-regular flex leading-none">
-              {moment(user?.dob).subtract(10, "days").calendar()}
+              {user?.dob
+                ? moment(user?.dob).subtract(10, "days").calendar()
+                : "không có"}
             </p>
           </span>
           <span className="flex gap-[8px] items-center w-fit">
@@ -60,11 +64,13 @@ const Profile = ({ user }: { user: any }) => {
               height={30}
             ></Image>
             <p className="xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[14px] font-regular flex leading-none">
-              {user?.MSSV}
+              {user?.MSSV ?? "không có"}
             </p>
           </span>
           <span className="flex flex-col gap-[8px] w-full">
-            <h2 className="lg:text-20px] md:text-[18px] sm:text-[14px] font-bold">Social media</h2>
+            <h2 className="lg:text-20px] md:text-[18px] sm:text-[14px] font-bold">
+              Social media
+            </h2>
             <Social socials={user?.socials} />
           </span>
         </div>
@@ -76,7 +82,7 @@ const Profile = ({ user }: { user: any }) => {
               {data.label}
             </h2>
             <p className="xl:text-[16px] lg:text-[14px] font-bold">
-              {user && user[data.dataIndex]}
+              {(user && user[data.dataIndex]) ?? "Chưa có thông tin"}
             </p>
           </span>
         ))}

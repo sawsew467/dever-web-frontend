@@ -1,15 +1,13 @@
-"use client"
-export const runtime: 'edge' = 'edge';
+"use client";
+export const runtime: "edge" = "edge";
 
 import Banner from "@/components/sections/post/Banner";
 import Body from "@/components/sections/post/Body";
 import Author from "@/components/sections/post/Author";
 import RelatedPost from "@/components/sections/post/RelatedPost";
-import { useEffect } from "react";
 // import fs from "fs";
 // import matter from "gray-matter";
 // import getPostMetadata from "@/utils/getPostMetadata";
-
 
 // export async function generateStaticParams() {
 //   const posts = getPostMetadata();
@@ -22,13 +20,13 @@ import { useEffect } from "react";
 //   try {
 //   const folder = "posts/";
 //   const file = `${folder}${id}.md`;
-  
+
 //   const content = fs.readFileSync(file, "utf8");
 //   const matterResult = matter(content);
 
 //   return matterResult;
 //   } catch (error) {
-//     return null 
+//     return null
 //   }
 // };
 import Card1 from "@images/pages/blogs/fakedata/card1.jpg";
@@ -61,7 +59,7 @@ const listProjects = [
   },
   {
     _id: "0002",
-    category: ["Java","Spring boot"],
+    category: ["Java", "Spring boot"],
     postTime: "3 months ago",
     img: Card2,
     title: "Java Spring Development is dead ?",
@@ -70,7 +68,7 @@ const listProjects = [
   },
   {
     _id: "0003",
-    category: ["C#","Dotnet"],
+    category: ["C#", "Dotnet"],
     postTime: "6 months ago",
     img: Card3,
     title: "Developing nice software with C#",
@@ -79,7 +77,7 @@ const listProjects = [
   },
   {
     _id: "0004",
-    category: ["Node.js","Reactjs"],
+    category: ["Node.js", "Reactjs"],
     postTime: "4 months ago",
     img: Card4,
     title: "Real-Time Web Applications with Node.js",
@@ -97,7 +95,7 @@ const listProjects = [
   },
   {
     _id: "0006",
-    category: ["TypeScript","Reactjs"],
+    category: ["TypeScript", "Reactjs"],
     postTime: "1 month ago",
     img: Card6,
     title: "TypeScript in Modern Web Development",
@@ -106,24 +104,35 @@ const listProjects = [
   },
 ];
 
-
-
 export default function Page({ params }: { params: { id: string } }) {
- 
   function findIndexById(id: string): number {
     const index = listProjects.findIndex((project) => project._id === id);
     return index;
   }
-  
+
   const index = findIndexById(params.id);
 
   // const post = getPostContent(id);
   return (
     <div>
-      <Banner category={listProjects[index]?.category} tiltle={listProjects[index]?.title} pic={listProjects[index]?.img} _id={""} postTime={""} depcription={""}></Banner>
-      <Body _id={""} category={[]} postTime={""} tiltle={""} depcription={""} pic={Card1}></Body>
+      {/* <Banner
+        category={listProjects[index]?.category}
+        tiltle={listProjects[index]?.title}
+        pic={listProjects[index]?.img}
+        _id={""}
+        postTime={""}
+        depcription={""}
+      ></Banner>
+      <Body
+        _id={""}
+        category={[]}
+        postTime={""}
+        tiltle={""}
+        depcription={""}
+        pic={Card1}
+      ></Body>
       <Author></Author>
-      <RelatedPost></RelatedPost>
+      <RelatedPost></RelatedPost> */}
     </div>
   );
 }

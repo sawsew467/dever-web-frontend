@@ -12,7 +12,9 @@ const DetailMember = ({ user }: any) => {
       <div className="flex w-full justify-between lg:mb-[60px] sm:mb-[20px] items-center flex-wrap gap-[10px]">
         <span className="xl:text-[40px] lg:text-[32px] md:text-[28px] sm:text-[20px] font-bold flex gap-[10px]">
           <h2 className="text-[#0098FF] ">
-            {user?.firstname} {user?.lastname}
+            {user?.firstname || user?.lastname
+              ? `${user?.firstname ?? ""} ${user?.lastname ?? ""}`
+              : "Chưa có tông tin tên"}
           </h2>
           <p>Profile</p>
         </span>

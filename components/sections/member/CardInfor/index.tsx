@@ -11,15 +11,23 @@ const Skill = ({ title, data, backgroundColor, color }: any) => {
         size="sm"
       ></SectionTittle>
       <div className="flex gap-[8px] flex-wrap lg:w-auto md:w-full ">
-        {data?.map((label: string) => (
-          <span
-            key={data.label}
-            className={`flex flex-col rounded-[6px] xl:p-[2px_12px] md:p-[2px_10px] sm:p-[2px_4px] `}
-            style={{ backgroundColor, color }}
-          >
-            <h2 className="xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[12px] font-semibold">{label}</h2>
-          </span>
-        ))}
+        {data?.length != 0 ? (
+          <>
+            {data?.map((label: string) => (
+              <span
+                key={data.label}
+                className={`flex flex-col rounded-[6px] xl:p-[2px_12px] md:p-[2px_10px] sm:p-[2px_4px] `}
+                style={{ backgroundColor, color }}
+              >
+                <h2 className="xl:text-[20px] lg:text-[18px] md:text-[16px] sm:text-[12px] font-semibold">
+                  {label}
+                </h2>
+              </span>
+            ))}
+          </>
+        ) : (
+          <p>Không ghi nhận được kĩ năng cụ thể</p>
+        )}
       </div>
     </div>
   );

@@ -20,6 +20,28 @@ const getDetailProject = async (id: string) => {
   }
 };
 
+export async function generateMetadata({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  const data: any = await getDetailProject(id);
+  const project = data?.data?.data;
+  return {
+    title: `FU-DEVER | ${project?.title}`,
+    description:
+      "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",
+    icons: {
+      icon: "/icons/layout/logo.png",
+    },
+    openGraph: {
+      images: [project?.image],
+      title: `FU-DEVER | ${project?.title}`,
+      description:`${project?.subTitle}`,
+    },
+  };
+}
+
 export default async function Page({
   params: { id },
 }: {

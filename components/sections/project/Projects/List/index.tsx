@@ -47,14 +47,6 @@ function List({ listProjects = initialListProjects }: any) {
           ></Card>
         ))}
       </div>
-
-      <div className="flex justify-center  ">
-        <ChangePage
-          currentPage={page}
-          onPageChange={onChangePage}
-          totalPages={totalPages}
-        ></ChangePage>
-      </div>
     </div>
   );
 }
