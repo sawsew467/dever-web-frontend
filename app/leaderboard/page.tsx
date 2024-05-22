@@ -37,5 +37,10 @@ const getLeaderboard = async () => {
 export default async function LeaderBoardPage() {
   const leaderboard: any = await getLeaderboard();
 
-  return <LeaderboardModule leaderboardData={leaderboard?.data?.data} />;
+  return (
+    <>
+      {/* <LeaderboardModule leaderboardData={leaderboard?.data?.data} />; */}
+      <div className="w-full h-screen flex justify-center items-center">Đang Phát triển</div>
+    </>
+  );
 }
