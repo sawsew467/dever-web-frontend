@@ -11,11 +11,12 @@ function Banner({ _id, image, tiltle, slug, postTime }: any) {
         <Image
           loading="lazy"
           src={image}
-          alt=""
+          alt={tiltle}
           width={900}
           height={900}
           className="absolute w-[100%] h-[100%] rounded-[6px] object-cover"
         />
+        <div className="absolute  bottom-0 w-full lg:h-44 md:h-40 sm:h-32 bg-gradient-to-t from-[#202020] z-0" />
         <div className="absolute w-[100%] h-[100%] bg-black opacity-25 rounded-[6px] "></div>
         <div className="absolute w-[100%] h-[100%] sm:px-[20px] sm:py-[20px] lg:px-[40px] lg:py-[40px] ">
           <div className="absolute sm:w-[calc(100%-40px)] lg:w-[calc(100%-80px)]"></div>

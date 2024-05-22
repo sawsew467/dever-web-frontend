@@ -35,12 +35,12 @@ function Card({
               </div>
             </div>
             <div className="space-y-[8px] sm:text-[12px] md:text-[8px] lg:text-[12px]">
-              <div className="text-black sm:text-[16px] md:text-[12px] lg:text-[16px] xl:text-[24px] xl:leading-[29px] ">
+              <div className="text-black sm:text-[16px] md:text-[12px] lg:text-[16px] xl:text-[24px] xl:leading-[29px] line-clamp-2 xl:h-[60px]">
                 {tiltle}
               </div>
               <div
                 dangerouslySetInnerHTML={{ __html: depcription }}
-                className="truncate whitespace-pre-line max-h-[40px] text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px] "
+                className=" text-black opacity-[60%] sm:text-[12px] md:text-[8px] lg:text-[12px] xl:text-[16px] sm:leading-[15px] md:leading-[20px] line-clamp-3"
               ></div>
             </div>
           </div>
