@@ -3,9 +3,9 @@ import { activityEndpointer } from "@/helpers/endpoint";
 import axios from "axios";
 
 export const metadata = {
-  title: "FU-DEVER | Our Activities",
+  title: "FU-DEVER | Hoạt động của chúng tôi",
   description:
-    "Discover the vibrant activities at FU-DEVER's coding club. Collaborate on innovative projects, boost your programming skills, and connect with a community of tech enthusiasts. Perfect for beginners and experienced coders alike.",
+    "Khám phá những hoạt động sôi nổi tại câu lạc bộ lập trình của FU-DEVER. Cộng tác trong các dự án đổi mới, nâng cao kỹ năng lập trình của bạn và kết nối với cộng đồng những người đam mê công nghệ. Hoàn hảo cho cả người mới bắt đầu và lập trình viên có kinh nghiệm.",
   icons: {
     icon: "/icons/layout/logo.png",
   },
@@ -13,7 +13,7 @@ export const metadata = {
     images: ["/images/activity.png"],
     title: "FU-DEVER | Câu lạc bộ lập trình FU-DEVER",
     description:
-      "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",
+      "Chào mừng bạn đến với FU-DEVER, câu lạc bộ lập trình của Đại học FPT! . Tại FU-DEVER, chúng tôi cố gắng thúc đẩy một cộng đồng sôi động gồm các lập trình viên đầy tham vọng và cung cấp nền tảng để phát triển kỹ năng và cộng tác.",
   },
 };
 const getActivity = async () => {

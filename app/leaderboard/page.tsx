@@ -2,9 +2,9 @@ import LeaderboardModule from "@/components/Leaderboard/Main";
 import axios from "axios";
 
 export const metadata = {
-  title: "FU-DEVER | Leaderboard",
+  title: "FU-DEVER | Bảng xếp hạng",
   description:
-    "Check out the FU-DEVER leaderboard! See top performers and track your progress as you compete in coding challenges and contribute to exciting projects. Join us and climb the ranks in our vibrant programming community.",
+    "Kiểm tra bảng xếp hạng FU-DEVER! Xem những người có thành tích cao nhất và theo dõi tiến trình của bạn khi bạn cạnh tranh trong các thử thách lập trình và đóng góp cho các dự án thú vị. Hãy tham gia cùng chúng tôi và thăng hạng trong cộng đồng lập trình sôi động của chúng tôi.",
   icons: {
     icon: "/icons/layout/logo.png",
   },
@@ -12,7 +12,7 @@ export const metadata = {
     images: ["/images/leaderboard.png"],
     title: "FU-DEVER | Câu lạc bộ lập trình FU-DEVER",
     description:
-      "Welcome to FU-DEVER, the programming club of FPT University! . At FU-DEVER, we strive to foster a vibrant community of aspiring programmers and provide a platform for skill development and collaboration.",
+      "Chào mừng bạn đến với FU-DEVER, câu lạc bộ lập trình của Đại học FPT! . Tại FU-DEVER, chúng tôi cố gắng thúc đẩy một cộng đồng sôi động gồm các lập trình viên đầy tham vọng và cung cấp nền tảng để phát triển kỹ năng và cộng tác.",
   },
 };
 

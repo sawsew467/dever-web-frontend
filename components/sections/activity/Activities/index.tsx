@@ -84,7 +84,7 @@ function Activities({ data }: any) {
           </div>
         </div>
       </section>
-      <Album />
+      {/* <Album /> */}
     </>
   );
 }
