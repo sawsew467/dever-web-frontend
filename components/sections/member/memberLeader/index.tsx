@@ -75,7 +75,7 @@ const ListLeaderMember = ({ data = initialData }: { data: any }) => {
                   ></Image>
                   <div className="h-[auto] absolute bottom-0 w-[100%]">
                     <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] sm:py-[4px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] sm:w-[40px] lg:rounded-tl-[12px] md:rounded-tl-[6px] sm:rounded-tl-[4px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-[0.2px]">
-                      <p className="xl:h-[19px] lg:h-[17px] md:h-[12px] sm:h-[7px] xl:text-[16px] lg:text-[14px] md:text-[10px] sm:text-[8px] font-[700] text-[#fff]">
+                      <p className="uppercase xl:h-[19px] lg:h-[17px] md:h-[12px] sm:h-[7px] xl:text-[16px] lg:text-[14px] md:text-[10px] sm:text-[8px] font-[700] text-[#fff]">
                         {user?.MSSV && `K${user?.MSSV?.slice(2, 4)}`}
                       </p>
                     </div>
