@@ -20,7 +20,7 @@ const getLeaderboard = async () => {
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: "https://dever-dashboard-api.onrender.com/api/v1/leetcode",
+    url: "https://dever-dashboard-api-v2.onrender.com/api/v1/leetcode/",
     headers: {
       "X-API-Key": "{{token}}",
     },
@@ -40,7 +40,9 @@ export default async function LeaderBoardPage() {
   return (
     <>
       {/* <LeaderboardModule leaderboardData={leaderboard?.data?.data} />; */}
-      <div className="w-full h-screen flex justify-center items-center">Đang Phát triển</div>
+      <div className="w-full h-screen flex justify-center items-center">
+        Đang Phát triển
+      </div>
     </>
   );
 }
