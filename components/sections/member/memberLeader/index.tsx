@@ -72,6 +72,7 @@ const ListLeaderMember = ({ data = initialData }: { data: any }) => {
                     className="xl:aspect-[29/40] lg:aspect-[7/10] md:aspect-[146/204]  sm:aspect-[93/123] pointer-events-none object-cover lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[15px] md:rounded-br-[15px] sm:rounded-tl-[8px] sm:rounded-br-[8px] w-[100%] h-[100%] "
                     alt={user?.nickname}
                     src={user?.avatar}
+                    unoptimized
                   ></Image>
                   <div className="h-[auto] absolute bottom-0 w-[100%]">
                     <div className=" flex justify-center lg:pt-[3.75px] xl:py-[6px] lg:pb-[2.5px] sm:py-[4px] xl:w-[93px] lg:w-[68px] h-[auto] md:w-[47px] sm:w-[40px] lg:rounded-tl-[12px] md:rounded-tl-[6px] sm:rounded-tl-[4px] bg-[#FF7171] absolute right-0 translate-y-[-100%] top-[0.2px]">

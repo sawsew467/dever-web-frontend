@@ -60,6 +60,7 @@ const TopTypical = ({ data = initialData }: { data: any }) => {
                 className="pointer-events-none object-cover  lg:rounded-tl-[20px] lg:rounded-br-[20px] md:rounded-tl-[10px] md:rounded-br-[10px] sm:rounded-tl-[5px] sm:rounded-br-[5px] w-[100%] h-[100%]  "
                 alt={user?.nickname}
                 src={user?.avatar}
+                unoptimized
               ></Image>
             </motion.li>
           ))}
